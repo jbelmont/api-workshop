@@ -9,4 +9,4 @@ _________________________
 
 Previous | Next
 :------- | ---:
-← [URL Structure](./url-structure.md) | [API Testing](./api-testing.md) →
+← [URI Design](./uri-design.md) | [Endpoint Design](./endpoint-design.md) →

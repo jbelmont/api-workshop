@@ -1,4 +1,5 @@
-API Workshop - API Testing
+API Workshop - Endpoint Design
+
 ## Sections:
 
 * [Bread Crumb Navigation](#bread-crumb-navigation)
@@ -8,4 +9,4 @@ _________________________
 
 Previous | Next
 :------- | ---:
-← [Endpoint Design](./endpoint-design.md) | [Types of API Testing](./types-of-api-testing.md) →
+← [Query String](./query-string.md) | [API Testing](./api-testing.md) →

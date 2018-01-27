@@ -1,4 +1,4 @@
-API Workshop - Url Structure
+API Workshop - Uri Design
 
 ## Sections:
 

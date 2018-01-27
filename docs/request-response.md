@@ -9,4 +9,4 @@ _________________________
 
 Previous | Next
 :------- | ---:
-← [HTTP Headers](./http-headers.md) | [URL Structure](./url-structure.md) →
+← [HTTP Headers](./http-headers.md) | [URI Design](./uri-design.md) →
