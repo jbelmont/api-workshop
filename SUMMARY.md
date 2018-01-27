@@ -1,8 +1,6 @@
 # API Workshop
 
-A workshop  on API Development, API Security, API Testing and API Description Languages
-
-* [Workshop Details](#workshop-details)
+* [Introduction](README.md)
 * [API Summary and Description](docs/api-summary.md)
 * [Restful API Introduction](docs/restful-intro.md)
   * [Roy Fieldings Dissertation on REST](docs/rest-dissertation.md)
@@ -25,8 +23,3 @@ A workshop  on API Development, API Security, API Testing and API Description La
   * [Swagger](docs/swagger.md)
   * [RAML](docs/raml.md)
 * [GraphQL](docs/graphql.md)
-
-
-## Workshop Details
-
-More to come
