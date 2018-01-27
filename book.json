@@ -1,0 +1,8 @@
+{
+  "plugins": [
+    "include-codeblock",
+    "advanced-emoji",
+    "highlight",
+    "copy-code-button"
+  ]
+}
