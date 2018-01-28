@@ -1,4 +1,4 @@
-API Workshop - Rest Constraints
+API Workshop - Richardson Maturity Model
 
 ## Sections:
 
@@ -9,4 +9,4 @@ _________________________
 
 Previous | Next
 :------- | ---:
-← [Roy Fieldings Dissertation on REST](./rest-dissertation.md) | [Richardson Maturity Model](./maturity-model.md) →
+← [Rest Architecture Constraints](./rest-constraints.md) | [HTTP Concepts](./http-concepts.md) →

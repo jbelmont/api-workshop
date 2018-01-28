@@ -7,6 +7,7 @@ A workshop  on API Development, API Security, API Testing and API Description La
 * [Restful API Introduction](docs/restful-intro.md)
   * [Roy Fieldings Dissertation on REST](docs/rest-dissertation.md)
   * [Rest Architecture Constraints](docs/rest-constraints.md)
+  * [Richardson Maturity Model](docs/maturity-model.md)
 * [HTTP Concepts](docs/http-concepts.md)
   * [HTTP Verbs](docs/http-verbs.md)
   * [HTTP Status Codes](docs/status-codes.md)

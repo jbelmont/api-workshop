@@ -9,4 +9,4 @@ _________________________
 
 Previous | Next
 :------- | ---:
-← [Rest Architecture Constraints](./rest-constraints.md) | [HTTP Verbs](./http-verbs.md) →
+← [Richardson Maturity Model](./maturity-model.md) | [HTTP Verbs](./http-verbs.md) →
