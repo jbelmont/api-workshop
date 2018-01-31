@@ -1,5 +1,5 @@
 [![Build Status](https://travis-ci.org/jbelmont/api-workshop.svg?branch=master)](https://travis-ci.org/jbelmont/api-workshop)
-
+[![Coverage Status](https://coveralls.io/repos/github/jbelmont/api-workshop/badge.svg?branch=master)](https://coveralls.io/github/jbelmont/api-workshop?branch=master)
 
 # API Workshop
 
