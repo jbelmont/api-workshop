@@ -1,0 +1,27 @@
+version: '3'
+services:
+  mongo:
+    image: mongo:3.4.5
+    command: --smallfiles --quiet --logpath=/dev/null --dbpath=/data/db
+    ports:
+      - "27017:27017"
+    volumes:
+      - data:/data/db
+  redis:
+    image: redis:3.2-alpine
+    ports:
+      - "6379:6379"
+  apid:
+    image: jbelmont/api-workshop:latest
+    depends_on:
+      - mongo
+      - redis
+    env_file:
+      - ./common.env
+    links:
+      - mongo
+      - redis
+    ports:
+      - "8080:8080"
+volumes:
+    data:

@@ -12,6 +12,15 @@
 
 # Project-local glide cache, RE: https://github.com/Masterminds/glide/issues/736
 .glide/
+vendor
+
+# Coverage files
+/coverage.html
+/coverage.out
+/profile.cov
+
+# Vscode
+.vscode
 
 # Node specific vendor files
 /node_modules
