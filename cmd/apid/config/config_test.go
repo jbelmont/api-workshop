@@ -23,16 +23,16 @@ func TestNewConfig(t *testing.T) {
 
 func TestGetEnvironmentVariablesThatAreSet(t *testing.T) {
 	apiHost := ":3000"
-	os.Setenv("APIHost", apiHost)
-	defer os.Unsetenv("APIHost")
+	os.Setenv("API_HOST", apiHost)
+	defer os.Unsetenv("API_HOST")
 
 	mongoHost := "mongodb://mongo:30015"
-	os.Setenv("MongoHost", mongoHost)
-	defer os.Unsetenv("MongoHost")
+	os.Setenv("MONGO_HOST", mongoHost)
+	defer os.Unsetenv("MONGO_HOST")
 
 	redisHost := "redis:7005"
-	os.Setenv("RedisHost", redisHost)
-	defer os.Unsetenv("RedisHost")
+	os.Setenv("REDIS_HOST", redisHost)
+	defer os.Unsetenv("REDIS_HOST")
 
 	cfg := config.New()
 

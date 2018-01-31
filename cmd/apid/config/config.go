@@ -5,6 +5,7 @@ import (
 	"time"
 )
 
+// Config holds environment variables
 type Config struct {
 	ReadTimeout     time.Duration
 	WriteTimeout    time.Duration

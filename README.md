@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.org/jbelmont/api-workshop.svg?branch=master)](https://travis-ci.org/jbelmont/api-workshop)
+
+
 # API Workshop
 
 A workshop  on API Development, API Security, API Testing and API Description Languages
