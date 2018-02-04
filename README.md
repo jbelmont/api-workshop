@@ -34,4 +34,16 @@ A workshop  on API Development, API Security, API Testing and API Description La
 
 ## Workshop Details
 
-More to come
+Make sure that you have [Golang](https://golang.org/dl/) Installed
+
+Run `make` in the root of the repository to install go libraries needed for the workshop.
+
+#### Running API
+
+Run `make dev` in order to get API running locally
+
+This gets both [Redis](https://redis.io/) and [MongoDB](https://www.mongodb.com/) running in docker containers as well as a Golang Container running.
+
+#### Running API Tests
+
+Run `make test` in order to run the tests in a Go container
