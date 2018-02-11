@@ -83,11 +83,42 @@ There is great discussions on the following topics:
 
 #### CHAPTER 3 - Network-based Architectural Styles
 
-content
+This chapter discusses many different types of architectural styles in network-based architectures.
+
+"Roy Fielding":
+
+> I  have  intentionally  excluded  styles  that  do  not  enhance  the  communication  or interaction properties when combined with one of the surveyed styles to form a network-based  application.  
+
+Pipe and Filter styles is mentioned quite often in this chapter.
+
+A Pipe and Filter is a simple, yet powerful architecture. A pipe and filter consists of any number of components (filters) that transform or filter data, before passing it on via connectors (pipes) to other components. The filters are all working at the same time. The architecture is often used as a simple sequence, but it may also be used for very complex structures.
+
+The most well known pipe and filter system is a Unix Program or in compilers.
+
+Fielding discusses many different Hierarchical Network Styles such as Client Server, Layered Client Server and more.
 
 #### CHAPTER 4 - Designing the Web Architecture: Problems and Insights
 
-content
+This chapter describes in detail the early thoughts on how the World Wide Web (WWW) would be.
+As its intent was to share documents with University Faculty and Government Employees in Physics Laboratories.
+
+Fielding explains how no one predicted the explosive growth of the web and the impending interest with businesses.
+
+The Internet Engineering Task Force (IETF) set out to form standardization committees for URI, HTTP, and HTML.
+
+Fielding formulates 3 hypothesis:
+
+* The design rationale behind the WWW architecture can be described by an architectural style consisting of the set of constraints applied to the elements within the Web architecture.
+
+* Constraints can be added to the WWW architectural style to derive a new hybrid style that better reflects the desired properties of a modern Web architecture.
+
+* Proposals to modify the Web architecture can be compared to the updated WWW architectural style and analyzed for conflicts prior to deployment.
+
+Fielding explains how over the past 6 years as a PHD student he worked with many individiduals and committees to help formulate standards.
+
+Roy Fielding helped write much of HTTP 1.1 Specification
+
+[HTTP 1.1 Specification](https://www.w3.org/Protocols/HTTP/1.1/draft-ietf-http-v11-spec-01)
 
 #### CHAPTER 5 - Representational State Transfer (REST)
 
