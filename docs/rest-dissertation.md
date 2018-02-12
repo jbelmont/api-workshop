@@ -122,12 +122,79 @@ Roy Fielding helped write much of HTTP 1.1 Specification
 
 #### CHAPTER 5 - Representational State Transfer (REST)
 
-content
+Fielding states the constraints of REST in this Chapter:
+
+* Client - Server
+  * The first constraints added to our hybrid style are those of the client-server architectural style.
+  * Separation  of  concerns  is  the  principlebehind  the  client-server  constraints.  
+  * By  separating  the  user  interface  concerns  from  the data  storage  concerns,  we  improve  the  portability  of  the  user  interface  across  multiple platforms  and  improve  scalability  by  simplifying  the  server  components.
+  
+* Stateless
+  * Communication must be stateless in  nature,  as  in  the  client-stateless-server  (CSS)  style, such that  each  request  from  client  to  server  must  contain  all  of  the  information  necessary  to understand  the  request,  and  cannot  take  advantage  of  any  stored  context  on  the  server.
+  * Session state is therefore kept entirely on the client.
+  
+ * Cache 
+  * In order to improve network efficiency, we add cache constraints to form the client-cache-stateless-server style.
+  * Cache constraints require that the data within  a  response  to  a  request  be  implicitly  or  explicitly  labeled  as  cacheable  or  non-cacheable.  
+  * If  a  response  is  cacheable,  then  a  client  cache  is  given  the  right  to  reuse  that response data for later, equivalent requests.
+  
+*  Uniform Interface
+  * The  central  feature  that  distinguishes  the  REST  architectural  style  from  other  network-based styles is its emphasis on a uniform interface between components.
+  * By applying the software engineering principle of generality to the component interface, the overall  system  architecture  is  simplified  and  the  visibility  of  interactions  is  improved.
+  
+* Layered System
+  * The  layered  system  style allows  an  architecture  to  be  composed  of  hierarchical  layers  by  constraining  component behavior such that each component cannot "see" beyond the immediate layer with which they are interacting. 
+  * By restricting knowledge of the system to a single layer, we place a bound on the overall system complexity and promote substrate independence.
+  
+* Code-On-Demand
+  * REST   allows   client   functionality   to   be   extended   by downloading and executing code in the form of applets or scripts. 
+  * This simplifies clientsby reducing the number of features required to be pre-implemented. 
+  * Allowing features to be downloaded after deployment improves system extensibility. 
+  * However, it also reduces visibility, and thus is only an optional constraint within REST
+
+"Roy Fielding":
+
+> All  REST  interactions  are  stateless.  That  is,  each  request  contains  all  of  theinformation  necessary  for  a  connector  to  understand  the  request,  independent  of  anyrequests  that  may  have  preceded  it.  This  restriction  accomplishes  four  functions:  1)  it removes  any  need  for  the  connectors  to  retain  application  state  between  requests,  thus reducing  consumption  of  physical  resources  and  improving  scalability;  2)  it  allows interactions  to  be  processed  in  parallel  without  requiring  that  the  processing  mechanism understand the interaction semantics; 3) it allows an intermediary to view and understand a request in isolation, which may be necessary when services are dynamically rearranged; and,  4)  it  forces  all  of  the  information  that  might  factor  into  the  reusability  of  a  cachedresponse to be present in each request.
+
+"Roy Fielding":
+
+> REST  provides  a  set  of  architectural  constraints  that, when applied as a whole, emphasizes scalability of component interactions, generality of interfaces,  independent  deployment  of  components,  and  intermediary  components  to reduce  interaction  latency,  enforce  security,  and  encapsulate  legacy  systems.  I  described the software engineering principles guiding REST and the interaction constraints chosen to retain those principles, while contrasting them to the constraints of other architectural styles
 
 #### CHAPTER 6 - Experience and Evaluation
 
-content
+Fielding spends a lot of the chapter discussing different experiences and impacts of REST.
 
+"Fielding":
+
+> The early Web architecture defined URI as document identifiers. Authors were instructed to  define  identifiers  in  terms  of  a  document’s  location  on  the  network.  Web  protocols could  then  be  used  to  retrieve  that  document.
+
+"Fielding":
+
+> Information hiding is one of the key software engineering principles that motivates the uniform  interface  of  REST.  Because  a  client  is  restricted  to  the  manipulation  of representations  rather  than  directly  accessing  the  implementation  of  a  resource,  the implementation  can  be  constructed  in  whatever  form  is  desired  by  the  naming  authority without  impacting  the  clients  that  may  use  its  representations.
+
+"Fielding":
+
+> The key problem areas in HTTP that were identified by REST included planning for the  deployment  of  new  protocol  versions,  separating  message  parsing  from  HTTP semantics and the underlying transport layer (TCP), distinguishing between authoritative and  non-authoritative  responses,  fine-grained  control  of  caching,  and  various  aspects  of the  protocol  that  failed  to  be  self-descriptive.
+
+"Fielding":
+
+> HTTP does not support write-back caching. An HTTP cache cannot assume that what gets written through it is the same as what would be retrievable from a subsequent request for that  resource,  and  thus  it  cannot  cache  a  PUT  request  body  and  reuse  it  for  a  later  GET response. There are two reasons for this rule: 1) metadata might be generated behind-the-scenes, and 2) access control on later GET requests cannot be determined from the PUT request. However, since write actions using the Web are extremely rare, the lack of write-back caching does not have a significant impact on performance.
+
+Fielding also lays some disadvantages of HTTP cookie usage and frames (i.e. iframes) in terms of security concerns and how they violate REST constraints.
+
+Fielding also explains how Multipurpose Internet Mail Extensions [MIME](https://en.wikipedia.org/wiki/MIME) was adopted by HTTP but how the message semantics don't line up well with the intentions of the WEB.
+
+Fielding also explains the success of the Apache Project and how Apache became the first major implementor of the HTTP 1.1 Specification. Also notes its success as an open source project.
+
+"Fielding":
+
+> A network-based API is an on-the-wire syntax, with defined semantics, for application interactions. A network-based API does not place any restrictions on the application code aside from the need to read/write to the network, but does place restrictions on the set of semantics  that  can  be  effectively  communicated  across  the  interface.  On  the  plus  side, performance   is   only   bounded   by   the   protocol   design   and   not   by   any   particular implementation of that design.
+
+Fielding also makes some distinctions with HTTP with CORBA.
+
+Fielding also differentiates RPC from HTTP.
+
+Lastly Fielding explains why JavaScript is better suited for the web than Java.
 
 #### Bread Crumb Navigation
 _________________________
