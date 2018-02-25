@@ -102,9 +102,31 @@ The following HTTP methods are idempotent:
 
 > The OPTIONS method returns the HTTP methods that the server supports for the specified URL. This can be used to check the functionality of a web server by requesting '*' instead of a specific resource.
 
-###### HTTP Response Codes and HTTP Response Payloads
+###### HTTP Response Codes
 
-content
+[RFC 7231 Section 6.3.1](https://tools.ietf.org/html/rfc7231#section-6.3.1)
+
+Typically a 200 (OK) status code is used with a `OPTIONS` request.
+
+* The 200 (OK) status code indicates that the request has succeeded.
+
+###### HTTP Response Payloads
+
+Typically an OPTIONS is a representation of the communications options like the HTTP verbs used for the particular resource
+
+###### Example OPTIONS request
+
+```curl
+curl -X OPTIONS http://example.org -i
+
+HTTP/1.1 200 OK
+Allow: OPTIONS, GET, HEAD, POST
+Cache-Control: max-age=604800
+Date: Sun, 25 Feb 2018 14:56:31 GMT
+Expires: Sun, 04 Mar 2018 14:56:31 GMT
+Server: EOS (vny006/0452)
+Content-Length: 0
+```
 
 #### GET HTTP Method
 
@@ -163,7 +185,46 @@ Link: <https://api.github.com/users?since=135>; rel="next"
 
 [HEAD HTTP Method](https://tools.ietf.org/html/rfc2616#section-9.4)
 
-> The HEAD method is identical to GET except that the server MUST NOT return a message-body in the response. The metainformation contained in the HTTP headers in response to a HEAD request SHOULD be identical to the information sent in response to a GET request. This method can be used for obtaining metainformation about the entity implied by the request without transferring the entity-body itself. This method is often used for testing hypertext links for validity, accessibility, and recent modification.
+* The HEAD method is identical to GET except that the server MUST NOT return a message-body in the response. 
+
+* The metainformation contained in the HTTP headers in response to a HEAD request SHOULD be identical to the information sent in response to a GET request. 
+
+* This method can be used for obtaining metainformation about the entity implied by the request without transferring the entity-body itself. 
+
+* This method is often used for testing hypertext links for validity, accessibility, and recent modification.
+
+###### HTTP Response Codes
+
+[RFC 7231 Section 6.3.1](https://tools.ietf.org/html/rfc7231#section-6.3.1)
+
+Typically a 200 (OK) status code is used with a `GET` request.
+
+* The 200 (OK) status code indicates that the request has succeeded.
+
+###### HTTP Response Payloads
+   
+For a `HEAD` request you get the same representation as GET, but without the representation data.
+
+This means you cannot send a message body with `HEAD` request, you only get the HTTP Response Headers sent back.
+
+###### Example HEAD Request
+
+```curl
+curl -X HEAD http://example.org/index.html -I
+
+HTTP/1.1 200 OK
+Content-Encoding: gzip
+Accept-Ranges: bytes
+Cache-Control: max-age=604800
+Content-Type: text/html
+Date: Sun, 25 Feb 2018 15:06:38 GMT
+Etag: "1541025663+gzip"
+Expires: Sun, 04 Mar 2018 15:06:38 GMT
+Last-Modified: Fri, 09 Aug 2013 23:54:35 GMT
+Server: ECS (dca/53DB)
+X-Cache: HIT
+Content-Length: 606
+```
 
 #### POST HTTP Method
 
@@ -180,6 +241,194 @@ POST is designed to allow a uniform method to cover the following functions:
 * Providing a block of data, such as the result of submitting a form, to a data-handling process
 
 * Extending a database through an append operation.
+
+###### HTTP Response Codes
+
+[RFC 7231 Section 6.3.1](https://tools.ietf.org/html/rfc7231#section-6.3.1)
+
+A 200 (OK) status code is used with a `POST` request to denote a successful operation.
+
+* The 200 (OK) status code indicates that the request has succeeded.
+
+[RFC 7231 Section 6.3.2](https://tools.ietf.org/html/rfc7231#section-6.3.2)
+
+A 201 (CREATED) status code indicates that a new resource has been created
+
+###### HTTP Response Payloads
+   
+A 200 response code you will get a message body
+
+A 201 response code you will get a message body
+
+More response codes are applicable please consult [RFC 7231 Section 6.1](https://tools.ietf.org/html/rfc7231#section-6.1)
+
+###### Example POST Request
+
+```http
+POST /v1/payments/payment HTTP/1.1
+Host: api.sandbox.paypal.com
+Content-Type: application/json
+Authorization: Bearer AFakeBearerToken12345
+Cache-Control: no-cache
+
+{
+  "intent": "sale",
+  "payer": {
+  "payment_method": "paypal"
+  },
+  "transactions": [
+  {
+    "amount": {
+    "total": "30.11",
+    "currency": "USD",
+    "details": {
+      "subtotal": "30.00",
+      "tax": "0.07",
+      "shipping": "0.03",
+      "handling_fee": "1.00",
+      "shipping_discount": "-1.00",
+      "insurance": "0.01"
+    }
+    },
+    "description": "The payment transaction description.",
+    "custom": "EBAY_EMS_90048630024435",
+    "invoice_number": "48787589673",
+    "payment_options": {
+    "allowed_payment_method": "INSTANT_FUNDING_SOURCE"
+    },
+    "soft_descriptor": "ECHI5786786",
+    "item_list": {
+    "items": [
+      {
+      "name": "hat",
+      "description": "Brown hat.",
+      "quantity": "5",
+      "price": "3",
+      "tax": "0.01",
+      "sku": "1",
+      "currency": "USD"
+      },
+      {
+      "name": "handbag",
+      "description": "Black handbag.",
+      "quantity": "1",
+      "price": "15",
+      "tax": "0.02",
+      "sku": "product34",
+      "currency": "USD"
+      }
+    ],
+    "shipping_address": {
+      "recipient_name": "Brian Robinson",
+      "line1": "4th Floor",
+      "line2": "Unit #34",
+      "city": "San Jose",
+      "country_code": "US",
+      "postal_code": "95131",
+      "phone": "011862212345678",
+      "state": "CA"
+    }
+    }
+  }
+  ],
+  "note_to_payer": "Contact us for any questions on your order.",
+  "redirect_urls": {
+  "return_url": "https://www.example.com/return",
+  "cancel_url": "https://www.example.com/cancel"
+  }
+}
+```
+
+HTTP POST Response with `201` Response Code
+
+```json
+{
+    "id": "PAY-60M79518TW7602539LKJOIWA",
+    "intent": "sale",
+    "state": "created",
+    "payer": {
+        "payment_method": "paypal"
+    },
+    "transactions": [
+        {
+            "amount": {
+                "total": "30.11",
+                "currency": "USD",
+                "details": {
+                    "subtotal": "30.00",
+                    "tax": "0.07",
+                    "shipping": "0.03",
+                    "insurance": "0.01",
+                    "handling_fee": "1.00",
+                    "shipping_discount": "-1.00"
+                }
+            },
+            "description": "The payment transaction description.",
+            "custom": "EBAY_EMS_90048630024435",
+            "invoice_number": "48787589673",
+            "soft_descriptor": "ECHI5786786",
+            "payment_options": {
+                "allowed_payment_method": "INSTANT_FUNDING_SOURCE",
+                "recurring_flag": false,
+                "skip_fmf": false
+            },
+            "item_list": {
+                "items": [
+                    {
+                        "name": "hat",
+                        "sku": "1",
+                        "description": "Brown hat.",
+                        "price": "3.00",
+                        "currency": "USD",
+                        "tax": "0.01",
+                        "quantity": 5
+                    },
+                    {
+                        "name": "handbag",
+                        "sku": "product34",
+                        "description": "Black handbag.",
+                        "price": "15.00",
+                        "currency": "USD",
+                        "tax": "0.02",
+                        "quantity": 1
+                    }
+                ],
+                "shipping_address": {
+                    "recipient_name": "Brian Robinson",
+                    "line1": "4th Floor",
+                    "line2": "Unit #34",
+                    "city": "San Jose",
+                    "state": "CA",
+                    "postal_code": "95131",
+                    "country_code": "US",
+                    "phone": "011862212345678"
+                }
+            },
+            "related_resources": []
+        }
+    ],
+    "note_to_payer": "Contact us for any questions on your order.",
+    "create_time": "2018-02-25T16:29:12Z",
+    "links": [
+        {
+            "href": "https://api.sandbox.paypal.com/v1/payments/payment/PAY-60M79518TW7602539LKJOIWA",
+            "rel": "self",
+            "method": "GET"
+        },
+        {
+            "href": "https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=EC-4BG64645KB941924E",
+            "rel": "approval_url",
+            "method": "REDIRECT"
+        },
+        {
+            "href": "https://api.sandbox.paypal.com/v1/payments/payment/PAY-60M79518TW7602539LKJOIWA/execute",
+            "rel": "execute",
+            "method": "POST"
+        }
+    ]
+}
+```
+
 
 #### PUT HTTP Method
 
