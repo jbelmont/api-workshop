@@ -81,13 +81,14 @@ The following HTTP methods are idempotent:
 #### HTTP Method Summary Table
 
 | HTTP Method | RFC | Has Request Body | Has Response Body | Safe | Idempotent | Cacheable |
+| --- | --- | --- | --- | --- | --- | --- |
 | GET | [RFC 2616](https://tools.ietf.org/html/rfc2616#section-9) | Optional | Yes | Yes | Yes | Yes |
 | HEAD | [RFC 2616](https://tools.ietf.org/html/rfc2616#section-9) | No | No | Yes | Yes | Yes |
 | POST | [RFC 2616](https://tools.ietf.org/html/rfc2616#section-9) | Yes | Yes | No | No | Yes |
 | PUT | [RFC 2616](https://tools.ietf.org/html/rfc2616#section-9) | Yes | Yes | No | Yes | No |
 | DELETE | [RFC 2616](https://tools.ietf.org/html/rfc2616#section-9) | No | Yes | No | Yes | No |
 | CONNECT | [RFC 2616](https://tools.ietf.org/html/rfc2616#section-9) | Yes | Yes | No | No | No |
-| OPTIONS | [RFC 2616](https://tools.ietf.org/html/rfc2616#section-9) | Optional | Yes | yes | Yes | No |
+| OPTIONS | [RFC 2616](https://tools.ietf.org/html/rfc2616#section-9) | Optional | Yes | Yes | Yes | No |
 | TRACE | [RFC 2616](https://tools.ietf.org/html/rfc2616#section-9) | No | Yes | Yes | Yes | No |
 | PATCH | [RFC 2616](https://tools.ietf.org/html/rfc2616#section-9) | Yes | Yes | No | No | No |
 
