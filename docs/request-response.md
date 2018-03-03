@@ -21,7 +21,7 @@ API Workshop - HTTP Request and Response
 The request line has 3 parts:
 
 * The HTTP Request Method
-    * * [GET](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods)
+    * [GET](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods)
     * [POST](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods)
     * [HEAD](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods)
     * [OPTIONS](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods)
