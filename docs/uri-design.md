@@ -89,6 +89,63 @@ Reserved characters:
 
 * In general, a character is reserved if the semantics of the URI changes if the character is replaced with its escaped US-ASCII encoding.
 
+When a character from the reserved set (a "reserved character") has special meaning (a "reserved purpose") in a certain context, and a URI scheme says that it is necessary to use that character for some other purpose, then the character must be percent-encoded. 
+
+Percent-encoding a reserved character involves converting the character to its corresponding byte value in ASCII and then representing that value as a pair of hexadecimal digits. 
+
+##### Unreserved Characters
+
+[RFC 2396 Section 2.3](https://tools.ietf.org/html/rfc2396#section-2.3)
+
+Data characters that are allowed in a URI but do not have a reserved purpose are called unreserved.  
+
+These include upper and lower case letters, decimal digits, and a limited set of punctuation marks and symbols.
+
+Unreserved characters:
+
+* `-`
+* `_` 
+* `.` 
+* `!` 
+* `~`
+* `*`
+*  `'`
+* `(`
+* `)`
+
+Unreserved characters can be escaped without changing the semantics of the URI, but this should not be done unless the URI is being used in a context that does not allow the unescaped character to appear.
+
+**Characters from the unreserved set never need to be percent-encoded.**
+
+##### Escape Sequences
+
+[RFC 2396 Section 2.4](https://tools.ietf.org/html/rfc2396#section-2.4)
+
+* Data must be escaped if it does not have a representation using an unreserved character
+
+* this includes data that does not correspond to a printable character of the US-ASCII coded character set, or that corresponds to any US-ASCII character that is disallowed, as explained below
+
+An escaped octet is encoded as a character triplet, consisting of the percent character "%" followed by the two hexadecimal digits representing the octet code. 
+
+For example, "%20" is the escaped encoding for the US-ASCII space character.
+
+A URI is always in an "escaped" form, since escaping or unescaping a completed URI might change its semantics.  
+
+Normally, the only time escape encodings can safely be made is when the URI is being created from its component parts
+
+Each component may have its own set of characters that are reserved, so only the mechanism responsible for generating or interpreting that component can determine whether or not escaping a character will change its semantics. 
+
+Likewise, a URI must be separated into its components before the escaped characters within those components can be safely decoded.
+
+##### Common Characters that are Percent Encoded
+
+| Character | Percent Encoding | Character | Percent Encoding | Character | Percent Encoding | Character | Percent Encoding |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Newline (\n) | %0A | Space (" ") | %20 | Double Quote (") | %22 | Percent (%) | %25 |
+| Dash (-) | %2D | Period (.) | %2E | < | %3C | > | %3E |
+| \ | %5C | Caret (^) | %5E | _ | %5F | \` | %60 |
+| { | %7B | \| | %7C | } | %7D | ~ | %7E |
+
 #### URI Syntactic Components
 
 content
