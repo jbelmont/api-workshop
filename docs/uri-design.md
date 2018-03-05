@@ -141,9 +141,9 @@ Likewise, a URI must be separated into its components before the escaped charact
 
 | Character | Percent Encoding | Character | Percent Encoding | Character | Percent Encoding | Character | Percent Encoding |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| Newline (\n) | %0A | Space (" ") | %20 | Double Quote (") | %22 | Percent (%) | %25 |
+| Newline | %0A | Space | %20 | \" | %22 | % | %25 |
 | Dash (-) | %2D | Period (.) | %2E | < | %3C | > | %3E |
-| \ | %5C | Caret (^) | %5E | _ | %5F | \` | %60 |
+| \ | %5C | \^ | %5E | _ | %5F | \` | %60 |
 | { | %7B | \| | %7C | } | %7D | ~ | %7E |
 
 #### URI Syntactic Components
