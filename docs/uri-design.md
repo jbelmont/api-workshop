@@ -148,7 +148,65 @@ Likewise, a URI must be separated into its components before the escaped charact
 
 #### URI Syntactic Components
 
-content
+In general, absolute URI are written as follows:
+
+`<scheme>:<scheme-specific-part>`
+
+This "generic URI" syntax consists of a sequence of four main components:
+
+`<scheme>://<authority><path>?<query>`
+
+Scheme names consist of a sequence of characters beginning with a lower case letter and followed by any combination of lower case letters, digits, plus ("+"), period ("."), or hyphen ("-").
+
+Scheme ==> `alpha *( alpha | digit | "+" | "-" | "." )`
+
+##### Authority Component
+
+An authority part, comprising:
+
+* An optional authentication section of a user name and password, separated by a colon, followed by an at symbol (@)
+
+* A "host", consisting of either a registered name (including but not limited to a hostname), or an IP address. 
+  * IPv4 addresses must be in dot-decimal notation, and IPv6 addresses must be enclosed in brackets ([ ]).
+  * An optional port number, separated from the hostname by a colon
+  
+Some URL schemes use the format "user:password" in the userinfo field. 
+
+This practice is NOT RECOMMENDED, because the passing of authentication information in clear text (such as URI) has proven to be a security risk in almost every case where it has been used.
+
+###### Authority Component Example
+
+`http://john:secret@rambo.net:3000/path/data`
+
+*The part `john:secret@rambo.net` is the authority component*
+
+##### Path Component
+
+The path component contains data, specific to the authority (or the scheme if there is no authority component), identifying the resource within the scope of that scheme and authority.
+
+* The path may consist of a sequence of path segments separated by a single slash "/" character.  Within a path segment, the characters "/", ";", "=", and "?" are reserved.  
+
+* Each path segment may include a sequence of parameters, indicated by the semicolon ";" character.
+
+* The parameters are not significant to the parsing of relative references.
+
+###### Path Component Example
+
+`https://www.marcelbelmont.com/post/api-testing`
+
+The part `/post/api-testing` is the path component
+
+##### Query Component
+
+The query component is a string of information to be interpreted by the resource.
+
+*Within a query component, the characters ";", "/", "?", ":", "@", "&", "=", "+", ",", and "$" are reserved.*
+
+###### Query Component Example
+
+`https://someuser.auth0.com/api/v2/authorize?audience=https://someuser.auth0.com/api/v2/&scope=openid%20profile%20 email&response_type=code&client_id=abcd13555&redirect_uri=https://task.io/callback`
+
+The part `?audience=https://someuser.auth0.com/api/v2/&scope=openid%20profile%20 email&response_type=code&client_id=abcd13555&redirect_uri=https://task.io/callback` is the query component part.
 
 #### URI References
 
