@@ -664,7 +664,7 @@ A 204 response code you will *not* get a message body
 ```curl
 curl -X delete \
   https://api.github.com/repos/jbelmont/api-workshop/issues/4/labels/duplicate \
-  -H 'Authorization: token 9342bd73e336e5cf2fe7d1a84d77f206f65c66c8' \
+  -H 'Authorization: token aToken' \
   -H 'Content-Type: application/json'
 ```
 
@@ -817,7 +817,7 @@ More response codes are applicable please consult [RFC 7231 Section 6.1](https:/
 curl -X patch \
   https://api.github.com/repos/jbelmont/api-workshop/labels/enhancement \
   -H 'Accept: application/json' \
-  -H 'Authorization: token 9342bd73e336e5cf2fe7d1a84d77f206f65c66c8' \
+  -H 'Authorization: token aToken12345' \
   -H 'Content-Type: application/json' \
   -d '{
   "name": "bug :bug:",
