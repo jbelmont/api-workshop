@@ -8,4 +8,4 @@ _________________________
 
 Previous | Next
 :------- | ---:
-← [Endpoint Design](./endpoint-design.md) | [Types of API Testing](./types-of-api-testing.md) →
+← [API Design](./api-design.md) | [Types of API Testing](./types-of-api-testing.md) →

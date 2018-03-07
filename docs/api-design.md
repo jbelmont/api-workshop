@@ -1,4 +1,4 @@
-API Workshop - Endpoint Design
+API Workshop - API Design
 
 ## Sections:
 

@@ -13,7 +13,7 @@
   * [HTTP Request and Response](docs/request-response.md)
   * [URL Design](docs/uri-design.md)
   * [Query String](docs/query-string.md)
-  * [Endpoint Design](docs/endpoint-design.md)
+* [API Design](docs/api-design.md)
 * [API Testing](docs/api-testing.md)
   * [Types of API Testing](docs/types-of-api-testing.md)
   * [API Testing Tools](docs/api-testing-tools.md)

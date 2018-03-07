@@ -8,7 +8,7 @@ API Workshop - Url Structure
 
 [RFC 3986 Section 3.4](https://tools.ietf.org/html/rfc3986#section-3.4)
 
-The query component contains non-hierarchical data that, along with data in the path component, serves to identify a resource within the scope of the URI's scheme and naming authority (if any).  
+The query component contains non-hierarchical data that, along with data in the path component, serves to identify a resource within the scope of the URI's scheme and naming authority (if any).
 
 The query component is indicated by the first question mark ("?") character and terminated by a number sign ("#") character or by the end of the URI.
 
@@ -97,4 +97,4 @@ _________________________
 
 Previous | Next
 :------- | ---:
-← [URI Design](./uri-design.md) | [Endpoint Design](./endpoint-design.md) →
+← [URI Design](./uri-design.md) | [API Design](./api-design.md) →
