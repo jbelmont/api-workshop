@@ -197,6 +197,50 @@ Obviously this is completely true as there is need for 3xx-level (redirects) at 
 
 The main point I am trying to make is that start with a basic subset for your API and add more as you need them.
 
+#### API Versioning
+
+*Try not to release an API without a version and make the version mandatory.*
+
+API Providers use different techniques to version their APIs.
+
+A good approach to use is to specify the version with a 'v' prefix. 
+
+Move the verions or `v` all the way to the left in the URL so that it has the highest scope (e.g. /v1/students).
+
+Use a simple ordinal number like `v1` and avoid using the dot notation like v1.2 because it implies a level of granularity for versioning that doesn't work well with APIs. 
+
+**Stick with v1, v2, v3, and so on**
+
+##### API versions to maintain
+
+How many API versions should you try to maintain? Try to maintain at least one version behind.
+
+You want to give developers enough time to update their application code, but it all depends on the application developers' platform.
+
+Some might need 6 months while others might need a year.
+
+##### Puting API version information in the header
+
+Although putting api version information in the HTTP header is more aligned with Roy Fielding's vision of rest not a lot API Providers do this.
+
+Here is an example where using HTTP headers is cleaner:
+
+These for example, all represent the same resource:
+
+```http
+GET students/1 
+Content-Type: application/json
+```
+
+```http
+GET students/1 
+Content-Type: application/xml
+```
+
+In this example the header appears to be more correct and is still a very strong API design.
+
+You will see some apis do the following though `GET students/1.json` and `GET students/1.xml` and that is fine as well.
+
 #### Bread Crumb Navigation
 _________________________
 
