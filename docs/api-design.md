@@ -121,6 +121,82 @@ To get all students living in dorms perhaps you could use the following query:
 
 Keep the API intuitive by using query strings where appropriate.
 
+#### Error Handling
+
+To most API consumers your API is a blackbox so having good error reporting in place provides proper context and visibility to an API.
+
+The Extreme Programming Model teaches developers to learn to write through errors.
+
+So for example if an API consumer uses a TDD approach when building their application then having good error reporting will help the app developers as they build their application.
+
+App Developers also depend on well-designed errors when they are troubleshooting and when resolving issues as they are building their application with your API.
+
+##### Twilio Error Reporting
+
+Let us look at a twilio API error:
+
+We will make the following restful call:
+
+```curl
+curl -X POST https://notify.twilio.com/v1/Services/ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Notifications \
+    -d 'Identity=0000005' \
+    -d 'Title=Generic loooooooong title for all Bindings' \
+    -d 'Body=This is the body for all Bindings' \
+    -d 'Data={"custom_key1":"custom value 1","custom_key2":"custom value 2"}' \
+    -d 'Fcm={"notification":{"title":"New alert","body":"Hello Bob!"}}' \
+    -d 'Apn={"aps":{"alert":{"title":"New alert","body":"Hello Bob!"}}}' \
+    -u 'MyAuthToken12345:your_auth_token'
+```
+
+Here we put an improper identity for the notifications API.
+
+We get the following JSON response:
+
+```json
+{
+	"code": 20404,
+	"message": "The requested resource /Services/ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Notifications was not found",
+	"more_info": "https://www.twilio.com/docs/errors/20404",
+	"status": 404
+}
+```
+
+Notice here that you get an internal error code for twilio that maps to an application specific error code.
+
+You get a detailed message explaining what occurred and you get a link to see how to fix the issue.
+
+This is the kind of error response that is useful to an application developer where you give a descriptive message and provide a link to resolve the issue.
+
+Try to be verbose and use plain language descriptions in your error messages. 
+
+Add as many hints as you can possibly think of to the error itself to help the app developer figure out the problem.
+
+I recommend that you add a link in your description for more information, like Twilio provides. 
+
+##### Using HTTP Status Codes
+
+Use HTTP status codes and try to map status codes cleanly to relevant standard-based codes.
+
+There are over 70 HTTP status codes and not every developer has all of the status codes memorized.
+
+Try to pick a decent subset of status code for your API.
+
+Keep in mind that Google GData API only uses 10 status codes. 
+
+Netflix uses about 9 status codes.
+
+* 200, 201, 304, 400, 401, 403, 404, 409, 410, 500
+
+Essentially you can reduce an interaction between an app and an API to 3 outcomes:
+
+* Everything worked (success) 2xx-level http response code
+* The application did something incorrect (client error) 4xx-level http response code
+* The API did something incorrect (server error) 5xx-level http response code
+
+Obviously this is completely true as there is need for 3xx-level (redirects) at times.
+
+The main point I am trying to make is that start with a basic subset for your API and add more as you need them.
+
 #### Bread Crumb Navigation
 _________________________
 
