@@ -369,6 +369,52 @@ If we wanted to add scope to our search we could do the following in the student
 
 If we wanted to format the result we could do the following `GET /search.xml?q=carolina+students` which would return in xml format.
 
+#### API Domains
+
+Popular API Providers such as Facebook, and Twitter have multiple subdomains for their api is they have different apis.
+
+This is understandable but you should strive to have one subdomain where your whole api lives.
+
+By having one subdomain where your api lives you make it easier for other application developers to work with your API.
+
+**Consolidate all APIs under one API subdomain if possible.**
+
+A lot of popular API providers have one developer portal:
+
+* [Google Developer Portal](https://developers.google.com/)
+* [Facebook Developer Portal](https://developers.facebook.com/)
+
+In our students example we can have a singular api subdomain as follows: `api.students.com`
+
+We can have a developer portal as follows: `developers.students.com`
+
+You can have developers get redirected to developer portal if they access `api.students.com` url in a browser
+
+#### Clients that support limited HTTP Methods
+
+There may exists some clients that cannot use all of the HTTP Methods.
+
+You could do the following technique in this case:
+
+```http
+POST /students?method=post
+```
+
+```http
+GET /students
+```
+
+```http
+PUT /students/1234?method=put&teacher=Parker
+```
+
+```http
+Delete /students/1234?method=delete
+```
+
+Be careful employing such a technique as you are using a GET Method that has destructive capability and a bot could inadvertently destroy your content. Such a tactic must be carefully thought about.
+
+
 #### Bread Crumb Navigation
 _________________________
 
