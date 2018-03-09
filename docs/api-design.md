@@ -275,6 +275,100 @@ The pagination defaults are dependent on your data size.
 
 If your resources are large, you probably want to limit it to fewer than 10; if resources are small, then consider a larger limit.
 
+#### API Responses that do not involve resources
+
+There are times that an api response will not involve an actual resource.
+
+For instance a financial institution might have an endpoint that does some type of calculation and which never hits a database.
+
+An action with a name like this indicates that you aren't dealing with a "resource" type of response:
+
+* Calculate
+* Translate
+* Convert
+
+It is appropriate in this cases to use a verb instead of a noun.
+
+Let us go back to the students api example:
+
+`/calculateFinalGrade?grades=90,83,99,85,91,92&weightedAvg=5`
+
+This endpoint although trivial is doing a calculation so the name `calculateFinalGrade` is appropriate in this instance.
+
+You should make it clear in the API documentation that this is a `non-resource` scenario.
+
+If you can separate endpoints like this into a separate part of your API so they get clearly delineated from resource type endpoints.
+
+**Remember resources deal with nouns, while actions deal with verbs**
+
+#### Accepting different types of responses
+
+It is helpful to application developers can use multiple types of formats when working with a particular format.
+
+**On the other hand to make things uniform only return one format.**
+
+[Google Blogger API](https://developers.google.com/blogger/docs/3.0/getting_started)
+
+Notice here that the api uses a header of `Content-Type: application/json`
+
+Some other apis might do something like this: `GET /events.json` right in the url
+
+We could do something similar in the students api like this:
+
+`GET /students/12345/summary.json`
+
+Most web apis will have a default format of JSON and it is okay to assume a default format as long as you highlight this in the API documentation.
+
+#### Naming Attributes
+
+Let us say you are returning metadata information back from a particular resource.
+
+For instance if were to create new student in the students api:
+
+`POST /students` we could return attributes like this `createdAt`, and `updatedAt`.
+
+Some APIs will name an attribute like this `created_at` and `updated_at` but try to avoid this.
+
+An attribute name like `created_at` does not follow JavaScript notation.
+
+For instance once you parse the response:
+
+```
+let student = JSON.parse(response);
+
+let createdAt = student.created_at;
+```
+
+Notice here that the `created_at` attribute breaks JavaScript convention.
+
+Here are some recommendations:
+
+* Pick JSON as default type
+
+* Follow JavaScript conventions for naming attributes
+  * camelCase (studentName) is best but depending on the attribute you could do Pascal Case (FinalGrade)
+  * Helps JavaScript developers work with names that go with typical JavaScript/JSON notation
+  
+#### Searching
+
+Let us like how google does searching:
+
+I searched api workshops in Google with the following query: `api workshop github`
+
+The query that google sent out looks like this:
+
+`search?q=api+workshop+github&oq=api+workshop+github` I removed some specific query parameters that google added
+
+Notice here Google uses `search` and uses the conventions of `q=api+workshop+github` to do the search.
+
+*Remember that spaces are not allowed in query string so Google used the `+` instead*
+
+If we wanted to add scope to our search we could do the following in the students api
+
+`GET /teachers/1234/students?q=math+science` Here we do a search for all students that have math and science with teacher `1234`
+
+If we wanted to format the result we could do the following `GET /search.xml?q=carolina+students` which would return in xml format.
+
 #### Bread Crumb Navigation
 _________________________
 
