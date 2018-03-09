@@ -241,6 +241,40 @@ In this example the header appears to be more correct and is still a very strong
 
 You will see some apis do the following though `GET students/1.json` and `GET students/1.xml` and that is fine as well.
 
+#### Partial Response
+
+We discussed using the convention of a fields query string in [Limit Payload section of the Query String Section](https://github.com/jbelmont/api-workshop/blob/736b679630a2e4d9dfa4b8445073ff9af3a125ea/docs/query-string.md#limit-payload-information-that-resources-return)
+
+The field query parameters are also used in google and linkedin apis
+
+It was actually google that pioneered the concept of a partial response, Read more about api performance tips at [Google Developers Performance Site](https://developers.google.com/discovery/v1/performance)
+
+As we stated earlier in the query string section you can use a comma delimited list to the fields parameter.
+
+Here is an example again with the students api:
+
+```http
+GET /students?fields=id,name,grade
+```
+
+#### Pagination
+
+Stick to using the concept of a limit and offset as they are common with apis and developers are used what they mean
+
+So let us go back to the students API.
+
+```http
+GET /students?limit=25&offset=50
+```
+
+This will get students 25 to 50
+
+A lot of APIs set a default limit of 10 and an offset of 10
+
+The pagination defaults are dependent on your data size. 
+
+If your resources are large, you probably want to limit it to fewer than 10; if resources are small, then consider a larger limit.
+
 #### Bread Crumb Navigation
 _________________________
 
