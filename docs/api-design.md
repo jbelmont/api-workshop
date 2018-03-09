@@ -414,6 +414,29 @@ Delete /students/1234?method=delete
 
 Be careful employing such a technique as you are using a GET Method that has destructive capability and a bot could inadvertently destroy your content. Such a tactic must be carefully thought about.
 
+#### Authorization
+
+* Authentication is the process of verifying who you are. 
+    * When you log on to a website with a user name and password you are authenticating.
+    
+* Authorization is the process of verifying that you have access to particular resource. 
+  * Gaining access to a resource because the permissions configured on the resource allow you access is authorization.
+
+I would highly recommend that you choose OAuth 2.0 for Authorization needs.
+
+[RFC 6749](https://tools.ietf.org/html/rfc6749)
+
+> The OAuth 2.0 authorization framework enables a third-party application to obtain limited access to an HTTP service, either on behalf of a resource owner by orchestrating an approval interaction between the resource owner and the HTTP service, or by allowing the third-party application to obtain access on its own behalf. 
+
+Using OAuth ensures that Web and Mobile Client that expose APIs will not have to share passwords.
+
+OAuth allows an API provider to revoke tokens for an individual user, for an entire app, without requiring the user to change their original password. 
+
+This functionality is critical if mobile devices are compromised or if a malicious application is on the loose.
+
+Using Oauth will ensure improved application security and better end-user and consumer experiences for both Web and Mobile Clients.
+
+We will also go over OAuth, Open ID, and Open ID Connect in greater detail later in the workshop.
 
 #### Bread Crumb Navigation
 _________________________
