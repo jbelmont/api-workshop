@@ -24,6 +24,7 @@ In this workshop we will go over the following topics:
 * Define REST as first described by [Roy Fielding](https://en.wikipedia.org/wiki/Roy_Fielding)
 * Discuss Restful API Design
 * Go over HTTP concepts
+* Discuss API Design Practices
 * API Testing
 * API Security
 * API Description Languages
