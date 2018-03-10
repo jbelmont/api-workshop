@@ -160,6 +160,135 @@ You can import Postman collections easily and if you have Postman Pro account yo
 
 I covered a good amount of features that Postman offers but read the Fine docs in Postman for more information.
 
+#### Using Curl as a Rest Client
+
+Curl is also a powerful tool to test apis
+
+Here is a sample `GET` request using curl:
+
+```curl
+curl -X GET \
+  'http://{{URL}}/search?query=chromebook&format=json&apiKey={{API_key}}' \
+  -H 'Cache-Control: no-cache' \
+  -H 'Content-Type: application/xml'
+```
+
+Notice here that we specified the HTTP verb using the flag `-X` we then gave a url and we specified HTTP Headers using `-H`
+
+Here is a sample `POST` request using curl:
+
+```curl
+curl -X POST \
+  https://api.sandbox.paypal.com/v1/payments/payment \
+  -H 'Authorization: afaketoken1234567' \
+  -H 'Cache-Control: no-cache' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "intent": "sale",
+  "payer": {
+  "payment_method": "paypal"
+  },
+  "transactions": [
+  {
+    "amount": {
+    "total": "30.11",
+    "currency": "USD",
+    "details": {
+      "subtotal": "30.00",
+      "tax": "0.07",
+      "shipping": "0.03",
+      "handling_fee": "1.00",
+      "shipping_discount": "-1.00",
+      "insurance": "0.01"
+    }
+    },
+    "description": "The payment transaction description.",
+    "custom": "EBAY_EMS_90048630024435",
+    "invoice_number": "48787589673",
+    "payment_options": {
+    "allowed_payment_method": "INSTANT_FUNDING_SOURCE"
+    },
+    "soft_descriptor": "ECHI5786786",
+    "item_list": {
+    "items": [
+      {
+      "name": "hat",
+      "description": "Brown hat.",
+      "quantity": "5",
+      "price": "3",
+      "tax": "0.01",
+      "sku": "1",
+      "currency": "USD"
+      },
+      {
+      "name": "handbag",
+      "description": "Black handbag.",
+      "quantity": "1",
+      "price": "15",
+      "tax": "0.02",
+      "sku": "product34",
+      "currency": "USD"
+      }
+    ],
+    "shipping_address": {
+      "recipient_name": "Brian Robinson",
+      "line1": "4th Floor",
+      "line2": "Unit #34",
+      "city": "San Jose",
+      "country_code": "US",
+      "postal_code": "95131",
+      "phone": "011862212345678",
+      "state": "CA"
+    }
+    }
+  }
+  ],
+  "note_to_payer": "Contact us for any questions on your order.",
+  "redirect_urls": {
+  "return_url": "https://www.example.com/return",
+  "cancel_url": "https://www.example.com/cancel"
+  }
+}'
+```
+
+Notice in the POST request we used `-d` flag to pass in a body to the request.
+
+#### Using HTTPie as a rest client
+
+Here is an example `POST` request using [HTTPie Rest Client](https://httpie.org/)
+
+```curl
+http --form POST https://api.sandbox.paypal.com/v1/oauth2/token \
+'Authorization: Basic aFakeToken' \
+'Content-Type: application/x-www-form-urlencoded' \
+grant_type='client_credentials'
+```
+
+#### Using jq library for nice json output
+
+Here is an example using [jq library](https://stedolan.github.io/jq/)
+
+```curl
+curl -X POST \
+  https://api.sandbox.paypal.com/v1/oauth2/token \
+  -H 'Authorization: Basic afakeToken12345' \
+  -H 'Content-Type: application/x-www-form-urlencoded' \
+  -d grant_type=client_credentials | jq
+```
+
+This gives a nicely formatted json response with indents and all like this:
+
+```json
+{
+  "scope": "https://uri.paypal.com/services/subscriptions https://api.paypal.com/v1/payments/.* https://api.paypal.com/v1/vault/credit-card https://uri.paypal.com/services/applications/webhooks openid https://uri.paypal.com/payments/payouts https://api.paypal.com/v1/vault/credit-card/.*",
+  "nonce": "2018-03-10T00:26:19Zs84muY6oGt55amkV4Yx7AdyPx5FBGYfTW-Z4FfXXECg",
+  "access_token": "A21AAGxDJPIqTppEqR_L_LbL3NOXrMPgLVH2pLG3f1U5s9WUJYiHkfLfbC0kC-fk_WbICqRIOmdRBtdEE-wr10VNNavtKzR-Q",
+  "token_type": "Bearer",
+  "app_id": "APP-80W284485P519543T",
+  "expires_in": 32398
+}
+```
+
 #### Bread Crumb Navigation
 _________________________
 
