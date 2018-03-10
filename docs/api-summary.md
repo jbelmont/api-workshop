@@ -7,7 +7,7 @@ API Workshop - API summary
 
 #### Workshop Summary
 
-This workshop will cover many topics revolving aroung APIs.
+This workshop will cover many topics revolving around APIs.
 
 ###### What is an API?
 
