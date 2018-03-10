@@ -9,8 +9,8 @@ API Workshop - Rest Constraints
 There are 5 Constraints that the Rest style advocates:
 
 * [Client-Server](https://en.wikipedia.org/wiki/Client%E2%80%93server_model)
-* [Stateless](https://en.wikipedia.org/wiki/State_(computer_science))
-* [Cache](https://en.wikipedia.org/wiki/Cache_(computing))
+* [Stateless](https://en.wikipedia.org/wiki/State_%28computer_science%29)
+* [Cache](https://en.wikipedia.org/wiki/Cache_%28computing%29)
 * [Uniform Interface](https://en.wikipedia.org/wiki/Representational_state_transfer#Uniform_interface)
 * [Layered System](https://en.wikipedia.org/wiki/Layered_system)
 * [Code-On-Demand](https://en.wikipedia.org/wiki/Code_on_demand)
@@ -19,9 +19,9 @@ There are 5 Constraints that the Rest style advocates:
 
 The server component provides a function or service to one or more clients.
 
-The client can initiate requests for such services. 
+The client can initiate requests for such services.
 
-Servers are classified by the services they provide. 
+Servers are classified by the services they provide.
 
 For example, a web server serves web pages and a file server serves files.
 
@@ -41,27 +41,27 @@ Communication must be stateless in nature.
 
 * Session state is therefore kept entirely on the client.
 
-The stateless constraint emphasizes visibility, reliability, and scalability. 
+The stateless constraint emphasizes visibility, reliability, and scalability.
 
 Visibility is improved because any monitoring sytem will not have to look beyond a single requet to determine the nature of the request.
 
-"Roy Fielding": 
+"Roy Fielding":
 
 > Reliability is improved because it eases the task of recovering from partial failures. Scalability is improved because not  having  to  store  state  between  requests  allows  the  server  component  to  quickly  free resources,  and  further  simplifies  implementation  because  the  server  doesn’t  have  to manage resource usage across requests.
 
-"Roy Fielding": 
+"Roy Fielding":
 
 > Like most architectural choices, the stateless constraint reflects a design trade-off. The disadvantage is that it may decrease network performance by increasing the repetitive data(per-interaction overhead) sent in a series of requests, since that data cannot be left on the server  in  a  shared  context.  In  addition,  placing  the  application  state  on  the  client-side reduces  the  server’s  control  over  consistent  application  behavior,  since  the  application becomes  dependent  on  the  correct  implementation  of  semantics  across  multiple  clientversions.
 
-#### Cache 
+#### Cache
 
 Network Efficiency is improved by adding cache constraints.
 
-"Roy Fielding": 
+"Roy Fielding":
 
 > Cache constraints require that the data within  a  response  to  a  request  be  implicitly  or  explicitly  labeled  as  cacheable  or  non-cacheable.  If  a  response  is  cacheable,  then  a  client  cache  is  given  the  right  to  reuse  that response data for later, equivalent requests.
 
-"Roy Fielding": 
+"Roy Fielding":
 
 > The advantage of adding cache constraints is that they have the potential to partially orcompletely  eliminate  some  interactions,  improving  efficiency,  scalability,  and  user-perceived  performance  by  reducing  the  average  latency  of  a  series  of  interactions.  The trade-off,  however,  is  that  a  cache  can  decrease  reliability  if  stale  data  within  the  cache differs significantly from the data that would have been obtained had the request been sent directly to the server.
 
@@ -82,10 +82,10 @@ The four constraints for a uniform interface are:
 
 * Manipulation  of  resources  through  representations
   * When a client holds a representation of a resource, including any metadata attached, it has enough information to modify or delete the resource.
-  
+
 * Self-descriptive messages
   * Each message includes enough information to describe how to process the message.
-  
+
 * Hypermedia as the engine of application state (HATEOAS)
   * A REST client should then be able to use server-provided links dynamically to discover all the available actions and resources it needs.
 
@@ -96,9 +96,9 @@ The four constraints for a uniform interface are:
 
 > A layered  system style allows  an  architecture  to  be  composed  of  hierarchical  layers  by  constraining  component behavior such that each component cannot "see" beyond the immediate layer with which they are interacting. By restricting knowledge of the system to a single layer, we place abound on the overall system complexity and promote substrate independence.
 
-A client cannot ordinarily tell whether it is connected directly to the end server, or to an intermediary along the way. 
+A client cannot ordinarily tell whether it is connected directly to the end server, or to an intermediary along the way.
 
-Intermediary servers may improve system scalability by enabling load balancing and by providing shared caches. 
+Intermediary servers may improve system scalability by enabling load balancing and by providing shared caches.
 
 Layered System can also enforce security policies.
 
