@@ -4,6 +4,11 @@
 *.so
 *.dylib
 
+# Do not include the binary file
+cmd/apid/apid
+/bin
+/apid
+
 # Test binary, build with `go test -c`
 *.test
 

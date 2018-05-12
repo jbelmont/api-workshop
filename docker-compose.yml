@@ -12,7 +12,7 @@ services:
     ports:
       - "6379:6379"
   apid:
-    image: jbelmont/api-workshop:latest
+    build: .
     depends_on:
       - mongo
       - redis
