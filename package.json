@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/jbelmont/api-workshop#readme",
   "devDependencies": {
+    "cypress": "^2.1.0",
     "gitbook": "^3.2.3",
     "gitbook-cli": "^2.3.2"
   },

@@ -1,0 +1,20 @@
+FROM golang:1.10-alpine
+
+ENV PORT 8080
+EXPOSE 8080
+
+RUN apk update && \
+        apk add git
+
+ENV appDir /go/src/github.com/jbelmont/api-workshop
+
+RUN mkdir -p ${appDir}
+WORKDIR ${appDir}
+ADD . ${appDir}
+
+COPY Gopkg.toml Gopkg.lock ./
+
+RUN go get -u github.com/golang/dep/cmd/dep && \
+        dep ensure
+
+CMD [ "./bin/apid"]

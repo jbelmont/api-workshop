@@ -12,7 +12,9 @@ services:
     ports:
       - "6379:6379"
   apid:
-    build: .
+    build:
+      context: .
+      dockerfile: Dockerfile-go
     depends_on:
       - mongo
       - redis
