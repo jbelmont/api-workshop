@@ -3,6 +3,9 @@ APID_MAIN := "cmd/apid/main.go"
 
 all: ensure lint test-cover
 
+dev:
+		docker-compose up mongo redis apid
+
 ensure:
 				go get -u github.com/mattn/goveralls
 				go get -u github.com/philwinder/gocoverage
