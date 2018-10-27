@@ -3,8 +3,14 @@ APID_MAIN := "cmd/apid/main.go"
 
 all: ensure lint test-cover
 
+build:
+		docker-compose build
+
 dev:
 		docker-compose up mongo redis apid
+
+destroy-dev:
+						docker-compose down
 
 ensure:
 				go get -u github.com/mattn/goveralls

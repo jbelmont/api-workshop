@@ -17,4 +17,4 @@ COPY Gopkg.toml Gopkg.lock ./
 RUN go get -u github.com/golang/dep/cmd/dep && \
         dep ensure
 
-CMD [ "./bin/apid"]
+CMD [ "echo", "dev"]

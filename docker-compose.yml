@@ -2,7 +2,7 @@ version: '3'
 services:
   mongo:
     image: mongo:3.4.5
-    command: --smallfiles --quiet --logpath=/dev/null --dbpath=/data/db
+    command: --storageEngine wiredTiger --smallfiles
     ports:
       - "27017:27017"
     volumes:
@@ -15,6 +15,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile-go
+    command: go run cmd/apid/main.go
     depends_on:
       - mongo
       - redis
