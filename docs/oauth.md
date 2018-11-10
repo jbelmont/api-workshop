@@ -8,4 +8,4 @@ _________________________
 
 Previous | Next
 :------- | ---:
-← [API Security](./api-security.md) | [OpenID Connect](./openid-connect.md) →
+← [Authorization](./authorization.md) | [Federation](./federation.md) →

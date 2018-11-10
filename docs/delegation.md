@@ -1,4 +1,4 @@
-API Workshop - API Description Languages
+API Workshop - Delegation
 
 ## Sections:
 
@@ -9,4 +9,4 @@ _________________________
 
 Previous | Next
 :------- | ---:
-← [Delegation](./delegation.md) | [OpenAPI Initiative](./openapi-initiative.md) →
+← [Federation](./federation.md) | [API Description Languages](./api-description-languages.md) →

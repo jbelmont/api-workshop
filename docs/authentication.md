@@ -1,4 +1,4 @@
-API Workshop - API Description Languages
+API Workshop - Authentication
 
 ## Sections:
 
@@ -9,4 +9,4 @@ _________________________
 
 Previous | Next
 :------- | ---:
-← [Delegation](./delegation.md) | [OpenAPI Initiative](./openapi-initiative.md) →
+← [API Security](./api-security.md) | [OpenID Connect](./openid-connect.md) →

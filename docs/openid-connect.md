@@ -9,4 +9,4 @@ _________________________
 
 Previous | Next
 :------- | ---:
-← [OAuth](./oauth.md) | [API Description Languages](./api-description-languages.md) →
+← [Authentication](./authentication.md) | [Authorization](./authorization.md) →
