@@ -26,4 +26,4 @@ _________________________
 
 Previous | Next
 :------- | ---:
-← [OpenID Connect](./openid-connect.md) | [oAuth](./oauth.md) →
+← [OpenID Connect](./openid-connect.md) | [OAuth](./oauth.md) →

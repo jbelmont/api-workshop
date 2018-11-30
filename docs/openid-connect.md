@@ -1,4 +1,4 @@
-API Workshop - OAuth
+API Workshop - Open ID Connect
 
 ## Sections:
 
