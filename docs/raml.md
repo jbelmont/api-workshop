@@ -9,4 +9,4 @@ _________________________
 
 Previous | Next
 :------- | ---:
-← [Swagger](./swagger.md) | [GraphQL](./graphql.md) →
+← [API Blueprint](./api-blueprint.md) | [GraphQL](./graphql.md) →

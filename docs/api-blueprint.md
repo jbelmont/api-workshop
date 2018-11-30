@@ -1,4 +1,4 @@
-API Workshop - API Description Languages
+API Workshop - API Blueprint
 
 ## Sections:
 
@@ -9,4 +9,4 @@ _________________________
 
 Previous | Next
 :------- | ---:
-← [API Description Languages](./api-description-languages.md) | [Swagger](./swagger.md) →
+← [OpenAPI](./openapi.md) | [RAML](./raml.md) →

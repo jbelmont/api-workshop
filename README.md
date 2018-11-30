@@ -30,8 +30,8 @@ A workshop  on API Development, API Security, API Testing and API Description La
   * [Federation](docs/federation.md)
   * [Delegation](docs/delegation.md)
 * [API Description Languages](docs/api-description-languages.md)
-  * [OpenAPI Initiative](docs/openapi-initiative.md)
-  * [Swagger](docs/swagger.md)
+  * [OpenAPI](docs/openapi.md)
+  * [API Blueprint](docs/api-blueprint.md)
   * [RAML](docs/raml.md)
 * [GraphQL](docs/graphql.md)
 
