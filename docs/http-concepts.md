@@ -55,11 +55,102 @@ The response message consists of the following:
 
 > HTTP is a stateless protocol. A stateless protocol does not require the HTTP server to retain information or status about each user for the duration of multiple requests. However, some web applications implement states or server side sessions using for instance HTTP cookies or hidden variables within web forms.
 
+#### HTTP Parameters
+
+There are four different types of HTTP parameters:
+
+1. Path parameters
+2. Query parameters
+3. Form parameters
+4. Header parameters.
+
+All parameters are generally used to provide input to the API, but in practice each type is used in a different situation.
+
+###### Path Parameters
+
+A URL path is used to identify a resource. A path parameter is part of the URL and thus becomes part of the resource identifier.
+
+Path parameters are thus locators.
+
+Multiple path parameters are possible, but they will a tree structure.
+
+Hierarchies can be well expressed by path parameters, but lists cannot be represented.
+
+*https://domain.com/api/resource/{parameter-value1}/{parameter-value2}*
+
+If a path parameter is invalid, then the URL becomes invalid, as it does not identify a resource.
+
+As a result, the resource cannot be found, and the status code 404 Not Found is returned.
+
+Path parameters can be used for any of the main HTTP methods such as GET, PUT, POST, DELETE, etc.
+
+###### Query Parameters
+
+Query parameters are key value pairs that are appended to the end of URL of a particular resource.
+
+Multiple query parameters can be concatenated, thus forming a list:
+
+`​https://domain.com/api/resource?parameter1=value1&parameter2=value2`
+
+* It is best practice to design query parameters as optional inputs for the API.
+
+* Each query parameter may be provided or may be left out.
+
+* If a query parameter is not present, the API should be able to function without them or assume reasonable default values.
+
+If a query parameter is an invalid identifier, the status code 400 Bad Request is returned.
+
+A status code of 404 Not Found should only be return if the underlying resource cannot be found.
+
+Query parameters are usually used to do filtering, sorting, and/or projections and are used with the HTTP GET method.
+
+###### Form Parameters
+
+Form parameters are key-value pairs, where the key is the actual *parameter name*, and the value is the parameter value.
+
+Form parameters are used for data which has been collected in a HTML Form.
+
+Form parameters are used in combination with the HTTP POST method.
+
+Form parameters are transmitted in the HTTP Request Body.
+
+*Unlike query parameters or path parameters, form parameters are not part of the URL.*
+
+The advantage of using form parameters is that they are not limited by the practical URL length limitations.
+
+You need to set the HTTP Header when using Form Parameters to `Content-Type :application/ x-www-form-urlencoded`
+
+Here is an example Request:
+
+```http
+POST https://domain.com/heroes  ​
+
+firstname=Dark&lastname=Elf  ​
+
+Content-Type: application/x-www-form-encoded  ​
+
+-> 201 Created
+```
+
+###### Header Parameters
+
+Header parameters are key-value pairs, where the key is the name of the HTTP header and the value is the parameter value.
+
+Header parameters are sent in the HTTP header, not in the HTTP body.
+
+Header parameters are used in both requests and responses.
+
+Header parameters are usually used for metadata.
+
+Header parameters provide information on how to process the request or response without having to analyze the payload in the HTTP body.
+
+Header parameters are sometimes also called HTTP header fields or simply HTTP headers.
+
 #### HTTP encryption
 
 The most popular way of establishing an encrypted HTTP connection is HTTP Secure or `HTTPS`
 
-There are two other methods for establishing an encrypted HTTP connection: 
+There are two other methods for establishing an encrypted HTTP connection:
 
 * Secure Hypertext Transfer Protocol
 
