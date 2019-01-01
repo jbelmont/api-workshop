@@ -19,6 +19,7 @@ func API(masterDB *database.DB, cfg config.Config) http.Handler {
 	}
 
 	app.Handle("POST", "/api/v1/heroes", h.Create)
+	app.Handle("GET", "/api/v1/heroes", h.List)
 
 	return app
 }
