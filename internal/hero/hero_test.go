@@ -30,9 +30,11 @@ type HeroInfo struct {
 func heroInfo() HeroInfo {
 	return HeroInfo{
 		hero: hero.CreateHero{
-			Name:       "SuperMan",
-			Gender:     "Male",
-			SuperPower: "Super Strength, Super Speed, Flying, and other cool abilities",
+			Name:   "SuperMan",
+			Gender: "Male",
+			SuperPowers: []string{
+				"Super Strength, Super Speed, Flying, and other cool abilities",
+			},
 		},
 	}
 }

@@ -8,11 +8,11 @@ import (
 
 // Hero holds value for /v1/heroes endpoint
 type Hero struct {
-	ID         bson.ObjectId `bson:"_id" json:"id"`
-	Name       string        `bson:"Name" json:"Name"`
-	SuperPower string        `bson:"superPower" json:"superPower"`
-	Gender     string        `bson:"gender" json:"gender"`
-	Metadata   `bson:",inline"`
+	ID          bson.ObjectId `bson:"_id" json:"id"`
+	Name        string        `bson:"Name" json:"Name"`
+	SuperPowers []string      `bson:"superpowers" json:"superpowers"`
+	Gender      string        `bson:"gender" json:"gender"`
+	Metadata    `bson:",inline"`
 }
 
 // CreateHero holds values for creating users.

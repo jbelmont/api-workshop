@@ -21,10 +21,10 @@ func Create(ctx context.Context, dbConn *database.DB, cH *CreateHero) (*Hero, er
 	ctxValues := ctx.Value(apiContext.KeyValues).(*apiContext.Values)
 	createdByID := ctxValues.ID
 	h := Hero{
-		ID:         bson.NewObjectId(),
-		Name:       cH.Name,
-		SuperPower: cH.SuperPower,
-		Gender:     cH.Gender,
+		ID:          bson.NewObjectId(),
+		Name:        cH.Name,
+		SuperPowers: cH.SuperPowers,
+		Gender:      cH.Gender,
 		Metadata: Metadata{
 			CreatedAt:   time.Now(),
 			CreatedByID: &createdByID,
