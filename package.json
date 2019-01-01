@@ -28,9 +28,16 @@
     "gitbook-cli": "^2.3.2"
   },
   "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
     "gitbook-plugin-advanced-emoji": "^0.2.2",
     "gitbook-plugin-copy-code-button": "0.0.2",
     "gitbook-plugin-highlight": "^2.0.3",
-    "gitbook-plugin-include-codeblock": "^3.2.1"
+    "gitbook-plugin-include-codeblock": "^3.2.1",
+    "graphql": "^14.0.2",
+    "graphql-server-express": "^1.4.0",
+    "graphql-subscriptions": "^1.0.0",
+    "graphql-tools": "^4.0.3",
+    "subscriptions-transport-ws": "^0.9.15"
   }
 }
