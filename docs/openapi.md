@@ -343,6 +343,171 @@ Let us add a schema type of object to the heroes endpoint and notice that now th
 
 ![schema type fix](../images/schema-type-error-fix.png)
 
+###### Using the Components Object in OpenAPI Specification
+
+Please read through the [Components Section in the OpenAPI Specification](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.2.md#components-object)
+
+We will add the *components* fields as a top level field in the swagger editor
+
+Let us enter the following yml enter the swagger editor:
+
+```yml
+components:
+  schemas:
+    Heroes:
+      type: object
+      required:
+        - name
+        - superpowers
+        - gender
+      properties:
+        name:
+          type: string
+        superpowers:
+          type: array
+          items:
+            type: string
+        gender:
+          type: string
+```
+
+We also need to update the responses section to use the new schema section:
+
+```yml
+responses:
+        201:
+          description: Created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Heroes'
+```
+
+Notice that now the swagger editor is showing the following for our `POST /heroes` endpoint:
+
+![post with components](../images/post-with-components-section.png)
+
+If you look at the responses section notice that there is a default example generated:
+
+![responses example section](../images/responses-default-example.png)
+
+###### Adding an example for our schema
+
+Let us add an example of a superhero for our endpoint with the following yml:
+
+```yml
+examples:
+    Superman:
+      summary: A powerful superhero
+      value: {
+        "name": "Superman",
+        "superpowers": [
+          "Super speed", "Super Strength", "Near Invulnerability", "Heat Vision"
+        ],
+        "gender": "Male"
+      }
+```
+
+Here is the complete yml thus far:
+
+```yml
+openapi: '3.0.2'
+
+info:
+  version: 0.0.0
+  title: title
+  description: description
+  termsOfService: terms
+  contact:
+    name: Jean-Marcel Belmont
+    url: http://www.marcelbelmont.com
+    email: mypersonalemail@gmail.com
+  license:
+    name: MIT
+    url: http://opensource.org/licenses/MIT
+
+paths:
+  /heroes:
+    get:
+      summary: This endpoint returns a list of heroes
+      description: This endpoint returns a whole list of heroes with an assortment of superpowers.
+      responses:
+        200:
+          description: OK
+    post:
+      summary: This endpoint will create a new hero
+      description: This endpoint accepts a json payload with hero attributes
+      responses:
+        201:
+          description: Created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Hero'
+              example:
+                $ref: '#/components/examples/Superman/value'
+
+
+components:
+  examples:
+    Superman:
+      summary: A powerful superhero
+      value: {
+        "name": "Superman",
+        "superpowers": [
+          "Super speed", "Super Strength", "Near Invulnerability", "Heat Vision"
+        ],
+        "gender": "Male"
+      }
+  schemas:
+    Hero:
+      type: object
+      required:
+        - name
+        - superpowers
+        - gender
+      properties:
+        name:
+          type: string
+        superpowers:
+          type: array
+          items:
+            type: string
+        gender:
+          type: string
+```
+
+Now look at the updated example value in the screenshot below:
+
+![superman example](../images/superman-responses-example.png)
+
+###### Adding request body information
+
+In the operations object we can use the requestBody field to specify our request body:
+
+Please read the [Operations Object Section for more details](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.2.md#operation-object)
+
+We will add the following requestBody yml:
+
+```yml
+requestBody:
+  content:
+    application/json:
+      schema:
+        $ref: '#/components/schemas/Hero'
+      example:  {
+        "name": "Superman",
+        "superPowers": [
+          "super speed", "super strength", "heat vision", "flight", "invulnerable"
+        ],
+        "gender": "male"
+      }
+```
+
+Now we have the following section in the swagger editor:
+
+![superman request body](../images/superman-request-body-example.png)
+
 #### Bread Crumb Navigation
 _________________________
 
