@@ -76,3 +76,20 @@ func (h *Hero) populateFilters(r *http.Request) (*hero.Filters, error) {
 	}
 	return &filter, nil
 }
+
+// Retrieve returns a hero from the heroes collection.
+func (h *Hero) Retrieve(ctx context.Context, w http.ResponseWriter, r *http.Request, params map[string]string) error {
+	dbConn, err := h.MasterDB.Copy()
+	if err != nil {
+		return errors.Wrapf(web.ErrDBNotConfigured, "")
+	}
+	defer dbConn.Close()
+
+	hero, err := hero.Retrieve(ctx, dbConn, params["id"])
+	if err != nil {
+		return errors.Wrap(err, "calling hero retrieve service")
+	}
+
+	web.Respond(ctx, w, hero, http.StatusOK)
+	return nil
+}

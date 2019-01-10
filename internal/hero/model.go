@@ -35,12 +35,9 @@ type ListResults struct {
 
 // Metadata fields for a hero
 type Metadata struct {
-	CreatedAt   time.Time  `bson:"createdAt,omitempty" json:"createdAt,omitempty"`
-	CreatedByID *string    `bson:"createdById,omitempty" json:"createdById,omitempty"`
-	UpdatedAt   time.Time  `bson:"updatedAt,omitempty" json:"updatedAt,omitempty"`
-	UpdatedByID *string    `bson:"updatedById,omitempty" json:"updatedById,omitempty"`
-	RemovedAt   *time.Time `bson:"removedAt,omitempty" json:"removedAt,omitempty"`
-	RemovedByID *string    `bson:"removedById,omitempty" json:"removedById,omitempty"`
+	Created      time.Time `bson:"created" json:"created"`
+	LastModified time.Time `bson:"lastModified" json:"lastModified"`
+	IsRemoved    bool      `bson:"isRemoved" json:"-"`
 }
 
 // Filters represent restrictions that can be applied when listing heroes.

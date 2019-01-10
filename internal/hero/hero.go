@@ -118,3 +118,32 @@ func extractQueryFromFilters(filters Filters) (bson.M, error) {
 
 	return query, nil
 }
+
+// Retrieve finds a hero by ID.
+// The id needs to be a valid bson ObjectIdHex.
+func Retrieve(ctx context.Context, dbConn *database.DB, heroID string) (*Hero, error) {
+	var h Hero
+
+	if !bson.IsObjectIdHex(heroID) {
+		return nil, errors.Wrapf(web.ErrInvalidID, "bson.IsObjectIdHex: %s", heroID)
+	}
+
+	fmt.Println("got here dawg")
+
+	q := bson.M{
+		"_id":       bson.ObjectIdHex(heroID),
+		"isRemoved": false,
+	}
+
+	fn := func(coll *mgo.Collection) error {
+		return coll.Find(q).One(&h)
+	}
+
+	if err := dbConn.Execute(ctx, heroCollection, fn); err != nil {
+		if err == mgo.ErrNotFound {
+			return nil, web.ErrNotFound
+		}
+		return nil, errors.Wrapf(err, "db.heroes.find(%s)", database.Query(q))
+	}
+	return &h, nil
+}
