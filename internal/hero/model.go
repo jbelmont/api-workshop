@@ -17,10 +17,10 @@ type Hero struct {
 
 // CreateHero holds values for creating users.
 type CreateHero struct {
-	Name        string   `json:"name"`
-	SuperPowers []string `json:"superpowers"`
-	Gender      string   `json:"gender"`
-	Metadata    `json:",inline"`
+	Name        string   `bson:"name" json:"name"`
+	SuperPowers []string `bson:"superpowers" json:"superpowers"`
+	Gender      string   `bson:"gender" json:"gender"`
+	Metadata    `bson:",inline"`
 }
 
 // ListResults holds a list of heroes and pagination information.
