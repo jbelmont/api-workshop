@@ -9,7 +9,6 @@ import (
 	mgo "gopkg.in/mgo.v2"
 	"gopkg.in/mgo.v2/bson"
 
-	apiContext "github.com/jbelmont/api-workshop/internal/platform/context"
 	database "github.com/jbelmont/api-workshop/internal/platform/db"
 	"github.com/jbelmont/api-workshop/internal/platform/web"
 )
@@ -18,17 +17,14 @@ const heroCollection = "heroes"
 
 // Create creates new hero in DB
 func Create(ctx context.Context, dbConn *database.DB, cH *CreateHero) (*Hero, error) {
-	ctxValues := ctx.Value(apiContext.KeyValues).(*apiContext.Values)
-	createdByID := ctxValues.ID
 	h := Hero{
 		ID:          bson.NewObjectId(),
 		Name:        cH.Name,
 		SuperPowers: cH.SuperPowers,
 		Gender:      cH.Gender,
 		Metadata: Metadata{
-			CreatedAt:   time.Now(),
-			CreatedByID: &createdByID,
-			UpdatedAt:   time.Now(),
+			Created:      time.Now(),
+			LastModified: time.Now(),
 		},
 	}
 
@@ -127,8 +123,6 @@ func Retrieve(ctx context.Context, dbConn *database.DB, heroID string) (*Hero, e
 	if !bson.IsObjectIdHex(heroID) {
 		return nil, errors.Wrapf(web.ErrInvalidID, "bson.IsObjectIdHex: %s", heroID)
 	}
-
-	fmt.Println("got here dawg")
 
 	q := bson.M{
 		"_id":       bson.ObjectIdHex(heroID),
