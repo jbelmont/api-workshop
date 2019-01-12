@@ -23,6 +23,9 @@ type CreateHero struct {
 	Metadata    `bson:",inline"`
 }
 
+// UpdateHero is what we accept from users to update a Hero record.
+type UpdateHero CreateHero
+
 // ListResults holds a list of heroes and pagination information.
 type ListResults struct {
 	Heroes        []Hero `json:"items"`

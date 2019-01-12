@@ -51,6 +51,19 @@ func (err InvalidError) Error() string {
 	return str
 }
 
+// AppError is an application error. Its message and error code should be
+// displayed to the client and served with a particular HTTP status code.
+type AppError struct {
+	Message string `json:"message"` // payload is in a format not supported by this method on the target resource
+	Code    string `json:"code"`    // Unsupported Media Type
+	Status  int    `json:"status"`  // 415
+}
+
+// Error implements the error interface
+func (e AppError) Error() string {
+	return e.Message
+}
+
 // JSONError is the response for errors that occur within the API.
 type JSONError struct {
 	Error  string       `json:"error"`

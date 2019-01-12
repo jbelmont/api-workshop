@@ -168,3 +168,17 @@ func Delete(ctx context.Context, dbConn *database.DB, id string) error {
 	}
 	return nil
 }
+
+// Update will update a hero in the heroes collection
+func Update(ctx context.Context, dbConn *database.DB, uHero UpdateHero, userID string) error {
+	uHero.Metadata.LastModified = time.Now()
+	id := bson.ObjectIdHex(userID)
+	fn := func(collection *mgo.Collection) error {
+		return collection.UpdateId(id, bson.M{"$set": uHero})
+	}
+
+	if err := dbConn.Execute(ctx, heroCollection, fn); err != nil {
+		return errors.Wrap(err, "updating hero")
+	}
+	return nil
+}

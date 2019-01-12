@@ -2,9 +2,13 @@ package handlers
 
 import (
 	"context"
-	"net/http"
+	"fmt"
+  "net/http"
+  "json"
 
-	"github.com/pkg/errors"
+  "github.com/pkg/errors"
+
+  jsonpatch "github.com/evanphx/json-patch"
 
 	"github.com/jbelmont/api-workshop/internal/hero"
 	database "github.com/jbelmont/api-workshop/internal/platform/db"
@@ -107,5 +111,55 @@ func (h *Hero) Delete(ctx context.Context, w http.ResponseWriter, r *http.Reques
 	}
 
 	web.Respond(ctx, w, nil, http.StatusNoContent)
+	return nil
+}
+
+// Update accepts PATCH requests in application/merge-patch+json form and modifies a hero collection information
+func (h *Hero) Update(ctx context.Context, w http.ResponseWriter, r *http.Request, params map[string]string) error {
+	// Force the endpoint to provide application/merge-patch+json Content-Type
+	if typ, want := r.Header.Get("Content-Type"), "application/merge-patch+json"; typ != want {
+		return web.AppError{
+			Message: fmt.Sprintf("Unsupported content type: %q. Must be %q.", typ, want),
+			Status:  http.StatusUnsupportedMediaType,
+			Code:    "CONTENT_TYPE",
+		}
+	}
+	dbConn, err := h.MasterDB.Copy()
+	if err != nil {
+		return errors.Wrapf(web.ErrDBNotConfigured, "")
+	}
+	defer dbConn.Close()
+
+	id := params["id"]
+
+	retrievedHero, err := hero.Retrieve(ctx, dbConn, id)
+	if err != nil {
+		return errors.Wrap(err, "calling hero retrieve service")
+  }
+
+  var uHero hero.UpdateHero
+	if err = web.Unmarshal(r.Body, &uHero); err != nil {
+		return errors.Wrap(err, "unmarshalling request body into updateHero")
+	}
+
+  var upd hero.UpdateHero
+
+  // now merge the mergePatch into the originalJSON
+  originalHero := json.Marshal(retrievedHero)
+	resultJSON, err := jsonpatch.MergePatch(originalHero, uHero)
+	if err != nil {
+		return errors.Wrap(err, "something happened while merging structs together")
+  }
+
+  // Unmarshal the result JSON into the result struct passed in
+  result := interface{}
+	err = json.Unmarshal(resultJSON, result)
+
+	if err = hero.Update(ctx, dbConn, upd, id); err != nil {
+		return errors.Wrap(err, "calling user update service")
+	}
+
+	web.Respond(ctx, w, retrievedHero, http.StatusOK)
+
 	return nil
 }
