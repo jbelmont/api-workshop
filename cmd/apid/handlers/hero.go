@@ -2,13 +2,14 @@ package handlers
 
 import (
 	"context"
+	"encoding/json"
 	"fmt"
-  "net/http"
-  "json"
+	"io/ioutil"
+	"net/http"
 
-  "github.com/pkg/errors"
+	"github.com/pkg/errors"
 
-  jsonpatch "github.com/evanphx/json-patch"
+	jsonpatch "github.com/evanphx/json-patch"
 
 	"github.com/jbelmont/api-workshop/internal/hero"
 	database "github.com/jbelmont/api-workshop/internal/platform/db"
@@ -135,25 +136,26 @@ func (h *Hero) Update(ctx context.Context, w http.ResponseWriter, r *http.Reques
 	retrievedHero, err := hero.Retrieve(ctx, dbConn, id)
 	if err != nil {
 		return errors.Wrap(err, "calling hero retrieve service")
-  }
-
-  var uHero hero.UpdateHero
-	if err = web.Unmarshal(r.Body, &uHero); err != nil {
-		return errors.Wrap(err, "unmarshalling request body into updateHero")
 	}
 
-  var upd hero.UpdateHero
+	// read request body to get updated object's JSON
+	uHero, err := ioutil.ReadAll(r.Body)
 
-  // now merge the mergePatch into the originalJSON
-  originalHero := json.Marshal(retrievedHero)
+	var upd hero.UpdateHero
+
+	// now merge the mergePatch into the originalJSON
+	originalHero, err := json.Marshal(retrievedHero)
+	if err != nil {
+		return errors.New("Error trying to marshal a retrieved hero")
+	}
+
 	resultJSON, err := jsonpatch.MergePatch(originalHero, uHero)
 	if err != nil {
 		return errors.Wrap(err, "something happened while merging structs together")
-  }
+	}
 
-  // Unmarshal the result JSON into the result struct passed in
-  result := interface{}
-	err = json.Unmarshal(resultJSON, result)
+	// Unmarshal the result JSON into the upd struct passed in
+	err = json.Unmarshal(resultJSON, upd)
 
 	if err = hero.Update(ctx, dbConn, upd, id); err != nil {
 		return errors.Wrap(err, "calling user update service")
