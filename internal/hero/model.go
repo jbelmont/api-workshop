@@ -9,7 +9,7 @@ import (
 // Hero holds value for /v1/heroes endpoint
 type Hero struct {
 	ID          bson.ObjectId `bson:"_id" json:"id"`
-	Name        string        `bson:"Name" json:"Name"`
+	Name        string        `bson:"name" json:"name"`
 	SuperPowers []string      `bson:"superpowers" json:"superpowers"`
 	Gender      string        `bson:"gender" json:"gender"`
 	Metadata    `bson:",inline"`
