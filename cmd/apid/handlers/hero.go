@@ -93,3 +93,19 @@ func (h *Hero) Retrieve(ctx context.Context, w http.ResponseWriter, r *http.Requ
 	web.Respond(ctx, w, hero, http.StatusOK)
 	return nil
 }
+
+// Delete deletes a hero from the heroes collection.
+func (h *Hero) Delete(ctx context.Context, w http.ResponseWriter, r *http.Request, params map[string]string) error {
+	dbConn, err := h.MasterDB.Copy()
+	if err != nil {
+		return errors.Wrapf(web.ErrDBNotConfigured, "")
+	}
+	defer dbConn.Close()
+
+	if err := hero.Delete(ctx, dbConn, params["id"]); err != nil {
+		return errors.Wrap(err, "calling hero delete service")
+	}
+
+	web.Respond(ctx, w, nil, http.StatusNoContent)
+	return nil
+}

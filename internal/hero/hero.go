@@ -141,3 +141,30 @@ func Retrieve(ctx context.Context, dbConn *database.DB, heroID string) (*Hero, e
 	}
 	return &h, nil
 }
+
+// Delete removes a hero.
+// The id should be a valid bson ObjectIdHex.
+func Delete(ctx context.Context, dbConn *database.DB, id string) error {
+	if !bson.IsObjectIdHex(id) {
+		return errors.Errorf("invalid ID provided: %q", id)
+	}
+
+	// construct soft delete query
+	softDeleteQuery := bson.M{
+		"$set": bson.M{
+			"isRemoved":   true,
+			"lastUpdated": time.Now(),
+		},
+	}
+
+	fn := func(collection *mgo.Collection) error {
+		return collection.UpdateId(bson.ObjectIdHex(id), softDeleteQuery)
+	}
+	if err := dbConn.Execute(ctx, heroCollection, fn); err != nil {
+		if err == mgo.ErrNotFound {
+			return web.ErrNotFound
+		}
+		return errors.Wrap(err, fmt.Sprintf("db.%s.update(%s)", heroCollection, database.Query(softDeleteQuery)))
+	}
+	return nil
+}

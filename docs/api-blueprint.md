@@ -8,14 +8,8 @@ API Workshop - API Blueprint
 * [Resource group section](#resource-group-section)
 * [Resource section](#resource-section)
 * [Resource Actions](#resource-actions)
-* [Schema section](#schema-section)
-* [Action section](#action-section)
-* [Request section](#request-section)
-* [Response section](#response-section)
-* [URI parameters section](#uri-parameters-section)
-* [Attributes section](#attributes-section)
-* [Headers section](#headers-section)
-* [Body section](#body-section)
+* [URI Template](#uri-template)
+* [URI Parameters](#uri-parameters)
 * [Bread Crumb Navigation](#bread-crumb-navigation)
 
 #### API Blueprint Introduction
@@ -195,37 +189,88 @@ The next resource is a specific hero id, which represents a single hero.
 ## A specific hero [/api/v1/heroes/{hero_id}]
 ```
 
-#### Schema section
+This resource returns a 200 status code, along with HTTP headers and a response body:
 
-add content here
+```apib
+Response 200 (application/json)
 
-#### Action section
+  + Headers
 
-add content here
+          Content-Type: application/json
+          X-Workshop-Trace-Id: ce21f483-bbdc-474f-a960-f1ac10e9b792
+          Date: Sat, 12 Jan 2019 14:36:32 GMT
+          Content-Length: 271
 
-#### Request section
+    + Body
 
-add content here
+          {
+            "id": "5c39fb67ee458c00c072eade",
+            "Name": "Aquaman",
+            "superpowers": [
+                "super speed",
+                "super strength",
+                "telepathic abilities with animals"
+            ],
+            "gender": "male",
+            "created": "2019-01-12T14:36:23.606Z",
+            "lastModified": "2019-01-12T14:36:23.606Z"
+          }
+```
 
-#### Response section
+#### URI Template
 
-add content here
+The URI for the Heroes resource uses a variable component, expressed by URI Template.
 
-#### URI parameters section
+In this case, there is an ID variable called hero_id, represented in the URI template as {hero_id}.
 
-add content here
+#### URI Parameters
 
-#### Attributes section
+URI parameters should describe the URI using a list of Parameters.
 
-add content here
+For "Heroes" it would be as follows:
 
-#### Headers section
+```apib
++ Parameters
+    + hero_id (number) - ID of the Hero in the form of an MongoDB ObjectID
+```
 
-add content here
+The hero_id variable of the URI template is a parameter for every action on this resource.
 
-#### Body section
+The hero_id variable is defined here using an arbitrary type number, followed by a description for the parameter.
 
-add content here
+###### Response with a Body
+
+Here is rest call to the *Retrieve a Hero with an ID` endpoint that has json payload:
+
+```apib
+Response 200 (application/json)
+
+  + Headers
+
+          Content-Type: application/json
+          X-Workshop-Trace-Id: ce21f483-bbdc-474f-a960-f1ac10e9b792
+          Date: Sat, 12 Jan 2019 14:36:32 GMT
+          Content-Length: 271
+
+    + Body
+
+          {
+            "id": "5c39fb67ee458c00c072eade",
+            "Name": "Aquaman",
+            "superpowers": [
+                "super speed",
+                "super strength",
+                "telepathic abilities with animals"
+            ],
+            "gender": "male",
+            "created": "2019-01-12T14:36:23.606Z",
+            "lastModified": "2019-01-12T14:36:23.606Z"
+          }
+```
+
+###### Response without a body
+
+
 
 #### Bread Crumb Navigation
 _________________________
