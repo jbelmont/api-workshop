@@ -2,14 +2,9 @@ package handlers
 
 import (
 	"context"
-	"encoding/json"
-	"fmt"
-	"io/ioutil"
 	"net/http"
 
 	"github.com/pkg/errors"
-
-	jsonpatch "github.com/evanphx/json-patch"
 
 	"github.com/jbelmont/api-workshop/internal/hero"
 	database "github.com/jbelmont/api-workshop/internal/platform/db"
@@ -115,16 +110,8 @@ func (h *Hero) Delete(ctx context.Context, w http.ResponseWriter, r *http.Reques
 	return nil
 }
 
-// Update accepts PATCH requests in application/merge-patch+json form and modifies a hero collection information
+// Update accepts updates a hero in the heroes collection.
 func (h *Hero) Update(ctx context.Context, w http.ResponseWriter, r *http.Request, params map[string]string) error {
-	// Force the endpoint to provide application/merge-patch+json Content-Type
-	if typ, want := r.Header.Get("Content-Type"), "application/merge-patch+json"; typ != want {
-		return web.AppError{
-			Message: fmt.Sprintf("Unsupported content type: %q. Must be %q.", typ, want),
-			Status:  http.StatusUnsupportedMediaType,
-			Code:    "CONTENT_TYPE",
-		}
-	}
 	dbConn, err := h.MasterDB.Copy()
 	if err != nil {
 		return errors.Wrapf(web.ErrDBNotConfigured, "")
@@ -138,27 +125,13 @@ func (h *Hero) Update(ctx context.Context, w http.ResponseWriter, r *http.Reques
 		return errors.Wrap(err, "calling hero retrieve service")
 	}
 
-	// read request body to get updated object's JSON
-	uHero, err := ioutil.ReadAll(r.Body)
-
-	var upd hero.UpdateHero
-
-	// now merge the mergePatch into the originalJSON
-	originalHero, err := json.Marshal(retrievedHero)
-	if err != nil {
-		return errors.New("Error trying to marshal a retrieved hero")
+	var uHero hero.UpdateHero
+	if err = web.Unmarshal(r.Body, &uHero); err != nil {
+		return errors.Wrap(err, "unmarshalling to update hero")
 	}
 
-	resultJSON, err := jsonpatch.MergePatch(originalHero, uHero)
-	if err != nil {
-		return errors.Wrap(err, "something happened while merging structs together")
-	}
-
-	// Unmarshal the result JSON into the upd struct passed in
-	err = json.Unmarshal(resultJSON, upd)
-
-	if err = hero.Update(ctx, dbConn, upd, id); err != nil {
-		return errors.Wrap(err, "calling user update service")
+	if err = hero.Update(ctx, dbConn, uHero, id); err != nil {
+		return errors.Wrap(err, "calling hero update service")
 	}
 
 	web.Respond(ctx, w, retrievedHero, http.StatusOK)
