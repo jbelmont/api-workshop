@@ -337,7 +337,7 @@ The JSON Schema instance can have the following 6 instances:
   * An arbitrary-precision, base-10 decimal number value, from the JSON "number" production
     string  A string of Unicode code points, from the JSON "string" production
 
-#### Adding a schema type POST /heroes endpoint
+###### Adding a schema type POST /heroes endpoint
 
 Let us add a schema type of object to the heroes endpoint and notice that now the swagger editor is not complaining anymore:
 
@@ -507,6 +507,109 @@ requestBody:
 Now we have the following section in the swagger editor:
 
 ![superman request body](../images/superman-request-body-example.png)
+
+###### Patterned Fields
+
+[Patterned Fields](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.2.md#patterned-fields)
+
+`/heroes/{id}`
+
+###### Parameter Locations
+
+[Parameter Locations](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.2.md#parameter-locations)
+
+path - Used together with Path Templating, where the parameter value is actually part of the operation's URL.
+
+This does not include the host or base path of the API.
+
+For example, in /heroes/{id}, the path parameter is id.
+
+###### Parameter Objects
+
+[Parameter Objects](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.2.md#parameter-object-examples)
+
+```yml
+parameters:
+    - name: id
+      in: path
+      required: true
+      description: the hero identifier, as heroId
+      schema:
+        type: string
+```
+
+###### Adding Get By ID hero endpoint
+
+Let us add a get hero by id endpoint so we can simply retrieve one hero:
+
+```yml
+/heroes/{id}:
+    parameters:
+    - name: id
+      in: path
+      required: true
+      description: the hero identifier, as heroId
+      schema:
+        type: string
+    get:
+      summary: This endpoint returns a specific hero
+      description: This endpoint fetches a hero by ID
+      responses:
+        200:
+          description: OK
+```
+
+Notice here that we added new path of `/heroes/{id}` and defined a new parameters block under it.
+
+###### Adding an updated hero by ID endpoint
+
+Now that we have defined the new resource path of `/heroes/{id}` let us make an update endpoint for a particular hero:
+
+```yml
+/heroes/{id}:
+    ...
+    put:
+      summary: This endpoint will update a hero' information
+      description: This endpoint accepts a json payload with hero attributes
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Hero'
+            example: {
+              "name": "Strange Visitor Superman",
+              "superpowers": [
+                "super speed", "super strength", "heat vision", "Flight", "Telepathy", "Duplication", "Reality Warping", "Immortality", "Telescopic Vision", "Microscopic Vision","X-Ray Vision", "Heat Vision", "Super Hearing", "Super Breath", "Freeze Breath", "Invulnerability", "unknown other capabilities"
+              ],
+              "gender": "male"
+            }
+      responses:
+        200:
+          description: Ok
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Hero'
+              example:
+                $ref: '#/components/examples/Superman/value'
+```
+
+*Notice here that we are adding more powers to superman and his name*
+
+###### Delete a hero by ID endpoint
+
+Let us finish our CRUD routes by adding a delete hero endpoint:
+
+```yml
+/heroes/{id}:
+  ...
+  delete:
+      summary: This endpoint deletes a specific hero
+      description: This endpoint will delete a specific hero from the heroes collection
+      responses:
+        204:
+          description: No Content
+```
 
 #### Bread Crumb Navigation
 _________________________
