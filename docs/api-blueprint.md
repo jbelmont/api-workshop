@@ -284,7 +284,7 @@ Here is the simple CRUD API example:
 
 ```apib
 FORMAT: 1A
-HOST: http://polls.apiblueprint.org/
+HOST: http://api-workshop.apiblueprint.org/
 
 # marcelbelmont
 

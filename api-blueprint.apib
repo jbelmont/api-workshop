@@ -1,0 +1,157 @@
+FORMAT: 1A
+HOST: http://api-workshop.apiblueprint.org/
+
+# marcelbelmont
+
+Heroes is a simple CRUD API allowing consumers to create, list, retrieve, update and delete superheroes.
+
+## Heroes Collection [/heroes]
+
+### List All Heroes [GET]
+
++ Response 200 (application/json)
+
+        {
+            "items": [
+                {
+                    "id": "5c3a241e092bd900c4444c88",
+                    "name": "Superman Prime",
+                    "superpowers": [
+                        "super speed",
+                        "super strength",
+                        "heat vision",
+                        "Strongest Version of Superman"
+                    ],
+                    "gender": "male",
+                    "created": "0001-01-01T00:00:00Z",
+                    "lastModified": "2019-01-12T17:30:41.818Z"
+                },
+                {
+                    "id": "5c3bd46c092bd9004c27cdee",
+                    "name": "Aquaman",
+                    "superpowers": [
+                        "telepathic abilities",
+                        "super strength",
+                        "Intense heat resistance",
+                        "Superhuman Hearing and Sonar"
+                    ],
+                    "gender": "male",
+                    "created": "2019-01-14T00:14:36.158Z",
+                    "lastModified": "2019-01-14T00:14:36.158Z"
+                }
+            ],
+            "count": 2,
+            "total": 2,
+            "index": 0
+        }
+
+### Create a New Hero [POST]
+
+You may create your own hero using this action. It takes a JSON
+object containing a hero's name, superpowers, and gender.
+
++ Request (application/json)
+
+        {
+            "name": "Aquaman",
+            "superpowers": [
+                "telepathic abilities",
+                "super strength",
+                "Intense heat resistance",
+                "Superhuman Hearing and Sonar"
+            ],
+            "gender": "male"
+        }
+
++ Response 201 (application/json)
+
+    + Headers
+
+            X-Workshop-Trace-Id: 6831eb5c-de6c-4286-8af7-cc9f08100386
+            Date: Mon, 14 Jan 2019 00:14:36 GMT
+            Content-Length: 313
+
+    + Body
+
+            {
+                "id": "5c3bd46c092bd9004c27cdee",
+                "name": "Aquaman",
+                "superpowers": [
+                    "telepathic abilities",
+                    "super strength",
+                    "Intense heat resistance",
+                    "Superhuman Hearing and Sonar"
+                ],
+                "gender": "male",
+                "created": "2019-01-14T00:14:36.158902Z",
+                "lastModified": "2019-01-14T00:14:36.1589207Z"
+            }
+
+## Heroes By ID [/heroes/{id}]
+
+### Retrieve a hero by id [GET]
+
+This endpoint retrieves a hero by ID and uses a path parameter of {id}
+
++ Response 200 (application/json)
+
+        {
+            "id": "5c3a241e092bd900c4444c88",
+            "name": "Superman Prime",
+            "superpowers": [
+                "super speed",
+                "super strength",
+                "heat vision",
+                "Strongest Version of Superman"
+            ],
+            "gender": "male",
+            "created": "0001-01-01T00:00:00Z",
+            "lastModified": "2019-01-12T17:30:41.818Z"
+        }
+
+### Update a hero by id [PUT]
+
+This endpoint updates a hero's name, powers and gender.
+
++ Request (application/json)
+
+        {
+            "name": "Superman Prime",
+            "superpowers": [
+                "super speed", "super strength", "heat vision", "Strongest Version of Superman"
+            ],
+            "gender": "male"
+        }
+
++ Response 200
+
+    + Headers
+
+            X-Workshop-Trace-Id: 8b75a7c0-96d1-4c62-bb96-35705cda80a2
+            Date: Sat, 12 Jan 2019 17:30:41 GMT
+            Content-Length: 250
+
+    + Body
+
+            {
+                "id": "5c3a241e092bd900c4444c88",
+                "name": "Superman",
+                "superpowers": [
+                    "super speed",
+                    "super strength",
+                    "heat vision"
+                ],
+                "gender": "male",
+                "created": "2019-01-12T17:30:06.042Z",
+                "lastModified": "2019-01-12T17:30:06.042Z"
+            }
+
+
+### Delete a hero by id [DELETE]
+
++ Response 204
+
+    + Headers
+
+            X-Workshop-Trace-Id: c4711ca8-5d82-4d3b-9857-6aa152a1b021
+            Date: Mon, 14 Jan 2019 00:34:15 GMT

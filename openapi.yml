@@ -1,0 +1,122 @@
+openapi: '3.0.2'
+
+info:
+  version: 0.0.0
+  title: title
+  description: description
+  termsOfService: terms
+  contact:
+    name: Jean-Marcel Belmont
+    url: http://www.marcelbelmont.com
+    email: mypersonalemail@gmail.com
+  license:
+    name: MIT
+    url: http://opensource.org/licenses/MIT
+
+paths:
+  /heroes:
+    get:
+      summary: This endpoint returns a list of heroes
+      description: This endpoint returns a whole list of heroes with an assortment of superpowers.
+      responses:
+        200:
+          description: OK
+    post:
+      summary: This endpoint will create a new hero
+      description: This endpoint accepts a json payload with hero attributes
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Hero'
+            example:  {
+              "name": "Superman",
+              "superpowers": [
+                "super speed", "super strength", "heat vision", "flight", "invulnerable"
+              ],
+              "gender": "male"
+            }
+      responses:
+        201:
+          description: Created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Hero'
+              example:
+                $ref: '#/components/examples/Superman/value'
+  /heroes/{id}:
+    parameters:
+    - name: id
+      in: path
+      required: true
+      description: the hero identifier, as heroId
+      schema:
+        type: string
+    get:
+      summary: This endpoint returns a specific hero
+      description: This endpoint fetches a hero by ID
+      responses:
+        200:
+          description: OK
+    put:
+      summary: This endpoint will update a hero' information
+      description: This endpoint accepts a json payload with hero attributes
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Hero'
+            example: {
+              "name": "Strange Visitor Superman",
+              "superpowers": [
+                "super speed", "super strength", "heat vision", "Flight", "Telepathy", "Duplication", "Reality Warping", "Immortality", "Telescopic Vision", "Microscopic Vision","X-Ray Vision", "Heat Vision", "Super Hearing", "Super Breath", "Freeze Breath", "Invulnerability", "unknown other capabilities"
+              ],
+              "gender": "male"
+            }
+      responses:
+        200:
+          description: Ok
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Hero'
+              example:
+                $ref: '#/components/examples/Superman/value'
+    delete:
+      summary: This endpoint deletes a specific hero
+      description: This endpoint will delete a specific hero from the heroes collection
+      responses:
+        204:
+          description: No Content
+
+
+components:
+  examples:
+    Superman:
+      summary: A powerful superhero
+      value: {
+        "id": "5c30eed2cbf27800b60a2a78",
+        "Name": "Superman",
+        "superPower": "",
+        "gender": "male",
+        "createdAt": "2019-01-05T17:52:18.0608929Z",
+        "createdById": "",
+        "updatedAt": "2019-01-05T17:52:18.0609109Z"
+      }
+  schemas:
+    Hero:
+      type: object
+      required:
+        - name
+        - superpowers
+        - gender
+      properties:
+        name:
+          type: string
+        superpowers:
+          type: array
+          items:
+            type: string
+        gender:
+          type: string
