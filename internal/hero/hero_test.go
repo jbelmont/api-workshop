@@ -1,7 +1,6 @@
 package hero_test
 
 import (
-	"context"
 	"encoding/json"
 	"log"
 	"os"
@@ -9,14 +8,11 @@ import (
 	"time"
 
 	"github.com/jbelmont/api-workshop/internal/hero"
-	apiContext "github.com/jbelmont/api-workshop/internal/platform/context"
 	database "github.com/jbelmont/api-workshop/internal/platform/db"
 	"github.com/jbelmont/api-workshop/internal/platform/docker"
 	mgo "gopkg.in/mgo.v2"
-	"gopkg.in/mgo.v2/bson"
 )
 
-var ctx context.Context
 var masterDB *database.DB
 
 const (
@@ -47,7 +43,7 @@ func TestCreateInsertHero(t *testing.T) {
 	cuBytes, _ := json.Marshal(heroInfo.hero)
 	var exH hero.Hero
 	json.Unmarshal(cuBytes, &exH)
-	h, err := hero.Create(ctx, masterDB, &heroInfo.hero)
+	h, err := hero.Create(masterDB, &heroInfo.hero)
 	if err != nil {
 		t.Fatalf("Should be able to create a hero : %s.", err)
 	}
@@ -55,13 +51,6 @@ func TestCreateInsertHero(t *testing.T) {
 		t.Errorf("Should generate valid Hero ID, got: %s", h.ID)
 	}
 	assertEqualUsers(&exH, h, t)
-
-	// Test the user context value
-	ctxValues := ctx.Value(apiContext.KeyValues).(*apiContext.Values)
-	HeroID := bson.ObjectIdHex(ctxValues.ID).Hex()
-	if *h.CreatedByID != HeroID {
-		t.Errorf("Should create a user by userID: %s, got: %s", HeroID, *h.CreatedByID)
-	}
 }
 
 func assertEqualUsers(actual *hero.Hero, expected *hero.Hero, t *testing.T) {
@@ -75,8 +64,6 @@ func TestMain(m *testing.M) {
 }
 
 func testMain(m *testing.M) int {
-	ctx = context.Background()
-
 	c, err := docker.StartDB()
 	if err != nil {
 		log.Fatalln(err)
@@ -99,13 +86,6 @@ func testMain(m *testing.M) int {
 	}
 	defer masterDB.Close()
 
-	// Initialize context
-	log.Println("main : Started : Initialize context")
-	v := apiContext.Values{
-		ID: bson.NewObjectId().Hex(),
-	}
-	ctx = context.WithValue(context.Background(), apiContext.KeyValues, &v)
-
 	// Creating DB state.
 	log.Println("main : Started : Set DB state for user")
 	// Insert test user
@@ -113,7 +93,7 @@ func testMain(m *testing.M) int {
 	f := func(collection *mgo.Collection) error {
 		return collection.Insert(heroInfo.hero)
 	}
-	if err := masterDB.Execute(ctx, heroCollection, f); err != nil {
+	if err := masterDB.Execute(heroCollection, f); err != nil {
 		log.Fatalf("startup : Set DB state : %v", err)
 	}
 	return m.Run()

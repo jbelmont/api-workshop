@@ -1,12 +1,11 @@
 package mongo
 
 import (
-	"context"
 	"encoding/json"
 	"time"
 
 	"github.com/pkg/errors"
-	"gopkg.in/mgo.v2"
+	mgo "gopkg.in/mgo.v2"
 )
 
 const apiDatabase = "api"
@@ -59,7 +58,7 @@ func (db *DB) Copy() (*DB, error) {
 }
 
 // Execute is used to execute MongoDB commands.
-func (db *DB) Execute(ctx context.Context, collection string, fn func(*mgo.Collection) error) error {
+func (db *DB) Execute(collection string, fn func(*mgo.Collection) error) error {
 	if db == nil || db.session == nil {
 		return errors.New("DB error: db == nil || db.session == nil")
 	}
@@ -68,7 +67,7 @@ func (db *DB) Execute(ctx context.Context, collection string, fn func(*mgo.Colle
 }
 
 // ExecuteTimeout is used to execute MongoDB commands with a timeout.
-func (db *DB) ExecuteTimeout(ctx context.Context, collection string, fn func(*mgo.Collection) error, timeout time.Duration) error {
+func (db *DB) ExecuteTimeout(collection string, fn func(*mgo.Collection) error, timeout time.Duration) error {
 	if db == nil || db.session == nil {
 		return errors.New("DB error: db == nil || db.session == nil")
 	}

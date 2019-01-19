@@ -1,7 +1,6 @@
 package hero
 
 import (
-	"context"
 	"fmt"
 	"time"
 
@@ -16,7 +15,7 @@ import (
 const heroCollection = "heroes"
 
 // Create creates new hero in DB
-func Create(ctx context.Context, dbConn *database.DB, cH *CreateHero) (*Hero, error) {
+func Create(dbConn *database.DB, cH *CreateHero) (*Hero, error) {
 	h := Hero{
 		ID:          bson.NewObjectId(),
 		Name:        cH.Name,
@@ -32,7 +31,7 @@ func Create(ctx context.Context, dbConn *database.DB, cH *CreateHero) (*Hero, er
 		return collection.Insert(h)
 	}
 
-	if err := dbConn.Execute(ctx, heroCollection, f); err != nil {
+	if err := dbConn.Execute(heroCollection, f); err != nil {
 		return nil, errors.Wrap(err, fmt.Sprintf("db.%s.insert(%s)", heroCollection, database.Query(h)))
 	}
 
@@ -40,7 +39,7 @@ func Create(ctx context.Context, dbConn *database.DB, cH *CreateHero) (*Hero, er
 }
 
 // List returns a list of heroes from the database and applies query string parameters
-func List(ctx context.Context, dbConn *database.DB, filters Filters, paging web.Paging) (*ListResults, error) {
+func List(dbConn *database.DB, filters Filters, paging web.Paging) (*ListResults, error) {
 	q, err := extractQueryFromFilters(filters)
 	if err != nil {
 		return nil, errors.Wrap(err, err.Error())
@@ -53,7 +52,7 @@ func List(ctx context.Context, dbConn *database.DB, filters Filters, paging web.
 		return err
 	}
 
-	if err := dbConn.Execute(ctx, heroCollection, fn); err != nil {
+	if err := dbConn.Execute(heroCollection, fn); err != nil {
 		return nil, errors.Wrap(err, "db.heroes.Count()")
 	}
 
@@ -72,7 +71,7 @@ func List(ctx context.Context, dbConn *database.DB, filters Filters, paging web.
 
 			return q.Skip(paging.Size * paging.Index).Limit(paging.Size).All(&heroes)
 		}
-		if err := dbConn.Execute(ctx, heroCollection, f); err != nil {
+		if err := dbConn.Execute(heroCollection, f); err != nil {
 			return nil, errors.Wrap(err, "db.heroes.Find()")
 		}
 	}
@@ -117,11 +116,11 @@ func extractQueryFromFilters(filters Filters) (bson.M, error) {
 
 // Retrieve finds a hero by ID.
 // The id needs to be a valid bson ObjectIdHex.
-func Retrieve(ctx context.Context, dbConn *database.DB, heroID string) (*Hero, error) {
+func Retrieve(dbConn *database.DB, heroID string) (*Hero, error) {
 	var h Hero
 
 	if !bson.IsObjectIdHex(heroID) {
-		return nil, errors.Wrapf(web.ErrInvalidID, "bson.IsObjectIdHex: %s", heroID)
+		return nil, errors.Wrapf(errors.New("ID is not in it's proper form"), "bson.IsObjectIdHex: %s", heroID)
 	}
 
 	q := bson.M{
@@ -133,9 +132,9 @@ func Retrieve(ctx context.Context, dbConn *database.DB, heroID string) (*Hero, e
 		return coll.Find(q).One(&h)
 	}
 
-	if err := dbConn.Execute(ctx, heroCollection, fn); err != nil {
+	if err := dbConn.Execute(heroCollection, fn); err != nil {
 		if err == mgo.ErrNotFound {
-			return nil, web.ErrNotFound
+			return nil, errors.New("Entity not found")
 		}
 		return nil, errors.Wrapf(err, "db.heroes.find(%s)", database.Query(q))
 	}
@@ -144,7 +143,7 @@ func Retrieve(ctx context.Context, dbConn *database.DB, heroID string) (*Hero, e
 
 // Delete removes a hero.
 // The id should be a valid bson ObjectIdHex.
-func Delete(ctx context.Context, dbConn *database.DB, id string) error {
+func Delete(dbConn *database.DB, id string) error {
 	if !bson.IsObjectIdHex(id) {
 		return errors.Errorf("invalid ID provided: %q", id)
 	}
@@ -160,9 +159,9 @@ func Delete(ctx context.Context, dbConn *database.DB, id string) error {
 	fn := func(collection *mgo.Collection) error {
 		return collection.UpdateId(bson.ObjectIdHex(id), softDeleteQuery)
 	}
-	if err := dbConn.Execute(ctx, heroCollection, fn); err != nil {
+	if err := dbConn.Execute(heroCollection, fn); err != nil {
 		if err == mgo.ErrNotFound {
-			return web.ErrNotFound
+			return errors.New("Entity not found")
 		}
 		return errors.Wrap(err, fmt.Sprintf("db.%s.update(%s)", heroCollection, database.Query(softDeleteQuery)))
 	}
@@ -170,14 +169,14 @@ func Delete(ctx context.Context, dbConn *database.DB, id string) error {
 }
 
 // Update will update a hero in the heroes collection
-func Update(ctx context.Context, dbConn *database.DB, uHero UpdateHero, userID string) error {
+func Update(dbConn *database.DB, uHero UpdateHero, userID string) error {
 	uHero.Metadata.LastModified = time.Now()
 	id := bson.ObjectIdHex(userID)
 	fn := func(collection *mgo.Collection) error {
 		return collection.UpdateId(id, bson.M{"$set": uHero})
 	}
 
-	if err := dbConn.Execute(ctx, heroCollection, fn); err != nil {
+	if err := dbConn.Execute(heroCollection, fn); err != nil {
 		return errors.Wrap(err, "updating hero")
 	}
 	return nil

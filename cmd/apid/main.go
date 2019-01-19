@@ -7,7 +7,6 @@ import (
 	"os"
 	"os/signal"
 	"sync"
-	"time"
 
 	"github.com/jbelmont/api-workshop/cmd/apid/config"
 	"github.com/jbelmont/api-workshop/cmd/apid/handlers"
@@ -51,7 +50,6 @@ func main() {
 	<-osSignals
 
 	// Create a context to attempt a graceful 5 second shutdown.
-	const timeout = 5 * time.Second
 	ctx, cancel := context.WithTimeout(context.Background(), config.ShutdownTimeout)
 	defer cancel()
 
