@@ -5,6 +5,7 @@
 
 A workshop  on API Development, API Security, API Testing and API Description Languages
 
+* [API Workshop Gitbook](#api-workshop-gitbook)
 * [Workshop Details](#workshop-details)
 * [API Summary and Description](docs/api-summary.md)
 * [Restful API Introduction](docs/restful-intro.md)
@@ -35,6 +36,10 @@ A workshop  on API Development, API Security, API Testing and API Description La
   * [RAML](docs/raml.md)
 * [GraphQL](docs/graphql.md)
 
+
+# API Workshop Gitbook
+
+Here is the gitbook for the [API Workshop](https://www.marcelbelmont.com/api-workshop/)
 
 ## Workshop Details
 
