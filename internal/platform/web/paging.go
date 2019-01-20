@@ -5,6 +5,7 @@ import (
 	"strconv"
 )
 
+// Paging holds information about paging such as as the pageIndex etc.
 type Paging struct {
 	Index  int
 	Size   int

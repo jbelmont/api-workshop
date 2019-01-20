@@ -65,7 +65,12 @@ func (h *Hero) Create(w http.ResponseWriter, r *http.Request, params map[string]
 
 	w.Header().Set("Content-Type", "application/json")
 	w.WriteHeader(http.StatusCreated)
-	w.Write(response)
+	_, err = w.Write(response)
+	if err != nil {
+		log.Printf("ERROR: Failed writing response: %s", err.Error())
+		w.WriteHeader(http.StatusInternalServerError)
+		return
+	}
 
 	return
 }
@@ -107,7 +112,13 @@ func (h *Hero) List(w http.ResponseWriter, r *http.Request, params map[string]st
 
 	w.Header().Set("Content-Type", "application/json")
 	w.WriteHeader(http.StatusOK)
-	w.Write(response)
+	_, err = w.Write(response)
+	if err != nil {
+		log.Printf("ERROR: Failed writing response: %s", err.Error())
+		w.WriteHeader(http.StatusInternalServerError)
+		return
+	}
+
 	return
 }
 
@@ -147,7 +158,12 @@ func (h *Hero) Retrieve(w http.ResponseWriter, r *http.Request, params map[strin
 
 	w.Header().Set("Content-Type", "application/json")
 	w.WriteHeader(http.StatusOK)
-	w.Write(response)
+	_, err = w.Write(response)
+	if err != nil {
+		log.Printf("ERROR: Failed writing response: %s", err.Error())
+		w.WriteHeader(http.StatusInternalServerError)
+		return
+	}
 	return
 }
 
@@ -221,6 +237,12 @@ func (h *Hero) Update(w http.ResponseWriter, r *http.Request, params map[string]
 
 	w.Header().Set("Content-Type", "application/json")
 	w.WriteHeader(http.StatusOK)
-	w.Write(response)
+	_, err = w.Write(response)
+	if err != nil {
+		log.Printf("ERROR: Failed writing response: %s", err.Error())
+		w.WriteHeader(http.StatusInternalServerError)
+		return
+	}
+
 	return
 }
