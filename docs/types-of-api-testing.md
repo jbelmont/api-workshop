@@ -69,53 +69,64 @@ func TestGetEnvironmentVariablesThatAreSet(t *testing.T) {
 Here is an example of an integration test in golang:
 
 ```go
-func TestMain(m *testing.M) {
-	os.Exit(testMain(m))
-}
+func TestCreateHero(t *testing.T) {
+	heroPayload := `
+  {
+      "name": "Aquaman",
+      "superpowers": [
+        "Expert with magical Trident",
+        "Enhanced vision",
+        "Enhanced smell",
+        "Enhanced stamina",
+        "Expert combatant",
+        "Expert tactician",
+        "Super Strength",
+        "Super Speed",
+        "Marine Telepathy"
+      ],
+      "gender": "male"
+  }
+  `
+	payload := []byte(heroPayload)
+	r := httptest.NewRequest("POST", "/api/v1/heroes", bytes.NewBuffer(payload))
+	w := httptest.NewRecorder()
+	app.ServeHTTP(w, r)
 
-func testMain(m *testing.M) int {
-	ctx = context.Background()
-
-	c, err := container.StartDB()
-	if err != nil {
-		log.Fatalln(err)
+	if w.Code != http.StatusCreated {
+		t.Fatalf("Should receive a status code of 201 for the response : %v", w.Code)
 	}
-	container.SetContainer(c)
 
-	defer func() {
-		if err = container.StopDB(c); err != nil {
-			log.Println(err)
+	var cHero hero.CreateHero
+	if err := json.NewDecoder(w.Body).Decode(&cHero); err != nil {
+		t.Fatalf("could not decode json response: %v", err)
+	}
+
+	expected := hero.Hero{
+		Name: "Aquaman",
+		SuperPowers: []string{
+			"Expert with magical Trident",
+			"Enhanced vision",
+			"Enhanced smell",
+			"Enhanced stamina",
+			"Expert combatant",
+			"Expert tactician",
+			"Super Strength",
+			"Super Speed",
+			"Marine Telepathy",
+		},
+		Gender: "male",
+	}
+	if cHero.Name != expected.Name {
+		t.Errorf("Name should be set to %s", expected.Name)
+	}
+	for idx, power := range cHero.SuperPowers {
+		if power != expected.SuperPowers[idx] {
+			t.Errorf("Expected Power %s, Actual %s", expected.SuperPowers[idx], power)
 		}
-	}()
-
-	dbTimeout := 25 * time.Second
-	dbHost := os.Getenv("MONGO_HOST")
-
-	log.Println("main : Started : Initialize Mongo")
-	masterDB, err = database.New(dbHost, dbTimeout)
-	if err != nil {
-		log.Fatalf("startup : Register DB : %v", err)
 	}
-	defer masterDB.Close()
-
-	// Initialize context
-	log.Println("main : Started : Initialize context")
-	v := apiContext.Values{
-		ID: bson.NewObjectId().Hex(),
+	if cHero.Gender != expected.Gender {
+		t.Errorf("Expected Gender %s, Actual %s", expected.Gender, cHero.Gender)
 	}
-	ctx = context.WithValue(context.Background(), apiContext.KeyValues, &v)
-
-	// Creating DB state.
-	log.Println("main : Started : Set DB state for user")
-	// Insert test user
-	heroInfo := heroInfo()
-	f := func(collection *mgo.Collection) error {
-		return collection.Insert(heroInfo.hero)
-	}
-	if err := masterDB.Execute(ctx, heroCollection, f); err != nil {
-		log.Fatalf("startup : Set DB state : %v", err)
-	}
-	return m.Run()
 }
 ```
 
