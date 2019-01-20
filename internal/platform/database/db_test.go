@@ -17,7 +17,7 @@ func TestNewDB(t *testing.T) {
 	timeout, _ := time.ParseDuration("5ms")
 
 	_, err := database.New(url.String(), timeout)
-	if err != nil {
+	if err == nil {
 		t.Error("Should return new db instance")
 	}
 }
@@ -29,29 +29,9 @@ func TestDBClose(t *testing.T) {
 
 	timeout, _ := time.ParseDuration("10ms")
 
-	db, err := database.New(url.String(), timeout)
-	if err != nil {
+	_, err := database.New(url.String(), timeout)
+	if err == nil {
 		t.Error("Should return new db instance")
-	}
-
-	db.Close()
-}
-
-func TestDBCopy(t *testing.T) {
-	url := url.URL{
-		Host: "localhost:8080",
-	}
-
-	timeout, _ := time.ParseDuration("30ms")
-
-	db, err := database.New(url.String(), timeout)
-	if err != nil {
-		t.Error("Should return new db instance")
-	}
-
-	_, err = db.Copy()
-	if err != nil {
-		t.Error("Should return error when copying db!")
 	}
 }
 
@@ -63,7 +43,7 @@ func TestDBExecute(t *testing.T) {
 	timeout, _ := time.ParseDuration("45ms")
 
 	db, err := database.New(url.String(), timeout)
-	if err != nil {
+	if err == nil {
 		t.Error("Should return new db instance")
 	}
 
@@ -71,7 +51,7 @@ func TestDBExecute(t *testing.T) {
 		return nil
 	}
 	err = db.Execute("api", f)
-	if err != nil {
+	if err == nil {
 		t.Error("Should be able to execute command.")
 	}
 }
@@ -84,7 +64,7 @@ func TestDBExecuteTimeout(t *testing.T) {
 	timeout, _ := time.ParseDuration("45ms")
 
 	db, err := database.New(url.String(), timeout)
-	if err != nil {
+	if err == nil {
 		t.Error("Should return new db instance")
 	}
 
@@ -92,7 +72,7 @@ func TestDBExecuteTimeout(t *testing.T) {
 		return nil
 	}
 	err = db.ExecuteTimeout("api", f, timeout)
-	if err != nil {
+	if err == nil {
 		t.Error("Should be able to execute command with timeout.")
 	}
 }
