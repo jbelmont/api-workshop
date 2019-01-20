@@ -8,7 +8,7 @@ import (
 
 	"github.com/jbelmont/api-workshop/cmd/apid/config"
 	"github.com/jbelmont/api-workshop/internal/hero"
-	database "github.com/jbelmont/api-workshop/internal/platform/db"
+	"github.com/jbelmont/api-workshop/internal/platform/database"
 	"github.com/jbelmont/api-workshop/internal/platform/pagination"
 )
 

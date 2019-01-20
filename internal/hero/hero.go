@@ -8,8 +8,8 @@ import (
 	mgo "gopkg.in/mgo.v2"
 	"gopkg.in/mgo.v2/bson"
 
-	database "github.com/jbelmont/api-workshop/internal/platform/db"
-	"github.com/jbelmont/api-workshop/internal/platform/web"
+	"github.com/jbelmont/api-workshop/internal/platform/database"
+	"github.com/jbelmont/api-workshop/internal/platform/pagination"
 )
 
 const heroCollection = "heroes"
@@ -39,7 +39,7 @@ func Create(dbConn *database.DB, cH *CreateHero) (*Hero, error) {
 }
 
 // List returns a list of heroes from the database and applies query string parameters
-func List(dbConn *database.DB, filters Filters, paging web.Paging) (*ListResults, error) {
+func List(dbConn *database.DB, filters Filters, paging pagination.Paging) (*ListResults, error) {
 	q, err := extractQueryFromFilters(filters)
 	if err != nil {
 		return nil, errors.Wrap(err, err.Error())

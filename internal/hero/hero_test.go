@@ -9,7 +9,7 @@ import (
 
 	"github.com/jbelmont/api-workshop/internal/hero"
 	"github.com/jbelmont/api-workshop/internal/platform/container"
-	database "github.com/jbelmont/api-workshop/internal/platform/db"
+	"github.com/jbelmont/api-workshop/internal/platform/database"
 	mgo "gopkg.in/mgo.v2"
 )
 

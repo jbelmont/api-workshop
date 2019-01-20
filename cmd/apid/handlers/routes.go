@@ -5,7 +5,7 @@ import (
 
 	"github.com/dimfeld/httptreemux"
 	"github.com/jbelmont/api-workshop/cmd/apid/config"
-	database "github.com/jbelmont/api-workshop/internal/platform/db"
+	"github.com/jbelmont/api-workshop/internal/platform/database"
 )
 
 // API returns a handler for a set of routes.
