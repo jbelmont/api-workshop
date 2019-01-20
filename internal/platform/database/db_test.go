@@ -14,7 +14,7 @@ func TestNewDB(t *testing.T) {
 		Host: "localhost:8080",
 	}
 
-	timeout, _ := time.ParseDuration("30m")
+	timeout, _ := time.ParseDuration("5ms")
 
 	_, err := database.New(url.String(), timeout)
 	if err != nil {
@@ -27,7 +27,7 @@ func TestDBClose(t *testing.T) {
 		Host: "localhost:8080",
 	}
 
-	timeout, _ := time.ParseDuration("30m")
+	timeout, _ := time.ParseDuration("10ms")
 
 	db, err := database.New(url.String(), timeout)
 	if err != nil {
@@ -42,7 +42,7 @@ func TestDBCopy(t *testing.T) {
 		Host: "localhost:8080",
 	}
 
-	timeout, _ := time.ParseDuration("30m")
+	timeout, _ := time.ParseDuration("30ms")
 
 	db, err := database.New(url.String(), timeout)
 	if err != nil {
@@ -60,7 +60,7 @@ func TestDBExecute(t *testing.T) {
 		Host: "localhost:8080",
 	}
 
-	timeout, _ := time.ParseDuration("45m")
+	timeout, _ := time.ParseDuration("45ms")
 
 	db, err := database.New(url.String(), timeout)
 	if err != nil {
@@ -81,7 +81,7 @@ func TestDBExecuteTimeout(t *testing.T) {
 		Host: "localhost:8080",
 	}
 
-	timeout, _ := time.ParseDuration("45m")
+	timeout, _ := time.ParseDuration("45ms")
 
 	db, err := database.New(url.String(), timeout)
 	if err != nil {

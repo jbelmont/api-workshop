@@ -32,6 +32,11 @@ func SetContainer(c *Container) error {
 	return os.Setenv("MONGO_HOST", fmt.Sprintf("mongodb://localhost:%s/api", c.Port))
 }
 
+// GetDBHost return the Mongo Host value
+func GetDBHost(c *Container) string {
+	return fmt.Sprintf("mongodb://localhost:%s/apitest", c.Port)
+}
+
 // StartDB starts db container in docker
 func StartDB() (*Container, error) {
 	cmd := exec.Command("docker", "run", "-P", "-d", "mongo:3.4.5")
