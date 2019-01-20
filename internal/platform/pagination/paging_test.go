@@ -1,10 +1,10 @@
-package web_test
+package pagination_test
 
 import (
 	"net/url"
 	"testing"
 
-	"github.com/jbelmont/api-workshop/internal/platform/web"
+	"github.com/jbelmont/api-workshop/internal/platform/pagination"
 )
 
 func TestPopulatePaging(t *testing.T) {
@@ -15,7 +15,7 @@ func TestPopulatePaging(t *testing.T) {
 		RawQuery: "pageSize=50&pageIndex=1",
 	}
 
-	paging := web.PopulatePaging(url, 50, 100)
+	paging := pagination.PopulatePaging(url, 50, 100)
 	if paging.Index != 1 {
 		t.Errorf("Expected %d, Actual %d", 1, paging.Index)
 	}

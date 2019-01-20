@@ -76,14 +76,14 @@ func TestMain(m *testing.M) {
 func testMain(m *testing.M) int {
 	ctx = context.Background()
 
-	c, err := docker.StartDB()
+	c, err := container.StartDB()
 	if err != nil {
 		log.Fatalln(err)
 	}
-	docker.SetContainer(c)
+	container.SetContainer(c)
 
 	defer func() {
-		if err = docker.StopDB(c); err != nil {
+		if err = container.StopDB(c); err != nil {
 			log.Println(err)
 		}
 	}()

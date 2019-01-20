@@ -8,8 +8,8 @@ import (
 	"time"
 
 	"github.com/jbelmont/api-workshop/internal/hero"
+	"github.com/jbelmont/api-workshop/internal/platform/container"
 	database "github.com/jbelmont/api-workshop/internal/platform/db"
-	"github.com/jbelmont/api-workshop/internal/platform/docker"
 	mgo "gopkg.in/mgo.v2"
 )
 
@@ -64,14 +64,14 @@ func TestMain(m *testing.M) {
 }
 
 func testMain(m *testing.M) int {
-	c, err := docker.StartDB()
+	c, err := container.StartDB()
 	if err != nil {
 		log.Fatalln(err)
 	}
-	docker.SetContainer(c)
+	container.SetContainer(c)
 
 	defer func() {
-		if err = docker.StopDB(c); err != nil {
+		if err = container.StopDB(c); err != nil {
 			log.Println(err)
 		}
 	}()

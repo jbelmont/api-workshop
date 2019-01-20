@@ -9,7 +9,7 @@ import (
 	"github.com/jbelmont/api-workshop/cmd/apid/config"
 	"github.com/jbelmont/api-workshop/internal/hero"
 	database "github.com/jbelmont/api-workshop/internal/platform/db"
-	"github.com/jbelmont/api-workshop/internal/platform/web"
+	"github.com/jbelmont/api-workshop/internal/platform/pagination"
 )
 
 // Hero holds database information for a given hero
@@ -86,7 +86,7 @@ func (h *Hero) List(w http.ResponseWriter, r *http.Request, params map[string]st
 	defer dbConn.Close()
 
 	// Default page size can be pulled from configuration.
-	paging := web.PopulatePaging(*r.URL, defaultPageSize, maxPageSize)
+	paging := pagination.PopulatePaging(*r.URL, defaultPageSize, maxPageSize)
 
 	filters, err := h.populateFilters(r)
 	if err != nil {
