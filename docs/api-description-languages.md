@@ -116,4 +116,4 @@ _________________________
 
 Previous | Next
 :------- | ---:
-← [Delegation](./delegation.md) | [OpenAPI Initiative](./openapi-initiative.md) →
+← [Delegation](./delegation.md) | [OpenAPI Initiative](./openapi.md) →
