@@ -27,7 +27,7 @@ A workshop  on API Development, API Security, API Testing and API Description La
   * [Authentication](docs/authentication.md)
     * [OpenID Connect](docs/openid-connect.md)
   * [Authorization](docs/authorization.md)
-    * [oAuth](docs/oauth.md)
+    * [OAuth](docs/oauth.md)
   * [Federation](docs/federation.md)
   * [Delegation](docs/delegation.md)
 * [API Description Languages](docs/api-description-languages.md)

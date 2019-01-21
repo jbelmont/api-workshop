@@ -166,7 +166,6 @@ Response 201 (application/json)
   + Headers
 
           Content-Type: application/json
-          X-Workshop-Trace-Id: e697253f-b5af-43ed-8592-84dc4be8f072
           Date: Thu, 10 Jan 2019 23:00:44 GMT
           Content-Length: 214
 
@@ -197,7 +196,6 @@ Response 200 (application/json)
   + Headers
 
           Content-Type: application/json
-          X-Workshop-Trace-Id: ce21f483-bbdc-474f-a960-f1ac10e9b792
           Date: Sat, 12 Jan 2019 14:36:32 GMT
           Content-Length: 271
 
@@ -248,7 +246,6 @@ Response 200 (application/json)
   + Headers
 
           Content-Type: application/json
-          X-Workshop-Trace-Id: ce21f483-bbdc-474f-a960-f1ac10e9b792
           Date: Sat, 12 Jan 2019 14:36:32 GMT
           Content-Length: 271
 
@@ -352,7 +349,6 @@ object containing a hero's name, superpowers, and gender.
 
     + Headers
 
-            X-Workshop-Trace-Id: 6831eb5c-de6c-4286-8af7-cc9f08100386
             Date: Mon, 14 Jan 2019 00:14:36 GMT
             Content-Length: 313
 
@@ -412,7 +408,6 @@ This endpoint updates a hero's name, powers and gender.
 
     + Headers
 
-            X-Workshop-Trace-Id: 8b75a7c0-96d1-4c62-bb96-35705cda80a2
             Date: Sat, 12 Jan 2019 17:30:41 GMT
             Content-Length: 250
 
@@ -438,7 +433,6 @@ This endpoint updates a hero's name, powers and gender.
 
     + Headers
 
-            X-Workshop-Trace-Id: c4711ca8-5d82-4d3b-9857-6aa152a1b021
             Date: Mon, 14 Jan 2019 00:34:15 GMT
 ```
 
