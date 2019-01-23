@@ -10,12 +10,11 @@ ENV appDir /go/src/github.com/jbelmont/api-workshop
 
 RUN mkdir -p ${appDir}
 WORKDIR ${appDir}
-ADD . ${appDir}
 
-COPY Gopkg.toml Gopkg.lock ./
+COPY . ${appDir}
 
 RUN go get -u github.com/golang/dep/cmd/dep && \
     go get -u github.com/githubnemo/CompileDaemon && \
     dep ensure
 
-ENTRYPOINT CompileDaemon -log-prefix=false -build="go build ./cmd/apid/" -command="./apid"
+CMD CompileDaemon -log-prefix=false -build="go build ./cmd/apid/" -command="./apid"
