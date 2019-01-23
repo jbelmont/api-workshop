@@ -14,8 +14,7 @@ services:
   apid:
     build:
       context: .
-      dockerfile: Dockerfile-go
-    command: ./CompileDaemon --build="go build -o cmd/apid/apid cmd/apid/main.go" --command="./cmd/apid/apid"
+      dockerfile: ./cmd/apid/Dockerfile-go
     depends_on:
       - mongo
       - redis

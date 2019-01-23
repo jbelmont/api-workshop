@@ -20,11 +20,21 @@ func API(masterDB *database.DB, cfg config.Config) http.Handler {
 		MasterDB: masterDB,
 	}
 
+	// Regular CRUD Endpoints for Hero Resources
 	api.GET("/heroes", h.List)
 	api.POST("/heroes", h.Create)
 	api.GET("/heroes/:id", h.Retrieve)
 	api.PUT("/heroes/:id", h.Update)
 	api.DELETE("/heroes/:id", h.Delete)
+
+	// SSO / OpenID Connect with OAuth2 using Auth0
+	// These endpoints are in support of Authorization Code Flow
+	// https://openid.net/specs/openid-connect-core-1_0.html#AuthorizationEndpoint
+
+	auth := Authorize{
+		config: cfg,
+	}
+	api.GET("/authorize", auth.Authorize)
 
 	return router
 }

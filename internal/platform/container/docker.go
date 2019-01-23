@@ -29,7 +29,7 @@ type Settings struct {
 
 // SetContainer sets MONGO_HOST value
 func SetContainer(c *Container) error {
-	return os.Setenv("MONGO_HOST", fmt.Sprintf("mongodb://localhost:%s/api", c.Port))
+	return os.Setenv("MONGO_HOST", fmt.Sprintf("mongodb://localhost:%s/apitest", c.Port))
 }
 
 // GetDBHost return the Mongo Host value

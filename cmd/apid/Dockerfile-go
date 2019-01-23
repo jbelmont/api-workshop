@@ -15,6 +15,7 @@ ADD . ${appDir}
 COPY Gopkg.toml Gopkg.lock ./
 
 RUN go get -u github.com/golang/dep/cmd/dep && \
-        dep ensure
+    go get -u github.com/githubnemo/CompileDaemon && \
+    dep ensure
 
-CMD [ "echo", "dev"]
+ENTRYPOINT CompileDaemon -log-prefix=false -build="go build -o cmd/apid/apid cmd/apid/main.go" -command="./cmd/apid/apid"
