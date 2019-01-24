@@ -17,8 +17,9 @@ func TestSetContainer(t *testing.T) {
 		t.Error("Should not return error when setting environment variable in container.")
 	}
 
-	mgoHostEnv := "mongodb://localhost:8708/api"
-	if os.Getenv("MONGO_HOST") != mgoHostEnv {
+	mgoHostEnv := "mongodb://localhost:8708/apitest"
+	mongoHost := os.Getenv("MONGO_HOST")
+	if mongoHost != mgoHostEnv {
 		t.Errorf("Should set %s", mgoHostEnv)
 	}
 }

@@ -25,5 +25,13 @@ services:
       - redis
     ports:
       - "8080:8080"
+  web:
+    build:
+      context: .
+      dockerfile: ./cmd/web/Dockerfile
+    env_file:
+      - ./common.env
+    ports:
+      - "7080:80"
 volumes:
     data:
