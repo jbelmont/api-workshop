@@ -53,6 +53,18 @@ Please run the following commands to install Dep which is a dependency manager i
 
 - `curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh`
 
+###### Install GoMetalinter
+
+Binary Releases
+To install the latest stable release:
+
+curl -L https://git.io/vp6lP | sh
+Alternatively you can install a specific version from the releases list.
+
+Homebrew
+brew tap alecthomas/homebrew-tap
+brew install gometalinter
+
 ###### Homebrew Installation for Mac OS x
 
 Install or upgrade to the latest released version with Homebrew:
