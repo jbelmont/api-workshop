@@ -179,7 +179,7 @@ func (h *Hero) Delete(w http.ResponseWriter, r *http.Request, params map[string]
 
 	if err := hero.Delete(dbConn, params["id"]); err != nil {
 		log.Printf("ERROR: Calling hero Delete Service function: %s", err.Error())
-		w.WriteHeader(http.StatusInternalServerError)
+		w.WriteHeader(http.StatusNotFound)
 		return
 	}
 
