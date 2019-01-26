@@ -45,6 +45,23 @@ Here is the gitbook for the [API Workshop](https://www.marcelbelmont.com/api-wor
 
 Make sure that you have [Golang](https://golang.org/dl/) Installed
 
+#### Install Dep binary
+
+Please run the following commands to install Dep which is a dependency manager in Golang:
+
+###### Dep Install Script
+
+- `curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh`
+
+###### Homebrew Installation for Mac OS x
+
+Install or upgrade to the latest released version with Homebrew:
+
+1. brew install dep
+2. brew upgrade dep
+
+Once you have dep installed run the *make* command in your terminal
+
 Run `make` in the root of the repository to install go libraries needed for the workshop.
 
 #### Running API
