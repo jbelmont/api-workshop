@@ -64,6 +64,10 @@ Once you have dep installed run the *make* command in your terminal
 
 Run `make` in the root of the repository to install go libraries needed for the workshop.
 
+##### Add common.env file to the repository
+
+Please make sure to rename the *common.env.sample* to *common.env*
+
 #### Running API
 
 Run `make dev` in order to get API running locally
