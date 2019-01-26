@@ -1,0 +1,874 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>API Testing Tools · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="api-security.html" />
+    
+    
+    <link rel="prev" href="types-of-api-testing.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="api-summary.html">
+            
+                <a href="api-summary.html">
+            
+                    
+                    API Summary and Description
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="restful-intro.html">
+            
+                <a href="restful-intro.html">
+            
+                    
+                    Restful API Introduction
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="rest-dissertation.html">
+            
+                <a href="rest-dissertation.html">
+            
+                    
+                    Roy Fieldings Dissertation on REST
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="rest-constraints.html">
+            
+                <a href="rest-constraints.html">
+            
+                    
+                    Rest Architecture Constraints
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="maturity-model.html">
+            
+                <a href="maturity-model.html">
+            
+                    
+                    Richardson Maturity Model
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="http-concepts.html">
+            
+                <a href="http-concepts.html">
+            
+                    
+                    HTTP Concepts
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="http-verbs.html">
+            
+                <a href="http-verbs.html">
+            
+                    
+                    HTTP Verbs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="status-codes.html">
+            
+                <a href="status-codes.html">
+            
+                    
+                    HTTP Status Codes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="http-headers.html">
+            
+                <a href="http-headers.html">
+            
+                    
+                    HTTP Headers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="request-response.html">
+            
+                <a href="request-response.html">
+            
+                    
+                    HTTP Request and Response
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="uri-design.html">
+            
+                <a href="uri-design.html">
+            
+                    
+                    URL Design
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="query-string.html">
+            
+                <a href="query-string.html">
+            
+                    
+                    Query String
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="api-design.html">
+            
+                <a href="api-design.html">
+            
+                    
+                    API Design
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="api-testing.html">
+            
+                <a href="api-testing.html">
+            
+                    
+                    API Testing
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="types-of-api-testing.html">
+            
+                <a href="types-of-api-testing.html">
+            
+                    
+                    Types of API Testing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.6.2" data-path="api-testing-tools.html">
+            
+                <a href="api-testing-tools.html">
+            
+                    
+                    API Testing Tools
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="api-security.html">
+            
+                <a href="api-security.html">
+            
+                    
+                    API Security
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="authentication.html">
+            
+                <a href="authentication.html">
+            
+                    
+                    Authentication
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1.1" data-path="openid-connect.html">
+            
+                <a href="openid-connect.html">
+            
+                    
+                    OpenID Connect
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="authorization.html">
+            
+                <a href="authorization.html">
+            
+                    
+                    Authorization
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.2.1" data-path="oauth.html">
+            
+                <a href="oauth.html">
+            
+                    
+                    OAuth
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="federation.html">
+            
+                <a href="federation.html">
+            
+                    
+                    Federation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="delegation.html">
+            
+                <a href="delegation.html">
+            
+                    
+                    Delegation
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="api-description-languages.html">
+            
+                <a href="api-description-languages.html">
+            
+                    
+                    API Description Languages
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="openapi.html">
+            
+                <a href="openapi.html">
+            
+                    
+                    OpenAPI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="api-blueprint.html">
+            
+                <a href="api-blueprint.html">
+            
+                    
+                    API Blueprint
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="raml.html">
+            
+                <a href="raml.html">
+            
+                    
+                    RAML
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="graphql.html">
+            
+                <a href="graphql.html">
+            
+                    
+                    GraphQL
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >API Testing Tools</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>API Workshop - API Testing Tools</p>
+<h2 id="sections">Sections:</h2>
+<ul>
+<li><a href="#bread-crumb-navigation">Bread Crumb Navigation</a></li>
+</ul>
+<h2 id="restful-api-testing">Restful API Testing</h2>
+<p>API testing is a necessary task to do while building APIs.</p>
+<p>Instead of using a browser or typing into a UI and clicking buttons, you can test APIs using tools such as <a href="https://curl.haxx.se/" target="_blank">Curl</a> and <a href="https://www.getpostman.com/" target="_blank">Postman</a>.</p>
+<p>Using a Rest Client you can make Rest calls such as for <a href="https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods" target="_blank">HTTP Verbs</a> such as:</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods" target="_blank">GET</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods" target="_blank">POST</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods" target="_blank">PUT</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods" target="_blank">DELETE</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods" target="_blank">PATCH</a></li>
+</ul>
+<p>When we test an API, we deal with <a href="https://en.wikipedia.org/wiki/JSON" target="_blank">JSON</a>, <a href="https://en.wikipedia.org/wiki/XML" target="_blank">XML</a>, and <a href="https://en.wikipedia.org/wiki/Web_service" target="_blank">Web Services</a>.</p>
+<h2 id="3rd-party-apis">3rd Party APIs</h2>
+<p>Here is a list of 3rd Party APIs:</p>
+<ul>
+<li><a href="https://developers.google.com/apis-explorer/" target="_blank">Google APIs</a></li>
+<li><a href="https://developer.yahoo.com/everything.html" target="_blank">Yahoo APIs</a></li>
+<li><a href="https://developers.facebook.com/" target="_blank">Facebook APIs</a></li>
+<li><a href="https://stripe.com/docs/api" target="_blank">Stripe APIs</a></li>
+<li><a href="https://developer.amazon.com/services-and-apis" target="_blank">Amazon APIs</a></li>
+<li><a href="https://developer.walmart.com/#/home" target="_blank">Walmart APIs</a></li>
+<li><a href="https://developer.github.com/v3/" target="_blank">Github APIs</a></li>
+</ul>
+<p>Go to <a href="https://www.programmableweb.com/" target="_blank">Programmable Web</a> to get a complete list of 3rd Party APIs you can utilize</p>
+<h2 id="testing-restful-apis">Testing Restful APIs</h2>
+<p>You can utilize many different types of tools to test APIs such as:</p>
+<ul>
+<li><a href="https://curl.haxx.se/" target="_blank">Curl</a></li>
+<li><a href="https://www.getpostman.com/" target="_blank">Postman</a></li>
+<li><a href="https://httpie.org/" target="_blank">HTTPie</a></li>
+<li><a href="https://insomnia.rest/" target="_blank">Insomnia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Telnet" target="_blank">Telnet</a></li>
+</ul>
+<p>There are other Rest Clients you can use I just listed a few here</p>
+<h2 id="postman-rest-client-advantages">Postman Rest Client Advantages</h2>
+<p>I tend to favor Rest Clients like Postman because it helps to automate testing Restful APIs if you utilize some of its advanced features</p>
+<p><img src="../images/postman-collection.png" alt="Postman Collections"></p>
+<p>Notice here that you can create collection folders that can categorize APIs.</p>
+<p>You can do much more than this however</p>
+<p><img src="../images/header-variables.png" alt="Header Variables"></p>
+<p>Notice here that <code>Basic {{encodeCredentials}}</code> has curly braces around <code>encodeCredentials</code></p>
+<p>In Postman you surround variables in double curly braces</p>
+<p><img src="../images/pre-request-script.png" alt="Pre-Request Script"></p>
+<p>If you want to set variables before the HTTP call goes out than using <a href="https://www.getpostman.com/docs/postman/scripts/pre_request_scripts" target="_blank">Pre-request Script</a> is what you want</p>
+<ul>
+<li><p>Pre-request scripts are snippets of code associated with a collection request that are executed before the request is sent.</p>
+</li>
+<li><p>This is perfect for use-cases like including the timestamp in the request headers or sending a random alphanumeric string in the URL parameters.</p>
+</li>
+<li><p>Pre-request scripts are written in JavaScript, and the syntax is exactly like that of test scripts except that the response object is not present.</p>
+</li>
+</ul>
+<p>Notice here that I am using <em>common js</em> syntax in Postman and in particular <code>require(&apos;btoa&apos;</code>)` which is using <strong>Postman Sandbox API</strong></p>
+<p>You can find a more complete list in the <a href="https://www.getpostman.com/docs/postman/scripts/postman_sandbox_api_reference" target="_blank">Postman Sandbox API reference</a></p>
+<p>You can also read <a href="https://www.getpostman.com/docs/postman/scripts/postman_sandbox" target="_blank">Postman Sandbox</a> for other libraries available in Postman Rest Client</p>
+<p><img src="../images/test-script.png" alt="Test Script"></p>
+<p>Notice here that the Test script section is similar to Pre-Request Script</p>
+<p>With Postman you can write and run tests for each request using the JavaScript language.</p>
+<p>But more than that you can set variables in the Test script section that you can save for later use</p>
+<p>Notice here the use of <code>postman.setEnvironmentVariable(&quot;access_token&quot;, token_type + &quot; &quot; + access_token);</code> to set <strong>access_token</strong></p>
+<p>This is really useful because we can save the <strong>access_token</strong> for other Rest calls</p>
+<p>Instead of manually setting the access token in a variable each day since access tokens tend to expire quickly you can use the tests script section to do that in an automated way.</p>
+<p>Notice that we also wrote a test in the test script section as well</p>
+<pre><code class="lang-js"><span class="hljs-comment">// Parse JSON response</span>
+<span class="hljs-keyword">var</span> responseBody = <span class="hljs-built_in">JSON</span>.parse(responseBody);
+
+<span class="hljs-keyword">var</span> access_token = responseBody.access_token;
+<span class="hljs-keyword">var</span> token_type = responseBody.token_type;
+
+postman.setEnvironmentVariable(<span class="hljs-string">&quot;access_token&quot;</span>, token_type + <span class="hljs-string">&quot; &quot;</span> + access_token);
+
+pm.test(<span class="hljs-string">&quot;Token Type is Bearer&quot;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">var</span> jsonData = pm.response.json();
+    pm.expect(jsonData.token_type).to.eql(<span class="hljs-string">&quot;Bearer&quot;</span>);
+});
+</code></pre>
+<p><img src="../images/test-results.png" alt="Test Results"></p>
+<p>Notice here we get a passing test since we got an access token from the Paypal API</p>
+<p><img src="../images/environment.png" alt="Environment"></p>
+<p>Notice here that we set the environment for Paypal here</p>
+<p>Here we can use global variables that can be used per environment</p>
+<p><img src="../images/global-variables.png" alt="Global Variables"></p>
+<p>Here I greyed out the environment variables for security reasons but you can read more about <a href="https://www.getpostman.com/docs/postman/environments_and_globals/manage_globals" target="_blank">Global Variables at Postman Docs</a></p>
+<p><img src="../images/presets.png" alt="Presets"></p>
+<p>Another useful feature in Postman is the Presets for Headers which you can read in the <a href="https://www.getpostman.com/docs/postman/sending_api_requests/requests" target="_blank">Docs</a></p>
+<p>Header Presets are useful if you find yourself reusing a lot of HTTP Header values often and you can simply set a preset to autofill the HTTP headers for you in one click.</p>
+<p><img src="../images/group-edit.png" alt="Group Edit"></p>
+<p>Notice here that we can use the group edit feature to quickly set header values in key value pairs in the group edit view.</p>
+<p>You can easily go back to the normal view by clicking <code>Key-Value Edit</code> button again.</p>
+<p><img src="../images/http-verbs.png" alt="HTTP Verbs"></p>
+<p>Postman supports all of the HTTP Verbs in their dropdown menu</p>
+<p><img src="../images/params.png" alt="Params"></p>
+<p>You can easily set query string parameters utilizing the params section in postman</p>
+<p><img src="../images/developer-tools.png" alt="Developer Tools"></p>
+<p>Notice here that we can utilize developer tools in Postman.</p>
+<p>This is useful when you want to debug the <em>Pre-request Script</em> and <em>Test script</em> sections in Postman</p>
+<p>You can easily set <code>console.log</code> statements to debug things.</p>
+<p><img src="../images/collection-runner.png" alt="Collection Runner"></p>
+<p>Notice here that we can run all of the collections utilizing the collection runner.</p>
+<p>You can read more about the <a href="https://www.getpostman.com/docs/postman/collection_runs/starting_a_collection_run" target="_blank">Postman Collection Runner Here</a></p>
+<p>You can import Postman collections easily and if you have Postman Pro account you can share collections with team members.</p>
+<p>I covered a good amount of features that Postman offers but read the Fine docs in Postman for more information.</p>
+<h4 id="using-curl-as-a-rest-client">Using Curl as a Rest Client</h4>
+<p>Curl is also a powerful tool to test apis</p>
+<p>Here is a sample <code>GET</code> request using curl:</p>
+<pre><code class="lang-curl">curl -X GET \
+  &apos;http://{{URL}}/search?query=chromebook&amp;format=json&amp;apiKey={{API_key}}&apos; \
+  -H &apos;Cache-Control: no-cache&apos; \
+  -H &apos;Content-Type: application/xml&apos;
+</code></pre>
+<p>Notice here that we specified the HTTP verb using the flag <code>-X</code> we then gave a url and we specified HTTP Headers using <code>-H</code></p>
+<p>Here is a sample <code>POST</code> request using curl:</p>
+<pre><code class="lang-curl">curl -X POST \
+  https://api.sandbox.paypal.com/v1/payments/payment \
+  -H &apos;Authorization: afaketoken1234567&apos; \
+  -H &apos;Cache-Control: no-cache&apos; \
+  -H &apos;Content-Type: application/json&apos; \
+  -d &apos;{
+  &quot;intent&quot;: &quot;sale&quot;,
+  &quot;payer&quot;: {
+  &quot;payment_method&quot;: &quot;paypal&quot;
+  },
+  &quot;transactions&quot;: [
+  {
+    &quot;amount&quot;: {
+    &quot;total&quot;: &quot;30.11&quot;,
+    &quot;currency&quot;: &quot;USD&quot;,
+    &quot;details&quot;: {
+      &quot;subtotal&quot;: &quot;30.00&quot;,
+      &quot;tax&quot;: &quot;0.07&quot;,
+      &quot;shipping&quot;: &quot;0.03&quot;,
+      &quot;handling_fee&quot;: &quot;1.00&quot;,
+      &quot;shipping_discount&quot;: &quot;-1.00&quot;,
+      &quot;insurance&quot;: &quot;0.01&quot;
+    }
+    },
+    &quot;description&quot;: &quot;The payment transaction description.&quot;,
+    &quot;custom&quot;: &quot;EBAY_EMS_90048630024435&quot;,
+    &quot;invoice_number&quot;: &quot;48787589673&quot;,
+    &quot;payment_options&quot;: {
+    &quot;allowed_payment_method&quot;: &quot;INSTANT_FUNDING_SOURCE&quot;
+    },
+    &quot;soft_descriptor&quot;: &quot;ECHI5786786&quot;,
+    &quot;item_list&quot;: {
+    &quot;items&quot;: [
+      {
+      &quot;name&quot;: &quot;hat&quot;,
+      &quot;description&quot;: &quot;Brown hat.&quot;,
+      &quot;quantity&quot;: &quot;5&quot;,
+      &quot;price&quot;: &quot;3&quot;,
+      &quot;tax&quot;: &quot;0.01&quot;,
+      &quot;sku&quot;: &quot;1&quot;,
+      &quot;currency&quot;: &quot;USD&quot;
+      },
+      {
+      &quot;name&quot;: &quot;handbag&quot;,
+      &quot;description&quot;: &quot;Black handbag.&quot;,
+      &quot;quantity&quot;: &quot;1&quot;,
+      &quot;price&quot;: &quot;15&quot;,
+      &quot;tax&quot;: &quot;0.02&quot;,
+      &quot;sku&quot;: &quot;product34&quot;,
+      &quot;currency&quot;: &quot;USD&quot;
+      }
+    ],
+    &quot;shipping_address&quot;: {
+      &quot;recipient_name&quot;: &quot;Brian Robinson&quot;,
+      &quot;line1&quot;: &quot;4th Floor&quot;,
+      &quot;line2&quot;: &quot;Unit #34&quot;,
+      &quot;city&quot;: &quot;San Jose&quot;,
+      &quot;country_code&quot;: &quot;US&quot;,
+      &quot;postal_code&quot;: &quot;95131&quot;,
+      &quot;phone&quot;: &quot;011862212345678&quot;,
+      &quot;state&quot;: &quot;CA&quot;
+    }
+    }
+  }
+  ],
+  &quot;note_to_payer&quot;: &quot;Contact us for any questions on your order.&quot;,
+  &quot;redirect_urls&quot;: {
+  &quot;return_url&quot;: &quot;https://www.example.com/return&quot;,
+  &quot;cancel_url&quot;: &quot;https://www.example.com/cancel&quot;
+  }
+}&apos;
+</code></pre>
+<p>Notice in the POST request we used <code>-d</code> flag to pass in a body to the request.</p>
+<h4 id="using-httpie-as-a-rest-client">Using HTTPie as a rest client</h4>
+<p>Here is an example <code>POST</code> request using <a href="https://httpie.org/" target="_blank">HTTPie Rest Client</a></p>
+<pre><code class="lang-curl">http --form POST https://api.sandbox.paypal.com/v1/oauth2/token \
+&apos;Authorization: Basic aFakeToken&apos; \
+&apos;Content-Type: application/x-www-form-urlencoded&apos; \
+grant_type=&apos;client_credentials&apos;
+</code></pre>
+<h4 id="using-jq-library-for-nice-json-output">Using jq library for nice json output</h4>
+<p>Here is an example using <a href="https://stedolan.github.io/jq/" target="_blank">jq library</a></p>
+<pre><code class="lang-curl">curl -X POST \
+  https://api.sandbox.paypal.com/v1/oauth2/token \
+  -H &apos;Authorization: Basic afakeToken12345&apos; \
+  -H &apos;Content-Type: application/x-www-form-urlencoded&apos; \
+  -d grant_type=client_credentials | jq
+</code></pre>
+<p>This gives a nicely formatted json response with indents and all like this:</p>
+<pre><code class="lang-json">{
+  <span class="hljs-string">&quot;scope&quot;</span>: <span class="hljs-string">&quot;https://uri.paypal.com/services/subscriptions https://api.paypal.com/v1/payments/.* https://api.paypal.com/v1/vault/credit-card https://uri.paypal.com/services/applications/webhooks openid https://uri.paypal.com/payments/payouts https://api.paypal.com/v1/vault/credit-card/.*&quot;</span>,
+  <span class="hljs-string">&quot;nonce&quot;</span>: <span class="hljs-string">&quot;2018-03-10T00:26:19Zs84muY6oGt55amkV4Yx7AdyPx5FBGYfTW-Z4FfXXECg&quot;</span>,
+  <span class="hljs-string">&quot;access_token&quot;</span>: <span class="hljs-string">&quot;A21AAGxDJPIqTppEqR_L_LbL3NOXrMPgLVH2pLG3f1U5s9WUJYiHkfLfbC0kC-fk_WbICqRIOmdRBtdEE-wr10VNNavtKzR-Q&quot;</span>,
+  <span class="hljs-string">&quot;token_type&quot;</span>: <span class="hljs-string">&quot;Bearer&quot;</span>,
+  <span class="hljs-string">&quot;app_id&quot;</span>: <span class="hljs-string">&quot;APP-80W284485P519543T&quot;</span>,
+  <span class="hljs-string">&quot;expires_in&quot;</span>: <span class="hljs-number">32398</span>
+}
+</code></pre>
+<h4 id="bread-crumb-navigation">Bread Crumb Navigation</h4>
+<hr>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Previous</th>
+<th style="text-align:right">Next</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">&#x2190; <a href="types-of-api-testing.html">Types of API Testing</a></td>
+<td style="text-align:right"><a href="api-security.html">API Security</a> &#x2192;</td>
+</tr>
+</tbody>
+</table>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="types-of-api-testing.html" class="navigation navigation-prev " aria-label="Previous page: Types of API Testing">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="api-security.html" class="navigation navigation-next " aria-label="Next page: API Security">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"API Testing Tools","level":"1.6.2","depth":2,"next":{"title":"API Security","level":"1.7","depth":1,"path":"docs/api-security.md","ref":"docs/api-security.md","articles":[{"title":"Authentication","level":"1.7.1","depth":2,"path":"docs/authentication.md","ref":"docs/authentication.md","articles":[{"title":"OpenID Connect","level":"1.7.1.1","depth":3,"path":"docs/openid-connect.md","ref":"docs/openid-connect.md","articles":[]}]},{"title":"Authorization","level":"1.7.2","depth":2,"path":"docs/authorization.md","ref":"docs/authorization.md","articles":[{"title":"OAuth","level":"1.7.2.1","depth":3,"path":"docs/oauth.md","ref":"docs/oauth.md","articles":[]}]},{"title":"Federation","level":"1.7.3","depth":2,"path":"docs/federation.md","ref":"docs/federation.md","articles":[]},{"title":"Delegation","level":"1.7.4","depth":2,"path":"docs/delegation.md","ref":"docs/delegation.md","articles":[]}]},"previous":{"title":"Types of API Testing","level":"1.6.1","depth":2,"path":"docs/types-of-api-testing.md","ref":"docs/types-of-api-testing.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["include-codeblock","advanced-emoji","highlight","copy-code-button"],"pluginsConfig":{"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"copy-code-button":{},"advanced-emoji":{"embedEmojis":false},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"default","theme":"chrome","unindent":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"docs/api-testing-tools.md","mtime":"2018-03-10T00:27:01.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-26T19:30:35.921Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

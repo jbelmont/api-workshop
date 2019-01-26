@@ -1,0 +1,1142 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>GraphQL · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="raml.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="api-summary.html">
+            
+                <a href="api-summary.html">
+            
+                    
+                    API Summary and Description
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="restful-intro.html">
+            
+                <a href="restful-intro.html">
+            
+                    
+                    Restful API Introduction
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="rest-dissertation.html">
+            
+                <a href="rest-dissertation.html">
+            
+                    
+                    Roy Fieldings Dissertation on REST
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="rest-constraints.html">
+            
+                <a href="rest-constraints.html">
+            
+                    
+                    Rest Architecture Constraints
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="maturity-model.html">
+            
+                <a href="maturity-model.html">
+            
+                    
+                    Richardson Maturity Model
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="http-concepts.html">
+            
+                <a href="http-concepts.html">
+            
+                    
+                    HTTP Concepts
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="http-verbs.html">
+            
+                <a href="http-verbs.html">
+            
+                    
+                    HTTP Verbs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="status-codes.html">
+            
+                <a href="status-codes.html">
+            
+                    
+                    HTTP Status Codes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="http-headers.html">
+            
+                <a href="http-headers.html">
+            
+                    
+                    HTTP Headers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="request-response.html">
+            
+                <a href="request-response.html">
+            
+                    
+                    HTTP Request and Response
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="uri-design.html">
+            
+                <a href="uri-design.html">
+            
+                    
+                    URL Design
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="query-string.html">
+            
+                <a href="query-string.html">
+            
+                    
+                    Query String
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="api-design.html">
+            
+                <a href="api-design.html">
+            
+                    
+                    API Design
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="api-testing.html">
+            
+                <a href="api-testing.html">
+            
+                    
+                    API Testing
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="types-of-api-testing.html">
+            
+                <a href="types-of-api-testing.html">
+            
+                    
+                    Types of API Testing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="api-testing-tools.html">
+            
+                <a href="api-testing-tools.html">
+            
+                    
+                    API Testing Tools
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="api-security.html">
+            
+                <a href="api-security.html">
+            
+                    
+                    API Security
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="authentication.html">
+            
+                <a href="authentication.html">
+            
+                    
+                    Authentication
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1.1" data-path="openid-connect.html">
+            
+                <a href="openid-connect.html">
+            
+                    
+                    OpenID Connect
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="authorization.html">
+            
+                <a href="authorization.html">
+            
+                    
+                    Authorization
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.2.1" data-path="oauth.html">
+            
+                <a href="oauth.html">
+            
+                    
+                    OAuth
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="federation.html">
+            
+                <a href="federation.html">
+            
+                    
+                    Federation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="delegation.html">
+            
+                <a href="delegation.html">
+            
+                    
+                    Delegation
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="api-description-languages.html">
+            
+                <a href="api-description-languages.html">
+            
+                    
+                    API Description Languages
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="openapi.html">
+            
+                <a href="openapi.html">
+            
+                    
+                    OpenAPI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="api-blueprint.html">
+            
+                <a href="api-blueprint.html">
+            
+                    
+                    API Blueprint
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="raml.html">
+            
+                <a href="raml.html">
+            
+                    
+                    RAML
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.9" data-path="graphql.html">
+            
+                <a href="graphql.html">
+            
+                    
+                    GraphQL
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >GraphQL</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>API Workshop - GraphQL</p>
+<h2 id="sections">Sections:</h2>
+<ul>
+<li><a href="#introduction-to-graphql">Introduction to GraphQL</a></li>
+<li><a href="#graphql-schema-language">GraphQL Schema Language</a></li>
+<li><a href="#graphql-query-language">GraphQL Query Language</a></li>
+<li><a href="#graphiql">GraphiQL</a></li>
+<li><a href="#bread-crumb-navigation">Bread Crumb Navigation</a></li>
+</ul>
+<h4 id="introduction-to-graphql">Introduction to GraphQL</h4>
+<h6 id="what-is-graphql">What is GraphQL?</h6>
+<blockquote>
+<p>GraphQL is a query language for your API, and a server-side runtime for executing queries by using a type system you define for your data. GraphQL isn&apos;t tied to any specific database or storage engine and is instead backed by your existing code and data.</p>
+</blockquote>
+<h4 id="graphql-schema-language">GraphQL Schema Language</h4>
+<p>A GraphQL service is created by defining types and fields on those types, then providing functions for each field on each type. For example, a GraphQL service that tells us who the the hero is and his powers might look something like this:</p>
+<h6 id="schema-example">Schema Example</h6>
+<pre><code class="lang-graphql">type Hero {
+  id: ID!
+  name: String
+  powers: [String]
+}
+</code></pre>
+<p>GraphQL allows us to define and describe our data structures. For this purpose, GraphQL provides a typed schema language . We specify custom types for the data served by the API. A GraphQL schema is created by defining types, which have a number of fields, and by providing access functions for each field and each type.</p>
+<h6 id="2-different-languages-in-graphql">2 Different Languages in GraphQL</h6>
+<ul>
+<li><p>There is a query language and a schema definition language in GraphQL.</p>
+</li>
+<li><p>These two languages have different purposes.</p>
+</li>
+<li><p>The purpose of the schema definition language is to define the structure of the business data exposed by the GraphQL API. API providers use the schema definition language to specify the interface.</p>
+</li>
+<li><p>The purpose of the query language is to interact with the GraphQL endpoint.</p>
+</li>
+<li><p>Clients use the query language for reading data, writing data or subscribing to notifications.</p>
+</li>
+<li><p>The schema serves as a constraint on the possible interactions.</p>
+</li>
+</ul>
+<h6 id="why-is-graphql-have-the-graph-part">Why is GraphQL have the Graph Part?</h6>
+<p>A graph is a very generic data structure and it should be possible to express the data of any application in the form of a graph, and so this graph which is formed by all application data, is what we call the graph in GraphQL.</p>
+<h6 id="fields">Fields</h6>
+<blockquote>
+<p>At its simplest, GraphQL is about asking for specific fields on objects. Let&apos;s start by looking at a very simple query and the result we get when we run it:</p>
+</blockquote>
+<p><em>GraphQL query:</em></p>
+<pre><code class="lang-graphql">{
+  hero {
+    name
+    powers
+    gender
+  }
+}
+</code></pre>
+<p>could return the following json payload:</p>
+<pre><code class="lang-json">{
+  <span class="hljs-string">&quot;data&quot;</span>: {
+    <span class="hljs-string">&quot;hero&quot;</span>: {
+      <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;Superman&quot;</span>,
+      <span class="hljs-string">&quot;powers&quot;</span>: [
+        <span class="hljs-string">&quot;Superhuman Speed&quot;</span>,
+        <span class="hljs-string">&quot;Superhuman Strength&quot;</span>,
+        <span class="hljs-string">&quot;Superhuman Stamina&quot;</span>,
+        <span class="hljs-string">&quot;Superhuman Durability&quot;</span>,
+        <span class="hljs-string">&quot;Regenerative Healing Factor&quot;</span>,
+        <span class="hljs-string">&quot;Immunity to All Diseases and Viruses&quot;</span>
+      ],
+      <span class="hljs-string">&quot;gender&quot;</span>: <span class="hljs-string">&quot;male&quot;</span>
+    }
+  }
+}
+</code></pre>
+<h6 id="arguments">Arguments</h6>
+<p>In GraphQL you have the ability to pass in argument into fields.</p>
+<blockquote>
+<p>In a system like REST, you can only pass a single set of arguments - the query parameters and URL segments in your request. But in GraphQL, every field and nested object can get its own set of arguments, making GraphQL a complete replacement for making multiple API fetches. You can even pass arguments into scalar fields, to implement data transformations once on the server, instead of on every client separately.</p>
+</blockquote>
+<pre><code class="lang-graphql">{
+  hero(id: &quot;2&quot;) {
+    name
+    powers
+    gender
+  }
+}
+</code></pre>
+<p>would return the hero with an id of 2 which in this case would return this payload:</p>
+<pre><code class="lang-json">{
+  <span class="hljs-string">&quot;data&quot;</span>: {
+    <span class="hljs-string">&quot;hero&quot;</span>: {
+      <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;Immortal Hulk&quot;</span>,
+      <span class="hljs-string">&quot;superpowers&quot;</span>: [
+          <span class="hljs-string">&quot;Superhuman Speed&quot;</span>,
+          <span class="hljs-string">&quot;Superhuman Strength&quot;</span>,
+          <span class="hljs-string">&quot;Transformation&quot;</span>,
+          <span class="hljs-string">&quot;Self Sustenance&quot;</span>,
+          <span class="hljs-string">&quot;Superhuman Stamina&quot;</span>,
+          <span class="hljs-string">&quot;Superhuman Durability&quot;</span>,
+          <span class="hljs-string">&quot;Regenerative Healing Factor&quot;</span>,
+          <span class="hljs-string">&quot;Resistance to Psychic Control&quot;</span>,
+          <span class="hljs-string">&quot;Immunity to All Diseases and Viruses&quot;</span>,
+          <span class="hljs-string">&quot;Superhuman Leaping Ability&quot;</span>,
+          <span class="hljs-string">&quot;Astral Form Perception&quot;</span>,
+          <span class="hljs-string">&quot;Homing Ability&quot;</span>,
+          <span class="hljs-string">&quot;Gamma Radiation/Energy Manipulation and Emission&quot;</span>,
+          <span class="hljs-string">&quot;Adaptation to Hostile Environments&quot;</span>,
+          <span class="hljs-string">&quot;Immortality&quot;</span>
+      ],
+      <span class="hljs-string">&quot;gender&quot;</span>: <span class="hljs-string">&quot;male&quot;</span>
+    }
+  }
+}
+</code></pre>
+<h6 id="aliases">Aliases</h6>
+<p>Aliases in GraphQL let you rename the result of a field:</p>
+<pre><code class="lang-graphql">{
+  dcHero: hero(world: DC) {
+    name
+    powers
+    gender
+  }
+  marvelHero: hero(world: MARVEL) {
+    name
+    powers
+    gender
+  }
+}
+</code></pre>
+<p>so here we could get the following json payload with the following renamed fields:</p>
+<pre><code class="lang-json">{
+  <span class="hljs-string">&quot;data&quot;</span>: {
+    <span class="hljs-string">&quot;dcHero&quot;</span>: {
+      <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;Superman&quot;</span>,
+      <span class="hljs-string">&quot;powers&quot;</span>: [
+        <span class="hljs-string">&quot;Superhuman Speed&quot;</span>,
+        <span class="hljs-string">&quot;Superhuman Strength&quot;</span>,
+        <span class="hljs-string">&quot;Superhuman Stamina&quot;</span>,
+        <span class="hljs-string">&quot;Superhuman Durability&quot;</span>,
+        <span class="hljs-string">&quot;Regenerative Healing Factor&quot;</span>,
+        <span class="hljs-string">&quot;Immunity to All Diseases and Viruses&quot;</span>
+      ],
+      <span class="hljs-string">&quot;gender&quot;</span>: <span class="hljs-string">&quot;male&quot;</span>
+    },
+    <span class="hljs-string">&quot;marvelHero&quot;</span>: {
+      <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;Immortal Hulk&quot;</span>,
+      <span class="hljs-string">&quot;powers&quot;</span>: [
+        <span class="hljs-string">&quot;Superhuman Speed&quot;</span>,
+          <span class="hljs-string">&quot;Superhuman Strength&quot;</span>,
+          <span class="hljs-string">&quot;Transformation&quot;</span>,
+          <span class="hljs-string">&quot;Self Sustenance&quot;</span>,
+          <span class="hljs-string">&quot;Superhuman Stamina&quot;</span>,
+          <span class="hljs-string">&quot;Superhuman Durability&quot;</span>,
+          <span class="hljs-string">&quot;Regenerative Healing Factor&quot;</span>,
+          <span class="hljs-string">&quot;Resistance to Psychic Control&quot;</span>,
+          <span class="hljs-string">&quot;Immunity to All Diseases and Viruses&quot;</span>,
+          <span class="hljs-string">&quot;Superhuman Leaping Ability&quot;</span>,
+          <span class="hljs-string">&quot;Astral Form Perception&quot;</span>,
+          <span class="hljs-string">&quot;Homing Ability&quot;</span>,
+          <span class="hljs-string">&quot;Gamma Radiation/Energy Manipulation and Emission&quot;</span>,
+          <span class="hljs-string">&quot;Adaptation to Hostile Environments&quot;</span>,
+          <span class="hljs-string">&quot;Immortality&quot;</span>
+      ],
+      <span class="hljs-string">&quot;gender&quot;</span>: <span class="hljs-string">&quot;male&quot;</span>
+    }
+  }
+}
+</code></pre>
+<h6 id="fragments">Fragments</h6>
+<p><em>In GraphQL fragments let you solve issues with duplication and grant code reuse.</em></p>
+<pre><code class="lang-graphql">{
+  dcHero: hero(world: DC) {
+    ...heroFields
+  }
+  marvelHero: hero(world: MARVEL) {
+    ...heroFields
+  }
+}
+
+fragment heroFields on Hero {
+  name
+  powers
+  gender
+}
+</code></pre>
+<h6 id="variables-in-fragments">Variables in Fragments</h6>
+<p>It is possible for fragments to use variables declared in query or mutation.</p>
+<pre><code class="lang-graphql">query HeroComparison($first: Int = 3) {
+  dcHero: hero(world: DC) {
+    ...heroFields
+  }
+  marvelHero: hero(world: MARVEL) {
+    ...heroFields
+  }
+}
+fragment heroFields on Hero {
+  name
+  powers
+  gender
+  friendsConnection(first: $first) {
+    totalCount
+    edges {
+      node {
+        name
+      }
+    }
+  }
+}
+</code></pre>
+<p>Notice here how we reused the <em>$first</em> variable from the query</p>
+<h6 id="operation-name">Operation Name</h6>
+<p><em>We have been using the graphql shorthand syntax but it is better in production to use an operation name.</em></p>
+<blockquote>
+<p>The operation type is either query, mutation, or subscription and describes what type of operation you&apos;re intending to do. The operation type is required unless you&apos;re using the query shorthand syntax, in which case you can&apos;t supply a name or variable definitions for your operation.</p>
+<p>The operation name is a meaningful and explicit name for your operation. It is only required in multi-operation documents, but its use is encouraged because it is very helpful for debugging and server-side logging. When something goes wrong either in your network logs or your GraphQL server, it is easier to identify a query in your codebase by name instead of trying to decipher the contents. Think of this just like a function name in your favorite programming language. For example, in JavaScript we can easily work only with anonymous functions, but when we give a function a name, it&apos;s easier to track it down, debug our code, and log when it&apos;s called. In the same way, GraphQL query and mutation names, along with fragment names, can be a useful debugging tool on the server side to identify different GraphQL requests.</p>
+</blockquote>
+<p>Here is an example of a graphql <em>query</em> operation:</p>
+<pre><code class="lang-graphql">query HeroNameAndFriends {
+  hero {
+    name
+    powers
+    gender
+    friends {
+      name
+    }
+  }
+}
+</code></pre>
+<p>which would return the following json payload:</p>
+<pre><code class="lang-json">{
+  <span class="hljs-string">&quot;data&quot;</span>: {
+    <span class="hljs-string">&quot;hero&quot;</span>: {
+      <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;Superman&quot;</span>,
+      <span class="hljs-string">&quot;powers&quot;</span>: [
+        <span class="hljs-string">&quot;Superhuman Speed&quot;</span>,
+        <span class="hljs-string">&quot;Superhuman Strength&quot;</span>,
+        <span class="hljs-string">&quot;Superhuman Stamina&quot;</span>,
+        <span class="hljs-string">&quot;Superhuman Durability&quot;</span>,
+        <span class="hljs-string">&quot;Regenerative Healing Factor&quot;</span>,
+        <span class="hljs-string">&quot;Immunity to All Diseases and Viruses&quot;</span>
+      ],
+      <span class="hljs-string">&quot;gender&quot;</span>: <span class="hljs-string">&quot;male&quot;</span>,
+      <span class="hljs-string">&quot;friends&quot;</span>: [
+        {
+          <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;Batman&quot;</span>
+        },
+        {
+          <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;Han Solo&quot;</span>
+        }
+      ]
+    }
+  }
+}
+</code></pre>
+<h6 id="variables">Variables</h6>
+<p>We need to 3 things to work with variables:</p>
+<ol>
+<li><p>Replace the static value in the query with $variableName</p>
+</li>
+<li><p>Declare $variableName as one of the variables accepted by the query</p>
+</li>
+<li><p>Pass variableName: value in the separate, transport-specific (usually JSON) variables dictionary</p>
+</li>
+</ol>
+<p>Here is an example:</p>
+<pre><code class="lang-graphql">query HeroNameAndFriends($organization: ComicOrganization) {
+  hero(organization: $organization) {
+    name
+    friends {
+      name
+    }
+  }
+}
+
+// Pass in value for $organization
+{
+  &quot;organization&quot;: &quot;DC&quot;
+}
+</code></pre>
+<p>Here is the corresponding response payload:</p>
+<pre><code class="lang-json">{
+  <span class="hljs-string">&quot;data&quot;</span>: {
+    <span class="hljs-string">&quot;hero&quot;</span>: {
+      <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;Superman&quot;</span>,
+      <span class="hljs-string">&quot;friends&quot;</span>: [
+        {
+          <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;Batman&quot;</span>
+        },
+        {
+          <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;Wonder Woman&quot;</span>
+        }
+      ]
+    }
+  }
+}
+</code></pre>
+<h6 id="default-variables">Default Variables</h6>
+<p><em>Default values can also be assigned to the variables in the query by adding the default value after the type declaration.</em></p>
+<pre><code class="lang-graphql">query HeroNameAndFriends($organization: ComicOrganization = DC) {
+  hero(organization: $organization) {
+    name
+    friends {
+      name
+    }
+  }
+}
+</code></pre>
+<p><em>Notice here that we passed in a default value of &apos;DC&apos; for the $organization variable.</em></p>
+<h6 id="directives">Directives</h6>
+<blockquote>
+<p>A directive can be attached to a field or fragment inclusion, and can affect execution of the query in any way the server desires. The core GraphQL specification includes exactly two directives, which must be supported by any spec-compliant GraphQL server implementation.</p>
+</blockquote>
+<p>Here are the 2 directives:</p>
+<ul>
+<li><p><code>@include(if: Boolean)</code> Only include this field in the result if the argument is true.</p>
+</li>
+<li><p><code>@skip(if: Boolean)</code> Skip this field if the argument is true.</p>
+</li>
+</ul>
+<p>Here is the query:</p>
+<pre><code class="lang-graphql">query HeroNameAndFriends($organization: ComicOrganization = DC, $hasFriends: Boolean!) {
+  hero(organization: $organization) {
+    name
+    friends @include(if: $hasfriends) {
+      name
+    }
+  }
+}
+</code></pre>
+<p>Here is an example of passing in variables:</p>
+<pre><code class="lang-json">{
+  <span class="hljs-string">&quot;organization&quot;</span>: <span class="hljs-string">&quot;Marvel&quot;</span>,
+  <span class="hljs-string">&quot;hasFriends&quot;</span>: <span class="hljs-literal">false</span>
+}
+</code></pre>
+<p>Here would be a possible payload:</p>
+<pre><code class="lang-json">{
+  <span class="hljs-string">&quot;data&quot;</span>: {
+    <span class="hljs-string">&quot;hero&quot;</span>: {
+      <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;Deadpool&quot;</span>
+    }
+  }
+}
+</code></pre>
+<h6 id="mutations">Mutations</h6>
+<p>Mutations in GraphQL are used to update/create date.</p>
+<p>Remember that in REST we would by convention use a GET Request to retrieve data.</p>
+<p>In order to do a write operation in REST we can use a POST for creation, PUT for an update, and PATCH for a partial update.</p>
+<p>You could in theory use a query to do a write operation but in GraphQL the most appropriate operation is a Mutation.</p>
+<p>Let us create a new Hero by using a mutation:</p>
+<pre><code class="lang-graphql">mutation CreateHero($organization: ComicOrganization!, $name: NAME, $powers: Abilities, $gender: GENDER) {
+  createHero(organization: $organization, name: $name, powers: $powers, gender: $gender) {
+    organization
+    name
+    powers
+    gender
+  }
+}
+</code></pre>
+<p>Here would be the variables passed in:</p>
+<pre><code class="lang-json">{
+  <span class="hljs-string">&quot;organization&quot;</span>: <span class="hljs-string">&quot;DC&quot;</span>,
+  <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;Superman&quot;</span>,
+  <span class="hljs-string">&quot;powers&quot;</span>: [
+    <span class="hljs-string">&quot;Solar energy absorption&quot;</span>,
+    <span class="hljs-string">&quot;Superhuman Strength&quot;</span>,
+    <span class="hljs-string">&quot;Invulnerability&quot;</span>,
+    <span class="hljs-string">&quot;Superhuman speed&quot;</span>,
+    <span class="hljs-string">&quot;Flight&quot;</span>,
+    <span class="hljs-string">&quot;Healing-factor&quot;</span>,
+    <span class="hljs-string">&quot;Super-stamina, endurance, durability, agility and reflexes&quot;</span>,
+    <span class="hljs-string">&quot;Super-senses&quot;</span>,
+    <span class="hljs-string">&quot;Super-intelligence&quot;</span>,
+    <span class="hljs-string">&quot;Super-memory&quot;</span>,
+    <span class="hljs-string">&quot;Super-breath and Arctic breath&quot;</span>,
+    <span class="hljs-string">&quot;Multilingualism&quot;</span>,
+    <span class="hljs-string">&quot;Longevity&quot;</span>,
+    <span class="hljs-string">&quot;Solar-Flare (New 52)&quot;</span>,
+    <span class="hljs-string">&quot;Energy signals and transmissions awareness (New 52)&quot;</span>,
+  ],
+  <span class="hljs-string">&quot;gender&quot;</span>: <span class="hljs-string">&quot;male&quot;</span>
+}
+</code></pre>
+<h6 id="inline-fragments">Inline Fragments</h6>
+<p><em>If you are querying a field that returns an interface or a union type, you will need to use inline fragments to access data on the underlying concrete type.</em></p>
+<p>Here is an example:</p>
+<pre><code class="lang-graphql">query HeroGroups($organization: Organization!) {
+  heroGroups(organization: $organization) {
+    name
+    ... on DC {
+      rating
+      members
+    }
+    ... on Marvel {
+      members
+    }
+  }
+}
+</code></pre>
+<p>Here we pass the following json value for variable:</p>
+<pre><code class="lang-json">{
+  <span class="hljs-string">&quot;organization&quot;</span>: <span class="hljs-string">&quot;DC&quot;</span>
+}
+</code></pre>
+<p>Here is one possible json payload:</p>
+<pre><code class="lang-json">{
+  <span class="hljs-string">&quot;data&quot;</span>: {
+    <span class="hljs-string">&quot;hero&quot;</span>: {
+      <span class="hljs-string">&quot;rating&quot;</span>: <span class="hljs-number">10</span>,
+      <span class="hljs-string">&quot;members&quot;</span>: [
+        <span class="hljs-string">&quot;Aquaman&quot;</span>,
+        <span class="hljs-string">&quot;The Atom&quot;</span>,
+        <span class="hljs-string">&quot;Aztek&quot;</span>,
+        <span class="hljs-string">&quot;Batman&quot;</span>,
+        <span class="hljs-string">&quot;Black Canary&quot;</span>,
+        <span class="hljs-string">&quot;Booster Gold&quot;</span>,
+        <span class="hljs-string">&quot;Captain Marvel&quot;</span>,
+        <span class="hljs-string">&quot;Catwoman&quot;</span>,
+        <span class="hljs-string">&quot;Crimson Fox&quot;</span>,
+        <span class="hljs-string">&quot;Cyborg&quot;</span>,
+        <span class="hljs-string">&quot;Doctor Fate&quot;</span>,
+        <span class="hljs-string">&quot;The Elongated Man&quot;</span>,
+        <span class="hljs-string">&quot;Firestorm&quot;</span>,
+        <span class="hljs-string">&quot;The Flash&quot;</span>,
+        <span class="hljs-string">&quot;Green Arrow&quot;</span>,
+        <span class="hljs-string">&quot;Green Lantern (Hal Jordan)&quot;</span>,
+        <span class="hljs-string">&quot;Green Lantern (John Stewart)&quot;</span>,
+        <span class="hljs-string">&quot;Green Lantern (Kyle Rayner)&quot;</span>,
+        <span class="hljs-string">&quot;Green Lantern (Simon Baz)&quot;</span>,
+        <span class="hljs-string">&quot;Hawkgirl&quot;</span>,
+        <span class="hljs-string">&quot;Hawkman&quot;</span>,
+        <span class="hljs-string">&quot;Hawkwoman&quot;</span>,
+        <span class="hljs-string">&quot;Huntress&quot;</span>,
+        <span class="hljs-string">&quot;Killer Frost&quot;</span>,
+        <span class="hljs-string">&quot;Lobo&quot;</span>,
+        <span class="hljs-string">&quot;The Martian Manhunter&quot;</span>,
+        <span class="hljs-string">&quot;Mera&quot;</span>,
+        <span class="hljs-string">&quot;Metamorpho&quot;</span>,
+        <span class="hljs-string">&quot;Mister Miracle&quot;</span>,
+        <span class="hljs-string">&quot;Phantom Stranger&quot;</span>,
+        <span class="hljs-string">&quot;Plastic Man&quot;</span>,
+        <span class="hljs-string">&quot;The Ray&quot;</span>,
+        <span class="hljs-string">&quot;Red Tornado&quot;</span>,
+        <span class="hljs-string">&quot;Steel&quot;</span>,
+        <span class="hljs-string">&quot;Supergirl&quot;</span>,
+        <span class="hljs-string">&quot;Superman&quot;</span>,
+        <span class="hljs-string">&quot;Shazam&quot;</span>,
+        <span class="hljs-string">&quot;Vibe&quot;</span>,
+        <span class="hljs-string">&quot;Vixen&quot;</span>,
+        <span class="hljs-string">&quot;Wonder Woman&quot;</span>,
+        <span class="hljs-string">&quot;Zatanna&quot;</span>
+      ]
+    }
+  }
+}
+</code></pre>
+<p>Notice that we passed in DC for the organization which has a list of members and a rating of 1 to 10 whereas Marvel just has members.</p>
+<h4 id="graphql-query-language">GraphQL Query Language</h4>
+<h6 id="what-is-a-graphql-query">What is a GraphQL Query?</h6>
+<p>A GraphQL query consists of one ore more patterns and one method.</p>
+<p>The patterns are matched against parts of the graph.</p>
+<p>The method determines how the matched parts of the graph are processed.</p>
+<p>The language provides methods for retrieving data, writing data and getting notified when the data changes.</p>
+<h6 id="type-system">Type System</h6>
+<p>add content here</p>
+<h6 id="type-language">Type Language</h6>
+<p>add content here</p>
+<h6 id="object-types-and-fields">Object Types and Fields</h6>
+<p>add content here</p>
+<h6 id="arguments">Arguments</h6>
+<p>add content here</p>
+<h6 id="query-and-mutation-types">Query and Mutation Types</h6>
+<p>add content here</p>
+<h6 id="scalar-types">Scalar Types</h6>
+<p>add content here</p>
+<h6 id="enumeration-types">Enumeration Types</h6>
+<p>add content here</p>
+<h6 id="lists-and-non-null">Lists and Non-null</h6>
+<p>add content here</p>
+<h6 id="interfaces">Interfaces</h6>
+<p>add content here</p>
+<h6 id="union-types">Union Types</h6>
+<p>add content here</p>
+<h6 id="input-types">Input Types</h6>
+<p>add content here</p>
+<h4 id="graphiql">GraphiQL</h4>
+<p>For the workshop we will use Github&apos;s GraphiQL Explorer:</p>
+<p><img src="../images/github-graphiql.png" alt="Github GraphiQL"></p>
+<p>Notice in the screenshot below that we have a separate pane to put our variables for graphql:</p>
+<p><img src="../images/github-graphql-request.png" alt="Real Request to Github API v4 for GraphQL"></p>
+<p>Link to <a href="https://developer.github.com/v4/guides/forming-calls/#the-graphql-endpoint" target="_blank">Github V4 API</a></p>
+<h4 id="bread-crumb-navigation">Bread Crumb Navigation</h4>
+<hr>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Previous</th>
+<th style="text-align:right">Next</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">&#x2190; <a href="raml.html">RAML</a></td>
+<td style="text-align:right"><a href="../">README</a> &#x2192;</td>
+</tr>
+</tbody>
+</table>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="raml.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: RAML">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"GraphQL","level":"1.9","depth":1,"previous":{"title":"RAML","level":"1.8.3","depth":2,"path":"docs/raml.md","ref":"docs/raml.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["include-codeblock","advanced-emoji","highlight","copy-code-button"],"pluginsConfig":{"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"copy-code-button":{},"advanced-emoji":{"embedEmojis":false},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"default","theme":"chrome","unindent":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"docs/graphql.md","mtime":"2019-01-26T13:23:25.373Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-26T19:30:35.921Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

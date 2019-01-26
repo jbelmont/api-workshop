@@ -1,0 +1,746 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>OpenID Connect · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="authorization.html" />
+    
+    
+    <link rel="prev" href="authentication.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="api-summary.html">
+            
+                <a href="api-summary.html">
+            
+                    
+                    API Summary and Description
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="restful-intro.html">
+            
+                <a href="restful-intro.html">
+            
+                    
+                    Restful API Introduction
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="rest-dissertation.html">
+            
+                <a href="rest-dissertation.html">
+            
+                    
+                    Roy Fieldings Dissertation on REST
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="rest-constraints.html">
+            
+                <a href="rest-constraints.html">
+            
+                    
+                    Rest Architecture Constraints
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="maturity-model.html">
+            
+                <a href="maturity-model.html">
+            
+                    
+                    Richardson Maturity Model
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="http-concepts.html">
+            
+                <a href="http-concepts.html">
+            
+                    
+                    HTTP Concepts
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="http-verbs.html">
+            
+                <a href="http-verbs.html">
+            
+                    
+                    HTTP Verbs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="status-codes.html">
+            
+                <a href="status-codes.html">
+            
+                    
+                    HTTP Status Codes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="http-headers.html">
+            
+                <a href="http-headers.html">
+            
+                    
+                    HTTP Headers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="request-response.html">
+            
+                <a href="request-response.html">
+            
+                    
+                    HTTP Request and Response
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="uri-design.html">
+            
+                <a href="uri-design.html">
+            
+                    
+                    URL Design
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="query-string.html">
+            
+                <a href="query-string.html">
+            
+                    
+                    Query String
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="api-design.html">
+            
+                <a href="api-design.html">
+            
+                    
+                    API Design
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="api-testing.html">
+            
+                <a href="api-testing.html">
+            
+                    
+                    API Testing
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="types-of-api-testing.html">
+            
+                <a href="types-of-api-testing.html">
+            
+                    
+                    Types of API Testing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="api-testing-tools.html">
+            
+                <a href="api-testing-tools.html">
+            
+                    
+                    API Testing Tools
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="api-security.html">
+            
+                <a href="api-security.html">
+            
+                    
+                    API Security
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="authentication.html">
+            
+                <a href="authentication.html">
+            
+                    
+                    Authentication
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.7.1.1" data-path="openid-connect.html">
+            
+                <a href="openid-connect.html">
+            
+                    
+                    OpenID Connect
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="authorization.html">
+            
+                <a href="authorization.html">
+            
+                    
+                    Authorization
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.2.1" data-path="oauth.html">
+            
+                <a href="oauth.html">
+            
+                    
+                    OAuth
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="federation.html">
+            
+                <a href="federation.html">
+            
+                    
+                    Federation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="delegation.html">
+            
+                <a href="delegation.html">
+            
+                    
+                    Delegation
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="api-description-languages.html">
+            
+                <a href="api-description-languages.html">
+            
+                    
+                    API Description Languages
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="openapi.html">
+            
+                <a href="openapi.html">
+            
+                    
+                    OpenAPI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="api-blueprint.html">
+            
+                <a href="api-blueprint.html">
+            
+                    
+                    API Blueprint
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="raml.html">
+            
+                <a href="raml.html">
+            
+                    
+                    RAML
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="graphql.html">
+            
+                <a href="graphql.html">
+            
+                    
+                    GraphQL
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >OpenID Connect</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>API Workshop - Open ID Connect</p>
+<h2 id="sections">Sections:</h2>
+<ul>
+<li><a href="#what-is-openid-connect">What is OpenID Connect</a></li>
+<li><a href="#difference-between-openid-connect-and-openid">Difference between OpenID Connect and OpenID</a></li>
+<li><a href="#description-of-how-openid-connect-protocol-works">Description of How OpenID Connect Protocol Works</a></li>
+<li><a href="#openid-connect-specification">OpenID Connect Specification</a></li>
+<li><a href="#openid-connect-playground">OpenID Connect Playground</a></li>
+<li><a href="#authorization-code-review-diagram">Authorization Code Review Diagram</a></li>
+<li><a href="#bread-crumb-navigation">Bread Crumb Navigation</a></li>
+</ul>
+<h4 id="what-is-openid-connect">What is OpenID Connect</h4>
+<p>OpenID Connect 1.0 is a simple identity layer on top of the OAuth 2.0 protocol. It allows Clients to verify the identity of the End-User based on the authentication performed by an Authorization Server, as well as to obtain basic profile information about the End-User in an interoperable and REST-like manner.</p>
+<p>OpenID Connect allows clients of all types, including Web-based, mobile, and JavaScript clients to request and receive information about authenticated sessions and end-users. The specification suite is extensible, allowing participants to use optional features such as encryption of identity data, discovery of OpenID Providers, and session management, when it makes sense for them.</p>
+<p>See <a href="http://openid.net/connect/faq/" target="_blank">http://openid.net/connect/faq/</a> for a set of answers to Frequently Asked Questions about OpenID Connect.</p>
+<h4 id="difference-between-openid-connect-and-openid">Difference between OpenID Connect and OpenID</h4>
+<p>OpenID Connect is officially supported standard while OpenID 2.0 has been deprecated.</p>
+<p><a href="https://security.stackexchange.com/questions/44797/when-do-you-use-openid-vs-openid-connect" target="_blank">Security Stack Exchange Post</a></p>
+<blockquote>
+<p>OpenID 2.0 and OpenID Connect are very different standards with completely different parameters and response body formats. Both are built on top of OAuth 2.0 by putting additional values into otherwise valid OAuth 2.0 requests and responses, in order to provide identity information needed for authentication (whereas OAuth 2.0 only provides authorization, not authentication). OpenID Connect improved naming and structure of OpenID 2.0 fields and parameters in order to be easier to use.</p>
+</blockquote>
+<h4 id="description-of-how-openid-connect-protocol-works">Description of How OpenID Connect Protocol Works</h4>
+<p>Let&apos;s use the example we mentioned earlier, signing into Auth0 using your Google account, for a high level overview on how the flow works:</p>
+<p>When you choose to sign in with your twitter account for linkedin let us say, twitter will send an authorization request to LinkedIn.</p>
+<p>LinkedIn will then authenticate your credentials or ask you to login if you are not already signed in and then ask for your authorization and will ask for example to read your email address and ask if you are okay with this action.</p>
+<p>Once you have athenticated and authorized to sign in then LinkedIn will send an access token and if requested an ID Token and send this back to twitter.</p>
+<p>Twitter can then retrieve user information from the ID Token or use the Access Token to invoke a LinkedIn API.</p>
+<h4 id="openid-connect-specification">OpenID Connect Specification</h4>
+<p>Here is the official <a href="https://openid.net/specs/openid-connect-core-1_0.html" target="_blank">OpenID Connect Specification</a></p>
+<p><img src="../images/openid-connect-spec.png" alt="OpenID Connect Spec"></p>
+<h4 id="openid-connect-playground">OpenID Connect Playground</h4>
+<p>Auth0 built a nice tool to learn more about how OpenID Connect works which you can look at <a href="https://openidconnect.net/" target="_blank">Here</a></p>
+<p><img src="../images/openid-connect-playground.png" alt="OpenID Connect Playground"></p>
+<p>You can configure the debugger by clicking this cog:</p>
+<p><img src="../images/openid-debugger.png" alt="Debugger"></p>
+<p>Here is what the configuration looks like:</p>
+<p><img src="../images/openid-debugger-config.png" alt="Configuration"></p>
+<p>You just need to click the start button:</p>
+<p><img src="../images/openid-debugger-start.png" alt="Start Debugger"></p>
+<p>You will then be redirected back to login into auth0 account:</p>
+<p><img src="../images/redirect-back-to-auth0.png" alt="Redirect back to Auth0"></p>
+<p>Once you enter the proper credentials you will be redirected back debugger and provided an Authorization Code:</p>
+<p><img src="../images/authorization-code.png" alt="Authorization Code"></p>
+<p>You will then exchange this <strong>code</strong> for a token:</p>
+<p><img src="../images/access-token.png" alt="Token"></p>
+<p>You can then click next to verify the <code>id_token</code> which is a json web token <em>jwt</em>:</p>
+<p><img src="../images/verify-jwt.png" alt="jwt token"></p>
+<p>You can look at the parts of the jwt by using the <a href="https://jwt.io/" target="_blank">jwt debugger</a>:</p>
+<p><img src="../images/jwt-debugger.png" alt="JWT Debugger"></p>
+<p>Here is the base 64 decoded json web token information:</p>
+<pre><code class="lang-json">{
+ <span class="hljs-string">&quot;email&quot;</span>: <span class="hljs-string">&quot;-&quot;</span>, <span class="hljs-comment">// omit personal info</span>
+ <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;-&quot;</span>, <span class="hljs-comment">// omit personal info</span>
+ <span class="hljs-string">&quot;picture&quot;</span>: <span class="hljs-string">&quot;-&quot;</span>, <span class="hljs-comment">// omit personal info</span>
+ <span class="hljs-string">&quot;nickname&quot;</span>: <span class="hljs-string">&quot;-&quot;</span>, <span class="hljs-comment">// omit personal info</span>
+ <span class="hljs-string">&quot;groups&quot;</span>: [],
+ <span class="hljs-string">&quot;app_metadata&quot;</span>: {
+  <span class="hljs-string">&quot;authorization&quot;</span>: {
+   <span class="hljs-string">&quot;groups&quot;</span>: []
+  }
+ },
+ <span class="hljs-string">&quot;email_verified&quot;</span>: <span class="hljs-literal">false</span>,
+ <span class="hljs-string">&quot;clientID&quot;</span>: <span class="hljs-string">&quot;-&quot;</span>, <span class="hljs-comment">// omit</span>
+ <span class="hljs-string">&quot;updated_at&quot;</span>: <span class="hljs-string">&quot;2019-01-21T00:29:32.295Z&quot;</span>,
+ <span class="hljs-string">&quot;user_id&quot;</span>: <span class="hljs-string">&quot;-&quot;</span>, <span class="hljs-comment">// omit</span>
+ <span class="hljs-string">&quot;identities&quot;</span>: [
+  {
+   <span class="hljs-string">&quot;user_id&quot;</span>: <span class="hljs-string">&quot;-&quot;</span>, <span class="hljs-comment">// omit personal info</span>
+   <span class="hljs-string">&quot;provider&quot;</span>: <span class="hljs-string">&quot;auth0&quot;</span>,
+   <span class="hljs-string">&quot;connection&quot;</span>: <span class="hljs-string">&quot;Username-Password-Authentication&quot;</span>,
+   <span class="hljs-string">&quot;isSocial&quot;</span>: <span class="hljs-literal">false</span>
+  }
+ ],
+ <span class="hljs-string">&quot;created_at&quot;</span>: <span class="hljs-string">&quot;2019-01-21T00:29:31.834Z&quot;</span>,
+ <span class="hljs-string">&quot;authorization&quot;</span>: {
+  <span class="hljs-string">&quot;groups&quot;</span>: []
+ },
+ <span class="hljs-string">&quot;iss&quot;</span>: <span class="hljs-string">&quot;https://samples.auth0.com/&quot;</span>,
+ <span class="hljs-string">&quot;sub&quot;</span>: <span class="hljs-string">&quot;auth0|5c45126bcd6e2731d2997f12&quot;</span>,
+ <span class="hljs-string">&quot;aud&quot;</span>: <span class="hljs-string">&quot;kbyuFDidLLm280LIwVFiazOqjO3ty8KH&quot;</span>,
+ <span class="hljs-string">&quot;iat&quot;</span>: <span class="hljs-number">1548030699</span>,
+ <span class="hljs-string">&quot;exp&quot;</span>: <span class="hljs-number">1548066699</span>
+}
+</code></pre>
+<h4 id="authorization-code-review-diagram">Authorization Code Review Diagram</h4>
+<p>Here is a diagram illustration the authorization code flow that occurred in the debugger:</p>
+<p><img src="../images/auth-flow.png" alt="Auth Flow"></p>
+<h4 id="bread-crumb-navigation">Bread Crumb Navigation</h4>
+<hr>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Previous</th>
+<th style="text-align:right">Next</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">&#x2190; <a href="authentication.html">Authentication</a></td>
+<td style="text-align:right"><a href="authorization.html">Authorization</a> &#x2192;</td>
+</tr>
+</tbody>
+</table>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="authentication.html" class="navigation navigation-prev " aria-label="Previous page: Authentication">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="authorization.html" class="navigation navigation-next " aria-label="Next page: Authorization">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"OpenID Connect","level":"1.7.1.1","depth":3,"next":{"title":"Authorization","level":"1.7.2","depth":2,"path":"docs/authorization.md","ref":"docs/authorization.md","articles":[{"title":"OAuth","level":"1.7.2.1","depth":3,"path":"docs/oauth.md","ref":"docs/oauth.md","articles":[]}]},"previous":{"title":"Authentication","level":"1.7.1","depth":2,"path":"docs/authentication.md","ref":"docs/authentication.md","articles":[{"title":"OpenID Connect","level":"1.7.1.1","depth":3,"path":"docs/openid-connect.md","ref":"docs/openid-connect.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["include-codeblock","advanced-emoji","highlight","copy-code-button"],"pluginsConfig":{"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"copy-code-button":{},"advanced-emoji":{"embedEmojis":false},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"default","theme":"chrome","unindent":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"docs/openid-connect.md","mtime":"2019-01-21T01:03:42.562Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-26T19:30:35.921Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,1455 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>HTTP Verbs · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="status-codes.html" />
+    
+    
+    <link rel="prev" href="http-concepts.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="api-summary.html">
+            
+                <a href="api-summary.html">
+            
+                    
+                    API Summary and Description
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="restful-intro.html">
+            
+                <a href="restful-intro.html">
+            
+                    
+                    Restful API Introduction
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="rest-dissertation.html">
+            
+                <a href="rest-dissertation.html">
+            
+                    
+                    Roy Fieldings Dissertation on REST
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="rest-constraints.html">
+            
+                <a href="rest-constraints.html">
+            
+                    
+                    Rest Architecture Constraints
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="maturity-model.html">
+            
+                <a href="maturity-model.html">
+            
+                    
+                    Richardson Maturity Model
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="http-concepts.html">
+            
+                <a href="http-concepts.html">
+            
+                    
+                    HTTP Concepts
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.4.1" data-path="http-verbs.html">
+            
+                <a href="http-verbs.html">
+            
+                    
+                    HTTP Verbs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="status-codes.html">
+            
+                <a href="status-codes.html">
+            
+                    
+                    HTTP Status Codes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="http-headers.html">
+            
+                <a href="http-headers.html">
+            
+                    
+                    HTTP Headers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="request-response.html">
+            
+                <a href="request-response.html">
+            
+                    
+                    HTTP Request and Response
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="uri-design.html">
+            
+                <a href="uri-design.html">
+            
+                    
+                    URL Design
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="query-string.html">
+            
+                <a href="query-string.html">
+            
+                    
+                    Query String
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="api-design.html">
+            
+                <a href="api-design.html">
+            
+                    
+                    API Design
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="api-testing.html">
+            
+                <a href="api-testing.html">
+            
+                    
+                    API Testing
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="types-of-api-testing.html">
+            
+                <a href="types-of-api-testing.html">
+            
+                    
+                    Types of API Testing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="api-testing-tools.html">
+            
+                <a href="api-testing-tools.html">
+            
+                    
+                    API Testing Tools
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="api-security.html">
+            
+                <a href="api-security.html">
+            
+                    
+                    API Security
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="authentication.html">
+            
+                <a href="authentication.html">
+            
+                    
+                    Authentication
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1.1" data-path="openid-connect.html">
+            
+                <a href="openid-connect.html">
+            
+                    
+                    OpenID Connect
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="authorization.html">
+            
+                <a href="authorization.html">
+            
+                    
+                    Authorization
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.2.1" data-path="oauth.html">
+            
+                <a href="oauth.html">
+            
+                    
+                    OAuth
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="federation.html">
+            
+                <a href="federation.html">
+            
+                    
+                    Federation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="delegation.html">
+            
+                <a href="delegation.html">
+            
+                    
+                    Delegation
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="api-description-languages.html">
+            
+                <a href="api-description-languages.html">
+            
+                    
+                    API Description Languages
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="openapi.html">
+            
+                <a href="openapi.html">
+            
+                    
+                    OpenAPI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="api-blueprint.html">
+            
+                <a href="api-blueprint.html">
+            
+                    
+                    API Blueprint
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="raml.html">
+            
+                <a href="raml.html">
+            
+                    
+                    RAML
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="graphql.html">
+            
+                <a href="graphql.html">
+            
+                    
+                    GraphQL
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >HTTP Verbs</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>API Workshop - HTTP Verbs</p>
+<h2 id="sections">Sections:</h2>
+<ul>
+<li><a href="#bread-crumb-navigation">Bread Crumb Navigation</a></li>
+</ul>
+<h4 id="what-are-http-methods">What are HTTP methods?</h4>
+<p><a href="https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods" target="_blank">HTTP Methods</a></p>
+<p>HTTP defines methods which are sometimes called HTTP verbs which indicate an action that is to be performed on a identified resource.</p>
+<blockquote>
+<p>What this resource represents, whether pre-existing data or data that is generated dynamically, depends on the implementation of the server.</p>
+</blockquote>
+<p>The resource can correspond to a specific file on a server or can even be the output of an executable on a server.</p>
+<p>The HTTP 1.0 specification specified the following HTTP methods:</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods" target="_blank">GET</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods" target="_blank">POST</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods" target="_blank">HEAD</a></li>
+</ul>
+<p>You can read more about this in <a href="https://tools.ietf.org/html/rfc1945#section-8.1" target="_blank">RFC 1945 Section 8.1</a></p>
+<p>The HTTP 1.1 specification added 5 new methods:</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods" target="_blank">OPTIONS</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods" target="_blank">PUT</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods" target="_blank">DELETE</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods" target="_blank">TRACE</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods" target="_blank">CONNECT</a></li>
+</ul>
+<p>You can read more about this in <a href="https://tools.ietf.org/html/rfc2616#section-9" target="_blank">RFC 2616 Section 9</a></p>
+<p>Since these methods are specified in <a href="https://tools.ietf.org/html/rfc1945" target="_blank">RFC 1945</a> and <a href="https://tools.ietf.org/html/rfc2616" target="_blank">RFC 2616</a> the semantics of these HTTP methods are well known and can be depended on. </p>
+<p><em>Any client can use any method and the server can be configured to support any combination of methods.</em></p>
+<p><strong>If a method is an unknown to an intermediate server then it will treated as an unsafe and non-idempotent method</strong></p>
+<p>There is no limit to the number of methods that can be defined and this allows for future methods to be specified without breaking existing infrastructure.</p>
+<p>For instance <a href="https://tools.ietf.org/html/rfc5789" target="_blank">RFC 5789</a> specified the PATCH method.</p>
+<h4 id="safe-http-method">Safe HTTP Method</h4>
+<p>The following HTTP Methods are considerd <code>safe</code>:</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods" target="_blank">GET</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods" target="_blank">HEAD</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods" target="_blank">OPTIONS</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods" target="_blank">TRACE</a></li>
+</ul>
+<p><strong>An HTTP method is considered <code>safe</code> if it is only intended for information retrieval and does not change the state of the server.</strong></p>
+<h4 id="idempotent-method">Idempotent Method</h4>
+<p><a href="https://en.wikipedia.org/wiki/Idempotence" target="_blank">Idempotence</a></p>
+<blockquote>
+<p>Idempotence is the property of certain operations in mathematics and computer science that they can be applied multiple times without changing the result beyond the initial application</p>
+</blockquote>
+<p>HTTP Methods have the property of &quot;idempotence&quot; in that (aside from error or expiration issues) the side-effects of N &gt; 0 identical requests is the same as for a single request.</p>
+<p><a href="https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Idempotent_methods_and_web_applications" target="_blank">Idempotence in HTTP Methods</a></p>
+<blockquote>
+<p>(note that idempotence refers to the state of the system after the request has completed, so while the action the server takes (e.g. deleting a record) or the response code it returns may be different on subsequent requests, the system state will be the same every time</p>
+</blockquote>
+<p>In this sense <code>PUT</code> and <code>DELETE</code> HTTP methods are idempotent even though multiple calls can return a different HTTP response code. </p>
+<p>For example calling a resource such as <code>DELETE</code>/users/:id<code>could return</code>204<code>status code on first operation and then a</code>404` on the second and subsequent requests.</p>
+<p>The following HTTP methods are idempotent:</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods" target="_blank">GET</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods" target="_blank">HEAD</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods" target="_blank">PUT</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods" target="_blank">DELETE</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods" target="_blank">OPTIONS</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods" target="_blank">TRACE</a></li>
+</ul>
+<h4 id="http-method-summary-table">HTTP Method Summary Table</h4>
+<table>
+<thead>
+<tr>
+<th>HTTP Method</th>
+<th>RFC</th>
+<th>Has Request Body</th>
+<th>Has Response Body</th>
+<th>Safe</th>
+<th>Idempotent</th>
+<th>Cacheable</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GET</td>
+<td><a href="https://tools.ietf.org/html/rfc2616#section-9" target="_blank">RFC 2616</a></td>
+<td>Optional</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>HEAD</td>
+<td><a href="https://tools.ietf.org/html/rfc2616#section-9" target="_blank">RFC 2616</a></td>
+<td>No</td>
+<td>No</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>POST</td>
+<td><a href="https://tools.ietf.org/html/rfc2616#section-9" target="_blank">RFC 2616</a></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>No</td>
+<td>No</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>PUT</td>
+<td><a href="https://tools.ietf.org/html/rfc2616#section-9" target="_blank">RFC 2616</a></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>No</td>
+<td>Yes</td>
+<td>No</td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td><a href="https://tools.ietf.org/html/rfc2616#section-9" target="_blank">RFC 2616</a></td>
+<td>No</td>
+<td>Yes</td>
+<td>No</td>
+<td>Yes</td>
+<td>No</td>
+</tr>
+<tr>
+<td>CONNECT</td>
+<td><a href="https://tools.ietf.org/html/rfc2616#section-9" target="_blank">RFC 2616</a></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>No</td>
+<td>No</td>
+<td>No</td>
+</tr>
+<tr>
+<td>OPTIONS</td>
+<td><a href="https://tools.ietf.org/html/rfc2616#section-9" target="_blank">RFC 2616</a></td>
+<td>Optional</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>No</td>
+</tr>
+<tr>
+<td>TRACE</td>
+<td><a href="https://tools.ietf.org/html/rfc2616#section-9" target="_blank">RFC 2616</a></td>
+<td>No</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>No</td>
+</tr>
+<tr>
+<td>PATCH</td>
+<td><a href="https://tools.ietf.org/html/rfc2616#section-9" target="_blank">RFC 2616</a></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>No</td>
+<td>No</td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+<h4 id="options-http-method">OPTIONS HTTP Method</h4>
+<p><a href="https://tools.ietf.org/html/rfc2616#section-9.2" target="_blank">OPTIONS HTTP Method</a></p>
+<ul>
+<li><p>The OPTIONS method represents a request for information about the communication options available on the request/response chain identified by the Request-URI. </p>
+</li>
+<li><p>This method allows the client to determine the options and/or requirements associated with a resource, or the capabilities of a server, without implying a resource action or initiating a resource retrieval.</p>
+</li>
+</ul>
+<blockquote>
+<p>The OPTIONS method returns the HTTP methods that the server supports for the specified URL. This can be used to check the functionality of a web server by requesting &apos;*&apos; instead of a specific resource.</p>
+</blockquote>
+<h6 id="http-response-codes">HTTP Response Codes</h6>
+<p><a href="https://tools.ietf.org/html/rfc7231#section-6.3.1" target="_blank">RFC 7231 Section 6.3.1</a></p>
+<p>Typically a 200 (OK) status code is used with a <code>OPTIONS</code> request.</p>
+<ul>
+<li>The 200 (OK) status code indicates that the request has succeeded.</li>
+</ul>
+<h6 id="http-response-payloads">HTTP Response Payloads</h6>
+<p>Typically an OPTIONS is a representation of the communications options like the HTTP verbs used for the particular resource</p>
+<h6 id="example-options-request">Example OPTIONS request</h6>
+<pre><code class="lang-curl">curl -X OPTIONS http://example.org -i
+
+HTTP/1.1 200 OK
+Allow: OPTIONS, GET, HEAD, POST
+Cache-Control: max-age=604800
+Date: Sun, 25 Feb 2018 14:56:31 GMT
+Expires: Sun, 04 Mar 2018 14:56:31 GMT
+Server: EOS (vny006/0452)
+Content-Length: 0
+</code></pre>
+<h4 id="get-http-method">GET HTTP Method</h4>
+<p><a href="https://tools.ietf.org/html/rfc2616#section-9.3" target="_blank">GET HTTP Method</a></p>
+<blockquote>
+<p>The GET method means retrieve whatever information (in the form of an entity) is identified by the Request-URI. If the Request-URI refers to a data-producing process, it is the produced data which shall be returned as the entity in the response and not the source text of the process, unless that text happens to be the output of the process. </p>
+<p>The GET method requests a representation of the specified resource. Requests using GET should only retrieve data and should have no other effect.</p>
+</blockquote>
+<h6 id="http-response-codes">HTTP Response Codes</h6>
+<p><a href="https://tools.ietf.org/html/rfc7231#section-6.3.1" target="_blank">RFC 7231 Section 6.3.1</a></p>
+<p>Typically a 200 (OK) status code is used with a <code>GET</code> request.</p>
+<ul>
+<li>The 200 (OK) status code indicates that the request has succeeded.</li>
+</ul>
+<h6 id="http-response-payloads">HTTP Response Payloads</h6>
+<p>For a <code>GET</code> request the payload will be a representation of the target resource</p>
+<h6 id="example-get-request">Example GET Request</h6>
+<p>Here is a <code>GET</code> request from github that lists all users, in the order that they signed up on GitHub. This list includes personal user accounts and organization accounts.</p>
+<pre><code class="lang-http">GET /users
+
+Status: 200 OK
+Link: &lt;https://api.github.com/users?since=135&gt;; rel=&quot;next&quot;
+
+[
+  {
+    &quot;login&quot;: &quot;octocat&quot;,
+    &quot;id&quot;: 1,
+    &quot;avatar_url&quot;: &quot;https://github.com/images/error/octocat_happy.gif&quot;,
+    &quot;gravatar_id&quot;: &quot;&quot;,
+    &quot;url&quot;: &quot;https://api.github.com/users/octocat&quot;,
+    &quot;html_url&quot;: &quot;https://github.com/octocat&quot;,
+    &quot;followers_url&quot;: &quot;https://api.github.com/users/octocat/followers&quot;,
+    &quot;following_url&quot;: &quot;https://api.github.com/users/octocat/following{/other_user}&quot;,
+    &quot;gists_url&quot;: &quot;https://api.github.com/users/octocat/gists{/gist_id}&quot;,
+    &quot;starred_url&quot;: &quot;https://api.github.com/users/octocat/starred{/owner}{/repo}&quot;,
+    &quot;subscriptions_url&quot;: &quot;https://api.github.com/users/octocat/subscriptions&quot;,
+    &quot;organizations_url&quot;: &quot;https://api.github.com/users/octocat/orgs&quot;,
+    &quot;repos_url&quot;: &quot;https://api.github.com/users/octocat/repos&quot;,
+    &quot;events_url&quot;: &quot;https://api.github.com/users/octocat/events{/privacy}&quot;,
+    &quot;received_events_url&quot;: &quot;https://api.github.com/users/octocat/received_events&quot;,
+    &quot;type&quot;: &quot;User&quot;,
+    &quot;site_admin&quot;: false
+  }
+]
+</code></pre>
+<h4 id="head-http-method">HEAD HTTP Method</h4>
+<p><a href="https://tools.ietf.org/html/rfc2616#section-9.4" target="_blank">HEAD HTTP Method</a></p>
+<ul>
+<li><p>The HEAD method is identical to GET except that the server MUST NOT return a message-body in the response. </p>
+</li>
+<li><p>The metainformation contained in the HTTP headers in response to a HEAD request SHOULD be identical to the information sent in response to a GET request. </p>
+</li>
+<li><p>This method can be used for obtaining metainformation about the entity implied by the request without transferring the entity-body itself. </p>
+</li>
+<li><p>This method is often used for testing hypertext links for validity, accessibility, and recent modification.</p>
+</li>
+</ul>
+<h6 id="http-response-codes">HTTP Response Codes</h6>
+<p><a href="https://tools.ietf.org/html/rfc7231#section-6.3.1" target="_blank">RFC 7231 Section 6.3.1</a></p>
+<p>Typically a 200 (OK) status code is used with a <code>GET</code> request.</p>
+<ul>
+<li>The 200 (OK) status code indicates that the request has succeeded.</li>
+</ul>
+<h6 id="http-response-payloads">HTTP Response Payloads</h6>
+<p>For a <code>HEAD</code> request you get the same representation as GET, but without the representation data.</p>
+<p>This means you cannot send a message body with <code>HEAD</code> request, you only get the HTTP Response Headers sent back.</p>
+<h6 id="example-head-request">Example HEAD Request</h6>
+<pre><code class="lang-curl">curl -X HEAD http://example.org/index.html -I
+
+HTTP/1.1 200 OK
+Content-Encoding: gzip
+Accept-Ranges: bytes
+Cache-Control: max-age=604800
+Content-Type: text/html
+Date: Sun, 25 Feb 2018 15:06:38 GMT
+Etag: &quot;1541025663+gzip&quot;
+Expires: Sun, 04 Mar 2018 15:06:38 GMT
+Last-Modified: Fri, 09 Aug 2013 23:54:35 GMT
+Server: ECS (dca/53DB)
+X-Cache: HIT
+Content-Length: 606
+</code></pre>
+<h4 id="post-http-method">POST HTTP Method</h4>
+<p><a href="https://tools.ietf.org/html/rfc2616#section-9.5" target="_blank">POST HTTP Method</a></p>
+<blockquote>
+<p>The POST method is used to request that the origin server accept the entity enclosed in the request as a new subordinate of the resource identified by the Request-URI in the Request-Line.</p>
+</blockquote>
+<p>POST is designed to allow a uniform method to cover the following functions:</p>
+<ul>
+<li><p>Annotation of existing resources</p>
+</li>
+<li><p>Posting a message to a bulletin board, newsgroup, mailing list, or similar group of articles</p>
+</li>
+<li><p>Providing a block of data, such as the result of submitting a form, to a data-handling process</p>
+</li>
+<li><p>Extending a database through an append operation.</p>
+</li>
+</ul>
+<h6 id="http-response-codes">HTTP Response Codes</h6>
+<p><a href="https://tools.ietf.org/html/rfc7231#section-6.3.1" target="_blank">RFC 7231 Section 6.3.1</a></p>
+<p>A 200 (OK) status code is used with a <code>POST</code> request to denote a successful operation.</p>
+<ul>
+<li>The 200 (OK) status code indicates that the request has succeeded.</li>
+</ul>
+<p><a href="https://tools.ietf.org/html/rfc7231#section-6.3.2" target="_blank">RFC 7231 Section 6.3.2</a></p>
+<p>A 201 (CREATED) status code indicates that a new resource has been created</p>
+<h6 id="http-response-payloads">HTTP Response Payloads</h6>
+<p>A 200 response code you will get a message body</p>
+<p>A 201 response code you will get a message body</p>
+<p>More response codes are applicable please consult <a href="https://tools.ietf.org/html/rfc7231#section-6.1" target="_blank">RFC 7231 Section 6.1</a></p>
+<h6 id="example-post-request">Example POST Request</h6>
+<pre><code class="lang-http"><span class="hljs-keyword">POST</span> <span class="hljs-string">/v1/payments/payment</span> HTTP/1.1
+<span class="hljs-attribute">Host</span>: api.sandbox.paypal.com
+<span class="hljs-attribute">Content-Type</span>: application/json
+<span class="hljs-attribute">Authorization</span>: Bearer AFakeBearerToken12345
+<span class="hljs-attribute">Cache-Control</span>: no-cache
+
+<span class="json">{
+  <span class="hljs-attr">&quot;intent&quot;</span>: <span class="hljs-string">&quot;sale&quot;</span>,
+  <span class="hljs-attr">&quot;payer&quot;</span>: {
+  <span class="hljs-attr">&quot;payment_method&quot;</span>: <span class="hljs-string">&quot;paypal&quot;</span>
+  },
+  <span class="hljs-attr">&quot;transactions&quot;</span>: [
+  {
+    <span class="hljs-attr">&quot;amount&quot;</span>: {
+    <span class="hljs-attr">&quot;total&quot;</span>: <span class="hljs-string">&quot;30.11&quot;</span>,
+    <span class="hljs-attr">&quot;currency&quot;</span>: <span class="hljs-string">&quot;USD&quot;</span>,
+    <span class="hljs-attr">&quot;details&quot;</span>: {
+      <span class="hljs-attr">&quot;subtotal&quot;</span>: <span class="hljs-string">&quot;30.00&quot;</span>,
+      <span class="hljs-attr">&quot;tax&quot;</span>: <span class="hljs-string">&quot;0.07&quot;</span>,
+      <span class="hljs-attr">&quot;shipping&quot;</span>: <span class="hljs-string">&quot;0.03&quot;</span>,
+      <span class="hljs-attr">&quot;handling_fee&quot;</span>: <span class="hljs-string">&quot;1.00&quot;</span>,
+      <span class="hljs-attr">&quot;shipping_discount&quot;</span>: <span class="hljs-string">&quot;-1.00&quot;</span>,
+      <span class="hljs-attr">&quot;insurance&quot;</span>: <span class="hljs-string">&quot;0.01&quot;</span>
+    }
+    },
+    <span class="hljs-attr">&quot;description&quot;</span>: <span class="hljs-string">&quot;The payment transaction description.&quot;</span>,
+    <span class="hljs-attr">&quot;custom&quot;</span>: <span class="hljs-string">&quot;EBAY_EMS_90048630024435&quot;</span>,
+    <span class="hljs-attr">&quot;invoice_number&quot;</span>: <span class="hljs-string">&quot;48787589673&quot;</span>,
+    <span class="hljs-attr">&quot;payment_options&quot;</span>: {
+    <span class="hljs-attr">&quot;allowed_payment_method&quot;</span>: <span class="hljs-string">&quot;INSTANT_FUNDING_SOURCE&quot;</span>
+    },
+    <span class="hljs-attr">&quot;soft_descriptor&quot;</span>: <span class="hljs-string">&quot;ECHI5786786&quot;</span>,
+    <span class="hljs-attr">&quot;item_list&quot;</span>: {
+    <span class="hljs-attr">&quot;items&quot;</span>: [
+      {
+      <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;hat&quot;</span>,
+      <span class="hljs-attr">&quot;description&quot;</span>: <span class="hljs-string">&quot;Brown hat.&quot;</span>,
+      <span class="hljs-attr">&quot;quantity&quot;</span>: <span class="hljs-string">&quot;5&quot;</span>,
+      <span class="hljs-attr">&quot;price&quot;</span>: <span class="hljs-string">&quot;3&quot;</span>,
+      <span class="hljs-attr">&quot;tax&quot;</span>: <span class="hljs-string">&quot;0.01&quot;</span>,
+      <span class="hljs-attr">&quot;sku&quot;</span>: <span class="hljs-string">&quot;1&quot;</span>,
+      <span class="hljs-attr">&quot;currency&quot;</span>: <span class="hljs-string">&quot;USD&quot;</span>
+      },
+      {
+      <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;handbag&quot;</span>,
+      <span class="hljs-attr">&quot;description&quot;</span>: <span class="hljs-string">&quot;Black handbag.&quot;</span>,
+      <span class="hljs-attr">&quot;quantity&quot;</span>: <span class="hljs-string">&quot;1&quot;</span>,
+      <span class="hljs-attr">&quot;price&quot;</span>: <span class="hljs-string">&quot;15&quot;</span>,
+      <span class="hljs-attr">&quot;tax&quot;</span>: <span class="hljs-string">&quot;0.02&quot;</span>,
+      <span class="hljs-attr">&quot;sku&quot;</span>: <span class="hljs-string">&quot;product34&quot;</span>,
+      <span class="hljs-attr">&quot;currency&quot;</span>: <span class="hljs-string">&quot;USD&quot;</span>
+      }
+    ],
+    <span class="hljs-attr">&quot;shipping_address&quot;</span>: {
+      <span class="hljs-attr">&quot;recipient_name&quot;</span>: <span class="hljs-string">&quot;Brian Robinson&quot;</span>,
+      <span class="hljs-attr">&quot;line1&quot;</span>: <span class="hljs-string">&quot;4th Floor&quot;</span>,
+      <span class="hljs-attr">&quot;line2&quot;</span>: <span class="hljs-string">&quot;Unit #34&quot;</span>,
+      <span class="hljs-attr">&quot;city&quot;</span>: <span class="hljs-string">&quot;San Jose&quot;</span>,
+      <span class="hljs-attr">&quot;country_code&quot;</span>: <span class="hljs-string">&quot;US&quot;</span>,
+      <span class="hljs-attr">&quot;postal_code&quot;</span>: <span class="hljs-string">&quot;95131&quot;</span>,
+      <span class="hljs-attr">&quot;phone&quot;</span>: <span class="hljs-string">&quot;011862212345678&quot;</span>,
+      <span class="hljs-attr">&quot;state&quot;</span>: <span class="hljs-string">&quot;CA&quot;</span>
+    }
+    }
+  }
+  ],
+  <span class="hljs-attr">&quot;note_to_payer&quot;</span>: <span class="hljs-string">&quot;Contact us for any questions on your order.&quot;</span>,
+  <span class="hljs-attr">&quot;redirect_urls&quot;</span>: {
+  <span class="hljs-attr">&quot;return_url&quot;</span>: <span class="hljs-string">&quot;https://www.example.com/return&quot;</span>,
+  <span class="hljs-attr">&quot;cancel_url&quot;</span>: <span class="hljs-string">&quot;https://www.example.com/cancel&quot;</span>
+  }
+}
+</span></code></pre>
+<p>HTTP POST Response with <code>201</code> Response Code</p>
+<pre><code class="lang-json">{
+    <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-string">&quot;PAY-60M79518TW7602539LKJOIWA&quot;</span>,
+    <span class="hljs-string">&quot;intent&quot;</span>: <span class="hljs-string">&quot;sale&quot;</span>,
+    <span class="hljs-string">&quot;state&quot;</span>: <span class="hljs-string">&quot;created&quot;</span>,
+    <span class="hljs-string">&quot;payer&quot;</span>: {
+        <span class="hljs-string">&quot;payment_method&quot;</span>: <span class="hljs-string">&quot;paypal&quot;</span>
+    },
+    <span class="hljs-string">&quot;transactions&quot;</span>: [
+        {
+            <span class="hljs-string">&quot;amount&quot;</span>: {
+                <span class="hljs-string">&quot;total&quot;</span>: <span class="hljs-string">&quot;30.11&quot;</span>,
+                <span class="hljs-string">&quot;currency&quot;</span>: <span class="hljs-string">&quot;USD&quot;</span>,
+                <span class="hljs-string">&quot;details&quot;</span>: {
+                    <span class="hljs-string">&quot;subtotal&quot;</span>: <span class="hljs-string">&quot;30.00&quot;</span>,
+                    <span class="hljs-string">&quot;tax&quot;</span>: <span class="hljs-string">&quot;0.07&quot;</span>,
+                    <span class="hljs-string">&quot;shipping&quot;</span>: <span class="hljs-string">&quot;0.03&quot;</span>,
+                    <span class="hljs-string">&quot;insurance&quot;</span>: <span class="hljs-string">&quot;0.01&quot;</span>,
+                    <span class="hljs-string">&quot;handling_fee&quot;</span>: <span class="hljs-string">&quot;1.00&quot;</span>,
+                    <span class="hljs-string">&quot;shipping_discount&quot;</span>: <span class="hljs-string">&quot;-1.00&quot;</span>
+                }
+            },
+            <span class="hljs-string">&quot;description&quot;</span>: <span class="hljs-string">&quot;The payment transaction description.&quot;</span>,
+            <span class="hljs-string">&quot;custom&quot;</span>: <span class="hljs-string">&quot;EBAY_EMS_90048630024435&quot;</span>,
+            <span class="hljs-string">&quot;invoice_number&quot;</span>: <span class="hljs-string">&quot;48787589673&quot;</span>,
+            <span class="hljs-string">&quot;soft_descriptor&quot;</span>: <span class="hljs-string">&quot;ECHI5786786&quot;</span>,
+            <span class="hljs-string">&quot;payment_options&quot;</span>: {
+                <span class="hljs-string">&quot;allowed_payment_method&quot;</span>: <span class="hljs-string">&quot;INSTANT_FUNDING_SOURCE&quot;</span>,
+                <span class="hljs-string">&quot;recurring_flag&quot;</span>: <span class="hljs-literal">false</span>,
+                <span class="hljs-string">&quot;skip_fmf&quot;</span>: <span class="hljs-literal">false</span>
+            },
+            <span class="hljs-string">&quot;item_list&quot;</span>: {
+                <span class="hljs-string">&quot;items&quot;</span>: [
+                    {
+                        <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;hat&quot;</span>,
+                        <span class="hljs-string">&quot;sku&quot;</span>: <span class="hljs-string">&quot;1&quot;</span>,
+                        <span class="hljs-string">&quot;description&quot;</span>: <span class="hljs-string">&quot;Brown hat.&quot;</span>,
+                        <span class="hljs-string">&quot;price&quot;</span>: <span class="hljs-string">&quot;3.00&quot;</span>,
+                        <span class="hljs-string">&quot;currency&quot;</span>: <span class="hljs-string">&quot;USD&quot;</span>,
+                        <span class="hljs-string">&quot;tax&quot;</span>: <span class="hljs-string">&quot;0.01&quot;</span>,
+                        <span class="hljs-string">&quot;quantity&quot;</span>: <span class="hljs-number">5</span>
+                    },
+                    {
+                        <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;handbag&quot;</span>,
+                        <span class="hljs-string">&quot;sku&quot;</span>: <span class="hljs-string">&quot;product34&quot;</span>,
+                        <span class="hljs-string">&quot;description&quot;</span>: <span class="hljs-string">&quot;Black handbag.&quot;</span>,
+                        <span class="hljs-string">&quot;price&quot;</span>: <span class="hljs-string">&quot;15.00&quot;</span>,
+                        <span class="hljs-string">&quot;currency&quot;</span>: <span class="hljs-string">&quot;USD&quot;</span>,
+                        <span class="hljs-string">&quot;tax&quot;</span>: <span class="hljs-string">&quot;0.02&quot;</span>,
+                        <span class="hljs-string">&quot;quantity&quot;</span>: <span class="hljs-number">1</span>
+                    }
+                ],
+                <span class="hljs-string">&quot;shipping_address&quot;</span>: {
+                    <span class="hljs-string">&quot;recipient_name&quot;</span>: <span class="hljs-string">&quot;Brian Robinson&quot;</span>,
+                    <span class="hljs-string">&quot;line1&quot;</span>: <span class="hljs-string">&quot;4th Floor&quot;</span>,
+                    <span class="hljs-string">&quot;line2&quot;</span>: <span class="hljs-string">&quot;Unit #34&quot;</span>,
+                    <span class="hljs-string">&quot;city&quot;</span>: <span class="hljs-string">&quot;San Jose&quot;</span>,
+                    <span class="hljs-string">&quot;state&quot;</span>: <span class="hljs-string">&quot;CA&quot;</span>,
+                    <span class="hljs-string">&quot;postal_code&quot;</span>: <span class="hljs-string">&quot;95131&quot;</span>,
+                    <span class="hljs-string">&quot;country_code&quot;</span>: <span class="hljs-string">&quot;US&quot;</span>,
+                    <span class="hljs-string">&quot;phone&quot;</span>: <span class="hljs-string">&quot;011862212345678&quot;</span>
+                }
+            },
+            <span class="hljs-string">&quot;related_resources&quot;</span>: []
+        }
+    ],
+    <span class="hljs-string">&quot;note_to_payer&quot;</span>: <span class="hljs-string">&quot;Contact us for any questions on your order.&quot;</span>,
+    <span class="hljs-string">&quot;create_time&quot;</span>: <span class="hljs-string">&quot;2018-02-25T16:29:12Z&quot;</span>,
+    <span class="hljs-string">&quot;links&quot;</span>: [
+        {
+            <span class="hljs-string">&quot;href&quot;</span>: <span class="hljs-string">&quot;https://api.sandbox.paypal.com/v1/payments/payment/PAY-60M79518TW7602539LKJOIWA&quot;</span>,
+            <span class="hljs-string">&quot;rel&quot;</span>: <span class="hljs-string">&quot;self&quot;</span>,
+            <span class="hljs-string">&quot;method&quot;</span>: <span class="hljs-string">&quot;GET&quot;</span>
+        },
+        {
+            <span class="hljs-string">&quot;href&quot;</span>: <span class="hljs-string">&quot;https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&amp;token=EC-4BG64645KB941924E&quot;</span>,
+            <span class="hljs-string">&quot;rel&quot;</span>: <span class="hljs-string">&quot;approval_url&quot;</span>,
+            <span class="hljs-string">&quot;method&quot;</span>: <span class="hljs-string">&quot;REDIRECT&quot;</span>
+        },
+        {
+            <span class="hljs-string">&quot;href&quot;</span>: <span class="hljs-string">&quot;https://api.sandbox.paypal.com/v1/payments/payment/PAY-60M79518TW7602539LKJOIWA/execute&quot;</span>,
+            <span class="hljs-string">&quot;rel&quot;</span>: <span class="hljs-string">&quot;execute&quot;</span>,
+            <span class="hljs-string">&quot;method&quot;</span>: <span class="hljs-string">&quot;POST&quot;</span>
+        }
+    ]
+}
+</code></pre>
+<h6 id="create-a-test-issue-in-github">Create a test issue in Github</h6>
+<pre><code class="lang-curl">curl -X post \
+  https://api.github.com/repos/jbelmont/api-workshop/issues \
+  -H &apos;Authorization: token ATestToken12345&apos; \
+  -H &apos;Content-Type: application/json&apos; \
+  -d &apos;{
+  &quot;title&quot;: &quot;Test Issue for Github&quot;,
+  &quot;body&quot;: &quot;Please close me.&quot;,
+  &quot;assignees&quot;: [
+    &quot;jbelmont&quot;
+  ],
+  &quot;labels&quot;: [
+    &quot;bug&quot;
+  ]
+}&apos;
+</code></pre>
+<p>This returns the following JSON payload and a 201 status code:</p>
+<pre><code class="lang-json">{
+    <span class="hljs-string">&quot;url&quot;</span>: <span class="hljs-string">&quot;https://api.github.com/repos/jbelmont/api-workshop/issues/4&quot;</span>,
+    <span class="hljs-string">&quot;repository_url&quot;</span>: <span class="hljs-string">&quot;https://api.github.com/repos/jbelmont/api-workshop&quot;</span>,
+    <span class="hljs-string">&quot;labels_url&quot;</span>: <span class="hljs-string">&quot;https://api.github.com/repos/jbelmont/api-workshop/issues/4/labels{/name}&quot;</span>,
+    <span class="hljs-string">&quot;comments_url&quot;</span>: <span class="hljs-string">&quot;https://api.github.com/repos/jbelmont/api-workshop/issues/4/comments&quot;</span>,
+    <span class="hljs-string">&quot;events_url&quot;</span>: <span class="hljs-string">&quot;https://api.github.com/repos/jbelmont/api-workshop/issues/4/events&quot;</span>,
+    <span class="hljs-string">&quot;html_url&quot;</span>: <span class="hljs-string">&quot;https://github.com/jbelmont/api-workshop/issues/4&quot;</span>,
+    <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-number">300071585</span>,
+    <span class="hljs-string">&quot;number&quot;</span>: <span class="hljs-number">4</span>,
+    <span class="hljs-string">&quot;title&quot;</span>: <span class="hljs-string">&quot;Test Issue for Github&quot;</span>,
+    <span class="hljs-string">&quot;user&quot;</span>: {
+        <span class="hljs-string">&quot;login&quot;</span>: <span class="hljs-string">&quot;jbelmont&quot;</span>,
+        <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-number">2974744</span>,
+        <span class="hljs-string">&quot;avatar_url&quot;</span>: <span class="hljs-string">&quot;https://avatars3.githubusercontent.com/u/2974744?v=4&quot;</span>,
+        <span class="hljs-string">&quot;gravatar_id&quot;</span>: <span class="hljs-string">&quot;&quot;</span>,
+        <span class="hljs-string">&quot;url&quot;</span>: <span class="hljs-string">&quot;https://api.github.com/users/jbelmont&quot;</span>,
+        <span class="hljs-string">&quot;html_url&quot;</span>: <span class="hljs-string">&quot;https://github.com/jbelmont&quot;</span>,
+        <span class="hljs-string">&quot;followers_url&quot;</span>: <span class="hljs-string">&quot;https://api.github.com/users/jbelmont/followers&quot;</span>,
+        <span class="hljs-string">&quot;following_url&quot;</span>: <span class="hljs-string">&quot;https://api.github.com/users/jbelmont/following{/other_user}&quot;</span>,
+        <span class="hljs-string">&quot;gists_url&quot;</span>: <span class="hljs-string">&quot;https://api.github.com/users/jbelmont/gists{/gist_id}&quot;</span>,
+        <span class="hljs-string">&quot;starred_url&quot;</span>: <span class="hljs-string">&quot;https://api.github.com/users/jbelmont/starred{/owner}{/repo}&quot;</span>,
+        <span class="hljs-string">&quot;subscriptions_url&quot;</span>: <span class="hljs-string">&quot;https://api.github.com/users/jbelmont/subscriptions&quot;</span>,
+        <span class="hljs-string">&quot;organizations_url&quot;</span>: <span class="hljs-string">&quot;https://api.github.com/users/jbelmont/orgs&quot;</span>,
+        <span class="hljs-string">&quot;repos_url&quot;</span>: <span class="hljs-string">&quot;https://api.github.com/users/jbelmont/repos&quot;</span>,
+        <span class="hljs-string">&quot;events_url&quot;</span>: <span class="hljs-string">&quot;https://api.github.com/users/jbelmont/events{/privacy}&quot;</span>,
+        <span class="hljs-string">&quot;received_events_url&quot;</span>: <span class="hljs-string">&quot;https://api.github.com/users/jbelmont/received_events&quot;</span>,
+        <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;User&quot;</span>,
+        <span class="hljs-string">&quot;site_admin&quot;</span>: <span class="hljs-literal">false</span>
+    },
+    <span class="hljs-string">&quot;labels&quot;</span>: [
+        {
+            <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-number">812066649</span>,
+            <span class="hljs-string">&quot;url&quot;</span>: <span class="hljs-string">&quot;https://api.github.com/repos/jbelmont/api-workshop/labels/bug&quot;</span>,
+            <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;bug&quot;</span>,
+            <span class="hljs-string">&quot;color&quot;</span>: <span class="hljs-string">&quot;d73a4a&quot;</span>,
+            <span class="hljs-string">&quot;default&quot;</span>: <span class="hljs-literal">true</span>
+        }
+    ],
+    <span class="hljs-string">&quot;state&quot;</span>: <span class="hljs-string">&quot;open&quot;</span>,
+    <span class="hljs-string">&quot;locked&quot;</span>: <span class="hljs-literal">false</span>,
+    <span class="hljs-string">&quot;assignee&quot;</span>: {
+        <span class="hljs-string">&quot;login&quot;</span>: <span class="hljs-string">&quot;jbelmont&quot;</span>,
+        <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-number">2974744</span>,
+        <span class="hljs-string">&quot;avatar_url&quot;</span>: <span class="hljs-string">&quot;https://avatars3.githubusercontent.com/u/2974744?v=4&quot;</span>,
+        <span class="hljs-string">&quot;gravatar_id&quot;</span>: <span class="hljs-string">&quot;&quot;</span>,
+        <span class="hljs-string">&quot;url&quot;</span>: <span class="hljs-string">&quot;https://api.github.com/users/jbelmont&quot;</span>,
+        <span class="hljs-string">&quot;html_url&quot;</span>: <span class="hljs-string">&quot;https://github.com/jbelmont&quot;</span>,
+        <span class="hljs-string">&quot;followers_url&quot;</span>: <span class="hljs-string">&quot;https://api.github.com/users/jbelmont/followers&quot;</span>,
+        <span class="hljs-string">&quot;following_url&quot;</span>: <span class="hljs-string">&quot;https://api.github.com/users/jbelmont/following{/other_user}&quot;</span>,
+        <span class="hljs-string">&quot;gists_url&quot;</span>: <span class="hljs-string">&quot;https://api.github.com/users/jbelmont/gists{/gist_id}&quot;</span>,
+        <span class="hljs-string">&quot;starred_url&quot;</span>: <span class="hljs-string">&quot;https://api.github.com/users/jbelmont/starred{/owner}{/repo}&quot;</span>,
+        <span class="hljs-string">&quot;subscriptions_url&quot;</span>: <span class="hljs-string">&quot;https://api.github.com/users/jbelmont/subscriptions&quot;</span>,
+        <span class="hljs-string">&quot;organizations_url&quot;</span>: <span class="hljs-string">&quot;https://api.github.com/users/jbelmont/orgs&quot;</span>,
+        <span class="hljs-string">&quot;repos_url&quot;</span>: <span class="hljs-string">&quot;https://api.github.com/users/jbelmont/repos&quot;</span>,
+        <span class="hljs-string">&quot;events_url&quot;</span>: <span class="hljs-string">&quot;https://api.github.com/users/jbelmont/events{/privacy}&quot;</span>,
+        <span class="hljs-string">&quot;received_events_url&quot;</span>: <span class="hljs-string">&quot;https://api.github.com/users/jbelmont/received_events&quot;</span>,
+        <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;User&quot;</span>,
+        <span class="hljs-string">&quot;site_admin&quot;</span>: <span class="hljs-literal">false</span>
+    },
+    <span class="hljs-string">&quot;assignees&quot;</span>: [
+        {
+            <span class="hljs-string">&quot;login&quot;</span>: <span class="hljs-string">&quot;jbelmont&quot;</span>,
+            <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-number">2974744</span>,
+            <span class="hljs-string">&quot;avatar_url&quot;</span>: <span class="hljs-string">&quot;https://avatars3.githubusercontent.com/u/2974744?v=4&quot;</span>,
+            <span class="hljs-string">&quot;gravatar_id&quot;</span>: <span class="hljs-string">&quot;&quot;</span>,
+            <span class="hljs-string">&quot;url&quot;</span>: <span class="hljs-string">&quot;https://api.github.com/users/jbelmont&quot;</span>,
+            <span class="hljs-string">&quot;html_url&quot;</span>: <span class="hljs-string">&quot;https://github.com/jbelmont&quot;</span>,
+            <span class="hljs-string">&quot;followers_url&quot;</span>: <span class="hljs-string">&quot;https://api.github.com/users/jbelmont/followers&quot;</span>,
+            <span class="hljs-string">&quot;following_url&quot;</span>: <span class="hljs-string">&quot;https://api.github.com/users/jbelmont/following{/other_user}&quot;</span>,
+            <span class="hljs-string">&quot;gists_url&quot;</span>: <span class="hljs-string">&quot;https://api.github.com/users/jbelmont/gists{/gist_id}&quot;</span>,
+            <span class="hljs-string">&quot;starred_url&quot;</span>: <span class="hljs-string">&quot;https://api.github.com/users/jbelmont/starred{/owner}{/repo}&quot;</span>,
+            <span class="hljs-string">&quot;subscriptions_url&quot;</span>: <span class="hljs-string">&quot;https://api.github.com/users/jbelmont/subscriptions&quot;</span>,
+            <span class="hljs-string">&quot;organizations_url&quot;</span>: <span class="hljs-string">&quot;https://api.github.com/users/jbelmont/orgs&quot;</span>,
+            <span class="hljs-string">&quot;repos_url&quot;</span>: <span class="hljs-string">&quot;https://api.github.com/users/jbelmont/repos&quot;</span>,
+            <span class="hljs-string">&quot;events_url&quot;</span>: <span class="hljs-string">&quot;https://api.github.com/users/jbelmont/events{/privacy}&quot;</span>,
+            <span class="hljs-string">&quot;received_events_url&quot;</span>: <span class="hljs-string">&quot;https://api.github.com/users/jbelmont/received_events&quot;</span>,
+            <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;User&quot;</span>,
+            <span class="hljs-string">&quot;site_admin&quot;</span>: <span class="hljs-literal">false</span>
+        }
+    ],
+    <span class="hljs-string">&quot;milestone&quot;</span>: <span class="hljs-literal">null</span>,
+    <span class="hljs-string">&quot;comments&quot;</span>: <span class="hljs-number">0</span>,
+    <span class="hljs-string">&quot;created_at&quot;</span>: <span class="hljs-string">&quot;2018-02-25T23:14:45Z&quot;</span>,
+    <span class="hljs-string">&quot;updated_at&quot;</span>: <span class="hljs-string">&quot;2018-02-25T23:14:45Z&quot;</span>,
+    <span class="hljs-string">&quot;closed_at&quot;</span>: <span class="hljs-literal">null</span>,
+    <span class="hljs-string">&quot;author_association&quot;</span>: <span class="hljs-string">&quot;OWNER&quot;</span>,
+    <span class="hljs-string">&quot;body&quot;</span>: <span class="hljs-string">&quot;Please close me.&quot;</span>,
+    <span class="hljs-string">&quot;closed_by&quot;</span>: <span class="hljs-literal">null</span>
+}
+</code></pre>
+<h4 id="put-http-method">PUT HTTP Method</h4>
+<p><a href="https://tools.ietf.org/html/rfc2616#section-9.6" target="_blank">PUT HTTP Method</a></p>
+<ul>
+<li><p>The PUT method requests that the enclosed entity be stored under the supplied Request-URI. </p>
+</li>
+<li><p>If the Request-URI refers to an already existing resource, the enclosed entity SHOULD be considered as a modified version of the one residing on the origin server. </p>
+</li>
+<li><p>If the Request-URI does not point to an existing resource, and that URI is capable of being defined as a new resource by the requesting user agent, the origin server can create the resource with that URI. </p>
+</li>
+<li><p>If a new resource is created, the origin server MUST inform the user agent via the 201 (Created) response. </p>
+</li>
+<li><p>If an existing resource is modified, either the 200 (OK) or 204 (No Content) response codes SHOULD be sent to indicate successful completion of the request. </p>
+</li>
+<li><p>If the resource could not be created or modified with the Request-URI, an appropriate error response SHOULD be given that reflects the nature of the problem.</p>
+</li>
+<li><p>The recipient of the entity MUST NOT ignore any Content-* (e.g. Content-Range) headers that it does not understand or implement and MUST return a 501 (Not Implemented) response in such cases.</p>
+</li>
+</ul>
+<h6 id="difference-between-post-and-put-http-methods">Difference between POST and PUT HTTP Methods</h6>
+<ul>
+<li><p>The fundamental difference between the POST and PUT requests is
+ reflected in the different meaning of the Request-URI. </p>
+</li>
+<li><p>The URI in a POST request identifies the resource that will handle the enclosed
+ entity. </p>
+</li>
+<li><p>That resource might be a data-accepting process, a gateway to some other protocol, or a separate entity that accepts annotations.</p>
+</li>
+<li><p>In contrast, the URI in a PUT request identifies the entity enclosed with the request -- the user agent knows what URI is intended and the server MUST NOT attempt to apply the request to some other resource.</p>
+</li>
+<li><p>If the server desires that the request be applied to a different URI, it MUST send a 301 (Moved Permanently) response; the user agent MAY then make its own decision regarding whether or not to redirect the request.</p>
+</li>
+</ul>
+<h6 id="http-response-codes">HTTP Response Codes</h6>
+<p><a href="https://tools.ietf.org/html/rfc7231#section-6.3.1" target="_blank">RFC 7231 Section 6.3.1</a></p>
+<p>A 200 (OK) status code is used with a <code>PUT</code> request to denote a successful operation.</p>
+<p><a href="https://tools.ietf.org/html/rfc7231#section-6.3.2" target="_blank">RFC 7231 Section 6.3.2</a></p>
+<p>A 201 (CREATED) status code indicates that a new resource has been created</p>
+<h6 id="http-response-payloads">HTTP Response Payloads</h6>
+<p>A 200 response code you will get a message body</p>
+<p>A 201 response code you will get a message body</p>
+<p>More response codes are applicable please consult <a href="https://tools.ietf.org/html/rfc7231#section-6.1" target="_blank">RFC 7231 Section 6.1</a></p>
+<h6 id="example-put-request">Example PUT Request</h6>
+<pre><code class="lang-curl">curl -X put \
+  https://api.github.com/repos/jbelmont/api-workshop/issues/4/labels \
+  -H &apos;Accept: application/json&apos; \
+  -H &apos;Authorization: token ATestToken12345&apos; \
+  -H &apos;Cache-Control: no-cache&apos; \
+  -H &apos;Content-Type: application/json&apos; \
+  -d &apos;[
+  &quot;enhancement&quot;,
+  &quot;duplicate&quot;
+]&apos;
+</code></pre>
+<p>This returns the following JSON payload and a 200 status code:</p>
+<pre><code class="lang-json">[
+    {
+        <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-number">812066652</span>,
+        <span class="hljs-string">&quot;url&quot;</span>: <span class="hljs-string">&quot;https://api.github.com/repos/jbelmont/api-workshop/labels/duplicate&quot;</span>,
+        <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;duplicate&quot;</span>,
+        <span class="hljs-string">&quot;color&quot;</span>: <span class="hljs-string">&quot;cfd3d7&quot;</span>,
+        <span class="hljs-string">&quot;default&quot;</span>: <span class="hljs-literal">true</span>
+    },
+    {
+        <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-number">812066655</span>,
+        <span class="hljs-string">&quot;url&quot;</span>: <span class="hljs-string">&quot;https://api.github.com/repos/jbelmont/api-workshop/labels/enhancement&quot;</span>,
+        <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;enhancement&quot;</span>,
+        <span class="hljs-string">&quot;color&quot;</span>: <span class="hljs-string">&quot;a2eeef&quot;</span>,
+        <span class="hljs-string">&quot;default&quot;</span>: <span class="hljs-literal">true</span>
+    }
+]
+</code></pre>
+<h4 id="delete-http-method">DELETE HTTP Method</h4>
+<p><a href="https://tools.ietf.org/html/rfc2616#section-9.7" target="_blank">DELETE HTTP Method</a></p>
+<ul>
+<li><p>The DELETE method requests that the origin server delete the resource identified by the Request-URI. </p>
+</li>
+<li><p>This method MAY be overridden by human intervention (or other means) on the origin server. </p>
+</li>
+<li><p>The client cannot be guaranteed that the operation has been carried out, even if the status code returned from the origin server indicates that the action has been completed successfully. </p>
+</li>
+<li><p>However, the server SHOULD NOT indicate success unless, at the time the response is given, it intends to delete the resource or move it to an inaccessible location.</p>
+</li>
+</ul>
+<p>A successful response SHOULD be 200 (OK) if the response includes an entity describing the status, 202 (Accepted) if the action has not yet been enacted, or 204 (No Content) if the action has been enacted but the response does not include an entity.</p>
+<h6 id="http-response-codes">HTTP Response Codes</h6>
+<p><a href="https://tools.ietf.org/html/rfc7231#section-6.3.1" target="_blank">RFC 7231 Section 6.3.1</a></p>
+<p>A 200 (OK) status code is used with a <code>PUT</code> request to denote a successful operation.</p>
+<p><a href="https://tools.ietf.org/html/rfc7231#section-6.3.5" target="_blank">RFC 7231 Section 6.3.5</a></p>
+<p>A 204 (NO CONTENT) status code indicates indicates that the server has successfully fulfilled the request and that there is no additional content to send in the response payload body.</p>
+<h6 id="http-response-payloads">HTTP Response Payloads</h6>
+<p>A 200 response code you will get a message body</p>
+<p>A 204 response code you will <em>not</em> get a message body</p>
+<h6 id="example-delete-request">Example DELETE Request</h6>
+<pre><code class="lang-curl">curl -X delete \
+  https://api.github.com/repos/jbelmont/api-workshop/issues/4/labels/duplicate \
+  -H &apos;Authorization: token aToken&apos; \
+  -H &apos;Content-Type: application/json&apos;
+</code></pre>
+<p>This will return a 200 status code and the following JSON payload:</p>
+<pre><code class="lang-json">[
+    {
+        <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-number">812066655</span>,
+        <span class="hljs-string">&quot;url&quot;</span>: <span class="hljs-string">&quot;https://api.github.com/repos/jbelmont/api-workshop/labels/enhancement&quot;</span>,
+        <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;enhancement&quot;</span>,
+        <span class="hljs-string">&quot;color&quot;</span>: <span class="hljs-string">&quot;a2eeef&quot;</span>,
+        <span class="hljs-string">&quot;default&quot;</span>: <span class="hljs-literal">true</span>
+    }
+]
+</code></pre>
+<h4 id="trace-http-method">TRACE HTTP Method</h4>
+<p><a href="https://tools.ietf.org/html/rfc2616#section-9.8" target="_blank">TRACE HTTP Method</a></p>
+<ul>
+<li><p>The TRACE method is used to invoke a remote, application-layer loop-vback of the request message. </p>
+</li>
+<li><p>The final recipient of the request SHOULD reflect the message received back to the client as the entity-body of a 200 (OK) response. </p>
+</li>
+<li><p>The final recipient is either the origin server or the first proxy or gateway to receive a Max-Forwards value of zero (0) in the request (see section 14.31). </p>
+</li>
+<li><p>A TRACE request MUST NOT include an entity.</p>
+</li>
+</ul>
+<h6 id="http-response-codes">HTTP Response Codes</h6>
+<p><a href="https://tools.ietf.org/html/rfc7231#section-6.3.1" target="_blank">RFC 7231 Section 6.3.1</a></p>
+<p>A 200 (OK) status code is used with a <code>PUT</code> request to denote a successful operation.</p>
+<p><a href="https://tools.ietf.org/html/rfc7231#section-6.5.5" target="_blank">RFC 7231 Section 6.5.5</a></p>
+<p>The 405 (Method Not Allowed) status code indicates that the method received in the request-line is known by the origin server but not supported by the target resource. </p>
+<p>The origin server MUST generate an Allow header field in a 405 response containing a list of the target resource&apos;s currently supported methods.</p>
+<h6 id="example-trace-request">Example TRACE request</h6>
+<pre><code class="lang-curl">curl --insecure -v -X TRACE https://www.google.com/ -i
+</code></pre>
+<p>This will return a 405 status code (NOT ALLOWED)</p>
+<h4 id="connect-http-method">CONNECT HTTP Method</h4>
+<p><a href="https://tools.ietf.org/html/rfc2616#section-9.9" target="_blank">CONNECT HTTP Method</a></p>
+<p>This specification reserves the method name CONNECT for use with a proxy that can dynamically switch to being a tunnel (e.g. SSL tunneling [44])</p>
+<blockquote>
+<p>The CONNECT method converts the request connection to a transparent TCP/IP tunnel, usually to facilitate SSL-encrypted communication (HTTPS) through an unencrypted HTTP proxy</p>
+</blockquote>
+<p>Read more about this in <a href="https://en.wikipedia.org/wiki/HTTP_tunnel#HTTP_CONNECT_tunneling" target="_blank">HTTP Connect Tunneling in Wikipedia</a></p>
+<h6 id="example-connect-request">Example Connect Request</h6>
+<pre><code class="lang-curl">curl --insecure -X CONNECT curl.haxx.se -v -i
+</code></pre>
+<p>Has the following output:</p>
+<pre><code class="lang-http">* Rebuilt URL to: curl.haxx.se/
+*   Trying 2a04:4e42:2f::561...
+* TCP_NODELAY set
+* Connected to curl.haxx.se (2a04:4e42:2f::561) port 80 (#0)
+&gt; CONNECT / HTTP/1.1
+&gt; Host: curl.haxx.se
+&gt; User-Agent: curl/7.54.0
+&gt; Accept: */*
+&gt;
+&lt; HTTP/1.1 301 Moved Permanently
+HTTP/1.1 301 Moved Permanently
+&lt; Server: Varnish
+Server: Varnish
+&lt; Retry-After: 0
+Retry-After: 0
+&lt; Location: https://curl.haxx.se/
+Location: https://curl.haxx.se/
+&lt; Content-Length: 0
+Content-Length: 0
+&lt; Accept-Ranges: bytes
+Accept-Ranges: bytes
+&lt; Date: Mon, 26 Feb 2018 00:07:45 GMT
+Date: Mon, 26 Feb 2018 00:07:45 GMT
+&lt; Via: 1.1 varnish
+Via: 1.1 varnish
+&lt; Connection: close
+Connection: close
+&lt; X-Served-By: cache-dca17743-DCA
+X-Served-By: cache-dca17743-DCA
+&lt; X-Cache: HIT
+X-Cache: HIT
+&lt; X-Cache-Hits: 0
+X-Cache-Hits: 0
+&lt; X-Timer: S1519603666.815007,VS0,VE0
+X-Timer: S1519603666.815007,VS0,VE0
+
+&lt;
+* Closing connection 0
+</code></pre>
+<h4 id="patch-http-method">PATCH HTTP Method</h4>
+<p><a href="https://tools.ietf.org/html/rfc5789#section-1" target="_blank">PATCH HTTP Method</a></p>
+<ul>
+<li><p>The PATCH method requests that a set of changes described in the request entity be applied to the resource identified by the Request-URI.  </p>
+</li>
+<li><p>The set of changes is represented in a format called a &quot;patch document&quot; identified by a media type.  </p>
+</li>
+<li><p>If the Request-URI does not point to an existing resource, the server MAY create a new resource, depending on the patch document type (whether it can logically modify a null resource) and permissions, etc.</p>
+</li>
+<li><p>The difference between the PUT and PATCH requests is reflected in the way the server processes the enclosed entity to modify the resource identified by the Request-URI.  </p>
+</li>
+<li><p>In a PUT request, the enclosed entity is considered to be a modified version of the resource stored on the origin server, and the client is requesting that the stored version be replaced.  </p>
+</li>
+<li><p>With PATCH, however, the enclosed entity contains a set of instructions describing how a resource currently residing on the origin server should be modified to produce a new version.  </p>
+</li>
+<li><p>The PATCH method affects the resource identified by the Request-URI, and italso MAY have side effects on other resources; i.e., new resources may be created, or existing ones modified, by the application of a PATCH.</p>
+</li>
+</ul>
+<h6 id="http-response-codes">HTTP Response Codes</h6>
+<p><a href="https://tools.ietf.org/html/rfc7231#section-6.3.1" target="_blank">RFC 7231 Section 6.3.1</a></p>
+<p>A 200 (OK) status code is used with a <code>PUT</code> request to denote a successful operation.</p>
+<p><a href="https://tools.ietf.org/html/rfc7231#section-6.3.5" target="_blank">RFC 7231 Section 6.3.5</a></p>
+<p>A 204 (NO CONTENT) status code indicates indicates that the server has successfully fulfilled the request and that there is no additional content to send in the response payload body.</p>
+<h6 id="http-response-payloads">HTTP Response Payloads</h6>
+<p>A 200 response code you will get a message body</p>
+<p>A 204 response code you will <em>not</em> get a message body</p>
+<p>More response codes are applicable please consult <a href="https://tools.ietf.org/html/rfc7231#section-6.1" target="_blank">RFC 7231 Section 6.1</a></p>
+<h6 id="example-patch-request">Example PATCH Request</h6>
+<pre><code class="lang-curl">curl -X patch \
+  https://api.github.com/repos/jbelmont/api-workshop/labels/enhancement \
+  -H &apos;Accept: application/json&apos; \
+  -H &apos;Authorization: token aToken12345&apos; \
+  -H &apos;Content-Type: application/json&apos; \
+  -d &apos;{
+  &quot;name&quot;: &quot;bug &lt;img align=&apos;absmiddle&apos; alt=&apos;:bug:&apos; class=&apos;emoji&apos; src=&apos;/gitbook/gitbook-plugin-advanced-emoji/emojis/bug.png&apos; title=&apos;:bug:&apos; /&gt;&quot;,
+  &quot;description&quot;: &quot;Small bug fix required&quot;,
+  &quot;color&quot;: &quot;b01f26&quot;
+}&apos;
+</code></pre>
+<p>This returns a 200 status code with the following JSON payload:</p>
+<pre><code class="lang-json">{
+    <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-number">812066655</span>,
+    <span class="hljs-string">&quot;url&quot;</span>: <span class="hljs-string">&quot;https://api.github.com/repos/jbelmont/api-workshop/labels/bug%20:bug:&quot;</span>,
+    <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;bug &lt;img align=&apos;absmiddle&apos; alt=&apos;:bug:&apos; class=&apos;emoji&apos; src=&apos;/gitbook/gitbook-plugin-advanced-emoji/emojis/bug.png&apos; title=&apos;:bug:&apos; /&gt;&quot;</span>,
+    <span class="hljs-string">&quot;color&quot;</span>: <span class="hljs-string">&quot;b01f26&quot;</span>,
+    <span class="hljs-string">&quot;default&quot;</span>: <span class="hljs-literal">false</span>
+}
+</code></pre>
+<h4 id="bread-crumb-navigation">Bread Crumb Navigation</h4>
+<hr>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Previous</th>
+<th style="text-align:right">Next</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">&#x2190; <a href="http-concepts.html">HTTP Concepts</a></td>
+<td style="text-align:right"><a href="status-codes.html">HTTP Status Codes</a> &#x2192;</td>
+</tr>
+</tbody>
+</table>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="http-concepts.html" class="navigation navigation-prev " aria-label="Previous page: HTTP Concepts">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="status-codes.html" class="navigation navigation-next " aria-label="Next page: HTTP Status Codes">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"HTTP Verbs","level":"1.4.1","depth":2,"next":{"title":"HTTP Status Codes","level":"1.4.2","depth":2,"path":"docs/status-codes.md","ref":"docs/status-codes.md","articles":[]},"previous":{"title":"HTTP Concepts","level":"1.4","depth":1,"path":"docs/http-concepts.md","ref":"docs/http-concepts.md","articles":[{"title":"HTTP Verbs","level":"1.4.1","depth":2,"path":"docs/http-verbs.md","ref":"docs/http-verbs.md","articles":[]},{"title":"HTTP Status Codes","level":"1.4.2","depth":2,"path":"docs/status-codes.md","ref":"docs/status-codes.md","articles":[]},{"title":"HTTP Headers","level":"1.4.3","depth":2,"path":"docs/http-headers.md","ref":"docs/http-headers.md","articles":[]},{"title":"HTTP Request and Response","level":"1.4.4","depth":2,"path":"docs/request-response.md","ref":"docs/request-response.md","articles":[]},{"title":"URL Design","level":"1.4.5","depth":2,"path":"docs/uri-design.md","ref":"docs/uri-design.md","articles":[]},{"title":"Query String","level":"1.4.6","depth":2,"path":"docs/query-string.md","ref":"docs/query-string.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["include-codeblock","advanced-emoji","highlight","copy-code-button"],"pluginsConfig":{"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"copy-code-button":{},"advanced-emoji":{"embedEmojis":false},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"default","theme":"chrome","unindent":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"docs/http-verbs.md","mtime":"2018-03-06T23:26:58.633Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-26T19:30:35.921Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,25 @@
+language: go
+services:
+  - docker
+go:
+  - 1.10.6
+os:
+  - linux
+sudo: false
+env:
+  matrix:
+    - PORT=8080 ENVIRONMENT_NAME=travis
+  global:
+    secure: AvDa6vD77eIF3JifNegQ0cat2SS0vZpa9ami7E8LqYcnl4iJ3D47RHpR1eSkRrSwT6hJIsSG93y8Yi3WRSI3N8UkAuPs/tbr6mpaFwAHpZ0A+gxOf0Xt/SdV7xc2JEOuBjlwAoK23EXvvNyJwJxzAmg+ye5OzTv57LZu7tbWDoCT5Y1D8WD4IkDoFJUSDoG6SLwY0MWgd8YblhnpSIdWxn7H8cadJsjqhvnTkdyslx7s0rtpLsslNmBOgKu9yHdxAtxHXgBZnLHC9xLv41MDKJ1YNU6PqI/JUK4zHgWEHzXd4ZEATdDiq29WKtMIyJvcoVV8Kr8Tcm41ZuyFH6ZtzQGZOj1lyCmrI+qenMEhr7CvsPFOHpx0zZFQkjPYN9qDQAexzs5zEODMA9qjwpaaBXYm3xC7GHxLYUlXB+LpgB8bgmGIy0jax8Eyqlw8VRsmqyLBuPr5VU4W2ZV7GNYladNCLsNk/0VKWb6qdwzt4nXvCUZwbLeG8+TPIvceItxPA9MBxqdydVyfmwUB4aZSs76KJiALTxn0RcthgN+PE4RP6rcHlmsksd3/uup/LBASaK3yZH+DfFRh5VdzHGSqsYwP1Y2vxmnnWNltUfZMBW3WgPEO2sN29aMplcSFAVK8O2RNbBC2PDPRbmLzT7vrVZYKwCDQi6ywCVeS0xuv7js=
+    # This creates the following global variable `COVERALLS_TOKEN`
+before_install:
+  - export PATH=$PATH:$HOME/gopath/bin
+install:
+  - make travis-install
+before_script:
+  - echo -e "Host github.com\n\tHostName github.com\n\tIdentityFile ~/.ssh/id_rsa\n" >> ~/.ssh/config
+script:
+  - make travis-script
+after_success:
+  - if [ -n "$TRAVIS_TAG" ]; then rm -rf ./bin; fi
+  - if [ -n "$TRAVIS_TAG" ]; then curl -sL https://git.io/goreleaser | bash; fi

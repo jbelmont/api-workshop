@@ -1,0 +1,896 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>HTTP Headers · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="request-response.html" />
+    
+    
+    <link rel="prev" href="status-codes.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="api-summary.html">
+            
+                <a href="api-summary.html">
+            
+                    
+                    API Summary and Description
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="restful-intro.html">
+            
+                <a href="restful-intro.html">
+            
+                    
+                    Restful API Introduction
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="rest-dissertation.html">
+            
+                <a href="rest-dissertation.html">
+            
+                    
+                    Roy Fieldings Dissertation on REST
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="rest-constraints.html">
+            
+                <a href="rest-constraints.html">
+            
+                    
+                    Rest Architecture Constraints
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="maturity-model.html">
+            
+                <a href="maturity-model.html">
+            
+                    
+                    Richardson Maturity Model
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="http-concepts.html">
+            
+                <a href="http-concepts.html">
+            
+                    
+                    HTTP Concepts
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="http-verbs.html">
+            
+                <a href="http-verbs.html">
+            
+                    
+                    HTTP Verbs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="status-codes.html">
+            
+                <a href="status-codes.html">
+            
+                    
+                    HTTP Status Codes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.3" data-path="http-headers.html">
+            
+                <a href="http-headers.html">
+            
+                    
+                    HTTP Headers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="request-response.html">
+            
+                <a href="request-response.html">
+            
+                    
+                    HTTP Request and Response
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="uri-design.html">
+            
+                <a href="uri-design.html">
+            
+                    
+                    URL Design
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="query-string.html">
+            
+                <a href="query-string.html">
+            
+                    
+                    Query String
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="api-design.html">
+            
+                <a href="api-design.html">
+            
+                    
+                    API Design
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="api-testing.html">
+            
+                <a href="api-testing.html">
+            
+                    
+                    API Testing
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="types-of-api-testing.html">
+            
+                <a href="types-of-api-testing.html">
+            
+                    
+                    Types of API Testing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="api-testing-tools.html">
+            
+                <a href="api-testing-tools.html">
+            
+                    
+                    API Testing Tools
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="api-security.html">
+            
+                <a href="api-security.html">
+            
+                    
+                    API Security
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="authentication.html">
+            
+                <a href="authentication.html">
+            
+                    
+                    Authentication
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1.1" data-path="openid-connect.html">
+            
+                <a href="openid-connect.html">
+            
+                    
+                    OpenID Connect
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="authorization.html">
+            
+                <a href="authorization.html">
+            
+                    
+                    Authorization
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.2.1" data-path="oauth.html">
+            
+                <a href="oauth.html">
+            
+                    
+                    OAuth
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="federation.html">
+            
+                <a href="federation.html">
+            
+                    
+                    Federation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="delegation.html">
+            
+                <a href="delegation.html">
+            
+                    
+                    Delegation
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="api-description-languages.html">
+            
+                <a href="api-description-languages.html">
+            
+                    
+                    API Description Languages
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="openapi.html">
+            
+                <a href="openapi.html">
+            
+                    
+                    OpenAPI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="api-blueprint.html">
+            
+                <a href="api-blueprint.html">
+            
+                    
+                    API Blueprint
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="raml.html">
+            
+                <a href="raml.html">
+            
+                    
+                    RAML
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="graphql.html">
+            
+                <a href="graphql.html">
+            
+                    
+                    GraphQL
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >HTTP Headers</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>API Workshop - HTTP Headers</p>
+<h2 id="sections">Sections:</h2>
+<ul>
+<li><a href="#bread-crumb-navigation">Bread Crumb Navigation</a></li>
+</ul>
+<h4 id="http-header-fields">HTTP Header Fields</h4>
+<p><a href="https://en.wikipedia.org/wiki/List_of_HTTP_header_fields" target="_blank">HTTP Header Fields</a></p>
+<blockquote>
+<p>HTTP header fields are components of the header section of request and response messages in the Hypertext Transfer Protocol (HTTP). They define the operating parameters of an HTTP transaction.</p>
+</blockquote>
+<p>The format of HTTP Headers follow that which is laid out in <a href="https://tools.ietf.org/html/rfc822" target="_blank">RFC 822</a></p>
+<p>Each header field consists of a name followed by a colon (&quot;:&quot;) and the field value. </p>
+<p>According to <a href="https://tools.ietf.org/html/rfc2616#section-4.2" target="_blank">RFC 2616 Section 4.2</a> a field value MAY be preceded by any amount of Linear White Space (LWS), though a single space (SP) is preferred. </p>
+<p>Header fields can be extended over multiple lines by preceding each extra line with at least one SP or HT. </p>
+<pre><code class="lang-http">message-header = field-name &quot;:&quot; [ field-value ]
+
+field-name     = token
+
+field-value    = *( field-content | LWS )
+
+field-content  = &lt;the OCTETs making up the field-value and consisting of either *TEXT or 
+combinations of token, separators, and quoted-string&gt;
+</code></pre>
+<h4 id="request-header-fields">Request Header Fields</h4>
+<p><a href="https://tools.ietf.org/html/rfc2616#section-5.3" target="_blank">RFC 2616 Section 5.3</a></p>
+<p>The request-header fields allow the client to pass additional information about the request, and about the client itself, to the server. </p>
+<p>These fields act as request modifiers, with semantics equivalent to the parameters on a programming language method invocation.</p>
+<blockquote>
+<p>Request-header field names can be extended reliably only in combination with a change in the protocol version. However, new or experimental header fields MAY be given the semantics of request-header fields if all parties in the communication recognize them to be request-header fields. </p>
+</blockquote>
+<p>Unrecognized header fields are treated as entity-header fields.</p>
+<p>An entity header is an HTTP header describing the content of the body of the message. </p>
+<p>Entity headers are used in both, HTTP requests and responses. </p>
+<p>Headers like Content-Length, Content-Language, Content-Encoding are entity headers.</p>
+<h4 id="list-of-request-header-fields">List of Request Header Fields</h4>
+<table>
+<thead>
+<tr>
+<th>Header Field Name</th>
+<th>Description</th>
+<th>Example</th>
+<th>RFC Reference</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Accept</td>
+<td>The Accept request-header field can be used to specify certain media types which are acceptable for the response. Accept headers can be used to indicate that the request is specifically limited to a small set of desired types, as in the case of a request for an in-line image.</td>
+<td><code>Accept: text/plain</code></td>
+<td><a href="https://tools.ietf.org/html/rfc2616#section-14.1" target="_blank">RFC 2616 Section 14.1</a></td>
+</tr>
+<tr>
+<td>Accept-Charset</td>
+<td>The Accept-Charset request-header field can be used to indicate what character sets are acceptable for the response. This field allows clients capable of understanding more comprehensive or special-purpose character sets to signal that capability to a server which is capable of representing documents in those character sets.</td>
+<td><code>Accept-Charset: utf-8</code></td>
+<td><a href="https://tools.ietf.org/html/rfc2616#section-14.2" target="_blank">RFC 2616 Section</a></td>
+</tr>
+<tr>
+<td>Accept-Encoding</td>
+<td>The Accept-Encoding request-header field is similar to Accept, but restricts the content-codings that are acceptable in the response.</td>
+<td><code>Accept-Encoding: gzip, deflate</code></td>
+<td><a href="https://tools.ietf.org/html/rfc2616#section-14.3" target="_blank">RFC 2616 Section</a></td>
+</tr>
+<tr>
+<td>Accept-Language</td>
+<td>The Accept-Language request-header field is similar to Accept, but restricts the set of natural languages that are preferred as a response to the request.</td>
+<td><code>Accept-Language: en-US</code></td>
+<td><a href="https://tools.ietf.org/html/rfc2616#section-14.4" target="_blank">RFC 2616 Section 14.4</a></td>
+</tr>
+<tr>
+<td>Authorization</td>
+<td>A user agent that wishes to authenticate itself with a server--usually, but not necessarily, after receiving a 401 response--does so by including an Authorization request-header field with the request. The Authorization field value consists of credentials containing the authentication information of the user agent for the realm of the resource being requested.</td>
+<td><code>Authorization: Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ==</code></td>
+<td><a href="https://tools.ietf.org/html/rfc2616#section-14.8" target="_blank">RFC 2616 Section 14.8</a></td>
+</tr>
+<tr>
+<td>Expect</td>
+<td>The Expect request-header field is used to indicate that particular server behaviors are required by the client.</td>
+<td><code>Expect: 100-continue</code></td>
+<td><a href="https://tools.ietf.org/html/rfc2616#section-14.20" target="_blank">RFC 2616 14.20</a></td>
+</tr>
+<tr>
+<td>From</td>
+<td>The From request-header field, if given, SHOULD contain an Internete-mail address for the human user who controls the requesting user agent. The address SHOULD be machine-usable, as defined by &quot;mailbox&quot; in <a href="https://tools.ietf.org/html/rfc822" target="_blank">RFC 822</a> as updated by <a href="https://tools.ietf.org/html/rfc1123.html" target="_blank">RFC 1123</a></td>
+<td><code>From: user@example.com</code></td>
+<td><a href="https://tools.ietf.org/html/rfc2616#section-14.22" target="_blank">RFC 2622 Section 14.22</a></td>
+</tr>
+<tr>
+<td>Host</td>
+<td>The Host request-header field specifies the Internet host and port number of the resource being requested, as obtained from the original URI given by the user or referring resource. The Host field value MUST represent the naming authority of the origin server or gateway given by the original URL. This allows the origin server or gateway to differentiate between internally-ambiguous URLs, such as the root &quot;/&quot; URL of a server for multiple host names on a single IP address.</td>
+<td><code>Host: www.owasp.org</code></td>
+<td><a href="https://tools.ietf.org/html/rfc2616#section-14.23" target="_blank">RFC 2616 Section 14.23</a></td>
+</tr>
+<tr>
+<td>If-Match</td>
+<td>The If-Match request-header field is used with a method to make it conditional. A client that has one or more entities previously obtained from the resource can verify that one of those entities is current by including a list of their associated entity tags in the If-Match header field.</td>
+<td><code>If-Match: &quot;737060cd8c284d8af7ad3082f209582d&quot;</code></td>
+<td><a href="https://tools.ietf.org/html/rfc2616#section-14.24" target="_blank">RFC 2616 Section 14.24</a></td>
+</tr>
+<tr>
+<td>If-Modified-Since</td>
+<td>The If-Modified-Since request-header field is used with a method to make it conditional: if the requested variant has not been modified since the time specified in this field, an entity will not be returned from the server; instead, a 304 (not modified) response will be returned without any message-body.</td>
+<td><code>If-Modified-Since: Sat, 29 Oct 1994 19:43:31 GMT</code></td>
+<td><a href="https://tools.ietf.org/html/rfc2616#section-14.25" target="_blank">RFC 2616 Section 14.25</a></td>
+</tr>
+<tr>
+<td>If-None-Match</td>
+<td>The If-None-Match request-header field is used with a method to make it conditional. A client that has one or more entities previously obtained from the resource can verify that none of those entities is current by including a list of their associated entity tags in the If-None-Match header field. The purpose of this feature is to allow efficient updates of cached information with a minimum amount of transaction overhead. It is also used to prevent a method (e.g. PUT) from inadvertently modifying an existing resource when the client believes that the resource does not exist.</td>
+<td><code>If-None-Match: &quot;737060cd8c284d8af7ad3082f209582d&quot;</code></td>
+<td><a href="https://tools.ietf.org/html/rfc2616#section-14.26" target="_blank">RFC 2616 Section 14.26</a></td>
+</tr>
+<tr>
+<td>If-Range</td>
+<td>If a client has a partial copy of an entity in its cache, and wishes to have an up-to-date copy of the entire entity in its cache, it could use the Range request-header with a conditional GET (using either or both of If-Unmodified-Since and If-Match.) However, if the condition fails because the entity has been modified, the client would then have to make a second request to obtain the entire current entity-body.</td>
+<td><code>If-Range: &quot;737060cd8c284d8af7ad3082f209582d&quot;</code></td>
+<td><a href="https://tools.ietf.org/html/rfc2616#section-14.27" target="_blank">RFC 2616 Section 14.27</a></td>
+</tr>
+<tr>
+<td>If-Unmodified-Since</td>
+<td>The If-Unmodified-Since request-header field is used with a method to make it conditional. If the requested resource has not been modified since the time specified in this field, the server SHOULD perform the requested operation as if the If-Unmodified-Since header were not present.</td>
+<td><code>If-Unmodified-Since: Sat, 29 Oct 1994 19:43:31 GMT</code></td>
+<td><a href="https://tools.ietf.org/html/rfc2616#section-14.28" target="_blank">RFC 2616 Section 14.28</a></td>
+</tr>
+<tr>
+<td>Max-Forwards</td>
+<td>The Max-Forwards request-header field provides a mechanism with the TRACE and OPTIONS  methods to limit the number of proxies or gateways that can forward the request to the next inbound server. This can be useful when the client is attempting to trace a request chain which appears to be failing or looping in mid-chain.</td>
+<td><code>Max-Forwards: 10</code></td>
+<td><a href="https://tools.ietf.org/html/rfc2616#section-14.31" target="_blank">RFC 2616 Section 14.31</a></td>
+</tr>
+<tr>
+<td>Proxy-Authorization</td>
+<td>The Proxy-Authorization request-header field allows the client to identify itself (or its user) to a proxy which requires authentication. The Proxy-Authorization field value consists of credentials containing the authentication information of the user agent for the proxy and/or realm of the resource being requested.</td>
+<td><code>Proxy-Authorization: Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ==</code></td>
+<td><a href="https://tools.ietf.org/html/rfc2616#section-14.34" target="_blank">RFC 2616 Section 14.34</a></td>
+</tr>
+<tr>
+<td>Range</td>
+<td>Request only part of an entity. Bytes are numbered from 0</td>
+<td><code>Range: bytes=500-999</code></td>
+<td><a href="https://tools.ietf.org/html/rfc2616#section-14.35" target="_blank">RFC 2616 Section 14.35</a></td>
+</tr>
+<tr>
+<td>Referer</td>
+<td>The Referer[sic] request-header field allows the client to specify, for the server&apos;s benefit, the address (URI) of the resource from which the Request-URI was obtained (the &quot;referrer&quot;, although the header field is misspelled.) The Referer request-header allows a server to generate lists of back-links to resources for interest, logging, optimized caching, etc. It also allows obsolete or mistyped links to be traced for maintenance. The Referer field MUST NOT be sent if the Request-URI was obtained from a source that does not have its own URI, such as input from the user keyboard.</td>
+<td><code>Referer: https://www.youtube.com/embed/videoseries?list=PLpr-xdpM8wG9g8l21uzfgyx4xAJ9aY7e7&amp;</code></td>
+<td><a href="https://tools.ietf.org/html/rfc2616#section-14.36" target="_blank">RFC 2616 Section 14.36</a></td>
+</tr>
+<tr>
+<td>TE</td>
+<td>The TE request-header field indicates what extension transfer-codings it is willing to accept in the response and whether or not it is willing to accept trailer fields in a chunked transfer-coding. Its value may consist of the keyword &quot;trailers&quot; and/or a comma-separated list of extension transfer-coding names with optional accept parameters</td>
+<td><code>TE: trailers, deflate</code></td>
+<td><a href="https://tools.ietf.org/html/rfc2616#section-14.39" target="_blank">RFC 2616 Section 14.39</a></td>
+</tr>
+<tr>
+<td>User-Agent</td>
+<td>The User-Agent request-header field contains information about the user agent originating the request. This is for statistical purposes, the tracing of protocol violations, and automated recognition of user agents for the sake of tailoring responses to avoid particular user agent limitations. User agents SHOULD include this field with requests. The field can contain multiple product tokens (section 3.8) and comments identifying the agent and any subproducts which form a significant part of the user agent. By convention, the product tokens are listed in order of their significance for identifying the application.</td>
+<td><code>User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:12.0) Gecko/20100101 Firefox/12.0</code></td>
+<td><a href="https://tools.ietf.org/html/rfc2616#section-14.43" target="_blank">RFC 2616 Section 14.43</a></td>
+</tr>
+</tbody>
+</table>
+<p>Reference <a href="https://www.iana.org/assignments/message-headers/message-headers.xml#perm-headers" target="_blank">IANA Site for full list of Headers</a></p>
+<h4 id="response-header-fields">Response Header Fields</h4>
+<p><a href="https://tools.ietf.org/html/rfc2616#section-6.2" target="_blank">RFC 2616 Section 6.2</a></p>
+<p>The response-header fields allow the server to pass additional information about the response which cannot be placed in the Status-Line. </p>
+<p>Response header fields give information about the server and about further access to the resource identified by the Request-URI.</p>
+<blockquote>
+<p>Response-header field names can be extended reliably only in combination with a change in the protocol version. However, new or experimental header fields MAY be given the semantics of response-header fields if all parties in the communication recognize them to be response-header fields. Unrecognized header fields are treated as entity-header fields.</p>
+</blockquote>
+<h4 id="list-of-response-header-fields">List of Response Header Fields</h4>
+<table>
+<thead>
+<tr>
+<th>Header Field Name</th>
+<th>Description</th>
+<th>Example</th>
+<th>RFC Reference</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Accept-Ranges</td>
+<td>The Accept-Ranges response-header field allows the server to indicate its acceptance of range requests for a resource</td>
+<td><code>Accept-Ranges: bytes</code></td>
+<td><a href="https://tools.ietf.org/html/rfc2616#section-14.5" target="_blank">RFC 2616 Section 14.5</a></td>
+</tr>
+<tr>
+<td>Age</td>
+<td>The Age response-header field conveys the sender&apos;s estimate of the amount of time since the response (or its revalidation) was generated at the origin server. A cached response is &quot;fresh&quot; if its age does not exceed its freshness lifetime. Age values are calculated as specified in <a href="https://tools.ietf.org/html/rfc2616#section-13.2.3" target="_blank">RFC 2616 Section 13.2.3</a></td>
+<td><code>Age: 24</code></td>
+<td><a href="https://tools.ietf.org/html/rfc2616#section-14.6" target="_blank">RFC 2616 Section 14.6</a></td>
+</tr>
+<tr>
+<td>ETag</td>
+<td>The ETag response-header field provides the current value of the entity tag for the requested variant. The headers used with entity tags are described in sections 14.24, 14.26 and 14.44. The entity tag MAY be used for comparison with other entities from the same resource <a href="https://tools.ietf.org/html/rfc2616#section-13.3.3" target="_blank">RFC 2616 Section 13.3.3</a></td>
+<td><code>ETag: &quot;33a64df551425fcc55e4d42a148795d9f25f89d4&quot;</code></td>
+<td><a href="https://tools.ietf.org/html/rfc2616#section-14.19" target="_blank">RFC 2616 Section 14.19</a></td>
+</tr>
+<tr>
+<td>Location</td>
+<td>The Location response-header field is used to redirect the recipient to a location other than the Request-URI for completion of the request or identification of a new resource. For 201 (Created) responses, the Location is that of the new resource which was created by the request. For 3xx responses, the location SHOULD indicate the server&apos;s preferred URI for automatic redirection to the resource. The field value consists of a single absolute URI.</td>
+<td><code>Location: /index.html</code></td>
+<td><a href="https://tools.ietf.org/html/rfc2616#section-14.30" target="_blank">RFC 2616 Section 14.30</a></td>
+</tr>
+<tr>
+<td>Proxy-Authenticate</td>
+<td>The Proxy-Authenticate response-header field MUST be included as part of a 407 (Proxy Authentication Required) response. The field value consists of a challenge that indicates the authentication scheme and parameters applicable to the proxy for this Request-URI.</td>
+<td><code>Proxy-Authorization: Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ==</code></td>
+<td><a href="https://tools.ietf.org/html/rfc2616#section-14.33" target="_blank">RFC 2616 Section 14.33</a></td>
+</tr>
+<tr>
+<td>Retry-After</td>
+<td>The Retry-After response-header field can be used with a 503 (Service Unavailable) response to indicate how long the service is expected to be unavailable to the requesting client. This field MAY also be used with any 3xx (Redirection) response to indicate the minimum time the user-agent is asked wait before issuing the redirected request. The value of this field can be either an HTTP-date or an integer number of seconds (in decimal) after the time of the response.</td>
+<td><code>Retry-After: Wed, 21 Oct 2015 07:28:00 GMT</code></td>
+<td><a href="https://tools.ietf.org/html/rfc2616#section-14.37" target="_blank">RFC 2616 Section 14.37</a></td>
+</tr>
+<tr>
+<td>Server</td>
+<td>The Server response-header field contains information about the software used by the origin server to handle the request. The field can contain multiple product tokens <a href="https://tools.ietf.org/html/rfc2616#section-3.8" target="_blank">RFC 2616 Section 3.8</a> and comments identifying the server and any significant subproducts. The product tokens are listed in order of their significance for identifying the application.</td>
+<td><code>Server: Apache/2.4.1 (Unix)</code></td>
+<td><a href="https://tools.ietf.org/html/rfc2616#section-14.38" target="_blank">RFC 2616 Section 14.38</a></td>
+</tr>
+<tr>
+<td>Vary</td>
+<td>The Vary field value indicates the set of request-header fields that fully determines, while the response is fresh, whether a cache is permitted to use the response to reply to a subsequent request without revalidation. For uncacheable or stale responses, the Vary field value advises the user agent about the criteria that were used to select the representation. A Vary field value of &quot;*&quot; implies that a cache cannot determine from the request headers of a subsequent request whether this response is the appropriate representation.</td>
+<td><code>Vary: User-Agent</code></td>
+<td><a href="https://tools.ietf.org/html/rfc2616#section-14.44" target="_blank">RFC 2616 Section 14.44</a></td>
+</tr>
+<tr>
+<td>WWW-Authenticate</td>
+<td>The WWW-Authenticate response-header field MUST be included in 401 (Unauthorized) response messages. The field value consists of at least one challenge that indicates the authentication scheme(s) and parameters applicable to the Request-URI.</td>
+<td><code>WWW-Authenticate: Basic realm=&quot;Access to the staging site&quot;, charset=&quot;UTF-8&quot;</code></td>
+<td><a href="https://tools.ietf.org/html/rfc2616#section-14.47" target="_blank">RFC 2616 Section 14.47</a></td>
+</tr>
+</tbody>
+</table>
+<p>Reference <a href="https://www.iana.org/assignments/message-headers/message-headers.xml#perm-headers" target="_blank">IANA Site for full list of Headers</a></p>
+<h4 id="bread-crumb-navigation">Bread Crumb Navigation</h4>
+<hr>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Previous</th>
+<th style="text-align:right">Next</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">&#x2190; <a href="status-codes.html">HTTP Status Codes</a></td>
+<td style="text-align:right"><a href="request-response.html">HTTP Request and Response</a> &#x2192;</td>
+</tr>
+</tbody>
+</table>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="status-codes.html" class="navigation navigation-prev " aria-label="Previous page: HTTP Status Codes">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="request-response.html" class="navigation navigation-next " aria-label="Next page: HTTP Request and Response">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"HTTP Headers","level":"1.4.3","depth":2,"next":{"title":"HTTP Request and Response","level":"1.4.4","depth":2,"path":"docs/request-response.md","ref":"docs/request-response.md","articles":[]},"previous":{"title":"HTTP Status Codes","level":"1.4.2","depth":2,"path":"docs/status-codes.md","ref":"docs/status-codes.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["include-codeblock","advanced-emoji","highlight","copy-code-button"],"pluginsConfig":{"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"copy-code-button":{},"advanced-emoji":{"embedEmojis":false},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"default","theme":"chrome","unindent":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"docs/http-headers.md","mtime":"2018-03-03T20:19:30.896Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-26T19:30:35.921Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

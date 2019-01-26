@@ -1,0 +1,37 @@
+# Binaries for programs and plugins
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Do not include the binary file
+cmd/apid/apid
+/bin
+/apid
+
+# Test binary, build with `go test -c`
+*.test
+
+# Output of the go coverage tool, specifically when used with LiteIDE
+*.out
+
+# Project-local glide cache, RE: https://github.com/Masterminds/glide/issues/736
+.glide/
+vendor
+
+# Environment variable
+common.env
+
+# Coverage files
+/coverage.html
+/coverage.out
+/profile.cov
+
+# Vscode
+.vscode
+
+# Node specific vendor files
+/node_modules
+
+# Gitbook files
+/_book

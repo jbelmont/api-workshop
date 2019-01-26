@@ -1,0 +1,938 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>URL Design · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="query-string.html" />
+    
+    
+    <link rel="prev" href="request-response.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="api-summary.html">
+            
+                <a href="api-summary.html">
+            
+                    
+                    API Summary and Description
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="restful-intro.html">
+            
+                <a href="restful-intro.html">
+            
+                    
+                    Restful API Introduction
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="rest-dissertation.html">
+            
+                <a href="rest-dissertation.html">
+            
+                    
+                    Roy Fieldings Dissertation on REST
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="rest-constraints.html">
+            
+                <a href="rest-constraints.html">
+            
+                    
+                    Rest Architecture Constraints
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="maturity-model.html">
+            
+                <a href="maturity-model.html">
+            
+                    
+                    Richardson Maturity Model
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="http-concepts.html">
+            
+                <a href="http-concepts.html">
+            
+                    
+                    HTTP Concepts
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="http-verbs.html">
+            
+                <a href="http-verbs.html">
+            
+                    
+                    HTTP Verbs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="status-codes.html">
+            
+                <a href="status-codes.html">
+            
+                    
+                    HTTP Status Codes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="http-headers.html">
+            
+                <a href="http-headers.html">
+            
+                    
+                    HTTP Headers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="request-response.html">
+            
+                <a href="request-response.html">
+            
+                    
+                    HTTP Request and Response
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.5" data-path="uri-design.html">
+            
+                <a href="uri-design.html">
+            
+                    
+                    URL Design
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="query-string.html">
+            
+                <a href="query-string.html">
+            
+                    
+                    Query String
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="api-design.html">
+            
+                <a href="api-design.html">
+            
+                    
+                    API Design
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="api-testing.html">
+            
+                <a href="api-testing.html">
+            
+                    
+                    API Testing
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="types-of-api-testing.html">
+            
+                <a href="types-of-api-testing.html">
+            
+                    
+                    Types of API Testing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="api-testing-tools.html">
+            
+                <a href="api-testing-tools.html">
+            
+                    
+                    API Testing Tools
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="api-security.html">
+            
+                <a href="api-security.html">
+            
+                    
+                    API Security
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="authentication.html">
+            
+                <a href="authentication.html">
+            
+                    
+                    Authentication
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1.1" data-path="openid-connect.html">
+            
+                <a href="openid-connect.html">
+            
+                    
+                    OpenID Connect
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="authorization.html">
+            
+                <a href="authorization.html">
+            
+                    
+                    Authorization
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.2.1" data-path="oauth.html">
+            
+                <a href="oauth.html">
+            
+                    
+                    OAuth
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="federation.html">
+            
+                <a href="federation.html">
+            
+                    
+                    Federation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="delegation.html">
+            
+                <a href="delegation.html">
+            
+                    
+                    Delegation
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="api-description-languages.html">
+            
+                <a href="api-description-languages.html">
+            
+                    
+                    API Description Languages
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="openapi.html">
+            
+                <a href="openapi.html">
+            
+                    
+                    OpenAPI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="api-blueprint.html">
+            
+                <a href="api-blueprint.html">
+            
+                    
+                    API Blueprint
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="raml.html">
+            
+                <a href="raml.html">
+            
+                    
+                    RAML
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="graphql.html">
+            
+                <a href="graphql.html">
+            
+                    
+                    GraphQL
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >URL Design</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>API Workshop - Uri Design</p>
+<h2 id="sections">Sections:</h2>
+<ul>
+<li><a href="#bread-crumb-navigation">Bread Crumb Navigation</a></li>
+</ul>
+<h4 id="uniform-resource-identifiers-uri">Uniform Resource Identifiers (URI)</h4>
+<p><a href="https://tools.ietf.org/html/rfc2396" target="_blank">RFC 2396</a></p>
+<blockquote>
+<p>A Uniform Resource Identifier (URI) is a compact string of characters for identifying an abstract or physical resource.</p>
+</blockquote>
+<h5 id="overview-of-uri">Overview of URI</h5>
+<h6 id="uniform">Uniform</h6>
+<p><a href="https://tools.ietf.org/html/rfc2396#section-1.1" target="_blank">RFC 2396 Section 1.1</a></p>
+<p>Uniformity provides several benefits:</p>
+<ul>
+<li><p>Uniformity allows different types of resource identifiers to be used in the same context, even when the mechanisms used to access those resources may differ</p>
+</li>
+<li><p>Uniformity allows uniform semantic interpretation of common syntactic conventions across different types of resource identifiers;</p>
+</li>
+<li><p>Uniformity allows introduction of new types of resource identifiers without interfering with the way that existing identifiers are used</p>
+</li>
+<li><p>Uniformity allows the identifiers to be reused in many different contexts, thus permitting new applications or protocols to leverage a pre-existing, large, and widely-used set of resource identifiers.</p>
+</li>
+</ul>
+<h6 id="resource">Resource</h6>
+<p>A resource can be anything that has identity.</p>
+<ul>
+<li><p>Familiar examples include an electronic document, an image, a service (e.g., &quot;today&apos;s weather report for Los Angeles&quot;), and a collection of other resources.</p>
+</li>
+<li><p>Not all resources are network &quot;retrievable&quot;; e.g., human beings, corporations, and bound books in a library can also be considered resources.</p>
+</li>
+<li><p>The resource is the conceptual mapping to an entity or set of entities, not necessarily the entity which corresponds to that mapping at any particular instance in time.</p>
+</li>
+<li><p>Thus, a resource can remain constant even when its content---the entities to which it currently corresponds---changes over time, provided that the conceptual mapping is not changed in the process.</p>
+</li>
+</ul>
+<h6 id="identifier">Identifier</h6>
+<ul>
+<li><p>An identifier is an object that can act as a reference to something that has identity.</p>
+</li>
+<li><p>In the case of URI, the object is a sequence of characters with a restricted syntax.</p>
+</li>
+</ul>
+<h5 id="example-uri">Example URI</h5>
+<ul>
+<li><p><code>ftp://ftp.is.co.za/rfc/rfc1808.txt</code></p>
+</li>
+<li><p><code>mailto:marcelbelmont@gmail.com</code></p>
+</li>
+<li><p><code>news:comp.infosystems.www.servers.unix</code></p>
+</li>
+<li><p><code>https://developer.mozilla.org/en-US/</code></p>
+</li>
+</ul>
+<h4 id="uri-characters-and-escape-sequences">URI Characters and Escape Sequences</h4>
+<p><a href="https://tools.ietf.org/html/rfc2396#section-2" target="_blank">RFC 2396 Section 2</a></p>
+<blockquote>
+<p>URI consist of a restricted set of characters, primarily chosen to aid transcribability and usability both in computer systems and in non-computer communications. Characters used conventionally as delimiters around URI were excluded.  The restricted set of characters consists of digits, letters, and a few graphic symbols were chosen from those common to most of the character encodings and input facilities available to Internet users.</p>
+</blockquote>
+<h5 id="reserved-characters">Reserved Characters</h5>
+<p><a href="https://tools.ietf.org/html/rfc2396#section-2.2" target="_blank">RFC 2396 Section 2.2</a></p>
+<p>Many URI include components consisting of or delimited by, certain special characters.</p>
+<p>These characters are called &quot;reserved&quot;, since their usage within the URI component is limited to their reserved purpose.</p>
+<p>If the data for a URI component would conflict with the reserved purpose, then the conflicting data must be escaped before forming the URI.</p>
+<p>Reserved characters:</p>
+<ul>
+<li><code>;</code></li>
+<li><code>/</code></li>
+<li><code>?</code></li>
+<li><code>:</code></li>
+<li><code>@</code></li>
+<li><code>&amp;</code></li>
+<li><code>=</code></li>
+<li><code>+</code></li>
+<li><code>$</code></li>
+<li><p><code>,</code></p>
+</li>
+<li><p>Characters in the &quot;reserved&quot; set are not reserved in all contexts.</p>
+</li>
+<li><p>The set of characters actually reserved within any given URI component is defined by that component.</p>
+</li>
+<li><p>In general, a character is reserved if the semantics of the URI changes if the character is replaced with its escaped US-ASCII encoding.</p>
+</li>
+</ul>
+<p>When a character from the reserved set (a &quot;reserved character&quot;) has special meaning (a &quot;reserved purpose&quot;) in a certain context, and a URI scheme says that it is necessary to use that character for some other purpose, then the character must be percent-encoded.</p>
+<p>Percent-encoding a reserved character involves converting the character to its corresponding byte value in ASCII and then representing that value as a pair of hexadecimal digits.</p>
+<h5 id="unreserved-characters">Unreserved Characters</h5>
+<p><a href="https://tools.ietf.org/html/rfc2396#section-2.3" target="_blank">RFC 2396 Section 2.3</a></p>
+<p>Data characters that are allowed in a URI but do not have a reserved purpose are called unreserved.</p>
+<p>These include upper and lower case letters, decimal digits, and a limited set of punctuation marks and symbols.</p>
+<p>Unreserved characters:</p>
+<ul>
+<li><code>-</code></li>
+<li><code>_</code></li>
+<li><code>.</code></li>
+<li><code>!</code></li>
+<li><code>~</code></li>
+<li><code>*</code></li>
+<li><code>&apos;</code></li>
+<li><code>(</code></li>
+<li><code>)</code></li>
+</ul>
+<p>Unreserved characters can be escaped without changing the semantics of the URI, but this should not be done unless the URI is being used in a context that does not allow the unescaped character to appear.</p>
+<p><strong>Characters from the unreserved set never need to be percent-encoded.</strong></p>
+<h5 id="escape-sequences">Escape Sequences</h5>
+<p><a href="https://tools.ietf.org/html/rfc2396#section-2.4" target="_blank">RFC 2396 Section 2.4</a></p>
+<ul>
+<li><p>Data must be escaped if it does not have a representation using an unreserved character</p>
+</li>
+<li><p>this includes data that does not correspond to a printable character of the US-ASCII coded character set, or that corresponds to any US-ASCII character that is disallowed, as explained below</p>
+</li>
+</ul>
+<p>An escaped octet is encoded as a character triplet, consisting of the percent character &quot;%&quot; followed by the two hexadecimal digits representing the octet code.</p>
+<p>For example, &quot;%20&quot; is the escaped encoding for the US-ASCII space character.</p>
+<p>A URI is always in an &quot;escaped&quot; form, since escaping or unescaping a completed URI might change its semantics.</p>
+<p>Normally, the only time escape encodings can safely be made is when the URI is being created from its component parts</p>
+<p>Each component may have its own set of characters that are reserved, so only the mechanism responsible for generating or interpreting that component can determine whether or not escaping a character will change its semantics.</p>
+<p>Likewise, a URI must be separated into its components before the escaped characters within those components can be safely decoded.</p>
+<h5 id="common-characters-that-are-percent-encoded">Common Characters that are Percent Encoded</h5>
+<table>
+<thead>
+<tr>
+<th>Character</th>
+<th>Percent Encoding (PE)</th>
+<th>Character</th>
+<th>PE</th>
+<th>Character</th>
+<th>PE</th>
+<th>Character</th>
+<th>PE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Newline</td>
+<td>%0A</td>
+<td> </td>
+<td>%20</td>
+<td>&quot;</td>
+<td>%22</td>
+<td>%</td>
+<td>%25</td>
+</tr>
+<tr>
+<td>&#x2013;</td>
+<td>%2D</td>
+<td>.</td>
+<td>%2E</td>
+<td>&lt;</td>
+<td>%3C</td>
+<td>&gt;</td>
+<td>%3E</td>
+</tr>
+<tr>
+<td>\</td>
+<td>%5C</td>
+<td>^</td>
+<td>%5E</td>
+<td>_</td>
+<td>%5F</td>
+<td>`</td>
+<td>%60</td>
+</tr>
+<tr>
+<td>{</td>
+<td>%7B</td>
+<td>|</td>
+<td>%7C</td>
+<td>}</td>
+<td>%7D</td>
+<td>~</td>
+<td>%7E</td>
+</tr>
+</tbody>
+</table>
+<h4 id="uri-syntactic-components">URI Syntactic Components</h4>
+<p><a href="https://tools.ietf.org/html/rfc2396#section-3" target="_blank">RFC 2396 Section 3</a></p>
+<p>In general, absolute URI are written as follows:</p>
+<p><code>&lt;scheme&gt;:&lt;scheme-specific-part&gt;</code></p>
+<p>This &quot;generic URI&quot; syntax consists of a sequence of four main components:</p>
+<p><code>&lt;scheme&gt;://&lt;authority&gt;&lt;path&gt;?&lt;query&gt;</code></p>
+<p>Scheme names consist of a sequence of characters beginning with a lower case letter and followed by any combination of lower case letters, digits, plus (&quot;+&quot;), period (&quot;.&quot;), or hyphen (&quot;-&quot;).</p>
+<p>Scheme ==&gt; <code>alpha *( alpha | digit | &quot;+&quot; | &quot;-&quot; | &quot;.&quot; )</code></p>
+<h5 id="authority-component">Authority Component</h5>
+<p><a href="https://tools.ietf.org/html/rfc2396#section-3.2" target="_blank">RFC 2396 Section 3.2</a></p>
+<p>An authority part, comprising:</p>
+<ul>
+<li><p>An optional authentication section of a user name and password, separated by a colon, followed by an at symbol (@)</p>
+</li>
+<li><p>A &quot;host&quot;, consisting of either a registered name (including but not limited to a hostname), or an IP address.</p>
+<ul>
+<li>IPv4 addresses must be in dot-decimal notation, and IPv6 addresses must be enclosed in brackets ([ ]).</li>
+<li>An optional port number, separated from the hostname by a colon</li>
+</ul>
+</li>
+</ul>
+<p>Some URL schemes use the format &quot;user:password&quot; in the userinfo field.</p>
+<p>This practice is NOT RECOMMENDED, because the passing of authentication information in clear text (such as URI) has proven to be a security risk in almost every case where it has been used.</p>
+<h6 id="authority-component-example">Authority Component Example</h6>
+<p><code>http://john:secret@rambo.net:3000/path/data</code></p>
+<p><em>The part <code>john:secret@rambo.net</code> is the authority component</em></p>
+<h5 id="path-component">Path Component</h5>
+<p><a href="https://tools.ietf.org/html/rfc2396#section-3.3" target="_blank">RFC 2396 Section 3.3</a></p>
+<p>The path component contains data, specific to the authority (or the scheme if there is no authority component), identifying the resource within the scope of that scheme and authority.</p>
+<ul>
+<li><p>The path may consist of a sequence of path segments separated by a single slash &quot;/&quot; character.  Within a path segment, the characters &quot;/&quot;, &quot;;&quot;, &quot;=&quot;, and &quot;?&quot; are reserved.</p>
+</li>
+<li><p>Each path segment may include a sequence of parameters, indicated by the semicolon &quot;;&quot; character.</p>
+</li>
+<li><p>The parameters are not significant to the parsing of relative references.</p>
+</li>
+</ul>
+<h6 id="path-component-example">Path Component Example</h6>
+<p><code>https://www.marcelbelmont.com/post/api-testing</code></p>
+<p>The part <code>/post/api-testing</code> is the path component</p>
+<h5 id="query-component">Query Component</h5>
+<p><a href="https://tools.ietf.org/html/rfc2396#section-3.4" target="_blank">RFC 2396 Section 3.4</a></p>
+<p>The query component is a string of information to be interpreted by the resource.</p>
+<p><em>Within a query component, the characters &quot;;&quot;, &quot;/&quot;, &quot;?&quot;, &quot;:&quot;, &quot;@&quot;, &quot;&amp;&quot;, &quot;=&quot;, &quot;+&quot;, &quot;,&quot;, and &quot;$&quot; are reserved.</em></p>
+<h6 id="query-component-example">Query Component Example</h6>
+<p><code>https://someuser.auth0.com/api/v2/authorize?audience=https://someuser.auth0.com/api/v2/&amp;scope=openid%20profile%20 email&amp;response_type=code&amp;client_id=abcd13555&amp;redirect_uri=https://task.io/callback</code></p>
+<p>The part <code>?audience=https://someuser.auth0.com/api/v2/&amp;scope=openid%20profile%20 email&amp;response_type=code&amp;client_id=abcd13555&amp;redirect_uri=https://task.io/callback</code> is the query component part.</p>
+<h4 id="uri-references">URI References</h4>
+<p><a href="https://tools.ietf.org/html/rfc2396#section-4" target="_blank">RFC 2396 Section 4</a></p>
+<ul>
+<li><p>The term &quot;URI-reference&quot; is used here to denote the common usage of a resource identifier.</p>
+</li>
+<li><p>A URI reference may be absolute or relative, and may have additional information attached in the form of a fragment identifier.</p>
+</li>
+<li><p>However, &quot;the URI&quot; that results from such a reference includes only the absolute URI after the fragment identifier (if any) is removed and after any relative URI is resolved to its absolute form.</p>
+</li>
+</ul>
+<h5 id="fragment-identifier">Fragment Identifier</h5>
+<p><a href="https://tools.ietf.org/html/rfc2396#section-4.1" target="_blank">RFC 2396 Section 4.1</a></p>
+<p>When a URI reference is used to perform a retrieval action on the identified resource, the optional fragment identifier, separated from the URI by a crosshatch (&quot;#&quot;) character, consists of additional reference information to be interpreted by the user agent after the retrieval action has been successfully completed.</p>
+<p>As such, it is not part of a URI, but is often used in conjunction with a URI.</p>
+<h6 id="fragment-example">Fragment Example</h6>
+<p><code>https://github.com/jbelmont/api-workshop#workshop-details</code></p>
+<p>The Fragment part is <code>#workshop-details</code></p>
+<h5 id="same-document-references">Same-document References</h5>
+<p><a href="https://tools.ietf.org/html/rfc2396#section-4.2" target="_blank">RFC 2396 Section 4.2</a></p>
+<p>A URI reference that does not contain a URI is a reference to the current document.  In other words, an empty URI reference within a document is interpreted as a reference to the start of that document, and a reference containing only a fragment identifier is a reference to the identified fragment of that document.</p>
+<p>Traversal of such a reference should not result in an additional retrieval action.</p>
+<h5 id="parsing-a-uri-reference">Parsing a URI Reference</h5>
+<p><a href="https://tools.ietf.org/html/rfc2396#section-4.3" target="_blank">RFC 2396 Section 4.3</a></p>
+<p>A URI reference is typically parsed according to the four main components and fragment identifier in order to determine what components are present and whether the reference is relative or absolute.</p>
+<p>The individual components are then parsed for their subparts and, if not opaque, to verify their validity.</p>
+<h4 id="relative-uri-references">Relative URI References</h4>
+<p><a href="https://tools.ietf.org/html/rfc2396#section-5" target="_blank">RFC 2396 Section 5</a></p>
+<blockquote>
+<p>It is often the case that a group or &quot;tree&quot; of documents has been constructed to serve a common purpose; the vast majority of URI in these documents point to resources within the tree rather than outside of it.  Similarly, documents located at a particular site are much more likely to refer to other resources at that site than to resources at remote sites.</p>
+</blockquote>
+<p>Relative addressing of URI allows document trees to be partially independent of their location and access scheme.</p>
+<p>For instance, it is possible for a single set of hypertext documents to be simultaneously accessible and traversable via each of the &quot;file&quot;, &quot;http&quot;, and &quot;ftp&quot; schemes if the documents refer to each other using relative URI.</p>
+<h5 id="establishing-a-base-uri">Establishing a Base URI</h5>
+<ul>
+<li><p>The term &quot;relative URI&quot; implies that there exists some absolute &quot;base URI&quot; against which the relative reference is applied.</p>
+</li>
+<li><p>Indeed, the base URI is necessary to define the semantics of any relative URI reference; without it, a relative reference is meaningless.</p>
+</li>
+<li><p>In order for relative URI to be usable within a document, the base URI of that document must be known to the parser.</p>
+</li>
+</ul>
+<p>Please read sections: <a href="https://tools.ietf.org/html/rfc2396#section-5.1.1" target="_blank">5.1.1</a>, <a href="https://tools.ietf.org/html/rfc2396#section-5.1.2" target="_blank">5.1.2</a>, <a href="https://tools.ietf.org/html/rfc2396#section-5.1.3" target="_blank">5.1.3</a>, <a href="https://tools.ietf.org/html/rfc2396#section-5.1.4" target="_blank">5.1.4</a> for more details.</p>
+<h5 id="resolving-relative-references-to-absolute-form">Resolving Relative References to Absolute Form</h5>
+<p><strong>This section of RFC discusses an example algorithm for resolving URI references that might be relative to a given base URI.</strong></p>
+<h4 id="uri-normalization-and-equivalence">URI Normalization and Equivalence</h4>
+<p><a href="https://tools.ietf.org/html/rfc2396#section-6" target="_blank">RFC 2396 Section 6</a></p>
+<p>In many cases, different URI strings may actually identify the identical resource.</p>
+<p>For example, the host names used in URL are actually case insensitive, and the URL <a href="http://www.XEROX.com" target="_blank">http://www.XEROX.com</a> is equivalent to <a href="http://www.xerox.com" target="_blank">http://www.xerox.com</a>.</p>
+<p>In general, the rules for equivalence and definition of a normal form, if any, are scheme dependent.</p>
+<p>When a scheme uses elements of the common syntax, it will also use the common syntax equivalence rules, namely that the scheme and hostname are case insensitive and a URL with an explicit &quot;:port&quot;, where the port is the default for the scheme, is equivalent to one where the port is elided.</p>
+<h4 id="security-considerations">Security Considerations</h4>
+<p><a href="https://tools.ietf.org/html/rfc2396#section-7" target="_blank">RFC 2396 Section 7</a></p>
+<p>A URI does not in itself pose a security threat.</p>
+<p>Users should beware that there is no general guarantee that a URL, which at one time located a given resource, will continue to do so.</p>
+<p>Nor is there any guarantee that a URL will not locate a different resource at some later point in time, due to the lack of any constraint on how a given authority apportions its namespace.</p>
+<p>Such a guarantee can only be obtained from the person(s) controlling that namespace and the resource in question.</p>
+<p>A specific URI scheme may include additional semantics, such as name persistence, if those semantics are required of all naming authorities for that scheme.</p>
+<h4 id="bread-crumb-navigation">Bread Crumb Navigation</h4>
+<hr>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Previous</th>
+<th style="text-align:right">Next</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">&#x2190; <a href="request-response.html">HTTP Request and Response</a></td>
+<td style="text-align:right"><a href="query-string.html">Query String</a> &#x2192;</td>
+</tr>
+</tbody>
+</table>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="request-response.html" class="navigation navigation-prev " aria-label="Previous page: HTTP Request and Response">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="query-string.html" class="navigation navigation-next " aria-label="Next page: Query String">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"URL Design","level":"1.4.5","depth":2,"next":{"title":"Query String","level":"1.4.6","depth":2,"path":"docs/query-string.md","ref":"docs/query-string.md","articles":[]},"previous":{"title":"HTTP Request and Response","level":"1.4.4","depth":2,"path":"docs/request-response.md","ref":"docs/request-response.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["include-codeblock","advanced-emoji","highlight","copy-code-button"],"pluginsConfig":{"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"copy-code-button":{},"advanced-emoji":{"embedEmojis":false},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"default","theme":"chrome","unindent":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"docs/uri-design.md","mtime":"2018-12-20T21:37:37.217Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-26T19:30:35.921Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

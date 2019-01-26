@@ -1,0 +1,1251 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>RAML · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="graphql.html" />
+    
+    
+    <link rel="prev" href="api-blueprint.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="api-summary.html">
+            
+                <a href="api-summary.html">
+            
+                    
+                    API Summary and Description
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="restful-intro.html">
+            
+                <a href="restful-intro.html">
+            
+                    
+                    Restful API Introduction
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="rest-dissertation.html">
+            
+                <a href="rest-dissertation.html">
+            
+                    
+                    Roy Fieldings Dissertation on REST
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="rest-constraints.html">
+            
+                <a href="rest-constraints.html">
+            
+                    
+                    Rest Architecture Constraints
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="maturity-model.html">
+            
+                <a href="maturity-model.html">
+            
+                    
+                    Richardson Maturity Model
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="http-concepts.html">
+            
+                <a href="http-concepts.html">
+            
+                    
+                    HTTP Concepts
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="http-verbs.html">
+            
+                <a href="http-verbs.html">
+            
+                    
+                    HTTP Verbs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="status-codes.html">
+            
+                <a href="status-codes.html">
+            
+                    
+                    HTTP Status Codes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="http-headers.html">
+            
+                <a href="http-headers.html">
+            
+                    
+                    HTTP Headers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="request-response.html">
+            
+                <a href="request-response.html">
+            
+                    
+                    HTTP Request and Response
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="uri-design.html">
+            
+                <a href="uri-design.html">
+            
+                    
+                    URL Design
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="query-string.html">
+            
+                <a href="query-string.html">
+            
+                    
+                    Query String
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="api-design.html">
+            
+                <a href="api-design.html">
+            
+                    
+                    API Design
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="api-testing.html">
+            
+                <a href="api-testing.html">
+            
+                    
+                    API Testing
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="types-of-api-testing.html">
+            
+                <a href="types-of-api-testing.html">
+            
+                    
+                    Types of API Testing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="api-testing-tools.html">
+            
+                <a href="api-testing-tools.html">
+            
+                    
+                    API Testing Tools
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="api-security.html">
+            
+                <a href="api-security.html">
+            
+                    
+                    API Security
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="authentication.html">
+            
+                <a href="authentication.html">
+            
+                    
+                    Authentication
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1.1" data-path="openid-connect.html">
+            
+                <a href="openid-connect.html">
+            
+                    
+                    OpenID Connect
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="authorization.html">
+            
+                <a href="authorization.html">
+            
+                    
+                    Authorization
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.2.1" data-path="oauth.html">
+            
+                <a href="oauth.html">
+            
+                    
+                    OAuth
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="federation.html">
+            
+                <a href="federation.html">
+            
+                    
+                    Federation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="delegation.html">
+            
+                <a href="delegation.html">
+            
+                    
+                    Delegation
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="api-description-languages.html">
+            
+                <a href="api-description-languages.html">
+            
+                    
+                    API Description Languages
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="openapi.html">
+            
+                <a href="openapi.html">
+            
+                    
+                    OpenAPI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="api-blueprint.html">
+            
+                <a href="api-blueprint.html">
+            
+                    
+                    API Blueprint
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.8.3" data-path="raml.html">
+            
+                <a href="raml.html">
+            
+                    
+                    RAML
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="graphql.html">
+            
+                <a href="graphql.html">
+            
+                    
+                    GraphQL
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >RAML</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>API Workshop - RAML</p>
+<h2 id="sections">Sections:</h2>
+<ul>
+<li><a href="#what-is-raml">What is RAML</a></li>
+<li><a href="#root">Root</a></li>
+<li><a href="#resources">Resources</a></li>
+<li><a href="#methods">Methods</a></li>
+<li><a href="#uri-parameters">URI Parameters</a></li>
+<li><a href="#query-parameters">Query Parameters</a></li>
+<li><a href="#responses">Responses</a></li>
+<li><a href="#body-parameters">Body Parameters</a></li>
+<li><a href="#extract-schemas">Extract Schemas</a></li>
+<li><a href="#resource-types">Resource Types</a></li>
+<li><a href="#parameters">Parameters</a></li>
+<li><a href="#includes">Includes</a></li>
+<li><a href="#raml-specification">RAML Specification</a></li>
+<li><a href="#bread-crumb-navigation">Bread Crumb Navigation</a></li>
+</ul>
+<h4 id="what-is-raml">What is RAML</h4>
+<blockquote>
+<p>RESTful API Modeling Language (RAML) makes it easy to manage the whole API lifecycle from design to sharing. It&apos;s concise - you only write what you need to define - and reusable. It is machine readable API design that is actually human friendly.</p>
+</blockquote>
+<p><img src="../images/raml.png" alt="Raml Homepage"></p>
+<h4 id="root">Root</h4>
+<ul>
+<li><p>Everything you enter in at the root (or top) of the spec applies to the rest of your API.</p>
+</li>
+<li><p>The baseURI you choose will be used with every Rest Call made</p>
+</li>
+</ul>
+<pre><code class="lang-raml">#%RAML 1.0
+---
+title: Code Craftsmanship Saturdays API
+baseUri: http://localhost:8080
+version: v1
+</code></pre>
+<h4 id="resources">Resources</h4>
+<p>In RAML you define resources with the following syntax:</p>
+<pre><code class="lang-raml">/heroes:
+
+/heroes:
+  /{id}:
+</code></pre>
+<p><em>These resources go under the Root</em></p>
+<h4 id="methods">Methods</h4>
+<p>You can use the following HTTP Verbs with RAML:</p>
+<ul>
+<li><a href="https://tools.ietf.org/html/rfc2616#page-53" target="_blank">GET</a></li>
+<li><a href="https://tools.ietf.org/html/rfc5789" target="_blank">PATCH</a></li>
+<li><a href="https://tools.ietf.org/html/rfc2616#page-55" target="_blank">PUT</a></li>
+<li><a href="https://tools.ietf.org/html/rfc2616#page-54" target="_blank">POST</a></li>
+<li><a href="https://tools.ietf.org/html/rfc2616#page-56" target="_blank">DELETE</a></li>
+<li><a href="https://tools.ietf.org/html/rfc2616#page-52" target="_blank">OPTIONS</a></li>
+<li><a href="https://tools.ietf.org/html/rfc2616#page-54" target="_blank">HEAD</a></li>
+</ul>
+<p><em>Each HTTP method can only be used once per resource.</em></p>
+<p>Nest the methods to allow developers to perform these actions under your resources.</p>
+<p>Note that you must use lower-case for methods in your RAML API definition:</p>
+<pre><code class="lang-raml">/heroes:
+  get:
+  post:
+  /{id}:
+    put:
+    delete:
+    get:
+</code></pre>
+<h4 id="uri-parameters">URI Parameters</h4>
+<p>The resources that we defined are collections of smaller, relevant objects.</p>
+<p>This is a URI parameter, denoted by surrounding curly brackets in RAML:</p>
+<pre><code class="lang-raml">/heroes:
+  /{id}:
+</code></pre>
+<p>Now in order to make a request to this resource the uri would look like this:</p>
+<p><code>http://localhost:8080/api/v1/heroes/5c3a241e092bd900c4444c88</code></p>
+<h4 id="query-parameters">Query Parameters</h4>
+<p>API Consumers are also able to perform actions like filtering a collection and Query parameters allow you to accomplish filtering a collection.</p>
+<pre><code class="lang-raml">/heroes:
+  get:
+    queryParameters:
+      name:
+      superpowers:
+      gender:
+  post:
+</code></pre>
+<blockquote>
+<p>Query parameters may also be something that the server requires to process the API consumer&apos;s request, like an access token. Often, you need security authorization to alter a collection or record.</p>
+</blockquote>
+<pre><code class="lang-raml">/heroes:
+  get:
+    queryParameters:
+      name:
+      superpowers:
+      gender:
+    put:
+      queryParameters:
+        access_token:
+</code></pre>
+<blockquote>
+<p>An API&apos;s resources and methods often have a number of associated query parameters. Each query parameter may have any number of optional attributes to further define it.</p>
+</blockquote>
+<p>We can specify attributes for each of the query string parameters like this:</p>
+<pre><code class="lang-raml">/heroes:
+  /{id}
+    get:
+      queryParameters:
+        name:
+          displayName: Name
+          type: string
+          description: A heroes name
+          example: Superman Prime
+          required: true
+        superpowers:
+          displayName: Super Powers
+          type: array
+          description: A list of super hero powers that each hero has
+          example: [&quot;super speed&quot;, &quot;super strength&quot;, &quot;heat vision&quot;, &quot;flight&quot;, &quot;invulnerable&quot;]
+          required: true
+        gender:
+          displayName: Gender
+          type: string
+          description: A heroes gender
+          example: Male
+          required: true
+    put:
+      queryParameters:
+        access_token:
+          displayName: Access Token
+          type: string
+          description: Token giving you permission to make the rest call
+          required: true
+    delete:
+      queryParameters:
+        access_token:
+          displayName: Access Token
+          type: string
+          description: Token giving you permission to make the rest call
+          required: true
+</code></pre>
+<h4 id="responses">Responses</h4>
+<ul>
+<li>Responses MUST be a map of one or more HTTP status codes, and each response may include descriptions, examples, or schemas.</li>
+</ul>
+<pre><code class="lang-raml">/heroes:
+  /{id}:
+    get:
+      description: Retrieve a specific hero
+      responses:
+        200:
+          body:
+            application/json:
+              example: |
+                {
+                  &quot;id&quot;: &quot;5c42575e77802e00bf9ed411&quot;,
+                  &quot;name&quot;: &quot;Aquaman&quot;,
+                  &quot;superpowers&quot;: [
+                      &quot;telepathic abilities&quot;,
+                      &quot;super strength&quot;,
+                      &quot;Intense heat resistance&quot;,
+                      &quot;Superhuman Hearing and Sonar&quot;
+                  ],
+                  &quot;gender&quot;: &quot;male&quot;,
+                  &quot;created&quot;: &quot;2019-01-18T22:46:54.592Z&quot;,
+                  &quot;lastModified&quot;: &quot;2019-01-18T22:46:54.593Z&quot;
+                }
+</code></pre>
+<h4 id="body-parameters">Body Parameters</h4>
+<p>You can define several ways for body parameters in <em>raml:</em></p>
+<pre><code class="lang-raml">body:
+  application/json:
+    type: |
+      {
+        &quot;type&quot;: &quot;object&quot;,
+        &quot;$schema&quot;: &quot;http://json-schema.org/draft-04/schema&quot;,
+        &quot;id&quot;: &quot;http://jsonschema.net&quot;,
+        &quot;required&quot;: true,
+        &quot;properties&quot;: {
+          &quot;name&quot;: {
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;required&quot;: true
+          },
+          &quot;superpowers&quot;: {
+            &quot;type&quot;: &quot;array&quot;,
+            &quot;required&quot;: true
+          },
+          &quot;gender&quot;: {
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;required&quot;: true
+          },
+          &quot;created&quot;: {
+            &quot;format&quot;: &quot;date-time&quot;,
+            &quot;formatMinimum&quot;: &quot;2013-11-17T00:00Z&quot;,
+            &quot;formatMaximum&quot;: &quot;2015-11-17T00:00Z&quot;
+          },
+          &quot;lastModified&quot;: {
+            &quot;format&quot;: &quot;date-time&quot;,
+            &quot;formatMinimum&quot;: &quot;2013-11-17T00:00Z&quot;,
+            &quot;formatMaximum&quot;: &quot;2015-11-17T00:00Z&quot;
+          }
+        }
+      }
+    example: |
+      {
+        &quot;id&quot;: &quot;5c42575e77802e00bf9ed411&quot;,
+        &quot;name&quot;: &quot;Aquaman&quot;,
+        &quot;superpowers&quot;: [
+            &quot;telepathic abilities&quot;,
+            &quot;super strength&quot;,
+            &quot;Intense heat resistance&quot;,
+            &quot;Superhuman Hearing and Sonar&quot;
+        ],
+        &quot;gender&quot;: &quot;male&quot;,
+        &quot;created&quot;: &quot;2019-01-18T22:46:54.592Z&quot;,
+        &quot;lastModified&quot;: &quot;2019-01-18T22:46:54.593Z&quot;
+      }
+</code></pre>
+<p>The schema above defines what the json used needs to fulfill for each attribute.</p>
+<p>The represented object has:</p>
+<ul>
+<li>&quot;name&quot; property of type &quot;string&quot;, and is required</li>
+<li>&quot;superpowers&quot; property of type &quot;array&quot;, and is required</li>
+<li>etc</li>
+</ul>
+<h4 id="extract-schemas">Extract Schemas</h4>
+<blockquote>
+<p>One interesting RAML feature is the ability to extract the schemas and reference them by name.</p>
+</blockquote>
+<p>There are three major advantages of extracting schemas and referencing the schemas by name:</p>
+<ul>
+<li>Improve RAML readability</li>
+<li>Allow reusing the schemas in several sections</li>
+<li>content</li>
+</ul>
+<pre><code class="lang-raml">types:
+  hero: {
+    &quot;type&quot;: &quot;object&quot;,
+    &quot;$schema&quot;: &quot;http://json-schema.org/draft-04/schema&quot;,
+    &quot;id&quot;: &quot;http://jsonschema.net&quot;,
+    &quot;required&quot;: true,
+    &quot;properties&quot;: {
+      &quot;name&quot;: {
+        &quot;type&quot;: &quot;string&quot;,
+        &quot;required&quot;: true
+      },
+      &quot;superpowers&quot;: {
+        &quot;type&quot;: &quot;array&quot;,
+        &quot;required&quot;: true
+      },
+      &quot;gender&quot;: {
+        &quot;type&quot;: &quot;string&quot;,
+        &quot;required&quot;: true
+      },
+      &quot;created&quot;: {
+        &quot;format&quot;: &quot;date-time&quot;,
+        &quot;formatMinimum&quot;: &quot;2013-11-17T00:00Z&quot;,
+        &quot;formatMaximum&quot;: &quot;2015-11-17T00:00Z&quot;
+      },
+      &quot;lastModified&quot;: {
+        &quot;format&quot;: &quot;date-time&quot;,
+        &quot;formatMinimum&quot;: &quot;2013-11-17T00:00Z&quot;,
+        &quot;formatMaximum&quot;: &quot;2015-11-17T00:00Z&quot;
+      }
+    }
+  }
+</code></pre>
+<pre><code class="lang-raml">body:
+  application/json:
+    type: hero
+    example: |
+      {
+        &quot;id&quot;: &quot;5c42575e77802e00bf9ed411&quot;,
+        &quot;name&quot;: &quot;Aquaman&quot;,
+        &quot;superpowers&quot;: [
+            &quot;telepathic abilities&quot;,
+            &quot;super strength&quot;,
+            &quot;Intense heat resistance&quot;,
+            &quot;Superhuman Hearing and Sonar&quot;
+        ],
+        &quot;gender&quot;: &quot;male&quot;,
+        &quot;created&quot;: &quot;2019-01-18T22:46:54.592Z&quot;,
+        &quot;lastModified&quot;: &quot;2019-01-18T22:46:54.593Z&quot;
+      }
+</code></pre>
+<p><em>Notice that above we simply used the </em>type<em> of hero defined in the types section.</em></p>
+<h4 id="resource-types">RESOURCE TYPES</h4>
+<p>RAML allows you to be able to declare different types of resources which are called:</p>
+<p><strong>Resource Types in RAML</strong></p>
+<pre><code class="lang-raml">resourceTypes:
+  collection:
+    get:
+    post:
+  collection-item:
+    get:
+    delete:
+    update:
+</code></pre>
+<h6 id="defining-and-parameterizing-resourcetypes">Defining and parameterizing resourceTypes</h6>
+<ul>
+<li>Description</li>
+<li>GET method with:<ul>
+<li>description</li>
+<li>response for HTTP status 200 (which body&apos;s content type is &quot;application/json&quot;)</li>
+</ul>
+</li>
+<li>POST method with:<ul>
+<li>description</li>
+<li>&quot;access_token&quot; queryParameter</li>
+<li>bodyParameter with &quot;application/json&quot; contentType and validated by a Schema</li>
+<li>response with HTTP status 201 (which body&apos;s content type is &quot;application/json&quot;)</li>
+</ul>
+</li>
+<li>PUT method with:<ul>
+<li>description</li>
+<li>&quot;access_token&quot; queryParameter</li>
+<li>bodyParameter with &quot;application/json&quot; contentType and validated by a Schema</li>
+<li>response with HTTP status 200 (which body&apos;s content type is &quot;application/json&quot;)</li>
+</ul>
+</li>
+<li>DELETE method with:<ul>
+<li>description</li>
+<li>&quot;access_token&quot; queryParameter</li>
+<li>response with HTTP status 204 (which body&apos;s content type is &quot;application/json&quot;)</li>
+</ul>
+</li>
+</ul>
+<p><em>Now with this stated above let us define some resource types.</em></p>
+<pre><code class="lang-raml">resourceTypes:
+  collection:
+    description: Collection of Heroes
+    get:
+      description: Get a list of heroes
+      responses:
+        200:
+          body:
+            application/json:
+    post:
+      description: |
+        Add a new hero to collection
+      queryParameters:
+        access_token:
+          description: &quot;The access token provided by the authentication application&quot;
+          example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
+          required: true
+          type: string
+      body:
+        application/json:
+          type: song
+      responses:
+        200:
+          body:
+            application/json:
+              example: |
+                {
+                  &quot;id&quot;: &quot;5c42575e77802e00bf9ed411&quot;,
+                  &quot;name&quot;: &quot;Aquaman&quot;,
+                  &quot;superpowers&quot;: [
+                      &quot;telepathic abilities&quot;,
+                      &quot;super strength&quot;,
+                      &quot;Intense heat resistance&quot;,
+                      &quot;Superhuman Hearing and Sonar&quot;
+                  ],
+                  &quot;gender&quot;: &quot;male&quot;,
+                  &quot;created&quot;: &quot;2019-01-18T22:46:54.5929963Z&quot;,
+                  &quot;lastModified&quot;: &quot;2019-01-18T22:46:54.5930135Z&quot;
+                }
+</code></pre>
+<p>A Reserved Parameter is a parameter with a value automatically specified by its context.</p>
+<p>For the resourceTypes case, there are two Reserved Parameters: resourcePath and resourcePathName.</p>
+<p>For the /heroes example, the values will be &quot;/heroes&quot; and &quot;hero&quot; respectively.</p>
+<pre><code class="lang-raml">resourceTypes:
+  collection:
+    description: Collection of available &lt;&lt;resourcePathName&gt;&gt; in Heroes
+    get:
+      description: Get a list of &lt;&lt;resourcePathName&gt;&gt; based on the hero.
+      responses:
+        200:
+          body:
+            application/json:
+    post:
+      description: |
+        Add a new &lt;&lt;resourcePathName|!singularize&gt;&gt; to Heroes Collection.
+      queryParameters:
+        access_token:
+          description: &quot;The access token provided by the authentication application&quot;
+          example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
+          required: true
+          type: string
+      body:
+        application/json:
+          type: &lt;&lt;resourcePathName|!singularize&gt;&gt;
+      responses:
+        200:
+          body:
+            application/json:
+              example: |
+                {
+                  &quot;id&quot;: &quot;5c42575e77802e00bf9ed411&quot;,
+                  &quot;name&quot;: &quot;Aquaman&quot;,
+                  &quot;superpowers&quot;: [
+                      &quot;telepathic abilities&quot;,
+                      &quot;super strength&quot;,
+                      &quot;Intense heat resistance&quot;,
+                      &quot;Superhuman Hearing and Sonar&quot;
+                  ],
+                  &quot;gender&quot;: &quot;male&quot;,
+                  &quot;created&quot;: &quot;2019-01-18T22:46:54.5929963Z&quot;,
+                  &quot;lastModified&quot;: &quot;2019-01-18T22:46:54.5930135Z&quot;
+                }
+</code></pre>
+<pre><code class="lang-raml">/heroes:
+  type: collection
+  get:
+    queryParameters:
+      name:
+        displayName: Name
+        type: string
+        description: A heroes name
+        example: Superman Prime
+        required: true
+      superpowers:
+        displayName: Super Powers
+        type: array
+        description: A list of super hero powers that each hero has
+        example: [&quot;super speed&quot;, &quot;super strength&quot;, &quot;heat vision&quot;, &quot;flight&quot;, &quot;invulnerable&quot;]
+        required: true
+      gender:
+        displayName: Gender
+        type: string
+        description: A heroes gender
+        example: Male
+        required: true
+    responses:
+      200:
+        body:
+          application/json:
+            example: |
+              {
+                &quot;items&quot;: [
+                    {
+                        &quot;id&quot;: &quot;5c42575e77802e00bf9ed411&quot;,
+                        &quot;name&quot;: &quot;Aquaman&quot;,
+                        &quot;superpowers&quot;: [
+                            &quot;telepathic abilities&quot;,
+                            &quot;super strength&quot;,
+                            &quot;Intense heat resistance&quot;,
+                            &quot;Superhuman Hearing and Sonar&quot;
+                        ],
+                        &quot;gender&quot;: &quot;male&quot;,
+                        &quot;created&quot;: &quot;2019-01-18T22:46:54.592Z&quot;,
+                        &quot;lastModified&quot;: &quot;2019-01-18T22:46:54.593Z&quot;
+                    },
+                    {
+                        &quot;id&quot;: &quot;5c43432466508100c14a6538&quot;,
+                        &quot;name&quot;: &quot;Immortal Hulk&quot;,
+                        &quot;superpowers&quot;: [
+                            &quot;Superhuman Speed&quot;,
+                            &quot;Superhuman Strength&quot;,
+                            &quot;Transformation&quot;,
+                            &quot;Self Sustenance&quot;,
+                            &quot;Superhuman Stamina&quot;,
+                            &quot;Superhuman Durability&quot;,
+                            &quot;Regenerative Healing Factor&quot;,
+                            &quot;Resistance to Psychic Control&quot;,
+                            &quot;Immunity to All Diseases and Viruses&quot;,
+                            &quot;Superhuman Leaping Ability&quot;,
+                            &quot;Astral Form Perception&quot;,
+                            &quot;Homing Ability&quot;,
+                            &quot;Gamma Radiation/Energy Manipulation and Emission&quot;,
+                            &quot;Adaptation to Hostile Environments&quot;
+                        ],
+                        &quot;gender&quot;: &quot;male&quot;,
+                        &quot;created&quot;: &quot;2019-01-19T15:32:52.824Z&quot;,
+                        &quot;lastModified&quot;: &quot;2019-01-19T15:32:52.824Z&quot;
+                    }
+                ],
+                &quot;count&quot;: 2,
+                &quot;total&quot;: 2,
+                &quot;index&quot;: 0
+            }
+  post:
+    body:
+      application/json:
+        example: |
+          {
+              &quot;id&quot;: &quot;5c43432866508100c14a6539&quot;,
+              &quot;name&quot;: &quot;Immortal Hulk&quot;,
+              &quot;superpowers&quot;: [
+                  &quot;Superhuman Speed&quot;,
+                  &quot;Superhuman Strength&quot;,
+                  &quot;Transformation&quot;,
+                  &quot;Self Sustenance&quot;,
+                  &quot;Superhuman Stamina&quot;,
+                  &quot;Superhuman Durability&quot;,
+                  &quot;Regenerative Healing Factor&quot;,
+                  &quot;Resistance to Psychic Control&quot;,
+                  &quot;Immunity to All Diseases and Viruses&quot;,
+                  &quot;Superhuman Leaping Ability&quot;,
+                  &quot;Astral Form Perception&quot;,
+                  &quot;Homing Ability&quot;,
+                  &quot;Gamma Radiation/Energy Manipulation and Emission&quot;,
+                  &quot;Adaptation to Hostile Environments&quot;
+              ],
+              &quot;gender&quot;: &quot;male&quot;,
+              &quot;created&quot;: &quot;2019-01-19T15:32:56.1248085Z&quot;,
+              &quot;lastModified&quot;: &quot;2019-01-19T15:32:56.1248264Z&quot;
+          }
+</code></pre>
+<p>Some more resource usage and resourceType definitions in <em>raml</em>:</p>
+<pre><code class="lang-raml">collection-item:
+  description: Entity representing a &lt;&lt;resourcePathName|!singularize&gt;&gt;
+  get:
+    description: |
+      Get the &lt;&lt;resourcePathName|!singularize&gt;&gt;
+      with &lt;&lt;resourcePathName|!singularize&gt;&gt;Id =
+      {&lt;&lt;resourcePathName|!singularize&gt;&gt;Id}
+    responses:
+      200:
+        body:
+          application/json:
+      404:
+        body:
+          application/json:
+            example: |
+              {&quot;message&quot;: &quot;&lt;&lt;resourcePathName|!singularize&gt;&gt; not found&quot; }
+</code></pre>
+<h4 id="parameters">Parameters</h4>
+<blockquote>
+<p>At the moment of defining the parameter in the resourceType (with the placeholder), there is no difference between a parameter and a reserved parameter. The actual difference only appears when passing the parameter at the resource level.</p>
+</blockquote>
+<pre><code class="lang-raml">/{id}:
+  type:
+    collection-item:
+      exampleItem: An example here
+</code></pre>
+<pre><code class="lang-raml">resourceTypes:
+  collection:
+    description: Collection of available &lt;&lt;resourcePathName&gt;&gt; in Heroes
+    get:
+      description: Get a list of &lt;&lt;resourcePathName&gt;&gt; based on the hero.
+      responses:
+        200:
+          body:
+            application/json:
+    post:
+      description: |
+        Add a new &lt;&lt;resourcePathName|!singularize&gt;&gt; to heroes collection.
+      queryParameters:
+        access_token:
+          description: &quot;The access token provided by the authentication application&quot;
+          example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
+          required: true
+          type: string
+      body:
+        application/json:
+          type: &lt;&lt;resourcePathName|!singularize&gt;&gt;
+      responses:
+        200:
+          body:
+            application/json:
+              example: |
+                { &quot;message&quot;: &quot;The &lt;&lt;resourcePathName|!singularize&gt;&gt; has been properly entered&quot; }
+  collection-item:
+    description: Entity representing a &lt;&lt;resourcePathName|!singularize&gt;&gt;
+    get:
+      description: |
+        Get the &lt;&lt;resourcePathName|!singularize&gt;&gt;
+        with &lt;&lt;resourcePathName|!singularize&gt;&gt;Id =
+        {&lt;&lt;resourcePathName|!singularize&gt;&gt;Id}
+      responses:
+        200:
+          body:
+            application/json:
+        404:
+          body:
+            application/json:
+              example: |
+                {&quot;message&quot;: &quot;&lt;&lt;resourcePathName|!singularize&gt;&gt; not found&quot; }
+</code></pre>
+<h4 id="includes">Includes</h4>
+<p>The!includes directive in RAML allows you to build file-distributed API definitions, which is useful for both code reuse and readability.</p>
+<p>Here is an example:</p>
+<pre><code class="lang-raml">/heroes:
+  type:
+    collection:
+      exampleCollection: !include heroes.sample
+      exampleItem: !include hero-new.sample
+  /{songId}:
+    type:
+      collection-item:
+        exampleItem: !include hero-retrieve.sample
+</code></pre>
+<h4 id="raml-specification">RAML Specification</h4>
+<p>Here is the official <a href="https://github.com/raml-org/raml-spec/blob/master/versions/raml-10/raml-10.md/" target="_blank">RAML Specification</a></p>
+<h4 id="bread-crumb-navigation">Bread Crumb Navigation</h4>
+<hr>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Previous</th>
+<th style="text-align:right">Next</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">&#x2190; <a href="api-blueprint.html">API Blueprint</a></td>
+<td style="text-align:right"><a href="graphql.html">GraphQL</a> &#x2192;</td>
+</tr>
+</tbody>
+</table>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="api-blueprint.html" class="navigation navigation-prev " aria-label="Previous page: API Blueprint">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="graphql.html" class="navigation navigation-next " aria-label="Next page: GraphQL">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"RAML","level":"1.8.3","depth":2,"next":{"title":"GraphQL","level":"1.9","depth":1,"path":"docs/graphql.md","ref":"docs/graphql.md","articles":[]},"previous":{"title":"API Blueprint","level":"1.8.2","depth":2,"path":"docs/api-blueprint.md","ref":"docs/api-blueprint.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["include-codeblock","advanced-emoji","highlight","copy-code-button"],"pluginsConfig":{"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"copy-code-button":{},"advanced-emoji":{"embedEmojis":false},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"default","theme":"chrome","unindent":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"docs/raml.md","mtime":"2019-01-19T16:02:17.170Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-26T19:30:35.921Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

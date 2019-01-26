@@ -1,0 +1,837 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Roy Fieldings Dissertation on REST · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="rest-constraints.html" />
+    
+    
+    <link rel="prev" href="restful-intro.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="api-summary.html">
+            
+                <a href="api-summary.html">
+            
+                    
+                    API Summary and Description
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="restful-intro.html">
+            
+                <a href="restful-intro.html">
+            
+                    
+                    Restful API Introduction
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.3.1" data-path="rest-dissertation.html">
+            
+                <a href="rest-dissertation.html">
+            
+                    
+                    Roy Fieldings Dissertation on REST
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="rest-constraints.html">
+            
+                <a href="rest-constraints.html">
+            
+                    
+                    Rest Architecture Constraints
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="maturity-model.html">
+            
+                <a href="maturity-model.html">
+            
+                    
+                    Richardson Maturity Model
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="http-concepts.html">
+            
+                <a href="http-concepts.html">
+            
+                    
+                    HTTP Concepts
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="http-verbs.html">
+            
+                <a href="http-verbs.html">
+            
+                    
+                    HTTP Verbs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="status-codes.html">
+            
+                <a href="status-codes.html">
+            
+                    
+                    HTTP Status Codes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="http-headers.html">
+            
+                <a href="http-headers.html">
+            
+                    
+                    HTTP Headers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="request-response.html">
+            
+                <a href="request-response.html">
+            
+                    
+                    HTTP Request and Response
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="uri-design.html">
+            
+                <a href="uri-design.html">
+            
+                    
+                    URL Design
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="query-string.html">
+            
+                <a href="query-string.html">
+            
+                    
+                    Query String
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="api-design.html">
+            
+                <a href="api-design.html">
+            
+                    
+                    API Design
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="api-testing.html">
+            
+                <a href="api-testing.html">
+            
+                    
+                    API Testing
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="types-of-api-testing.html">
+            
+                <a href="types-of-api-testing.html">
+            
+                    
+                    Types of API Testing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="api-testing-tools.html">
+            
+                <a href="api-testing-tools.html">
+            
+                    
+                    API Testing Tools
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="api-security.html">
+            
+                <a href="api-security.html">
+            
+                    
+                    API Security
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="authentication.html">
+            
+                <a href="authentication.html">
+            
+                    
+                    Authentication
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1.1" data-path="openid-connect.html">
+            
+                <a href="openid-connect.html">
+            
+                    
+                    OpenID Connect
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="authorization.html">
+            
+                <a href="authorization.html">
+            
+                    
+                    Authorization
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.2.1" data-path="oauth.html">
+            
+                <a href="oauth.html">
+            
+                    
+                    OAuth
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="federation.html">
+            
+                <a href="federation.html">
+            
+                    
+                    Federation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="delegation.html">
+            
+                <a href="delegation.html">
+            
+                    
+                    Delegation
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="api-description-languages.html">
+            
+                <a href="api-description-languages.html">
+            
+                    
+                    API Description Languages
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="openapi.html">
+            
+                <a href="openapi.html">
+            
+                    
+                    OpenAPI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="api-blueprint.html">
+            
+                <a href="api-blueprint.html">
+            
+                    
+                    API Blueprint
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="raml.html">
+            
+                <a href="raml.html">
+            
+                    
+                    RAML
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="graphql.html">
+            
+                <a href="graphql.html">
+            
+                    
+                    GraphQL
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Roy Fieldings Dissertation on REST</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>API Workshop - Rest Dissertation</p>
+<h2 id="sections">Sections:</h2>
+<ul>
+<li><a href="#bread-crumb-navigation">Bread Crumb Navigation</a></li>
+</ul>
+<h4 id="roy-fielding-abstract-quotes">Roy Fielding Abstract Quotes</h4>
+<p>&quot;Roy Fielding&quot;:</p>
+<blockquote>
+<p>My  work  is motivated  by  the  desire  to  understand  and  evaluate  the  architectural  design  of  network-based  application  software  through  principled  use  of  architectural  constraints,  thereby obtaining the functional, performance, and social properties desired of an architecture. An architectural style is a named, coordinated set of architectural constraints.</p>
+</blockquote>
+<p>&quot;Roy Fielding&quot;:</p>
+<blockquote>
+<p>This  dissertation  defines  a  framework  for  understanding  software  architecture  viaarchitectural  styles  and  demonstrates  how  styles  can  be  used  to  guide  the  architecturaldesign  of  network-based  application  software.</p>
+</blockquote>
+<p>&quot;Roy Fielding&quot;:</p>
+<blockquote>
+<p>A  good  architecture is  not  created  in  a  vacuum. All design decisions at  the architectural  level should  be made  within the context of  the  functional,  behavioral,  and social requirements of the system being designed, which is a principle that applies equally to  both  software  architecture and the  traditional  field  of  building  architecture.</p>
+</blockquote>
+<p>&quot;Roy Fielding&quot;:</p>
+<blockquote>
+<p>The hyperbole of The Architects Sketch may seem ridiculous, but consider how oftenwe see software projects begin with adoption of the latest fad in architectural design, and only  later  discover  whether  or  not  the  system  requirements  call  for  such  an  architecture.</p>
+</blockquote>
+<p>&quot;Roy Fielding&quot;:</p>
+<blockquote>
+<p>This  dissertation  explores  a  junction  on  the  frontiers  of  two  research  disciplines  in computer  science:  software  and  networking. </p>
+</blockquote>
+<p>&quot;Roy Fielding&quot;:</p>
+<blockquote>
+<p>The Web is intended to be an Internet-scale distributed hypermedia system, which means considerably more than just geographical dispersion. The Internet is about  interconnecting  information  networks  across  organizational  boundaries.  Suppliers of information services must be able to cope with the demands of anarchic scalability and the independent deployment of software components. Distributed hypermedia provides a uniform means of accessing services through the embedding of action controls within the presentation of information retrieved from remote sites. An architecture for the Web must therefore  be  designed  with  the  context  of  communicating  large-grain  data  objects  across high-latency networks and multiple trust boundaries.</p>
+</blockquote>
+<p>&quot;Roy Fielding&quot;:</p>
+<blockquote>
+<p>This work  was  done  in  conjunction  with  my  authoring  of  the  Internet  standards  for  the Hypertext  Transfer  Protocol  (HTTP)  and  Uniform  Resource  Identifiers  (URI),  the  two specifications that define the generic interface used by all component interactions on the Web.</p>
+</blockquote>
+<h4 id="summary-of-dissertation-via-roy-fielding">Summary of Dissertation via Roy Fielding</h4>
+<p><strong>In  summary,  this  dissertation  makes  the  following  contributions  to  software  research within the field of Information and Computer Science:</strong></p>
+<ul>
+<li><p>a framework for understanding software architecture through architectural styles, including a consistent set of terminology for describing software architecture</p>
+</li>
+<li><p>a classification of architectural styles for network-based application software by the architectural properties they would induce when applied to the architecture for a distributed hypermedia system</p>
+</li>
+<li><p>REST, a novel architectural style for distributed hypermedia systems</p>
+</li>
+<li><p>application and evaluation of the REST architectural style in the design and deployment of the architecture for the modern World Wide Web.</p>
+</li>
+</ul>
+<h4 id="chapter-1---software-architecture">Chapter 1 - Software Architecture</h4>
+<p>&quot;Roy Fielding&quot;:</p>
+<blockquote>
+<p>A software architecture is an abstraction of the run-time elements of a software system during some phase of its operation. A system may be composed of many levels of abstraction and many phases of operation, each with its own software architecture.</p>
+</blockquote>
+<p>This chapter goes into detail on what Software Architecture is. Discussion about software architecture patterns ensues.</p>
+<p>Fielding goes into detail about the Gang of Four Design Patterns and expounds upon some of the choices that Object-Oriented Design patterns want to tackle.</p>
+<p>&quot;Roy Fielding&quot;:</p>
+<blockquote>
+<p>In  many  ways,  Alexander&#x2019;s  patterns  have  more  in  common  with  software  architectural styles than the design patterns of OOPL research. An architectural style, as a coordinated set  of  constraints,  is  applied  to  a  design  space  in  order  to  induce  the  architectural properties that are desired of the system. By applying a style, an architect is differentiatingthe software design space in the hope that the result will better match the forces inherent in the  application,  thus  leading  to  system  behavior  that  enhances  the  natural  pattern  rather than conflicting with it.</p>
+</blockquote>
+<p>Here Roy is talking about <a href="https://en.wikipedia.org/wiki/Christopher_Alexander" target="_blank">Christopher Alexander</a> who is a well known building architect. </p>
+<p>This chapter provides terminology that set the stage for later chapters.</p>
+<h4 id="chapter-2---network-based-application-architectures">CHAPTER 2 - Network-based Application Architectures</h4>
+<p>This chapter went over the framework of network-based application architectures.</p>
+<p>Fielding explains network latency concepts and how the style of a network application architecture influences the performance of such architectures</p>
+<p>There is great discussions on the following topics:</p>
+<ul>
+<li>Scalability</li>
+<li>Simplicity</li>
+<li>Modifiability</li>
+<li>Visibility</li>
+<li>Portability</li>
+<li>Reliability</li>
+</ul>
+<p><strong>The overall premise of this chapter seems to point that architectural style influences architectural design</strong></p>
+<h4 id="chapter-3---network-based-architectural-styles">CHAPTER 3 - Network-based Architectural Styles</h4>
+<p>This chapter discusses many different types of architectural styles in network-based architectures.</p>
+<p>&quot;Roy Fielding&quot;:</p>
+<blockquote>
+<p>I  have  intentionally  excluded  styles  that  do  not  enhance  the  communication  or interaction properties when combined with one of the surveyed styles to form a network-based  application.  </p>
+</blockquote>
+<p>Pipe and Filter styles is mentioned quite often in this chapter.</p>
+<p>A Pipe and Filter is a simple, yet powerful architecture. A pipe and filter consists of any number of components (filters) that transform or filter data, before passing it on via connectors (pipes) to other components. The filters are all working at the same time. The architecture is often used as a simple sequence, but it may also be used for very complex structures.</p>
+<p>The most well known pipe and filter system is a Unix Program or in compilers.</p>
+<p>Fielding discusses many different Hierarchical Network Styles such as Client Server, Layered Client Server and more.</p>
+<h4 id="chapter-4---designing-the-web-architecture-problems-and-insights">CHAPTER 4 - Designing the Web Architecture: Problems and Insights</h4>
+<p>This chapter describes in detail the early thoughts on how the World Wide Web (WWW) would be.
+As its intent was to share documents with University Faculty and Government Employees in Physics Laboratories.</p>
+<p>Fielding explains how no one predicted the explosive growth of the web and the impending interest with businesses.</p>
+<p>The Internet Engineering Task Force (IETF) set out to form standardization committees for URI, HTTP, and HTML.</p>
+<p>Fielding formulates 3 hypothesis:</p>
+<ul>
+<li><p>The design rationale behind the WWW architecture can be described by an architectural style consisting of the set of constraints applied to the elements within the Web architecture.</p>
+</li>
+<li><p>Constraints can be added to the WWW architectural style to derive a new hybrid style that better reflects the desired properties of a modern Web architecture.</p>
+</li>
+<li><p>Proposals to modify the Web architecture can be compared to the updated WWW architectural style and analyzed for conflicts prior to deployment.</p>
+</li>
+</ul>
+<p>Fielding explains how over the past 6 years as a PHD student he worked with many individiduals and committees to help formulate standards.</p>
+<p>Roy Fielding helped write much of HTTP 1.1 Specification</p>
+<p><a href="https://www.w3.org/Protocols/HTTP/1.1/draft-ietf-http-v11-spec-01" target="_blank">HTTP 1.1 Specification</a></p>
+<h4 id="chapter-5---representational-state-transfer-rest">CHAPTER 5 - Representational State Transfer (REST)</h4>
+<p>Fielding states the constraints of REST in this Chapter:</p>
+<ul>
+<li><p>Client - Server</p>
+<ul>
+<li>The first constraints added to our hybrid style are those of the client-server architectural style.</li>
+<li>Separation  of  concerns  is  the  principlebehind  the  client-server  constraints.  </li>
+<li>By  separating  the  user  interface  concerns  from  the data  storage  concerns,  we  improve  the  portability  of  the  user  interface  across  multiple platforms  and  improve  scalability  by  simplifying  the  server  components.</li>
+</ul>
+</li>
+<li><p>Stateless</p>
+<ul>
+<li>Communication must be stateless in  nature,  as  in  the  client-stateless-server  (CSS)  style, such that  each  request  from  client  to  server  must  contain  all  of  the  information  necessary  to understand  the  request,  and  cannot  take  advantage  of  any  stored  context  on  the  server.</li>
+<li><p>Session state is therefore kept entirely on the client.</p>
+</li>
+<li><p>Cache </p>
+</li>
+<li>In order to improve network efficiency, we add cache constraints to form the client-cache-stateless-server style.</li>
+<li>Cache constraints require that the data within  a  response  to  a  request  be  implicitly  or  explicitly  labeled  as  cacheable  or  non-cacheable.  </li>
+<li>If  a  response  is  cacheable,  then  a  client  cache  is  given  the  right  to  reuse  that response data for later, equivalent requests.</li>
+</ul>
+</li>
+<li><p>Uniform Interface</p>
+<ul>
+<li>The  central  feature  that  distinguishes  the  REST  architectural  style  from  other  network-based styles is its emphasis on a uniform interface between components.</li>
+<li>By applying the software engineering principle of generality to the component interface, the overall  system  architecture  is  simplified  and  the  visibility  of  interactions  is  improved.</li>
+</ul>
+</li>
+<li><p>Layered System</p>
+<ul>
+<li>The  layered  system  style allows  an  architecture  to  be  composed  of  hierarchical  layers  by  constraining  component behavior such that each component cannot &quot;see&quot; beyond the immediate layer with which they are interacting. </li>
+<li>By restricting knowledge of the system to a single layer, we place a bound on the overall system complexity and promote substrate independence.</li>
+</ul>
+</li>
+<li><p>Code-On-Demand</p>
+<ul>
+<li>REST   allows   client   functionality   to   be   extended   by downloading and executing code in the form of applets or scripts. </li>
+<li>This simplifies clientsby reducing the number of features required to be pre-implemented. </li>
+<li>Allowing features to be downloaded after deployment improves system extensibility. </li>
+<li>However, it also reduces visibility, and thus is only an optional constraint within REST</li>
+</ul>
+</li>
+</ul>
+<p>&quot;Roy Fielding&quot;:</p>
+<blockquote>
+<p>All  REST  interactions  are  stateless.  That  is,  each  request  contains  all  of  theinformation  necessary  for  a  connector  to  understand  the  request,  independent  of  anyrequests  that  may  have  preceded  it.  This  restriction  accomplishes  four  functions:  1)  it removes  any  need  for  the  connectors  to  retain  application  state  between  requests,  thus reducing  consumption  of  physical  resources  and  improving  scalability;  2)  it  allows interactions  to  be  processed  in  parallel  without  requiring  that  the  processing  mechanism understand the interaction semantics; 3) it allows an intermediary to view and understand a request in isolation, which may be necessary when services are dynamically rearranged; and,  4)  it  forces  all  of  the  information  that  might  factor  into  the  reusability  of  a  cachedresponse to be present in each request.</p>
+</blockquote>
+<p>&quot;Roy Fielding&quot;:</p>
+<blockquote>
+<p>REST  provides  a  set  of  architectural  constraints  that, when applied as a whole, emphasizes scalability of component interactions, generality of interfaces,  independent  deployment  of  components,  and  intermediary  components  to reduce  interaction  latency,  enforce  security,  and  encapsulate  legacy  systems.  I  described the software engineering principles guiding REST and the interaction constraints chosen to retain those principles, while contrasting them to the constraints of other architectural styles</p>
+</blockquote>
+<h4 id="chapter-6---experience-and-evaluation">CHAPTER 6 - Experience and Evaluation</h4>
+<p>Fielding spends a lot of the chapter discussing different experiences and impacts of REST.</p>
+<p>&quot;Fielding&quot;:</p>
+<blockquote>
+<p>The early Web architecture defined URI as document identifiers. Authors were instructed to  define  identifiers  in  terms  of  a  document&#x2019;s  location  on  the  network.  Web  protocols could  then  be  used  to  retrieve  that  document.</p>
+</blockquote>
+<p>&quot;Fielding&quot;:</p>
+<blockquote>
+<p>Information hiding is one of the key software engineering principles that motivates the uniform  interface  of  REST.  Because  a  client  is  restricted  to  the  manipulation  of representations  rather  than  directly  accessing  the  implementation  of  a  resource,  the implementation  can  be  constructed  in  whatever  form  is  desired  by  the  naming  authority without  impacting  the  clients  that  may  use  its  representations.</p>
+</blockquote>
+<p>&quot;Fielding&quot;:</p>
+<blockquote>
+<p>The key problem areas in HTTP that were identified by REST included planning for the  deployment  of  new  protocol  versions,  separating  message  parsing  from  HTTP semantics and the underlying transport layer (TCP), distinguishing between authoritative and  non-authoritative  responses,  fine-grained  control  of  caching,  and  various  aspects  of the  protocol  that  failed  to  be  self-descriptive.</p>
+</blockquote>
+<p>&quot;Fielding&quot;:</p>
+<blockquote>
+<p>HTTP does not support write-back caching. An HTTP cache cannot assume that what gets written through it is the same as what would be retrievable from a subsequent request for that  resource,  and  thus  it  cannot  cache  a  PUT  request  body  and  reuse  it  for  a  later  GET response. There are two reasons for this rule: 1) metadata might be generated behind-the-scenes, and 2) access control on later GET requests cannot be determined from the PUT request. However, since write actions using the Web are extremely rare, the lack of write-back caching does not have a significant impact on performance.</p>
+</blockquote>
+<p>Fielding also lays some disadvantages of HTTP cookie usage and frames (i.e. iframes) in terms of security concerns and how they violate REST constraints.</p>
+<p>Fielding also explains how Multipurpose Internet Mail Extensions <a href="https://en.wikipedia.org/wiki/MIME" target="_blank">MIME</a> was adopted by HTTP but how the message semantics don&apos;t line up well with the intentions of the WEB.</p>
+<p>Fielding also explains the success of the Apache Project and how Apache became the first major implementor of the HTTP 1.1 Specification. Also notes its success as an open source project.</p>
+<p>&quot;Fielding&quot;:</p>
+<blockquote>
+<p>A network-based API is an on-the-wire syntax, with defined semantics, for application interactions. A network-based API does not place any restrictions on the application code aside from the need to read/write to the network, but does place restrictions on the set of semantics  that  can  be  effectively  communicated  across  the  interface.  On  the  plus  side, performance   is   only   bounded   by   the   protocol   design   and   not   by   any   particular implementation of that design.</p>
+</blockquote>
+<p>Fielding also makes some distinctions with HTTP with CORBA.</p>
+<p>Fielding also differentiates RPC from HTTP.</p>
+<p>Lastly Fielding explains why JavaScript is better suited for the web than Java.</p>
+<h4 id="bread-crumb-navigation">Bread Crumb Navigation</h4>
+<hr>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Previous</th>
+<th style="text-align:right">Next</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">&#x2190; <a href="restful-intro.html">Restful API Introduction</a></td>
+<td style="text-align:right"><a href="rest-constraints.html">Rest Architecture Constraints</a> &#x2192;</td>
+</tr>
+</tbody>
+</table>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="restful-intro.html" class="navigation navigation-prev " aria-label="Previous page: Restful API Introduction">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="rest-constraints.html" class="navigation navigation-next " aria-label="Next page: Rest Architecture Constraints">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Roy Fieldings Dissertation on REST","level":"1.3.1","depth":2,"next":{"title":"Rest Architecture Constraints","level":"1.3.2","depth":2,"path":"docs/rest-constraints.md","ref":"docs/rest-constraints.md","articles":[]},"previous":{"title":"Restful API Introduction","level":"1.3","depth":1,"path":"docs/restful-intro.md","ref":"docs/restful-intro.md","articles":[{"title":"Roy Fieldings Dissertation on REST","level":"1.3.1","depth":2,"path":"docs/rest-dissertation.md","ref":"docs/rest-dissertation.md","articles":[]},{"title":"Rest Architecture Constraints","level":"1.3.2","depth":2,"path":"docs/rest-constraints.md","ref":"docs/rest-constraints.md","articles":[]},{"title":"Richardson Maturity Model","level":"1.3.3","depth":2,"path":"docs/maturity-model.md","ref":"docs/maturity-model.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["include-codeblock","advanced-emoji","highlight","copy-code-button"],"pluginsConfig":{"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"copy-code-button":{},"advanced-emoji":{"embedEmojis":false},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"default","theme":"chrome","unindent":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"docs/rest-dissertation.md","mtime":"2018-02-12T15:53:28.527Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-26T19:30:35.921Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

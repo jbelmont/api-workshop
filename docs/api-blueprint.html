@@ -1,0 +1,1018 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>API Blueprint · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="raml.html" />
+    
+    
+    <link rel="prev" href="openapi.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="api-summary.html">
+            
+                <a href="api-summary.html">
+            
+                    
+                    API Summary and Description
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="restful-intro.html">
+            
+                <a href="restful-intro.html">
+            
+                    
+                    Restful API Introduction
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="rest-dissertation.html">
+            
+                <a href="rest-dissertation.html">
+            
+                    
+                    Roy Fieldings Dissertation on REST
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="rest-constraints.html">
+            
+                <a href="rest-constraints.html">
+            
+                    
+                    Rest Architecture Constraints
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="maturity-model.html">
+            
+                <a href="maturity-model.html">
+            
+                    
+                    Richardson Maturity Model
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="http-concepts.html">
+            
+                <a href="http-concepts.html">
+            
+                    
+                    HTTP Concepts
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="http-verbs.html">
+            
+                <a href="http-verbs.html">
+            
+                    
+                    HTTP Verbs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="status-codes.html">
+            
+                <a href="status-codes.html">
+            
+                    
+                    HTTP Status Codes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="http-headers.html">
+            
+                <a href="http-headers.html">
+            
+                    
+                    HTTP Headers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="request-response.html">
+            
+                <a href="request-response.html">
+            
+                    
+                    HTTP Request and Response
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="uri-design.html">
+            
+                <a href="uri-design.html">
+            
+                    
+                    URL Design
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="query-string.html">
+            
+                <a href="query-string.html">
+            
+                    
+                    Query String
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="api-design.html">
+            
+                <a href="api-design.html">
+            
+                    
+                    API Design
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="api-testing.html">
+            
+                <a href="api-testing.html">
+            
+                    
+                    API Testing
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="types-of-api-testing.html">
+            
+                <a href="types-of-api-testing.html">
+            
+                    
+                    Types of API Testing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="api-testing-tools.html">
+            
+                <a href="api-testing-tools.html">
+            
+                    
+                    API Testing Tools
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="api-security.html">
+            
+                <a href="api-security.html">
+            
+                    
+                    API Security
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="authentication.html">
+            
+                <a href="authentication.html">
+            
+                    
+                    Authentication
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1.1" data-path="openid-connect.html">
+            
+                <a href="openid-connect.html">
+            
+                    
+                    OpenID Connect
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="authorization.html">
+            
+                <a href="authorization.html">
+            
+                    
+                    Authorization
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.2.1" data-path="oauth.html">
+            
+                <a href="oauth.html">
+            
+                    
+                    OAuth
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="federation.html">
+            
+                <a href="federation.html">
+            
+                    
+                    Federation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="delegation.html">
+            
+                <a href="delegation.html">
+            
+                    
+                    Delegation
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="api-description-languages.html">
+            
+                <a href="api-description-languages.html">
+            
+                    
+                    API Description Languages
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="openapi.html">
+            
+                <a href="openapi.html">
+            
+                    
+                    OpenAPI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.8.2" data-path="api-blueprint.html">
+            
+                <a href="api-blueprint.html">
+            
+                    
+                    API Blueprint
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="raml.html">
+            
+                <a href="raml.html">
+            
+                    
+                    RAML
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="graphql.html">
+            
+                <a href="graphql.html">
+            
+                    
+                    GraphQL
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >API Blueprint</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>API Workshop - API Blueprint</p>
+<h2 id="sections">Sections:</h2>
+<ul>
+<li><a href="#api-blueprint-introduction">API Blueprint Introduction</a></li>
+<li><a href="#metadata-section">Metadata section</a></li>
+<li><a href="#api-name-%5C&amp;-overview-section">API name &amp; overview section</a></li>
+<li><a href="#resource-group-section">Resource group section</a></li>
+<li><a href="#resource-section">Resource section</a></li>
+<li><a href="#resource-actions">Resource Actions</a></li>
+<li><a href="#uri-template">URI Template</a></li>
+<li><a href="#uri-parameters">URI Parameters</a></li>
+<li><a href="#bread-crumb-navigation">Bread Crumb Navigation</a></li>
+</ul>
+<h4 id="api-blueprint-introduction">API Blueprint Introduction</h4>
+<p>The first step in creating an api blueprint document is to specify the API Name and metadata.</p>
+<p><em>hello-world.md</em></p>
+<pre><code class="lang-apib">FORMAT: 1A
+
+# API Workshop
+
+A simple description right here.
+</code></pre>
+<h4 id="metadata-section">Metadata section</h4>
+<p>An api blueprint document starts with a metadata section.</p>
+<p>In the example above we specified a key of <em>FORMAT</em> and a value of <em>1A</em>.</p>
+<p>The format keyword denotes the version of the API Blueprint which in this case is <em>1A</em></p>
+<h4 id="api-name--overview-section">API name &amp; overview section</h4>
+<p>In your api blueprint document the first heading denoted by <code>#</code> should be the name of the api, which in this case is api-workshop.</p>
+<p>Headings correspond to markdown headers which go up to 6 levels:</p>
+<pre><code class="lang-apib"># foo         &lt;h1&gt;foo&lt;/h1&gt;
+## foo        &lt;h2&gt;foo&lt;/h2&gt;
+### foo       &lt;h3&gt;foo&lt;/h3&gt;
+#### foo      &lt;h4&gt;foo&lt;/h4&gt;
+##### foo     &lt;h5&gt;foo&lt;/h5&gt;
+###### foo    &lt;h6&gt;foo&lt;/h6&gt;
+</code></pre>
+<p>Notice here that the headings correspond to h1 to h6 html headings.</p>
+<p>The API Name here uses one hash to distinguish it as the first level.</p>
+<p>The number of # you use will determine the level of the heading.</p>
+<h4 id="resource-group-section">Resource group section</h4>
+<p>We use the <em>Group</em> keyword at the start of a heading for creating a group of related resources.</p>
+<pre><code class="lang-apib"># Group Heroes
+
+Resources related to heroes in the API.
+</code></pre>
+<h4 id="resource-section">Resource section</h4>
+<p>Now within the heroes resource groupe we can have a heroes collection.</p>
+<p>The heroes resource shows a group of heroes.</p>
+<p><em>The heading specifies the URI used to access the resource inside of square brackets at the end of the heading.</em></p>
+<pre><code class="lang-apib">## Heroes Collection [/heroes]
+</code></pre>
+<h4 id="resource-actions">Resource Actions</h4>
+<p>API Blueprint allows you to specify each action you may make on a resource.</p>
+<p>An action is specified with a sub-heading inside of a resource with the name of the action followed by the HTTP method.</p>
+<pre><code class="lang-apib">### List All Heroes [GET]
+</code></pre>
+<p>An action should include at least one response from the api and should include a status code and optionally a response body.</p>
+<p>A response is defined as a list item within an action.</p>
+<p>Lists are created by preceding list items with either a <code>+</code>, <code>*</code> or <code>-</code>.</p>
+<p>This action returns a <em>200</em> status code along with a JSON body for the heroes endpoint:</p>
+<pre><code class="lang-apib">+ Response 200 (application/json)
+{
+    &quot;items&quot;: [
+        {
+            &quot;id&quot;: &quot;5c2b9750da0b9600a8210156&quot;,
+            &quot;Name&quot;: &quot;Superman&quot;,
+            &quot;superPower&quot;: &quot;&quot;,
+            &quot;gender&quot;: &quot;male&quot;,
+            &quot;createdAt&quot;: &quot;2019-01-01T16:37:36.905Z&quot;,
+            &quot;createdById&quot;: &quot;&quot;,
+            &quot;updatedAt&quot;: &quot;2019-01-01T16:37:36.905Z&quot;
+        },
+        {
+            &quot;id&quot;: &quot;5c30eed2cbf27800b60a2a78&quot;,
+            &quot;Name&quot;: &quot;Superman&quot;,
+            &quot;superPower&quot;: &quot;&quot;,
+            &quot;gender&quot;: &quot;male&quot;,
+            &quot;createdAt&quot;: &quot;2019-01-05T17:52:18.06Z&quot;,
+            &quot;createdById&quot;: &quot;&quot;,
+            &quot;updatedAt&quot;: &quot;2019-01-05T17:52:18.06Z&quot;
+        }
+    ],
+    &quot;count&quot;: 2,
+    &quot;total&quot;: 2,
+    &quot;index&quot;: 0
+}
+</code></pre>
+<p>When you specify a media type after the response status code blueprint generates a <code>Content-Type</code> HTTP header.</p>
+<p><em>The Content-Type header does not need to be explicitly set.</em></p>
+<p>The heroes resource has a second action which allows you to create a new hero.</p>
+<p>This specific action includes a description that shows you the request payload needed to make this rest call.</p>
+<pre><code class="lang-apib">### Create a New Hero [POST]
+
+You may create your own hero using this action.
+
+It takes a JSON object containing a hero and a heroes abilities and name.
+
++ name (string) - The hero&apos;s name
++ superPowers (array[string]) - A list of superpowers that a hero has.
++ gender (string) - The hero&apos;s gender
+</code></pre>
+<p>This action takes a JSON payload as part of the request as follows:</p>
+<pre><code class="lang-apib">+ Request (application/json)
+
+{
+    &quot;name&quot;: &quot;Aquaman&quot;,
+    &quot;superPowers&quot;: [
+        &quot;super speed&quot;, &quot;super strength&quot;, &quot;telepathic abilities with animals&quot;
+    ],
+    &quot;gender&quot;: &quot;male&quot;
+}
+</code></pre>
+<p>This resource returns a 201 status code, along with HTTP headers and a response body:</p>
+<pre><code class="lang-apib">Response 201 (application/json)
+
+  + Headers
+
+          Content-Type: application/json
+          Date: Thu, 10 Jan 2019 23:00:44 GMT
+          Content-Length: 214
+
+    + Body
+
+          {
+            &quot;id&quot;: &quot;5c37ce9cac2eb400b9b783f9&quot;,
+            &quot;Name&quot;: &quot;Aquaman&quot;,
+            &quot;superPower&quot;: &quot;&quot;,
+            &quot;gender&quot;: &quot;male&quot;,
+            &quot;createdAt&quot;: &quot;2019-01-10T23:00:44.6509367Z&quot;,
+            &quot;createdById&quot;: &quot;&quot;,
+            &quot;updatedAt&quot;: &quot;2019-01-10T23:00:44.6509553Z&quot;
+          }
+</code></pre>
+<p>The next resource is a specific hero id, which represents a single hero.</p>
+<pre><code class="lang-apib">## A specific hero [/api/v1/heroes/{hero_id}]
+</code></pre>
+<p>This resource returns a 200 status code, along with HTTP headers and a response body:</p>
+<pre><code class="lang-apib">Response 200 (application/json)
+
+  + Headers
+
+          Content-Type: application/json
+          Date: Sat, 12 Jan 2019 14:36:32 GMT
+          Content-Length: 271
+
+    + Body
+
+          {
+            &quot;id&quot;: &quot;5c39fb67ee458c00c072eade&quot;,
+            &quot;Name&quot;: &quot;Aquaman&quot;,
+            &quot;superpowers&quot;: [
+                &quot;super speed&quot;,
+                &quot;super strength&quot;,
+                &quot;telepathic abilities with animals&quot;
+            ],
+            &quot;gender&quot;: &quot;male&quot;,
+            &quot;created&quot;: &quot;2019-01-12T14:36:23.606Z&quot;,
+            &quot;lastModified&quot;: &quot;2019-01-12T14:36:23.606Z&quot;
+          }
+</code></pre>
+<h4 id="uri-template">URI Template</h4>
+<p>The URI for the Heroes resource uses a variable component, expressed by URI Template.</p>
+<p>In this case, there is an ID variable called hero_id, represented in the URI template as {hero_id}.</p>
+<h4 id="uri-parameters">URI Parameters</h4>
+<p>URI parameters should describe the URI using a list of Parameters.</p>
+<p>For &quot;Heroes&quot; it would be as follows:</p>
+<pre><code class="lang-apib">+ Parameters
+    + hero_id (number) - ID of the Hero in the form of an MongoDB ObjectID
+</code></pre>
+<p>The hero_id variable of the URI template is a parameter for every action on this resource.</p>
+<p>The hero_id variable is defined here using an arbitrary type number, followed by a description for the parameter.</p>
+<h6 id="response-with-a-body">Response with a Body</h6>
+<p>Here is rest call to the *Retrieve a Hero with an ID` endpoint that has json payload:</p>
+<pre><code class="lang-apib">Response 200 (application/json)
+
+  + Headers
+
+          Content-Type: application/json
+          Date: Sat, 12 Jan 2019 14:36:32 GMT
+          Content-Length: 271
+
+    + Body
+
+          {
+            &quot;id&quot;: &quot;5c39fb67ee458c00c072eade&quot;,
+            &quot;Name&quot;: &quot;Aquaman&quot;,
+            &quot;superpowers&quot;: [
+                &quot;super speed&quot;,
+                &quot;super strength&quot;,
+                &quot;telepathic abilities with animals&quot;
+            ],
+            &quot;gender&quot;: &quot;male&quot;,
+            &quot;created&quot;: &quot;2019-01-12T14:36:23.606Z&quot;,
+            &quot;lastModified&quot;: &quot;2019-01-12T14:36:23.606Z&quot;
+          }
+</code></pre>
+<h6 id="response-without-a-body">Response without a body</h6>
+<p>This resource has a delete action and will return a 204 response code without a json response body:</p>
+<pre><code class="lang-apib">### Delete [DELETE]
+
++ Response 204
+</code></pre>
+<h6 id="complete-crud-api-example">Complete CRUD API Example</h6>
+<p>Here is the simple CRUD API example:</p>
+<pre><code class="lang-apib">FORMAT: 1A
+HOST: http://localhost:8080
+
+# marcelbelmont
+
+Heroes is a simple CRUD API allowing consumers to create, list, retrieve, update and delete superheroes.
+
+## Heroes Collection [/heroes]
+
+### List All Heroes [GET]
+
++ Response 200 (application/json)
+
+        {
+            &quot;items&quot;: [
+                {
+                    &quot;id&quot;: &quot;5c3a241e092bd900c4444c88&quot;,
+                    &quot;name&quot;: &quot;Superman Prime&quot;,
+                    &quot;superpowers&quot;: [
+                        &quot;super speed&quot;,
+                        &quot;super strength&quot;,
+                        &quot;heat vision&quot;,
+                        &quot;Strongest Version of Superman&quot;
+                    ],
+                    &quot;gender&quot;: &quot;male&quot;,
+                    &quot;created&quot;: &quot;0001-01-01T00:00:00Z&quot;,
+                    &quot;lastModified&quot;: &quot;2019-01-12T17:30:41.818Z&quot;
+                },
+                {
+                    &quot;id&quot;: &quot;5c3bd46c092bd9004c27cdee&quot;,
+                    &quot;name&quot;: &quot;Aquaman&quot;,
+                    &quot;superpowers&quot;: [
+                        &quot;telepathic abilities&quot;,
+                        &quot;super strength&quot;,
+                        &quot;Intense heat resistance&quot;,
+                        &quot;Superhuman Hearing and Sonar&quot;
+                    ],
+                    &quot;gender&quot;: &quot;male&quot;,
+                    &quot;created&quot;: &quot;2019-01-14T00:14:36.158Z&quot;,
+                    &quot;lastModified&quot;: &quot;2019-01-14T00:14:36.158Z&quot;
+                }
+            ],
+            &quot;count&quot;: 2,
+            &quot;total&quot;: 2,
+            &quot;index&quot;: 0
+        }
+
+### Create a New Hero [POST]
+
+You may create your own hero using this action. It takes a JSON
+object containing a hero&apos;s name, superpowers, and gender.
+
++ Request (application/json)
+
+        {
+            &quot;name&quot;: &quot;Aquaman&quot;,
+            &quot;superpowers&quot;: [
+                &quot;telepathic abilities&quot;,
+                &quot;super strength&quot;,
+                &quot;Intense heat resistance&quot;,
+                &quot;Superhuman Hearing and Sonar&quot;
+            ],
+            &quot;gender&quot;: &quot;male&quot;
+        }
+
++ Response 201 (application/json)
+
+    + Headers
+
+            Date: Mon, 14 Jan 2019 00:14:36 GMT
+            Content-Length: 313
+
+    + Body
+
+            {
+                &quot;id&quot;: &quot;5c3bd46c092bd9004c27cdee&quot;,
+                &quot;name&quot;: &quot;Aquaman&quot;,
+                &quot;superpowers&quot;: [
+                    &quot;telepathic abilities&quot;,
+                    &quot;super strength&quot;,
+                    &quot;Intense heat resistance&quot;,
+                    &quot;Superhuman Hearing and Sonar&quot;
+                ],
+                &quot;gender&quot;: &quot;male&quot;,
+                &quot;created&quot;: &quot;2019-01-14T00:14:36.158902Z&quot;,
+                &quot;lastModified&quot;: &quot;2019-01-14T00:14:36.1589207Z&quot;
+            }
+
+## Heroes By ID [/heroes/{id}]
+
+### Retrieve a hero by id [GET]
+
+This endpoint retrieves a hero by ID and uses a path parameter of {id}
+
++ Response 200 (application/json)
+
+        {
+            &quot;id&quot;: &quot;5c3a241e092bd900c4444c88&quot;,
+            &quot;name&quot;: &quot;Superman Prime&quot;,
+            &quot;superpowers&quot;: [
+                &quot;super speed&quot;,
+                &quot;super strength&quot;,
+                &quot;heat vision&quot;,
+                &quot;Strongest Version of Superman&quot;
+            ],
+            &quot;gender&quot;: &quot;male&quot;,
+            &quot;created&quot;: &quot;0001-01-01T00:00:00Z&quot;,
+            &quot;lastModified&quot;: &quot;2019-01-12T17:30:41.818Z&quot;
+        }
+
+### Update a hero by id [PUT]
+
+This endpoint updates a hero&apos;s name, powers and gender.
+
++ Request (application/json)
+
+        {
+            &quot;name&quot;: &quot;Superman Prime&quot;,
+            &quot;superpowers&quot;: [
+                &quot;super speed&quot;, &quot;super strength&quot;, &quot;heat vision&quot;, &quot;Strongest Version of Superman&quot;
+            ],
+            &quot;gender&quot;: &quot;male&quot;
+        }
+
++ Response 200
+
+    + Headers
+
+            Date: Sat, 12 Jan 2019 17:30:41 GMT
+            Content-Length: 250
+
+    + Body
+
+            {
+                &quot;id&quot;: &quot;5c3a241e092bd900c4444c88&quot;,
+                &quot;name&quot;: &quot;Superman&quot;,
+                &quot;superpowers&quot;: [
+                    &quot;super speed&quot;,
+                    &quot;super strength&quot;,
+                    &quot;heat vision&quot;
+                ],
+                &quot;gender&quot;: &quot;male&quot;,
+                &quot;created&quot;: &quot;2019-01-12T17:30:06.042Z&quot;,
+                &quot;lastModified&quot;: &quot;2019-01-12T17:30:06.042Z&quot;
+            }
+
+
+### Delete a hero by id [DELETE]
+
++ Response 204
+
+    + Headers
+
+            Date: Mon, 14 Jan 2019 00:34:15 GMT
+</code></pre>
+<h4 id="bread-crumb-navigation">Bread Crumb Navigation</h4>
+<hr>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Previous</th>
+<th style="text-align:right">Next</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">&#x2190; <a href="openapi.html">OpenAPI</a></td>
+<td style="text-align:right"><a href="raml.html">RAML</a> &#x2192;</td>
+</tr>
+</tbody>
+</table>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="openapi.html" class="navigation navigation-prev " aria-label="Previous page: OpenAPI">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="raml.html" class="navigation navigation-next " aria-label="Next page: RAML">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"API Blueprint","level":"1.8.2","depth":2,"next":{"title":"RAML","level":"1.8.3","depth":2,"path":"docs/raml.md","ref":"docs/raml.md","articles":[]},"previous":{"title":"OpenAPI","level":"1.8.1","depth":2,"path":"docs/openapi.md","ref":"docs/openapi.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["include-codeblock","advanced-emoji","highlight","copy-code-button"],"pluginsConfig":{"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"copy-code-button":{},"advanced-emoji":{"embedEmojis":false},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"default","theme":"chrome","unindent":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"docs/api-blueprint.md","mtime":"2019-01-21T00:17:31.765Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-26T19:30:35.921Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

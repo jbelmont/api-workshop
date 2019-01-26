@@ -1,0 +1,831 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Types of API Testing · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="api-testing-tools.html" />
+    
+    
+    <link rel="prev" href="api-testing.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="api-summary.html">
+            
+                <a href="api-summary.html">
+            
+                    
+                    API Summary and Description
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="restful-intro.html">
+            
+                <a href="restful-intro.html">
+            
+                    
+                    Restful API Introduction
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="rest-dissertation.html">
+            
+                <a href="rest-dissertation.html">
+            
+                    
+                    Roy Fieldings Dissertation on REST
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="rest-constraints.html">
+            
+                <a href="rest-constraints.html">
+            
+                    
+                    Rest Architecture Constraints
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="maturity-model.html">
+            
+                <a href="maturity-model.html">
+            
+                    
+                    Richardson Maturity Model
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="http-concepts.html">
+            
+                <a href="http-concepts.html">
+            
+                    
+                    HTTP Concepts
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="http-verbs.html">
+            
+                <a href="http-verbs.html">
+            
+                    
+                    HTTP Verbs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="status-codes.html">
+            
+                <a href="status-codes.html">
+            
+                    
+                    HTTP Status Codes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="http-headers.html">
+            
+                <a href="http-headers.html">
+            
+                    
+                    HTTP Headers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="request-response.html">
+            
+                <a href="request-response.html">
+            
+                    
+                    HTTP Request and Response
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="uri-design.html">
+            
+                <a href="uri-design.html">
+            
+                    
+                    URL Design
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="query-string.html">
+            
+                <a href="query-string.html">
+            
+                    
+                    Query String
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="api-design.html">
+            
+                <a href="api-design.html">
+            
+                    
+                    API Design
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="api-testing.html">
+            
+                <a href="api-testing.html">
+            
+                    
+                    API Testing
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.6.1" data-path="types-of-api-testing.html">
+            
+                <a href="types-of-api-testing.html">
+            
+                    
+                    Types of API Testing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="api-testing-tools.html">
+            
+                <a href="api-testing-tools.html">
+            
+                    
+                    API Testing Tools
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="api-security.html">
+            
+                <a href="api-security.html">
+            
+                    
+                    API Security
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="authentication.html">
+            
+                <a href="authentication.html">
+            
+                    
+                    Authentication
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1.1" data-path="openid-connect.html">
+            
+                <a href="openid-connect.html">
+            
+                    
+                    OpenID Connect
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="authorization.html">
+            
+                <a href="authorization.html">
+            
+                    
+                    Authorization
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.2.1" data-path="oauth.html">
+            
+                <a href="oauth.html">
+            
+                    
+                    OAuth
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="federation.html">
+            
+                <a href="federation.html">
+            
+                    
+                    Federation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="delegation.html">
+            
+                <a href="delegation.html">
+            
+                    
+                    Delegation
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="api-description-languages.html">
+            
+                <a href="api-description-languages.html">
+            
+                    
+                    API Description Languages
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="openapi.html">
+            
+                <a href="openapi.html">
+            
+                    
+                    OpenAPI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="api-blueprint.html">
+            
+                <a href="api-blueprint.html">
+            
+                    
+                    API Blueprint
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="raml.html">
+            
+                <a href="raml.html">
+            
+                    
+                    RAML
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="graphql.html">
+            
+                <a href="graphql.html">
+            
+                    
+                    GraphQL
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Types of API Testing</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>API Workshop - Types of API Testing</p>
+<h2 id="sections">Sections:</h2>
+<ul>
+<li><a href="#bread-crumb-navigation">Bread Crumb Navigation</a></li>
+</ul>
+<h4 id="types-of-api-testing">Types of API Testing</h4>
+<p><a href="https://en.wikipedia.org/wiki/API_testing#Types_of_API_testing" target="_blank">Types of API Testing</a></p>
+<p>API testing typically involves the following practices:</p>
+<ul>
+<li>Unit testing - Testing the functionality of individual operations.</li>
+</ul>
+<p>Here is an example of a unit test in golang:</p>
+<pre><code class="lang-go"><span class="hljs-keyword">package</span> config_test
+
+<span class="hljs-keyword">import</span> (
+    <span class="hljs-string">&quot;os&quot;</span>
+    <span class="hljs-string">&quot;testing&quot;</span>
+
+    <span class="hljs-string">&quot;github.com/jbelmont/api-workshop/cmd/apid/config&quot;</span>
+)
+
+<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">TestNewConfig</span><span class="hljs-params">(t *testing.T)</span></span> {
+    cfg := config.New()
+
+    <span class="hljs-keyword">if</span> cfg.APIHost != <span class="hljs-string">&quot;:8080&quot;</span> {
+        t.Error(<span class="hljs-string">&quot;config should set default value of APIHost variable&quot;</span>)
+    }
+    <span class="hljs-keyword">if</span> cfg.MongoHost != <span class="hljs-string">&quot;mongodb://mongo:27017&quot;</span> {
+        t.Error(<span class="hljs-string">&quot;config should set default value for MongoHost variable&quot;</span>)
+    }
+    <span class="hljs-keyword">if</span> cfg.RedisHost != <span class="hljs-string">&quot;redis:6379&quot;</span> {
+        t.Error(<span class="hljs-string">&quot;config should set default value for RedisHost variable&quot;</span>)
+    }
+}
+
+<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">TestGetEnvironmentVariablesThatAreSet</span><span class="hljs-params">(t *testing.T)</span></span> {
+    apiHost := <span class="hljs-string">&quot;:3000&quot;</span>
+    os.Setenv(<span class="hljs-string">&quot;API_HOST&quot;</span>, apiHost)
+    <span class="hljs-keyword">defer</span> os.Unsetenv(<span class="hljs-string">&quot;API_HOST&quot;</span>)
+
+    mongoHost := <span class="hljs-string">&quot;mongodb://mongo:30015&quot;</span>
+    os.Setenv(<span class="hljs-string">&quot;MONGO_HOST&quot;</span>, mongoHost)
+    <span class="hljs-keyword">defer</span> os.Unsetenv(<span class="hljs-string">&quot;MONGO_HOST&quot;</span>)
+
+    redisHost := <span class="hljs-string">&quot;redis:7005&quot;</span>
+    os.Setenv(<span class="hljs-string">&quot;REDIS_HOST&quot;</span>, redisHost)
+    <span class="hljs-keyword">defer</span> os.Unsetenv(<span class="hljs-string">&quot;REDIS_HOST&quot;</span>)
+
+    cfg := config.New()
+
+    <span class="hljs-keyword">if</span> cfg.APIHost != apiHost {
+        t.Errorf(<span class="hljs-string">&quot;Expected %s but got %s&quot;</span>, apiHost, cfg.APIHost)
+    }
+    <span class="hljs-keyword">if</span> cfg.MongoHost != mongoHost {
+        t.Errorf(<span class="hljs-string">&quot;Expected %s but got %s&quot;</span>, mongoHost, cfg.MongoHost)
+    }
+    <span class="hljs-keyword">if</span> cfg.RedisHost != redisHost {
+        t.Errorf(<span class="hljs-string">&quot;Expected %s but got %s&quot;</span>, redisHost, cfg.RedisHost)
+    }
+}
+</code></pre>
+<ul>
+<li>Integration Testing - Testing (sometimes called integration and testing, abbreviated I&amp;T) is the phase in software testing in which individual software modules are combined and tested as a group. It occurs after unit testing and before validation testing.</li>
+</ul>
+<p>Here is an example of an integration test in golang:</p>
+<pre><code class="lang-go"><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">TestCreateHero</span><span class="hljs-params">(t *testing.T)</span></span> {
+    heroPayload := <span class="hljs-string">`
+  {
+      &quot;name&quot;: &quot;Aquaman&quot;,
+      &quot;superpowers&quot;: [
+        &quot;Expert with magical Trident&quot;,
+        &quot;Enhanced vision&quot;,
+        &quot;Enhanced smell&quot;,
+        &quot;Enhanced stamina&quot;,
+        &quot;Expert combatant&quot;,
+        &quot;Expert tactician&quot;,
+        &quot;Super Strength&quot;,
+        &quot;Super Speed&quot;,
+        &quot;Marine Telepathy&quot;
+      ],
+      &quot;gender&quot;: &quot;male&quot;
+  }
+  `</span>
+    payload := []<span class="hljs-keyword">byte</span>(heroPayload)
+    r := httptest.NewRequest(<span class="hljs-string">&quot;POST&quot;</span>, <span class="hljs-string">&quot;/api/v1/heroes&quot;</span>, bytes.NewBuffer(payload))
+    w := httptest.NewRecorder()
+    app.ServeHTTP(w, r)
+
+    <span class="hljs-keyword">if</span> w.Code != http.StatusCreated {
+        t.Fatalf(<span class="hljs-string">&quot;Should receive a status code of 201 for the response : %v&quot;</span>, w.Code)
+    }
+
+    <span class="hljs-keyword">var</span> cHero hero.CreateHero
+    <span class="hljs-keyword">if</span> err := json.NewDecoder(w.Body).Decode(&amp;cHero); err != <span class="hljs-literal">nil</span> {
+        t.Fatalf(<span class="hljs-string">&quot;could not decode json response: %v&quot;</span>, err)
+    }
+
+    expected := hero.Hero{
+        Name: <span class="hljs-string">&quot;Aquaman&quot;</span>,
+        SuperPowers: []<span class="hljs-keyword">string</span>{
+            <span class="hljs-string">&quot;Expert with magical Trident&quot;</span>,
+            <span class="hljs-string">&quot;Enhanced vision&quot;</span>,
+            <span class="hljs-string">&quot;Enhanced smell&quot;</span>,
+            <span class="hljs-string">&quot;Enhanced stamina&quot;</span>,
+            <span class="hljs-string">&quot;Expert combatant&quot;</span>,
+            <span class="hljs-string">&quot;Expert tactician&quot;</span>,
+            <span class="hljs-string">&quot;Super Strength&quot;</span>,
+            <span class="hljs-string">&quot;Super Speed&quot;</span>,
+            <span class="hljs-string">&quot;Marine Telepathy&quot;</span>,
+        },
+        Gender: <span class="hljs-string">&quot;male&quot;</span>,
+    }
+    <span class="hljs-keyword">if</span> cHero.Name != expected.Name {
+        t.Errorf(<span class="hljs-string">&quot;Name should be set to %s&quot;</span>, expected.Name)
+    }
+    <span class="hljs-keyword">for</span> idx, power := <span class="hljs-keyword">range</span> cHero.SuperPowers {
+        <span class="hljs-keyword">if</span> power != expected.SuperPowers[idx] {
+            t.Errorf(<span class="hljs-string">&quot;Expected Power %s, Actual %s&quot;</span>, expected.SuperPowers[idx], power)
+        }
+    }
+    <span class="hljs-keyword">if</span> cHero.Gender != expected.Gender {
+        t.Errorf(<span class="hljs-string">&quot;Expected Gender %s, Actual %s&quot;</span>, expected.Gender, cHero.Gender)
+    }
+}
+</code></pre>
+<ul>
+<li><p>Functional testing - Testing the functionality of broader scenarios, often using unit tests as building blocks for end-to-end tests. Includes test case definition, execution, validation, and regression testing.</p>
+</li>
+<li><p>Load testing - Validating functionality and performance under load, often by reusing functional test cases.</p>
+</li>
+<li><p>Runtime error detection - Monitoring an application the execution of automated or manual tests to expose problems such as race conditions, exceptions, and resource leaks.</p>
+</li>
+<li><p>Security testing - Includes penetration testing and fuzz testing as well as validating authentication, encryption, and access control.</p>
+</li>
+<li><p>Web UI testing - Performed as part of end-to-end integration tests that also cover APIs, enables teams to validate GUI items in the context of the larger transaction.</p>
+</li>
+</ul>
+<p>Here is an example of an end to end ui test with nightwatch.js</p>
+<pre><code class="lang-js"><span class="hljs-meta">&apos;use strict&apos;</span>;
+
+<span class="hljs-built_in">module</span>.exports = {
+  <span class="hljs-string">&apos;Code Craftsmanship Saturdays&apos;</span>: <span class="hljs-function"><span class="hljs-params">browser</span> =&gt;</span> {
+    <span class="hljs-keyword">const</span> codeSaturdays = browser.page.codeCraftsmanshipSaturdaysPage();
+
+    codeSaturdays
+      .navigate()
+      .waitForElementVisible(<span class="hljs-string">&apos;@codeCraftsmanshipContainerLabel&apos;</span>, <span class="hljs-number">1000</span>)
+      .assert.containsText(<span class="hljs-string">&apos;@codeCraftsmanshipContainerStrongLabel&apos;</span>, <span class="hljs-string">&apos;Code Craftsmanship Saturdays&apos;</span>)
+
+    codeSaturdays
+      .click(<span class="hljs-string">&apos;@trashBin&apos;</span>)
+      .assert.elementNotPresent(<span class="hljs-string">&apos;[data-email=&quot;tcox0@dion.ne.jp&quot;]&apos;</span>)
+
+    codeSaturdays
+      .click(<span class="hljs-string">&apos;@addSomeUserBtn&apos;</span>)
+
+    codeSaturdays.setInput(<span class="hljs-string">&apos;#emailInput&apos;</span>, <span class="hljs-string">&apos;chuck@badass.net&apos;</span>)
+    codeSaturdays.setInput(<span class="hljs-string">&apos;#firstNameInput&apos;</span>, <span class="hljs-string">&apos;Chuck&apos;</span>)
+    codeSaturdays.setInput(<span class="hljs-string">&apos;#lastNameInput&apos;</span>, <span class="hljs-string">&apos;Norris&apos;</span>)
+
+    codeSaturdays
+      .click(<span class="hljs-string">&apos;@addUserSubmit&apos;</span>)
+      .waitForElementVisible(<span class="hljs-string">&apos;[data-email=&quot;chuck@badass.net&quot;]&apos;</span>, <span class="hljs-number">1000</span>)
+
+    codeSaturdays
+      .click(<span class="hljs-string">&apos;[data-email=&quot;dpayne3@cdbaby.com&quot;]&apos;</span>)
+      .assert.urlContains(<span class="hljs-string">&apos;user&apos;</span>)
+      .end();
+  }
+};
+</code></pre>
+<p>For more information about Software Testing in General checkout my repo <a href="https://github.com/jbelmont/software-testing" target="_blank">Software Testing at Github</a></p>
+<h4 id="bread-crumb-navigation">Bread Crumb Navigation</h4>
+<hr>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Previous</th>
+<th style="text-align:right">Next</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">&#x2190; <a href="api-testing.html">API Testing</a></td>
+<td style="text-align:right"><a href="api-testing-tools.html">API Testing Tools</a> &#x2192;</td>
+</tr>
+</tbody>
+</table>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="api-testing.html" class="navigation navigation-prev " aria-label="Previous page: API Testing">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="api-testing-tools.html" class="navigation navigation-next " aria-label="Next page: API Testing Tools">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Types of API Testing","level":"1.6.1","depth":2,"next":{"title":"API Testing Tools","level":"1.6.2","depth":2,"path":"docs/api-testing-tools.md","ref":"docs/api-testing-tools.md","articles":[]},"previous":{"title":"API Testing","level":"1.6","depth":1,"path":"docs/api-testing.md","ref":"docs/api-testing.md","articles":[{"title":"Types of API Testing","level":"1.6.1","depth":2,"path":"docs/types-of-api-testing.md","ref":"docs/types-of-api-testing.md","articles":[]},{"title":"API Testing Tools","level":"1.6.2","depth":2,"path":"docs/api-testing-tools.md","ref":"docs/api-testing-tools.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["include-codeblock","advanced-emoji","highlight","copy-code-button"],"pluginsConfig":{"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"copy-code-button":{},"advanced-emoji":{"embedEmojis":false},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"default","theme":"chrome","unindent":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"docs/types-of-api-testing.md","mtime":"2019-01-20T23:02:55.764Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-26T19:30:35.921Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

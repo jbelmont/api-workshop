@@ -1,0 +1,42 @@
+#%RAML 1.0
+---
+title: Code Craftsmanship Saturdays API
+baseUri: http://localhost:8080/api/v1
+version: v1
+
+/heroes:
+  /{id}
+    get:
+      queryParameters:
+        name:
+          displayName: Name
+          type: string
+          description: A heroes name
+          example: Superman Prime
+          required: true
+        superpowers:
+          displayName: Super Powers
+          type: array
+          description: A list of super hero powers that each hero has
+          example: ["super speed", "super strength", "heat vision", "flight", "invulnerable"]
+          required: true
+        gender:
+          displayName: Gender
+          type: string
+          description: A heroes gender
+          example: Male
+          required: true
+    put:
+      queryParameters:
+        access_token:
+          displayName: Access Token
+          type: string
+          description: Token giving you permission to make the rest call
+          required: true
+    delete:
+      queryParameters:
+        access_token:
+          displayName: Access Token
+          type: string
+          description: Token giving you permission to make the rest call
+          required: true

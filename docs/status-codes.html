@@ -1,0 +1,942 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>HTTP Status Codes · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="http-headers.html" />
+    
+    
+    <link rel="prev" href="http-verbs.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="api-summary.html">
+            
+                <a href="api-summary.html">
+            
+                    
+                    API Summary and Description
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="restful-intro.html">
+            
+                <a href="restful-intro.html">
+            
+                    
+                    Restful API Introduction
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="rest-dissertation.html">
+            
+                <a href="rest-dissertation.html">
+            
+                    
+                    Roy Fieldings Dissertation on REST
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="rest-constraints.html">
+            
+                <a href="rest-constraints.html">
+            
+                    
+                    Rest Architecture Constraints
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="maturity-model.html">
+            
+                <a href="maturity-model.html">
+            
+                    
+                    Richardson Maturity Model
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="http-concepts.html">
+            
+                <a href="http-concepts.html">
+            
+                    
+                    HTTP Concepts
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="http-verbs.html">
+            
+                <a href="http-verbs.html">
+            
+                    
+                    HTTP Verbs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.2" data-path="status-codes.html">
+            
+                <a href="status-codes.html">
+            
+                    
+                    HTTP Status Codes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="http-headers.html">
+            
+                <a href="http-headers.html">
+            
+                    
+                    HTTP Headers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="request-response.html">
+            
+                <a href="request-response.html">
+            
+                    
+                    HTTP Request and Response
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="uri-design.html">
+            
+                <a href="uri-design.html">
+            
+                    
+                    URL Design
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="query-string.html">
+            
+                <a href="query-string.html">
+            
+                    
+                    Query String
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="api-design.html">
+            
+                <a href="api-design.html">
+            
+                    
+                    API Design
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="api-testing.html">
+            
+                <a href="api-testing.html">
+            
+                    
+                    API Testing
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="types-of-api-testing.html">
+            
+                <a href="types-of-api-testing.html">
+            
+                    
+                    Types of API Testing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="api-testing-tools.html">
+            
+                <a href="api-testing-tools.html">
+            
+                    
+                    API Testing Tools
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="api-security.html">
+            
+                <a href="api-security.html">
+            
+                    
+                    API Security
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="authentication.html">
+            
+                <a href="authentication.html">
+            
+                    
+                    Authentication
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1.1" data-path="openid-connect.html">
+            
+                <a href="openid-connect.html">
+            
+                    
+                    OpenID Connect
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="authorization.html">
+            
+                <a href="authorization.html">
+            
+                    
+                    Authorization
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.2.1" data-path="oauth.html">
+            
+                <a href="oauth.html">
+            
+                    
+                    OAuth
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="federation.html">
+            
+                <a href="federation.html">
+            
+                    
+                    Federation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="delegation.html">
+            
+                <a href="delegation.html">
+            
+                    
+                    Delegation
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="api-description-languages.html">
+            
+                <a href="api-description-languages.html">
+            
+                    
+                    API Description Languages
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="openapi.html">
+            
+                <a href="openapi.html">
+            
+                    
+                    OpenAPI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="api-blueprint.html">
+            
+                <a href="api-blueprint.html">
+            
+                    
+                    API Blueprint
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="raml.html">
+            
+                <a href="raml.html">
+            
+                    
+                    RAML
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="graphql.html">
+            
+                <a href="graphql.html">
+            
+                    
+                    GraphQL
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >HTTP Status Codes</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>API Workshop - HTTP Status Codes</p>
+<h2 id="sections">Sections:</h2>
+<ul>
+<li><a href="#bread-crumb-navigation">Bread Crumb Navigation</a></li>
+</ul>
+<h4 id="response-status-code">Response Status Code</h4>
+<p><a href="https://tools.ietf.org/html/rfc7231#section-6" target="_blank">Response Status Codes RFC 7231</a></p>
+<blockquote>
+<p>The status-code element is a three-digit integer code giving the result of the attempt to understand and satisfy the request.</p>
+</blockquote>
+<ul>
+<li><p>HTTP status codes are extensible.  </p>
+</li>
+<li><p>HTTP clients are not required to understand the meaning of all registered status codes, though such understanding is obviously desirable.  </p>
+</li>
+<li><p>However, a client MUST understand the class of any status code, as indicated by the first digit, and treat an unrecognized status code as being equivalent to the x00 status code of that class, with the exception that a recipient MUST NOT cache a response with an unrecognized status code.</p>
+</li>
+</ul>
+<blockquote>
+<p>For example, if an unrecognized status code of 471 is received by a client, the client can assume that there was something wrong with its request and treat the response as if it had received a 400 (Bad Request) status code.  The response message will usually contain a representation that explains the status.</p>
+</blockquote>
+<p>The first digit of the status-code defines the class of response.</p>
+<p>The last two digits do not have any categorization role.  </p>
+<p>There are five values for the first digit:</p>
+<ul>
+<li><p>1xx (Informational): The request was received, continuing process</p>
+</li>
+<li><p>2xx (Successful): The request was successfully received, understood, and accepted</p>
+</li>
+<li><p>3xx (Redirection): Further action needs to be taken in order to complete the request</p>
+</li>
+<li><p>4xx (Client Error): The request contains bad syntax or cannot be fulfilled</p>
+</li>
+<li><p>5xx (Server Error): The server failed to fulfill an apparently valid request</p>
+</li>
+</ul>
+<h4 id="1xx-informational">1xx (Informational)</h4>
+<p><a href="https://tools.ietf.org/html/rfc7231#section-6.2" target="_blank">1xx RFC 7231</a></p>
+<ul>
+<li><p>The 1xx (Informational) class of status code indicates an interim response for communicating connection status or request progress prior to completing the requested action and sending a final response. </p>
+</li>
+<li><p>1xx responses are terminated by the first empty line after the status-line (the empty line signaling the end of the header section).</p>
+</li>
+<li><p>Since HTTP/1.0 did not define any 1xx status codes, a server MUST NOT send a 1xx response to an HTTP/1.0 client.</p>
+</li>
+<li><p>A client MUST be able to parse one or more 1xx responses received prior to a final response, even if the client does not expect one. </p>
+</li>
+<li><p>A user agent MAY ignore unexpected 1xx responses.</p>
+</li>
+<li><p>A proxy MUST forward 1xx responses unless the proxy itself requested the generation of the 1xx response.  </p>
+</li>
+<li><p>For example, if a proxy adds an &quot;Expect: 100-continue&quot; field when it forwards a request, then it need not forward the corresponding 100 (Continue) response(s).</p>
+</li>
+</ul>
+<h6 id="100-continue">100 Continue</h6>
+<p>The server has received the request headers, and that the client should proceed to send the request body.</p>
+<h6 id="101-switching-protocols">101 Switching protocols</h6>
+<p>The requester has asked the server to switch protocols and the server is acknowledging that it will do so.</p>
+<h6 id="102-processing">102 Processing</h6>
+<p>The server has received and is processing the request, but no response is available yet.</p>
+<h4 id="2xx-successful">2xx (Successful)</h4>
+<p><a href="https://tools.ietf.org/html/rfc7231#section-6.3" target="_blank">2xx RFC 7231</a></p>
+<blockquote>
+<p>The 2xx (Successful) class of status code indicates that the client&apos;s request was successfully received, understood, and accepted.</p>
+</blockquote>
+<h6 id="200-ok">200 OK</h6>
+<p>The standard response for successful HTTP requests.</p>
+<h6 id="201-created">201 Created</h6>
+<p>The request has been fulfilled and a new resource has been created.</p>
+<h6 id="202-accepted">202 Accepted</h6>
+<p>The request has been accepted but has not been processed yet. This code does not guarantee that the request will process successfully.</p>
+<h6 id="203-non-authoritative-information">203 Non-authoritative information</h6>
+<p>HTTP 1.1. The server successfully processed the request but is returning information from another source.</p>
+<h6 id="204-no-content">204 No content</h6>
+<p>The server accepted the request but is not returning any content. This is often used as a response to a DELETE request.</p>
+<h6 id="205-reset-content">205 Reset content</h6>
+<p>Similar to a 204 No Content response but this response requires the requester to reset the document view.</p>
+<h6 id="206-partial-content">206 Partial content</h6>
+<p>The server is delivering only a portion of the content, as requested by the client via a range header.</p>
+<h6 id="207-multi-status">207 Multi-status</h6>
+<p>The message body that follows is an XML message and can contain a number of separate response codes, depending on how many sub-requests were made.</p>
+<p><a href="https://tools.ietf.org/html/rfc4918" target="_blank">WebDAV - RFC 4918</a></p>
+<h6 id="208-already-reported">208 Already reported</h6>
+<p>The members of a DAV binding have already been enumerated in a previous reply to this request, and are not being included again.</p>
+<p><a href="https://tools.ietf.org/html/rfc5842" target="_blank">WebDAV - RFC 5842</a></p>
+<h6 id="226-im-used">226 IM used</h6>
+<p>The server has fulfilled a GET request for the resource, and the response is a representation of the result of one or more instance-manipulations applied to the current instance.</p>
+<h4 id="3xx-redirection">3xx (Redirection)</h4>
+<p><a href="https://tools.ietf.org/html/rfc7231#section-6.4" target="_blank">3xx RFC 7231</a></p>
+<p>The 3xx (Redirection) class of status code indicates that further action needs to be taken by the user agent in order to fulfill the request.</p>
+<ul>
+<li><p>If a Location header field (Section 7.1.2) is provided, the user agent MAY automatically redirect its request to the URI referenced by the Location field value, even if the specific status code is not understood. </p>
+</li>
+<li><p>Automatic redirection needs to done with care for methods not known to be safe, as defined in Section 4.2.1, since the user might not wish to redirect an unsafe request.</p>
+</li>
+</ul>
+<p>There are several types of redirects:</p>
+<ol>
+<li><p>Redirects that indicate the resource might be available at a different URI, as provided by the Location field, as in the status codes 301 (Moved Permanently), 302 (Found), and 307 (Temporary Redirect).</p>
+</li>
+<li><p>Redirection that offers a choice of matching resources, each capable of representing the original request target, as in the 300 (Multiple Choices) status code.</p>
+</li>
+<li><p>Redirection to a different resource, identified by the Location field, that can represent an indirect response to the request, as in the 303 (See Other) status code.</p>
+</li>
+<li><p>Redirection to a previously cached result, as in the 304 (Not Modified) status code.</p>
+</li>
+</ol>
+<h6 id="300-multiple-choices">300 Multiple choices</h6>
+<p>There are multiple options that the client may follow.</p>
+<h6 id="301-moved-permanently">301 Moved permanently</h6>
+<p>The resource has been moved and all further requests should reference its new URI.</p>
+<h6 id="302-found">302 Found</h6>
+<p>The HTTP 1.0 specification described this status as &quot;Moved Temporarily&quot;, but popular browsers respond to this status similar to behavior intended for 303. The resource can be retrieved by referencing the returned URI.</p>
+<h6 id="303-see-other">303 See other</h6>
+<p>The resource can be retrieved by following other URI using the GET method. When received in response to a POST, PUT, or DELETE, it can usually be assumed that the server processed the request successfully and is sending the client to an informational endpoint.</p>
+<h6 id="304-not-modified">304 Not modified</h6>
+<p>The resource has not been modified since the version specified in If-Modified-Since or If-Match headers. The resource will not be returned in response body.</p>
+<h6 id="305-use-proxy">305 Use proxy</h6>
+<p>HTTP 1.1. The resource is only available through a proxy and the address is provided in the response.</p>
+<h6 id="306-switch-proxy">306 Switch proxy</h6>
+<p>Deprecated in HTTP 1.1. Used to mean that subsequent requests should be sent using the specified proxy.</p>
+<h6 id="307-temporary-redirect">307 Temporary redirect</h6>
+<p>HTTP 1.1. The request should be repeated with the URI provided in the response, but future requests should still call the original URI.</p>
+<h6 id="308-permanent-redirect">308 Permanent redirect</h6>
+<p>Experimental. The request and all future requests should be repeated with the URI provided in the response. The HTTP method is not allowed to be changed in the subsequent request.</p>
+<h6 id="308-resume-incomplete-google">308 Resume Incomplete (Google)</h6>
+<p>This code is used in the Resumable HTTP Requests Proposal to resume aborted PUT or POST requests</p>
+<h4 id="4xx-client-error">4xx (Client Error)</h4>
+<p><a href="https://tools.ietf.org/html/rfc7231#section-6.5" target="_blank">4xx RFC 7231</a></p>
+<ul>
+<li><p>The 4xx (Client Error) class of status code indicates that the client seems to have erred.  </p>
+</li>
+<li><p>Except when responding to a HEAD request, the server SHOULD send a representation containing an explanation of the error situation, and whether it is a temporary or permanent condition. </p>
+</li>
+<li><p>These status codes are applicable to any request method. </p>
+</li>
+<li><p>User agents SHOULD display any included representation to the user.</p>
+</li>
+</ul>
+<h6 id="400-bad-request">400 Bad request</h6>
+<p>The request could not be fulfilled due to the incorrect syntax of the request.</p>
+<h6 id="401-unauthorized">401 Unauthorized</h6>
+<p>The requester is not authorized to access the resource. This is similar to 403 but is used in cases where authentication is expected but has failed or has not been provided.</p>
+<h6 id="402-payment-required">402 Payment required</h6>
+<p>Reserved for future use. Some web services use this as an indication that the client has sent an excessive number of requests.</p>
+<h6 id="403-forbidden">403 Forbidden</h6>
+<p>The request was formatted correctly but the server is refusing to supply the requested resource. Unlike 401, authenticating will not make a difference in the server&apos;s response.</p>
+<h6 id="404-not-found">404 Not found</h6>
+<p>The resource could not be found. This is often used as a catch-all for all invalid URIs requested of the server.</p>
+<h6 id="405-method-not-allowed">405 Method not allowed</h6>
+<p>The resource was requested using a method that is not allowed. For example, requesting a resource via a POST method when the resource only supports the GET method.</p>
+<h6 id="406-not-acceptable">406 Not acceptable</h6>
+<p>The resource is valid, but cannot be provided in a format specified in the Accept headers in the request.</p>
+<h6 id="407-proxy-authentication-required">407 Proxy authentication required</h6>
+<p>Authentication is required with the proxy before requests can be fulfilled.</p>
+<h6 id="408-request-timeout">408 Request timeout</h6>
+<p>The server timed out waiting for a request from the client. The client is allowed to repeat the request.</p>
+<h6 id="409-conflict">409 Conflict</h6>
+<p>The request cannot be completed due to a conflict in the request parameters.</p>
+<h6 id="410-gone">410 Gone</h6>
+<p>The resource is no longer available at the requested URI and no redirection will be given.</p>
+<h6 id="411-length-required">411 Length required</h6>
+<p>The request did not specify the length of its content as required by the resource.</p>
+<h6 id="412-precondition-failed">412 Precondition failed</h6>
+<p>The server does not meet one of the preconditions specified by the client.</p>
+<h6 id="413-request-entity-too-large">413 Request entity too large</h6>
+<p>The request is larger than what the server is able to process.</p>
+<h6 id="414-request-uri-too-long">414 Request-URI too long</h6>
+<p>The URI provided in the request is too long for the server to process. This is often used when too much data has been encoded into the URI of a GET request and a POST request should be used instead.</p>
+<h6 id="415-unsupported-media-type">415 Unsupported media type</h6>
+<p>The client provided data with a media type that the server does not support.</p>
+<h6 id="416-requested-range-not-satisfiable">416 Requested range not satisfiable</h6>
+<p>The client has asked for a portion of the resource but the server cannot supply that portion.</p>
+<h6 id="417-expectation-failed">417 Expectation failed</h6>
+<p>The server cannot meet the requirements of the Expect request-header field.</p>
+<h6 id="418-im-a-teapot">418 I&apos;m a teapot</h6>
+<p>Any attempt to brew coffee with a teapot should result in the error code &quot;418 I&apos;m a teapot&quot;. The resulting entity body MAY be short and stout.</p>
+<p><a href="https://tools.ietf.org/html/rfc2324" target="_blank">HTCPCP - RFC 2324</a></p>
+<h6 id="421-misdirected-request">421 Misdirected request</h6>
+<p>The request was directed at a server that is not able to produce a response. This can be sent by a server that is not configured to produce responses for the combination of scheme and authority that are included in the request URI.</p>
+<p><a href="https://tools.ietf.org/html/rfc7540" target="_blank">HTTP/2 - RFC 7540</a></p>
+<h6 id="422-unprocessable-entity">422 Unprocessable entity</h6>
+<p>The request was formatted correctly but cannot be processed in its current form. Often used when the specified parameters fail validation errors.</p>
+<p><a href="https://tools.ietf.org/html/rfc4918" target="_blank">WebDAV - RFC 4918</a></p>
+<h6 id="423-locked">423 Locked</h6>
+<p>The requested resource was found but has been locked and will not be returned.</p>
+<p><a href="https://tools.ietf.org/html/rfc4918" target="_blank">WebDAV - RFC 4918</a></p>
+<h6 id="424-failed-dependency">424 Failed dependency</h6>
+<p>The request failed due to a failure of a previous request.</p>
+<p><a href="https://tools.ietf.org/html/rfc4918" target="_blank">WebDAV - RFC 4918</a></p>
+<h6 id="426-upgrade-required">426 Upgrade required</h6>
+<p>The client should repeat the request using an upgraded protocol such as TLS 1.0.</p>
+<h6 id="428-precondition-required">428 Precondition required</h6>
+<p>The origin server requires the request to be conditional.</p>
+<p><a href="https://tools.ietf.org/html/rfc6585" target="_blank">Additional HTTP Status Codes - RFC 6585</a></p>
+<h6 id="429-too-many-requests">429 Too many requests</h6>
+<p>The user has sent too many requests in a given amount of time (&quot;rate limiting&quot;).</p>
+<p><a href="https://tools.ietf.org/html/rfc6585" target="_blank">Additional HTTP Status Codes - RFC 6585</a></p>
+<h6 id="431-request-header-fields-too-large">431 Request header fields too large</h6>
+<p>The server is unwilling to process the request because its header fields are too large.</p>
+<p><a href="https://tools.ietf.org/html/rfc6585" target="_blank">Additional HTTP Status Codes - RFC 6585</a></p>
+<h6 id="440-login-timeout-microsoft">440 Login Timeout (Microsoft)</h6>
+<p>A Microsoft extension. Indicates that your session has expired.</p>
+<h6 id="444-no-response-nginx">444 No Response (Nginx)</h6>
+<p>Used in Nginx logs to indicate that the server has returned no information to the client and closed the connection (useful as a deterrent for malware).</p>
+<h6 id="449-retry-with-microsoft">449 Retry With (Microsoft)</h6>
+<p>A Microsoft extension. The request should be retried after performing the appropriate action.</p>
+<h6 id="450-blocked-by-windows-parental-controls-microsoft">450 Blocked by Windows Parental Controls (Microsoft)</h6>
+<p>A Microsoft extension. This error is given when Windows Parental Controls are turned on and are blocking access to the given webpage.</p>
+<h6 id="451-unavailable-for-legal-reasons">451 Unavailable For Legal Reasons</h6>
+<p>A server operator has received a legal demand to deny access to a resource or to a set of resources that includes the requested resource.</p>
+<p>The code 451 was chosen as a reference to the 1953 dystopian novel Fahrenheit 451, where books are outlawed.</p>
+<p>An HTTP Status Code to Report Legal Obstacles - RFC 7725</p>
+<h6 id="451-redirect-microsoft">451 Redirect (Microsoft)</h6>
+<p>Used in Exchange ActiveSync if there either is a more efficient server to use or the server cannot access the users&apos; mailbox.</p>
+<h6 id="494-request-header-too-large-nginx">494 Request Header Too Large (Nginx)</h6>
+<p>Nginx internal code similar to 431 but it was introduced earlier in version 0.9.4 (on January 21, 2011).</p>
+<h6 id="495-cert-error-nginx">495 Cert Error (Nginx)</h6>
+<p>Nginx internal code used when SSL client certificate error occurred to distinguish it from 4XX in a log and an error page redirection.</p>
+<h6 id="496-no-cert-nginx">496 No Cert (Nginx)</h6>
+<p>Nginx internal code used when client didn&apos;t provide certificate to distinguish it from 4XX in a log and an error page redirection.</p>
+<h6 id="497-http-to-https-nginx">497 HTTP to HTTPS (Nginx)</h6>
+<p>Nginx internal code used for the plain HTTP requests that are sent to HTTPS port to distinguish it from 4XX in a log and an error page redirection.</p>
+<h6 id="498-token-expiredinvalid-esri">498 Token expired/invalid (Esri)</h6>
+<p>Returned by ArcGIS for Server. A code of 498 indicates an expired or otherwise invalid token.</p>
+<h6 id="499-client-closed-request-nginx">499 Client Closed Request (Nginx)</h6>
+<p>Used in Nginx logs to indicate when the connection has been closed by client while the server is still processing its request, making server unable to send a status code back.</p>
+<h6 id="499-token-required-esri">499 Token required (Esri)</h6>
+<p>Returned by ArcGIS for Server. A code of 499 indicates that a token is required (if no token was submitted).</p>
+<h4 id="5xx-server-error">5xx (Server Error)</h4>
+<p><a href="https://tools.ietf.org/html/rfc7231#section-6.6" target="_blank">5xx RFC 7231</a></p>
+<ul>
+<li><p>The 5xx (Server Error) class of status code indicates that the server is aware that it has erred or is incapable of performing the requested method.  </p>
+</li>
+<li><p>Except when responding to a HEAD request, the server SHOULD send a representation containing an explanation of the error situation, and whether it is a temporary or permanent condition. </p>
+</li>
+<li><p>A user agent SHOULD display any included representation to the user.  </p>
+</li>
+</ul>
+<p>These response codes are applicable to any request method.</p>
+<h6 id="500-internal-server-error">500 Internal server error</h6>
+<p>A generic status for an error in the server itself.</p>
+<h6 id="501-not-implemented">501 Not implemented</h6>
+<p>The server cannot respond to the request. This usually implies that the server could possibly support the request in the future &#x2014; otherwise a 4xx status may be more appropriate.</p>
+<h6 id="502-bad-gateway">502 Bad gateway</h6>
+<p>The server is acting as a proxy and did not receive an acceptable response from the upstream server.</p>
+<h6 id="503-service-unavailable">503 Service unavailable</h6>
+<p>The server is down and is not accepting requests.</p>
+<h6 id="504-gateway-timeout">504 Gateway timeout</h6>
+<p>The server is acting as a proxy and did not receive a response from the upstream server.</p>
+<h6 id="505-http-version-not-supported">505 HTTP version not supported</h6>
+<p>The server does not support the HTTP protocol version specified in the request.</p>
+<h6 id="506-variant-also-negotiates">506 Variant also negotiates</h6>
+<p>Transparent content negotiation for the request results in a circular reference.</p>
+<h6 id="507-insufficient-storage">507 Insufficient storage</h6>
+<p>The user or server does not have sufficient storage quota to fulfill the request.</p>
+<p><a href="https://tools.ietf.org/html/rfc4918" target="_blank">WebDAV - RFC 4918</a></p>
+<h6 id="508-loop-detected">508 Loop detected</h6>
+<p>The server detected an infinite loop in the request.</p>
+<p><a href="https://tools.ietf.org/html/rfc5842" target="_blank">WebDAV - RFC 5842</a></p>
+<h6 id="509-bandwidth-limit-exceeded-apache-bwlimited-extension">509 Bandwidth Limit Exceeded (Apache bw/limited extension)</h6>
+<p>This status code is not specified in any RFCs. Its use is unknown.</p>
+<h6 id="510-not-extended">510 Not extended</h6>
+<p>Further extensions to the request are necessary for it to be fulfilled.</p>
+<h6 id="511-network-authentication-required">511 Network authentication required</h6>
+<p>The client must authenticate with the network before sending requests.</p>
+<p><a href="https://tools.ietf.org/html/rfc6585" target="_blank">RFC 6585</a></p>
+<h6 id="520-unknown-error-microsoft--cloudflare">520 Unknown Error (Microsoft / CloudFlare)</h6>
+<p>This status code is not specified in any RFC and is returned by certain services, for instance Microsoft Azure and CloudFlare servers: &quot;The 520 error is essentially a &quot;catch-all&quot; response for when the origin server returns something unexpected or something that is not tolerated/interpreted (protocol violation or empty response).&quot;</p>
+<h6 id="521-web-server-is-down-cloudflare">521 Web Server Is Down (CloudFlare)</h6>
+<p>The origin server has refused the connection from CloudFlare.</p>
+<h6 id="522-connection-timed-out-cloudflare">522 Connection Timed Out (CloudFlare)</h6>
+<p>CloudFlare could not negotiate a TCP handshake with the origin server.</p>
+<h6 id="523-origin-is-unreachable-cloudflare">523 Origin Is Unreachable (CloudFlare)</h6>
+<p>CloudFlare could not reach the origin server; for example, if the DNS records for the origin server are incorrect.</p>
+<h6 id="524-a-timeout-occurred-cloudflare">524 A Timeout Occurred (CloudFlare)</h6>
+<p>CloudFlare was able to complete a TCP connection to the origin server, but did not receive a timely HTTP response.</p>
+<h6 id="525-ssl-handshake-failed-cloudflare">525 SSL Handshake Failed (CloudFlare)</h6>
+<p>CloudFlare could not negotiate a SSL/TLS handshake with the origin server.</p>
+<h6 id="526-invalid-ssl-certificate-cloudflare">526 Invalid SSL Certificate (CloudFlare)</h6>
+<p>CloudFlare could not validate the SSL/TLS certificate that the origin server presented.</p>
+<h6 id="527-railgun-error-cloudflare">527 Railgun Error (CloudFlare)</h6>
+<p>The request timed out or failed after the WAN connection has been established.</p>
+<h4 id="bread-crumb-navigation">Bread Crumb Navigation</h4>
+<hr>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Previous</th>
+<th style="text-align:right">Next</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">&#x2190; <a href="http-verbs.html">HTTP Verbs</a></td>
+<td style="text-align:right"><a href="http-headers.html">HTTP Headers</a> &#x2192;</td>
+</tr>
+</tbody>
+</table>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="http-verbs.html" class="navigation navigation-prev " aria-label="Previous page: HTTP Verbs">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="http-headers.html" class="navigation navigation-next " aria-label="Next page: HTTP Headers">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"HTTP Status Codes","level":"1.4.2","depth":2,"next":{"title":"HTTP Headers","level":"1.4.3","depth":2,"path":"docs/http-headers.md","ref":"docs/http-headers.md","articles":[]},"previous":{"title":"HTTP Verbs","level":"1.4.1","depth":2,"path":"docs/http-verbs.md","ref":"docs/http-verbs.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["include-codeblock","advanced-emoji","highlight","copy-code-button"],"pluginsConfig":{"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"copy-code-button":{},"advanced-emoji":{"embedEmojis":false},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"default","theme":"chrome","unindent":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"docs/status-codes.md","mtime":"2018-02-26T03:53:10.832Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-26T19:30:35.921Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

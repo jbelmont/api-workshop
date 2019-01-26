@@ -1,0 +1,961 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>API Design · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="api-testing.html" />
+    
+    
+    <link rel="prev" href="query-string.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="api-summary.html">
+            
+                <a href="api-summary.html">
+            
+                    
+                    API Summary and Description
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="restful-intro.html">
+            
+                <a href="restful-intro.html">
+            
+                    
+                    Restful API Introduction
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="rest-dissertation.html">
+            
+                <a href="rest-dissertation.html">
+            
+                    
+                    Roy Fieldings Dissertation on REST
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="rest-constraints.html">
+            
+                <a href="rest-constraints.html">
+            
+                    
+                    Rest Architecture Constraints
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="maturity-model.html">
+            
+                <a href="maturity-model.html">
+            
+                    
+                    Richardson Maturity Model
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="http-concepts.html">
+            
+                <a href="http-concepts.html">
+            
+                    
+                    HTTP Concepts
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="http-verbs.html">
+            
+                <a href="http-verbs.html">
+            
+                    
+                    HTTP Verbs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="status-codes.html">
+            
+                <a href="status-codes.html">
+            
+                    
+                    HTTP Status Codes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="http-headers.html">
+            
+                <a href="http-headers.html">
+            
+                    
+                    HTTP Headers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="request-response.html">
+            
+                <a href="request-response.html">
+            
+                    
+                    HTTP Request and Response
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="uri-design.html">
+            
+                <a href="uri-design.html">
+            
+                    
+                    URL Design
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="query-string.html">
+            
+                <a href="query-string.html">
+            
+                    
+                    Query String
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5" data-path="api-design.html">
+            
+                <a href="api-design.html">
+            
+                    
+                    API Design
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="api-testing.html">
+            
+                <a href="api-testing.html">
+            
+                    
+                    API Testing
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="types-of-api-testing.html">
+            
+                <a href="types-of-api-testing.html">
+            
+                    
+                    Types of API Testing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="api-testing-tools.html">
+            
+                <a href="api-testing-tools.html">
+            
+                    
+                    API Testing Tools
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="api-security.html">
+            
+                <a href="api-security.html">
+            
+                    
+                    API Security
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="authentication.html">
+            
+                <a href="authentication.html">
+            
+                    
+                    Authentication
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1.1" data-path="openid-connect.html">
+            
+                <a href="openid-connect.html">
+            
+                    
+                    OpenID Connect
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="authorization.html">
+            
+                <a href="authorization.html">
+            
+                    
+                    Authorization
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.2.1" data-path="oauth.html">
+            
+                <a href="oauth.html">
+            
+                    
+                    OAuth
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="federation.html">
+            
+                <a href="federation.html">
+            
+                    
+                    Federation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="delegation.html">
+            
+                <a href="delegation.html">
+            
+                    
+                    Delegation
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="api-description-languages.html">
+            
+                <a href="api-description-languages.html">
+            
+                    
+                    API Description Languages
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="openapi.html">
+            
+                <a href="openapi.html">
+            
+                    
+                    OpenAPI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="api-blueprint.html">
+            
+                <a href="api-blueprint.html">
+            
+                    
+                    API Blueprint
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="raml.html">
+            
+                <a href="raml.html">
+            
+                    
+                    RAML
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="graphql.html">
+            
+                <a href="graphql.html">
+            
+                    
+                    GraphQL
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >API Design</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>API Workshop - API Design</p>
+<h2 id="sections">Sections:</h2>
+<ul>
+<li><a href="#bread-crumb-navigation">Bread Crumb Navigation</a></li>
+</ul>
+<h4 id="restful-url">Restful URL</h4>
+<p>Use nouns not verbs for your resources</p>
+<p>Let us make student resources</p>
+<ul>
+<li><p><code>GET /students</code> - Retrieves a list of students</p>
+</li>
+<li><p><code>GET /students/:id</code> - Retrieves a specific student</p>
+</li>
+<li><p><code>POST /students</code> - Creates a new student</p>
+</li>
+<li><p><code>PUT /students/:id</code> - Updates student #5</p>
+</li>
+<li><p><code>PATCH /students/:id</code> - Partially updates student #5</p>
+</li>
+<li><p><code>DELETE /students/:id</code> - Deletes student #5</p>
+</li>
+</ul>
+<p>The <code>/students</code> endpoint is for a collection</p>
+<p>The <code>/students/:id</code> endpoint is for a specific element in the collection like for example <code>/students/5</code></p>
+<p>Doing this will help you get HTTP verbs/actions out of your base URLs.</p>
+<h5 id="why-are-verbs-bad-in-urls">Why are verbs bad in URLs?</h5>
+<p>Let us try to think about all the particular types of actions we can do with students:</p>
+<ul>
+<li><code>/getAllStudents</code></li>
+<li><code>/checkStudentGrades</code></li>
+<li><code>/retrieveStudent</code></li>
+<li><code>/updateStudents</code></li>
+<li><code>/updateSpecificStudent</code></li>
+<li><code>/deleteAllStudents</code></li>
+<li><code>/deleteSpecificStudent</code></li>
+</ul>
+<p>Mapping urls to actions can quickly get out of hand and is not intuitive for app developers.</p>
+<p><strong>Keep verbs out of your base URLs</strong></p>
+<p><strong>Use HTTP verbs to operate on the collections and elements.</strong></p>
+<h5 id="crud">CRUD</h5>
+<p>For our student resources, we have two base URLs that use nouns as labels, and we can operate on them with HTTP verbs. </p>
+<p>Our HTTP verbs are <code>POST</code>, <code>GET</code>, <code>PUT</code>, <code>PATCH</code>, and <code>DELETE</code>. </p>
+<p>We can map them to the acronym CRUD: <code>CREATE READ UPDATE DELETE</code></p>
+<h5 id="resource-table">Resource Table</h5>
+<table>
+<thead>
+<tr>
+<th>Resource</th>
+<th>POST</th>
+<th>GET</th>
+<th>PUT</th>
+<th>PATCH</th>
+<th>DELETE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/students</code></td>
+<td>Create a New Student</td>
+<td>List all students</td>
+<td>Bulk Update of all Students</td>
+<td>Partial Update</td>
+<td>Delete all Students</td>
+</tr>
+<tr>
+<td><code>/students/:id</code></td>
+<td>Error</td>
+<td>Show Rocky Balboa</td>
+<td>If Rocky exists then update him else Error</td>
+<td>Delete Rocky Balboa</td>
+</tr>
+</tbody>
+</table>
+<p>As you can see With the two resources (<code>/students</code> and <code>/students/:id</code>) and the 5 HTTP verbs, we have a rich set of capabilities that is intuitive to use.</p>
+<p><strong>Tip:</strong></p>
+<ul>
+<li><p>Use two base URLs per resource.</p>
+</li>
+<li><p>Keep verbs out of your base URLs.  </p>
+</li>
+<li><p>Use HTTP verbs to operate on the collections and elements.</p>
+</li>
+</ul>
+<h4 id="plural-and-concrete-names">Plural and Concrete Names</h4>
+<p>Try to favor plural names for a resource but above all else be consistent, don&apos;t use a plural name for one resource and then a singular name for another, this can quickly get confusing for an API consumer.</p>
+<p>For example we used <code>/students</code> over <code>/student</code> for our student resources</p>
+<p>Choose concrete names over abstract names</p>
+<p>For example what does an <code>/items</code> resource convey to you, not much right</p>
+<p>But what does <code>/toys</code> resource convey to you</p>
+<p>The level of abstraction can depend on scenarios but concrete names are more intuitive for API consumers.</p>
+<h4 id="resource-associations">Resource Associations</h4>
+<p>Resources tend to have relationships with other resources.</p>
+<p>Let us go back to our students resource.</p>
+<p>Now let us say that each student will have an associated teachers</p>
+<p>If we wanted to get all the students belonging to a specific teacher we could do the following:</p>
+<p><code>GET /teachers/:id/students</code> so for example an http request like this <code>GET /teachers/754/students</code> would get all students belonging to teacher number 754</p>
+<p>If we wanted to add a new student to a particular teacher we could do the following:</p>
+<p><code>POST /teachers/:id/students</code> so for example an http request like this <code>POST /teachers/754/student</code> would create a new student under teacher number 754</p>
+<p>Relationships can get very complex however and it is not uncommon to see APIs nest 5 to 6 levels deep.</p>
+<p>Once you have the primary key of a relationship then you shouldn&apos;t need to include relationship levels above the specific noun/object.</p>
+<p>Meaning there should not be many cases where you have to make particular URL  more than 3 levels deep <code>/resource/identifier/resource</code>.</p>
+<h4 id="limit-complexity-by-using-query-strings">Limit complexity by using query strings</h4>
+<p>Many APIs have many different states that a resource can be in.</p>
+<p>Simplify complexities by utilizing query string parameters.</p>
+<p><em>Any optional state that a particular resource can be in, can be conveyed by a particular query string.</em></p>
+<p>To get all students living in dorms perhaps you could use the following query:</p>
+<p><code>GET /students?dorms=true</code></p>
+<p>Keep the API intuitive by using query strings where appropriate.</p>
+<h4 id="error-handling">Error Handling</h4>
+<p>To most API consumers your API is a blackbox so having good error reporting in place provides proper context and visibility to an API.</p>
+<p>The Extreme Programming Model teaches developers to learn to write through errors.</p>
+<p>So for example if an API consumer uses a TDD approach when building their application then having good error reporting will help the app developers as they build their application.</p>
+<p>App Developers also depend on well-designed errors when they are troubleshooting and when resolving issues as they are building their application with your API.</p>
+<h5 id="twilio-error-reporting">Twilio Error Reporting</h5>
+<p>Let us look at a twilio API error:</p>
+<p>We will make the following restful call:</p>
+<pre><code class="lang-curl">curl -X POST https://notify.twilio.com/v1/Services/ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Notifications \
+    -d &apos;Identity=0000005&apos; \
+    -d &apos;Title=Generic loooooooong title for all Bindings&apos; \
+    -d &apos;Body=This is the body for all Bindings&apos; \
+    -d &apos;Data={&quot;custom_key1&quot;:&quot;custom value 1&quot;,&quot;custom_key2&quot;:&quot;custom value 2&quot;}&apos; \
+    -d &apos;Fcm={&quot;notification&quot;:{&quot;title&quot;:&quot;New alert&quot;,&quot;body&quot;:&quot;Hello Bob!&quot;}}&apos; \
+    -d &apos;Apn={&quot;aps&quot;:{&quot;alert&quot;:{&quot;title&quot;:&quot;New alert&quot;,&quot;body&quot;:&quot;Hello Bob!&quot;}}}&apos; \
+    -u &apos;MyAuthToken12345:your_auth_token&apos;
+</code></pre>
+<p>Here we put an improper identity for the notifications API.</p>
+<p>We get the following JSON response:</p>
+<pre><code class="lang-json">{
+    <span class="hljs-string">&quot;code&quot;</span>: <span class="hljs-number">20404</span>,
+    <span class="hljs-string">&quot;message&quot;</span>: <span class="hljs-string">&quot;The requested resource /Services/ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Notifications was not found&quot;</span>,
+    <span class="hljs-string">&quot;more_info&quot;</span>: <span class="hljs-string">&quot;https://www.twilio.com/docs/errors/20404&quot;</span>,
+    <span class="hljs-string">&quot;status&quot;</span>: <span class="hljs-number">404</span>
+}
+</code></pre>
+<p>Notice here that you get an internal error code for twilio that maps to an application specific error code.</p>
+<p>You get a detailed message explaining what occurred and you get a link to see how to fix the issue.</p>
+<p>This is the kind of error response that is useful to an application developer where you give a descriptive message and provide a link to resolve the issue.</p>
+<p>Try to be verbose and use plain language descriptions in your error messages. </p>
+<p>Add as many hints as you can possibly think of to the error itself to help the app developer figure out the problem.</p>
+<p>I recommend that you add a link in your description for more information, like Twilio provides. </p>
+<h5 id="using-http-status-codes">Using HTTP Status Codes</h5>
+<p>Use HTTP status codes and try to map status codes cleanly to relevant standard-based codes.</p>
+<p>There are over 70 HTTP status codes and not every developer has all of the status codes memorized.</p>
+<p>Try to pick a decent subset of status code for your API.</p>
+<p>Keep in mind that Google GData API only uses 10 status codes. </p>
+<p>Netflix uses about 9 status codes.</p>
+<ul>
+<li>200, 201, 304, 400, 401, 403, 404, 409, 410, 500</li>
+</ul>
+<p>Essentially you can reduce an interaction between an app and an API to 3 outcomes:</p>
+<ul>
+<li>Everything worked (success) 2xx-level http response code</li>
+<li>The application did something incorrect (client error) 4xx-level http response code</li>
+<li>The API did something incorrect (server error) 5xx-level http response code</li>
+</ul>
+<p>Obviously this is completely true as there is need for 3xx-level (redirects) at times.</p>
+<p>The main point I am trying to make is that start with a basic subset for your API and add more as you need them.</p>
+<h4 id="api-versioning">API Versioning</h4>
+<p><em>Try not to release an API without a version and make the version mandatory.</em></p>
+<p>API Providers use different techniques to version their APIs.</p>
+<p>A good approach to use is to specify the version with a &apos;v&apos; prefix. </p>
+<p>Move the verions or <code>v</code> all the way to the left in the URL so that it has the highest scope (e.g. /v1/students).</p>
+<p>Use a simple ordinal number like <code>v1</code> and avoid using the dot notation like v1.2 because it implies a level of granularity for versioning that doesn&apos;t work well with APIs. </p>
+<p><strong>Stick with v1, v2, v3, and so on</strong></p>
+<h5 id="api-versions-to-maintain">API versions to maintain</h5>
+<p>How many API versions should you try to maintain? Try to maintain at least one version behind.</p>
+<p>You want to give developers enough time to update their application code, but it all depends on the application developers&apos; platform.</p>
+<p>Some might need 6 months while others might need a year.</p>
+<h5 id="puting-api-version-information-in-the-header">Puting API version information in the header</h5>
+<p>Although putting api version information in the HTTP header is more aligned with Roy Fielding&apos;s vision of rest not a lot API Providers do this.</p>
+<p>Here is an example where using HTTP headers is cleaner:</p>
+<p>These for example, all represent the same resource:</p>
+<pre><code class="lang-http">GET students/1 
+Content-Type: application/json
+</code></pre>
+<pre><code class="lang-http">GET students/1 
+Content-Type: application/xml
+</code></pre>
+<p>In this example the header appears to be more correct and is still a very strong API design.</p>
+<p>You will see some apis do the following though <code>GET students/1.json</code> and <code>GET students/1.xml</code> and that is fine as well.</p>
+<h4 id="partial-response">Partial Response</h4>
+<p>We discussed using the convention of a fields query string in <a href="https://github.com/jbelmont/api-workshop/blob/736b679630a2e4d9dfa4b8445073ff9af3a125ea/docs/query-string.md#limit-payload-information-that-resources-return" target="_blank">Limit Payload section of the Query String Section</a></p>
+<p>The field query parameters are also used in google and linkedin apis</p>
+<p>It was actually google that pioneered the concept of a partial response, Read more about api performance tips at <a href="https://developers.google.com/discovery/v1/performance" target="_blank">Google Developers Performance Site</a></p>
+<p>As we stated earlier in the query string section you can use a comma delimited list to the fields parameter.</p>
+<p>Here is an example again with the students api:</p>
+<pre><code class="lang-http">GET /students?fields=id,name,grade
+</code></pre>
+<h4 id="pagination">Pagination</h4>
+<p>Stick to using the concept of a limit and offset as they are common with apis and developers are used what they mean</p>
+<p>So let us go back to the students API.</p>
+<pre><code class="lang-http">GET /students?limit=25&amp;offset=50
+</code></pre>
+<p>This will get students 25 to 50</p>
+<p>A lot of APIs set a default limit of 10 and an offset of 10</p>
+<p>The pagination defaults are dependent on your data size. </p>
+<p>If your resources are large, you probably want to limit it to fewer than 10; if resources are small, then consider a larger limit.</p>
+<h4 id="api-responses-that-do-not-involve-resources">API Responses that do not involve resources</h4>
+<p>There are times that an api response will not involve an actual resource.</p>
+<p>For instance a financial institution might have an endpoint that does some type of calculation and which never hits a database.</p>
+<p>An action with a name like this indicates that you aren&apos;t dealing with a &quot;resource&quot; type of response:</p>
+<ul>
+<li>Calculate</li>
+<li>Translate</li>
+<li>Convert</li>
+</ul>
+<p>It is appropriate in this cases to use a verb instead of a noun.</p>
+<p>Let us go back to the students api example:</p>
+<p><code>/calculateFinalGrade?grades=90,83,99,85,91,92&amp;weightedAvg=5</code></p>
+<p>This endpoint although trivial is doing a calculation so the name <code>calculateFinalGrade</code> is appropriate in this instance.</p>
+<p>You should make it clear in the API documentation that this is a <code>non-resource</code> scenario.</p>
+<p>If you can separate endpoints like this into a separate part of your API so they get clearly delineated from resource type endpoints.</p>
+<p><strong>Remember resources deal with nouns, while actions deal with verbs</strong></p>
+<h4 id="accepting-different-types-of-responses">Accepting different types of responses</h4>
+<p>It is helpful to application developers can use multiple types of formats when working with a particular format.</p>
+<p><strong>On the other hand to make things uniform only return one format.</strong></p>
+<p><a href="https://developers.google.com/blogger/docs/3.0/getting_started" target="_blank">Google Blogger API</a></p>
+<p>Notice here that the api uses a header of <code>Content-Type: application/json</code></p>
+<p>Some other apis might do something like this: <code>GET /events.json</code> right in the url</p>
+<p>We could do something similar in the students api like this:</p>
+<p><code>GET /students/12345/summary.json</code></p>
+<p>Most web apis will have a default format of JSON and it is okay to assume a default format as long as you highlight this in the API documentation.</p>
+<h4 id="naming-attributes">Naming Attributes</h4>
+<p>Let us say you are returning metadata information back from a particular resource.</p>
+<p>For instance if were to create new student in the students api:</p>
+<p><code>POST /students</code> we could return attributes like this <code>createdAt</code>, and <code>updatedAt</code>.</p>
+<p>Some APIs will name an attribute like this <code>created_at</code> and <code>updated_at</code> but try to avoid this.</p>
+<p>An attribute name like <code>created_at</code> does not follow JavaScript notation.</p>
+<p>For instance once you parse the response:</p>
+<pre><code>let student = JSON.parse(response);
+
+let createdAt = student.created_at;
+</code></pre><p>Notice here that the <code>created_at</code> attribute breaks JavaScript convention.</p>
+<p>Here are some recommendations:</p>
+<ul>
+<li><p>Pick JSON as default type</p>
+</li>
+<li><p>Follow JavaScript conventions for naming attributes</p>
+<ul>
+<li>camelCase (studentName) is best but depending on the attribute you could do Pascal Case (FinalGrade)</li>
+<li>Helps JavaScript developers work with names that go with typical JavaScript/JSON notation</li>
+</ul>
+</li>
+</ul>
+<h4 id="searching">Searching</h4>
+<p>Let us like how google does searching:</p>
+<p>I searched api workshops in Google with the following query: <code>api workshop github</code></p>
+<p>The query that google sent out looks like this:</p>
+<p><code>search?q=api+workshop+github&amp;oq=api+workshop+github</code> I removed some specific query parameters that google added</p>
+<p>Notice here Google uses <code>search</code> and uses the conventions of <code>q=api+workshop+github</code> to do the search.</p>
+<p><em>Remember that spaces are not allowed in query string so Google used the <code>+</code> instead</em></p>
+<p>If we wanted to add scope to our search we could do the following in the students api</p>
+<p><code>GET /teachers/1234/students?q=math+science</code> Here we do a search for all students that have math and science with teacher <code>1234</code></p>
+<p>If we wanted to format the result we could do the following <code>GET /search.xml?q=carolina+students</code> which would return in xml format.</p>
+<h4 id="api-domains">API Domains</h4>
+<p>Popular API Providers such as Facebook, and Twitter have multiple subdomains for their api is they have different apis.</p>
+<p>This is understandable but you should strive to have one subdomain where your whole api lives.</p>
+<p>By having one subdomain where your api lives you make it easier for other application developers to work with your API.</p>
+<p><strong>Consolidate all APIs under one API subdomain if possible.</strong></p>
+<p>A lot of popular API providers have one developer portal:</p>
+<ul>
+<li><a href="https://developers.google.com/" target="_blank">Google Developer Portal</a></li>
+<li><a href="https://developers.facebook.com/" target="_blank">Facebook Developer Portal</a></li>
+</ul>
+<p>In our students example we can have a singular api subdomain as follows: <code>api.students.com</code></p>
+<p>We can have a developer portal as follows: <code>developers.students.com</code></p>
+<p>You can have developers get redirected to developer portal if they access <code>api.students.com</code> url in a browser</p>
+<h4 id="clients-that-support-limited-http-methods">Clients that support limited HTTP Methods</h4>
+<p>There may exists some clients that cannot use all of the HTTP Methods.</p>
+<p>You could do the following technique in this case:</p>
+<pre><code class="lang-http">POST /students?method=post
+</code></pre>
+<pre><code class="lang-http">GET /students
+</code></pre>
+<pre><code class="lang-http">PUT /students/1234?method=put&amp;teacher=Parker
+</code></pre>
+<pre><code class="lang-http">Delete /students/1234?method=delete
+</code></pre>
+<p>Be careful employing such a technique as you are using a GET Method that has destructive capability and a bot could inadvertently destroy your content. Such a tactic must be carefully thought about.</p>
+<h4 id="authorization">Authorization</h4>
+<ul>
+<li><p>Authentication is the process of verifying who you are. </p>
+<ul>
+<li>When you log on to a website with a user name and password you are authenticating.</li>
+</ul>
+</li>
+<li><p>Authorization is the process of verifying that you have access to particular resource. </p>
+<ul>
+<li>Gaining access to a resource because the permissions configured on the resource allow you access is authorization.</li>
+</ul>
+</li>
+</ul>
+<p>I would highly recommend that you choose OAuth 2.0 for Authorization needs.</p>
+<p><a href="https://tools.ietf.org/html/rfc6749" target="_blank">RFC 6749</a></p>
+<blockquote>
+<p>The OAuth 2.0 authorization framework enables a third-party application to obtain limited access to an HTTP service, either on behalf of a resource owner by orchestrating an approval interaction between the resource owner and the HTTP service, or by allowing the third-party application to obtain access on its own behalf. </p>
+</blockquote>
+<p>Using OAuth ensures that Web and Mobile Client that expose APIs will not have to share passwords.</p>
+<p>OAuth allows an API provider to revoke tokens for an individual user, for an entire app, without requiring the user to change their original password. </p>
+<p>This functionality is critical if mobile devices are compromised or if a malicious application is on the loose.</p>
+<p>Using Oauth will ensure improved application security and better end-user and consumer experiences for both Web and Mobile Clients.</p>
+<p>We will also go over OAuth, Open ID, and Open ID Connect in greater detail later in the workshop.</p>
+<h4 id="bread-crumb-navigation">Bread Crumb Navigation</h4>
+<hr>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Previous</th>
+<th style="text-align:right">Next</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">&#x2190; <a href="query-string.html">Query String</a></td>
+<td style="text-align:right"><a href="api-testing.html">API Testing</a> &#x2192;</td>
+</tr>
+</tbody>
+</table>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="query-string.html" class="navigation navigation-prev " aria-label="Previous page: Query String">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="api-testing.html" class="navigation navigation-next " aria-label="Next page: API Testing">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"API Design","level":"1.5","depth":1,"next":{"title":"API Testing","level":"1.6","depth":1,"path":"docs/api-testing.md","ref":"docs/api-testing.md","articles":[{"title":"Types of API Testing","level":"1.6.1","depth":2,"path":"docs/types-of-api-testing.md","ref":"docs/types-of-api-testing.md","articles":[]},{"title":"API Testing Tools","level":"1.6.2","depth":2,"path":"docs/api-testing-tools.md","ref":"docs/api-testing-tools.md","articles":[]}]},"previous":{"title":"Query String","level":"1.4.6","depth":2,"path":"docs/query-string.md","ref":"docs/query-string.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["include-codeblock","advanced-emoji","highlight","copy-code-button"],"pluginsConfig":{"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"copy-code-button":{},"advanced-emoji":{"embedEmojis":false},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"default","theme":"chrome","unindent":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"docs/api-design.md","mtime":"2018-03-09T23:44:07.476Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-26T19:30:35.921Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
