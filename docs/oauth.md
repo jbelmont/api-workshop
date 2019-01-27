@@ -1,7 +1,7 @@
 API Workshop - OAuth
 ## Sections:
 
-* [Difference between OAuth and OAuth2](#difference-between-oauth-and-oauth2]
+* [Difference between OAuth and OAuth2](#difference-between-oauth-and-oauth2)
 * [OAuth Roles](#oauth-roles)
 * [Protocol Flow](#protocol-flow)
 * [Authorization Grant Types](#authorization-grant-types)
