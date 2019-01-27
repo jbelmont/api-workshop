@@ -97,6 +97,80 @@ Run `make dev` in order to get API running locally
 
 This gets both [Redis](https://redis.io/) and [MongoDB](https://www.mongodb.com/) running in docker containers as well as a Golang Container running.
 
+###### Using Rest Client to work with API
+
+I would suggest to use a Rest Client such as Postman to work with the running api:
+
+*Example making GET Request to the Heroes LIST Endpoint:*
+
+```bash
+curl -X GET \
+  http://localhost:8080/api/v1/heroes \
+  -H 'Accept: application/json'
+```
+
+*Example making a POST Request to the Heroes Create Endpoint:*
+
+```bash
+
+curl -X POST \
+  http://localhost:8080/api/v1/heroes \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "name": "Batman",
+    "superpowers": [
+        "Super Rich",
+        "Tech Gadgets",
+        "Batmobile",
+        "Martial Artists",
+        "Super Style",
+        "Alfred"
+    ],
+    "gender": "male"
+  }'
+```
+
+*Example making a GET Request retrieving a specific Hero:*
+
+```bash
+curl -X GET \
+  http://localhost:8080/api/v1/heroes/5c4ca572912242004355b5d4 \
+  -H 'Accept: application/json'
+```
+
+*Example making a DELETE Request to remove a specific hero:*
+
+```bash
+curl -X DELETE \
+  http://localhost:8080/api/v1/heroes/5c4ca572912242004355b5d4 \
+  -H 'Accept: application/json'
+```
+
+*Example making an UPDATE Request to update a specific hero:*
+
+```bash
+curl -X PUT \
+  http://localhost:8080/api/v1/heroes/5c44982798204b00946bb860 \
+  -H 'Accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "name": "Aquaman",
+    "superpowers": [
+        "Expert with magical Trident",
+        "Enhanced vision",
+        "Enhanced smell",
+        "Enhanced stamina",
+        "Expert combatant",
+        "Expert tactician",
+        "Super Strength",
+        "Super Speed",
+        "Marine Telepathy",
+        "Super Reflexes"
+    ],
+    "gender": "male"
+}'
+```
+
 #### Running API Tests
 
 Run `make test` in order to run the tests in a Go container
