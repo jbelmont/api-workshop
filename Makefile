@@ -7,7 +7,7 @@ build:
 		docker-compose build
 
 dev:
-		docker-compose up mongo redis apid web
+		docker-compose up mongo redis apid
 
 destroy-dev:
 						docker-compose down
