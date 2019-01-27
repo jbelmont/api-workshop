@@ -58,6 +58,7 @@ Please run the following commands to install Dep which is a dependency manager i
 Install or upgrade to the latest released version with Homebrew:
 
 1. brew install dep
+
 2. brew upgrade dep
 
 
@@ -67,16 +68,14 @@ Binary Releases
 To install the latest stable release:
 
 curl -L https://git.io/vp6lP | sh
+
 Alternatively you can install a specific version from the releases list.
 
 ###### Install GoMetalinter with Homebrew 
 
-brew tap alecthomas/homebrew-tap
-brew install gometalinter
+1. brew tap alecthomas/homebrew-tap
 
-Once you have dep installed run the *make* command in your terminal
-
-Run `make` in the root of the repository to install go libraries needed for the workshop.
+2. brew install gometalinter
 
 ##### Add common.env file to the repository
 
@@ -91,6 +90,8 @@ I would highly suggest that you place the cloned repository into the following d
 *Golang is very opionated about the package location and structure.*
 
 #### Running API
+
+Run `make build` to build the api and in particular the docker containers.
 
 Run `make dev` in order to get API running locally
 
