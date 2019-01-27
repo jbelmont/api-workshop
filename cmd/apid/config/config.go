@@ -29,7 +29,7 @@ func New() Config {
 		WriteTimeout:     10 * time.Second,
 		ShutdownTimeout:  5 * time.Second,
 		DBTimeout:        25 * time.Second,
-		APIHost:          ":8080",
+		APIHost:          ":8008",
 		MongoHost:        "mongodb://mongo:27017",
 		RedisHost:        "redis:6379",
 		Auth0ClientID:    "",
