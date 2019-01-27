@@ -414,6 +414,10 @@ Delete /students/1234?method=delete
 
 Be careful employing such a technique as you are using a GET Method that has destructive capability and a bot could inadvertently destroy your content. Such a tactic must be carefully thought about.
 
+#### Security through Dynamic paths and Nonce to restrict access control to a specific context
+
+content
+
 #### Authorization
 
 * Authentication is the process of verifying who you are. 
