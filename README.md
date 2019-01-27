@@ -99,3 +99,9 @@ This gets both [Redis](https://redis.io/) and [MongoDB](https://www.mongodb.com/
 #### Running API Tests
 
 Run `make test` in order to run the tests in a Go container
+
+##### TODO Section for Workshop
+
+- [] Wrap up added sections in API Design Section
+- [] Wrap up GraphQL Section
+- [] Add section for tool like API Dredd to test API Documentation
