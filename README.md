@@ -43,7 +43,51 @@ Here is the gitbook for the [API Workshop](https://www.marcelbelmont.com/api-wor
 
 ## Workshop Details
 
-Make sure that you have [Golang](https://golang.org/dl/) Installed
+Install [Golang](https://golang.org/dl/) and make sure to set $GOPATH to `$HOME/go`
+
+Try to put your GO Files in the following location:
+
+`$HOME/go/src/github.com/{github_username` 
+
+Go is very opinionated about this and linters and tools are looking for a specific path.
+
+Install Docker and Docker-compose. 
+
+Here is my version information:
+
+*Docker Version:*
+
+```bash
+docker version
+Client: Docker Engine - Community
+ Version:           18.09.1
+ API version:       1.39
+ Go version:        go1.10.6
+ Git commit:        4c52b90
+ Built:             Wed Jan  9 19:33:12 2019
+ OS/Arch:           darwin/amd64
+ Experimental:      false
+
+Server: Docker Engine - Community
+ Engine:
+  Version:          18.09.1
+  API version:      1.39 (minimum version 1.12)
+  Go version:       go1.10.6
+  Git commit:       4c52b90
+  Built:            Wed Jan  9 19:41:49 2019
+  OS/Arch:          linux/amd64
+  Experimental:     true
+```
+
+*Docker Compose Version:*
+
+```bash
+> docker-compose version
+docker-compose version 1.23.2, build 1110ad01
+docker-py version: 3.6.0
+CPython version: 3.6.6
+OpenSSL version: OpenSSL 1.1.0h  27 Mar 2018
+```
 
 #### Install Dep binary
 
