@@ -49,9 +49,17 @@ Make sure that you have [Golang](https://golang.org/dl/) Installed
 
 Please run the following commands to install Dep which is a dependency manager in Golang:
 
-###### Dep Install Script
+###### Dep Install Script with official shell script
 
 - `curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh`
+
+###### Homebrew Installation for Mac OS x
+
+Install or upgrade to the latest released version with Homebrew:
+
+1. brew install dep
+2. brew upgrade dep
+
 
 ###### Install GoMetalinter
 
@@ -61,16 +69,10 @@ To install the latest stable release:
 curl -L https://git.io/vp6lP | sh
 Alternatively you can install a specific version from the releases list.
 
-Homebrew
+###### Install GoMetalinter with Homebrew 
+
 brew tap alecthomas/homebrew-tap
 brew install gometalinter
-
-###### Homebrew Installation for Mac OS x
-
-Install or upgrade to the latest released version with Homebrew:
-
-1. brew install dep
-2. brew upgrade dep
 
 Once you have dep installed run the *make* command in your terminal
 
@@ -78,7 +80,15 @@ Run `make` in the root of the repository to install go libraries needed for the 
 
 ##### Add common.env file to the repository
 
-Please make sure to rename the *common.env.sample* to *common.env*
+Please make sure to rename the *common.env.sample* to *common.env* because the API needs it to run.
+
+##### Cloning instructions to proper GOPATH locations
+
+I would highly suggest that you place the cloned repository into the following directory path:
+
+`$HOME/go/src/github.com/{github_username}`
+
+*Golang is very opionated about the package location and structure.*
 
 #### Running API
 
