@@ -61,7 +61,7 @@ Install or upgrade to the latest released version with Homebrew:
 2. brew upgrade dep
 
 
-###### Install GoMetalinter
+###### Install GoMetalinter with Curl
 
 Binary Releases
 To install the latest stable release:
