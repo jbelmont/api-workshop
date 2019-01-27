@@ -10,7 +10,7 @@ import (
 func TestNewConfig(t *testing.T) {
 	cfg := config.New()
 
-	if cfg.APIHost != ":8080" {
+	if cfg.APIHost != ":8008" {
 		t.Error("config should set default value of APIHost variable")
 	}
 	if cfg.MongoHost != "mongodb://mongo:27017" {
