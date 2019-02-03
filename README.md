@@ -223,5 +223,6 @@ Run `make test` in order to run the tests in a Go container
 
 - [] Wrap up added sections in API Design Section
 - [] Wrap up GraphQL Section
+- [] Add section for API Introspection
 - [] Add section for tool like API Dredd to test API Documentation
 - [] Wrap new section to disambiguate differences between OAuth and OAuth2
